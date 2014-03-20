@@ -117,18 +117,12 @@
 
 @media (min-width: 1200px) {
 	.modal.container {
-		top: 1%;
-		right: 1%;
-		left: 1%;
-		bottom: auto;
-		width: auto !important;
-		height: auto !important;
-		margin: 0 !important;
-		padding: 0 !important;
+		width: 1170px;
+		margin-left: -585px;
 	}
 }
 
-@media (max-width: 979px) {
+@media (max-width: 1200px) {
 	.modal, 
 	.modal.container,
 	.modal.modal-overflow 	{
