@@ -37,12 +37,6 @@
 	overflow: auto;
 }
 
-.modal-vertical-centered {
-transform: translate(0, 50%) !important;
--ms-transform: translate(0, 50%) !important; /* IE 9 */
--webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
-}
-
 .modal {
 	outline: none;
 	position: absolute;
