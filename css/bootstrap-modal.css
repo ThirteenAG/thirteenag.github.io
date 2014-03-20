@@ -119,6 +119,13 @@
 	.modal.container {
 		width: 1170px;
 		margin-left: -585px;
+		top: 1%;
+		right: 1%;
+		left: 1%;
+		bottom: auto;
+		height: auto !important;
+		margin: 0 !important;
+		padding: 0 !important;
 	}
 }
 
