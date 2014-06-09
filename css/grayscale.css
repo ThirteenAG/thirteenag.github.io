@@ -133,6 +133,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+	-webkit-filter: blur(5px) grayscale(50%);
 }
 
 .intro-body {
