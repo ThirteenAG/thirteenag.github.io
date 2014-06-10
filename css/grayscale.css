@@ -133,7 +133,6 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-	-webkit-filter: blur(5px) grayscale(50%);
 }
 
 .intro-body {
@@ -256,7 +255,7 @@ a:focus {
 
 #map {
     width: 100%;
-    height: 200px;
+    height: 50px;
     margin-top: 100px;
 }
 
@@ -270,37 +269,9 @@ a:focus {
     }
 
     #map {
-        height: 400px;
+        height: 50px;
         margin-top: 250px;
     }
-}
-
-.btn {
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-
-.btn-default {
-    border: 1px solid #28c3ab;
-    color: #28c3ab;
-    background-color: transparent;
-}
-
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid #28c3ab;
-    outline: 0;
-    color: #000;
-    background-color: #28c3ab;
-}
-
-.btn-huge {
-    padding: 25px;
-    font-size: 26px;
 }
 
 .banner-social-buttons {
