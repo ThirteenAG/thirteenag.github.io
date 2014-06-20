@@ -752,6 +752,17 @@ $('.ajax_mp2').on('click', function(){
   }, 1000);
 });
 
+$('.ajax_da4').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+  $('body').modalmanager('loading');
+
+  setTimeout(function(){
+     $modal.load('screens/da4.html', '', function(){
+      $modal.modal();
+    });
+  }, 1000);
+});
+
 $modal.on('click', '.update', function(){
   $modal.modal('loading');
   setTimeout(function(){
