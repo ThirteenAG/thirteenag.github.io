@@ -501,6 +501,27 @@
 
         </div>
 		
+        <hr id="truecrimesola">
+		
+        <div class="row">
+				<div class="col-lg-7 col-md-7">
+					<!--img style="display: none" src="screens/truecrimesolamain1.jpg"/>
+					<img class="img-responsive" onmouseover="this.src='screens/truecrimesolamain1.jpg';" onmouseout="this.src='screens/truecrimesolamain2.jpg';" src="screens/truecrimesolamain2.jpg" alt="" width="700" height="394"/-->
+					<img class="img-responsive" src="http://placehold.it/700x394&text=N/A YET" alt="">
+				</div>
+
+            <div class="col-lg-5 col-md-5">
+                <a style="color:#111111;" href="#truecrimesola"><h3><u>True Crime Streets of LA Widescreen Fix</u></h3></a>
+                <h4><a href="" target="_blank"></a></h4>
+                <p>Supported exe version: <b></b></p>
+				Supported exe size: <b></b></p>
+				<p>Installation: <b></b></p>
+				<a style="float:left;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+				<div class="ajax_truecrimesola" style="position: relative; overflow: hidden;">&nbsp;
+				<button class="demo btn btn-primary" data-toggle="modal_truecrimesola"><span class="glyphicon glyphicon-picture"></span> Screenshots</button></div>           
+            </div>
+        </div>
+		
         <hr id="truecrimenyc">
 		
         <div class="row">
@@ -521,6 +542,28 @@
 				<button class="demo btn btn-primary" data-toggle="modal_truecrimenyc"><span class="glyphicon glyphicon-picture"></span> Screenshots</button></div>           
             </div>
         </div>
+		
+        <hr id="stubbsthezombie">
+		
+        <div class="row">
+				<div class="col-lg-7 col-md-7">
+					<!--img style="display: none" src="screens/stubbsthezombiemain1.jpg"/>
+					<img class="img-responsive" onmouseover="this.src='screens/stubbsthezombiemain1.jpg';" onmouseout="this.src='screens/stubbsthezombiemain2.jpg';" src="screens/stubbsthezombiemain2.jpg" alt="" width="700" height="394"/-->
+					<img class="img-responsive" src="http://placehold.it/700x394&text=N/A YET" alt="">
+				</div>
+
+            <div class="col-lg-5 col-md-5">
+                <a style="color:#111111;" href="#stubbsthezombie"><h3><u>Stubbs the Zombie Widescreen Fix</u></h3></a>
+                <h4><a href="" target="_blank"></a></h4>
+                <p>Supported exe version: <b></b></p>
+				Supported exe size: <b></b></p>
+				<p>Installation: <b></b></p>
+				<a style="float:left;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+				<div class="ajax_stubbsthezombie" style="position: relative; overflow: hidden;">&nbsp;
+				<button class="demo btn btn-primary" data-toggle="modal_stubbsthezombie"><span class="glyphicon glyphicon-picture"></span> Screenshots</button></div>           
+            </div>
+        </div>
+		
 		<hr>
     </div> 
 	
@@ -852,11 +895,31 @@ $('.ajax_da4').on('click', function(){
   }, 1000);
 });
 
+$('.ajax_truecrimesola').on('click', function(){
+  $('body').modalmanager('loading');
+
+  setTimeout(function(){
+     $modal.load('screens/truecrimesola.html', '', function(){
+      $modal.modal();
+    });
+  }, 1000);
+});
+
 $('.ajax_truecrimenyc').on('click', function(){
   $('body').modalmanager('loading');
 
   setTimeout(function(){
      $modal.load('screens/truecrimenyc.html', '', function(){
+      $modal.modal();
+    });
+  }, 1000);
+});
+
+$('.ajax_stubbsthezombie').on('click', function(){
+  $('body').modalmanager('loading');
+
+  setTimeout(function(){
+     $modal.load('screens/stubbsthezombie.html', '', function(){
       $modal.modal();
     });
   }, 1000);
