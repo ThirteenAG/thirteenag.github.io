@@ -689,6 +689,26 @@
             </div>
         </div>
 		
+        <hr id="tod">
+		
+        <div class="row">
+				<div class="col-lg-7 col-md-7">
+					<img style="display: none" src="screens/todmain1.jpg"/>
+					<img class="img-responsive" onmouseover="this.src='screens/todmain1.jpg';" onmouseout="this.src='screens/todmain2.jpg';" src="screens/todmain2.jpg" alt="" width="700" height="394"/>
+				</div>
+
+            <div class="col-lg-5 col-md-5">
+                <a style="color:#111111;" href="#tod"><h3><u>Total Overdose Widescreen Fix</u></h3></a>
+                <h4><a href="http://www.deadlinegames.com/games/total-overdose/" target="_blank">http://www.deadlinegames.com/games/total-overdose/</a></h4>
+				<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Total+Overdose+%5BENGLISH%5D+EXE" target="_blank">TOD.exe v1.0 </a></b></p>
+				Supported exe size: <b>6,54 MB (6 860 800 bytes)</b></p>
+				<p>Installation: <b>Unpack content of archive to Total Overdose root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+				<a style="float:left;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/tod"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+				<div class="ajax_tod" style="position: relative; overflow: hidden; float:left;">&nbsp;
+				<button class="demo btn btn-primary" data-toggle="modal_tod"><span class="glyphicon glyphicon-picture"></span> Screenshots</button></div> 
+            </div>
+        </div>
+		
 		<hr>
     </div> 
 	
@@ -1054,6 +1074,16 @@ $('.ajax_stubbsthezombie').on('click', function(){
   }, 1000);
 });
 
+$('.ajax_tod').on('click', function(){
+  $('body').modalmanager('loading');
+
+  setTimeout(function(){
+     $modal.load('screens/tod.html', '', function(){
+      $modal.modal();
+    });
+  }, 1000);
+});
+
 $modal.on('click', '.update', function(){
   $modal.modal('loading');
   setTimeout(function(){
@@ -1081,7 +1111,7 @@ $modal.on('click', '.update', function(){
 	if(window.location.href.indexOf("#tonyhawks") > -1 || window.location.href.indexOf("#s6") > -1) {
        $('a[href=#s6]').tab("show");
     }
-    if(window.location.href.indexOf("#s5") > -1 || window.location.href.indexOf("#manhunt") > -1 || window.location.href.indexOf("#dmc3se") > -1 || window.location.href.indexOf("#gun") > -1 || window.location.href.indexOf("#fahrenheit") > -1 || window.location.href.indexOf("#srs") > -1 || window.location.href.indexOf("#da4") > -1 || window.location.href.indexOf("#coldfear") > -1 || window.location.href.indexOf("#truecrimesola") > -1 || window.location.href.indexOf("#truecrimenyc") > -1 || window.location.href.indexOf("#stubbsthezombie") > -1) {
+    if(window.location.href.indexOf("#s5") > -1 || window.location.href.indexOf("#manhunt") > -1 || window.location.href.indexOf("#dmc3se") > -1 || window.location.href.indexOf("#gun") > -1 || window.location.href.indexOf("#fahrenheit") > -1 || window.location.href.indexOf("#srs") > -1 || window.location.href.indexOf("#da4") > -1 || window.location.href.indexOf("#coldfear") > -1 || window.location.href.indexOf("#truecrimesola") > -1 || window.location.href.indexOf("#truecrimenyc") > -1 || window.location.href.indexOf("#stubbsthezombie") > -1 || window.location.href.indexOf("#tod") > -1) {
        $('a[href=#s5]').tab("show");
 	}	
     if(window.location.href.indexOf("#s_all") > -1) {
