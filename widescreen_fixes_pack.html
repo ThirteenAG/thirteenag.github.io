@@ -957,7 +957,20 @@
 			{
 				if (tab != '#s_all')
 				{
-					$('a[href='+tab+']').tab("show");
+						for (var i = 0; i < TabContentMap.length; i++) 
+						{
+							if (tab.indexOf(TabContentMap[i].tabname) > -1) {
+								$('a[href='+tab+']').tab("show");
+								break;
+							} else 
+							{
+								if (tab.indexOf(TabContentMap[i].contentname) > -1) {
+									$('a[href=#'+TabContentMap[i].tabname+']').tab("show");
+									break;
+								}
+							}
+						}
+						
 				}
 				else
 				{
