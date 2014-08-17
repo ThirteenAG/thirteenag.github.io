@@ -952,7 +952,7 @@
         { "tabname" : "s5", "contentname" : "#th" }, //4
         { "tabname" : "s_other1", "contentname" : "#manhunt #dmc3se #gun #fahrenheit #srs #da4 #truecrimesola #truecrimenyc #stubbsthezombie #psiops" }, //5
         { "tabname" : "s_other2", "contentname" : "#tod" }, //6
-        { "tabname" : "s_all", "contentname" : "#s_all #disqus_thread" }, //7
+        { "tabname" : "s_all", "contentname" : "#s_all" }, //7
         { "tabname" : "latest_updates", "contentname" : "#latest_updates" }, //8
         { "tabname" : "disqus_thread", "contentname" : "#disqus_thread" } //9
         );
@@ -965,7 +965,8 @@
 			for (var i = 0; i < TabContentMap.length; i++) {
 				if ((TabContentMap[i].tabname.indexOf(curLocation) > -1 || TabContentMap[i].contentname.indexOf(curLocation) > -1) || curLocation.indexOf(TabContentMap[i].tabname) > -1 || curLocation.indexOf(TabContentMap[i].contentname) > -1) {
 					$('a[href=#'+TabContentMap[i].tabname+']').tab("show");
-					//break;
+						if (TabContentMap[i].tabname.indexOf('#s_all') > -1) {$('a[href=#disqus_thread]').tab("show");}
+					break;
 				} else {
 					if (i == TabContentMap.length - 1 && window.location.href.indexOf("#") > -1) 
 					{
