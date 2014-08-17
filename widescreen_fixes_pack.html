@@ -705,6 +705,26 @@
 						<a href="http://store.steampowered.com/app/7800/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> Works with Steam version</a>	  
 		            </div>
 		        </div>
+				
+		        <hr id="psiops">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/psiopsmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/psiopsmain1.jpg';" onmouseout="this.src='screens/psiopsmain2.jpg';" src="screens/psiopsmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#psiops"><h3><u>Psi-Ops: The Mindgate Conspiracy Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Psi-Ops+v1.0+%5BUS/EURO%5D" target="_blank">v. 1.0 (RELOADED)</a></b></p>
+						Supported exe size: <b>6,51 MB (6 836 224 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Psi-Ops: The Mindgate Conspiracy root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+						<a style="float:left;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/psiops"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+						<div style="position: relative; overflow: hidden; float:left;">&nbsp;
+						<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('psiops')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button></div>
+		            </div>
+		        </div>
 				<hr>
 		    </div> 
 			
@@ -929,7 +949,7 @@
         { "tabname" : "s2", "contentname" : "#mp" },  //1
         { "tabname" : "s3", "contentname" : "#nfs" }, //2
         { "tabname" : "s4", "contentname" : "#flatout" }, //3
-        { "tabname" : "s5", "contentname" : "#tonyhawks" }, //4
+        { "tabname" : "s5", "contentname" : "#th" }, //4
         { "tabname" : "s_other1", "contentname" : "#manhunt #dmc3se #gun #fahrenheit #srs #da4 #truecrimesola #truecrimenyc #stubbsthezombie #psiops" }, //5
         { "tabname" : "s_other2", "contentname" : "#tod" }, //6
         { "tabname" : "s_all", "contentname" : "#s_all #disqus_thread" }, //7
@@ -940,10 +960,12 @@
 	function LocationManager(tab) {	
 		if (tab == undefined)
 		{
+		var curLocation = window.location.href.split('#')[1];
+			curLocation = "#" + curLocation;
 			for (var i = 0; i < TabContentMap.length; i++) {
-				if (window.location.href.indexOf(TabContentMap[i].tabname) > -1 || window.location.href.indexOf(TabContentMap[i].contentname) > -1) {
+				if ((TabContentMap[i].tabname.indexOf(curLocation) > -1 || TabContentMap[i].contentname.indexOf(curLocation) > -1) || curLocation.indexOf(TabContentMap[i].tabname) > -1 || curLocation.indexOf(TabContentMap[i].contentname) > -1) {
 					$('a[href=#'+TabContentMap[i].tabname+']').tab("show");
-					break;
+					//break;
 				} else {
 					if (i == TabContentMap.length - 1 && window.location.href.indexOf("#") > -1) 
 					{
