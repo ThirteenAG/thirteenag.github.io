@@ -789,7 +789,7 @@
                         <a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">9</a>
                     </li>
                     <li id="page-disqus_thread">
-                        <a href="#disqus_thread " onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">10</a>
+                        <a href="#disqus_thread" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">10</a>
                     </li>
                     <li id="raquo">
                         <a href="javascript:void(null);" onclick="LocationManager('raquo');">&raquo;</a>
@@ -851,6 +851,8 @@
 	{
 		nCommentsCount.html( 'Comments' );
 	}
+	
+	$('a[href=\'#disqus_thread\']').eq(1).html('10');
     </script>
 	
 	<!-- show all tab -->
