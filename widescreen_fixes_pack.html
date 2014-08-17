@@ -789,7 +789,7 @@
                         <a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">9</a>
                     </li>
                     <li id="page-disqus_thread">
-                        <a href="#disqus_thread" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">10</a>
+                        <a href="#disqus_thread " onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">10</a>
                     </li>
                     <li id="raquo">
                         <a href="javascript:void(null);" onclick="LocationManager('raquo');">&raquo;</a>
@@ -970,11 +970,19 @@
 			{
 				if (tab == 'laquo' && $('#laquo').attr('class') != "disabled")
 				{
-				var PrevPage = $('li[class=\'active\']').eq(1).closest('li').prev().find('a').attr('href');
-				$('a[href='+PrevPage+']').tab("show");
+					var PrevPage = $('li[class=\'active\']').eq(1).closest('li').prev().find('a').attr('href');
+					$('a[href='+PrevPage+']').tab("show");
+						if (PrevPage == '#s_all')
+						{
+							ShowAllTabs();
+						}
 				} else if (tab == 'raquo' && $('#raquo').attr('class') != "disabled") {
-				var NextPage = $('li[class=\'active\']').eq(1).closest('li').next().find('a').attr('href');
-				$('a[href='+NextPage+']').tab("show");
+					var NextPage = $('li[class=\'active\']').eq(1).closest('li').next().find('a').attr('href');
+					$('a[href='+NextPage+']').tab("show");
+						if (NextPage == '#s_all')
+						{
+							ShowAllTabs();
+						}
 				}
 			}
 		}
