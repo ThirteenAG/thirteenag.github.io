@@ -838,11 +838,10 @@
     </script>
 	
 	<script type="text/javascript">
-    var disqus_shortname = 'widescreenfixespack';
     (function () {
-        var s = document.createElement('script'); s.async = false;
+        var s = document.createElement('script'); s.async = true;
         s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        s.src = 'js/count.js';
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 	
@@ -851,8 +850,6 @@
 	{
 		nCommentsCount.html( 'Comments' );
 	}
-	
-	$('a[href=\'#disqus_thread\']').eq(1).html('10');
     </script>
 	
 	<!-- show all tab -->
