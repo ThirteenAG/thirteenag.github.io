@@ -137,7 +137,7 @@ a:focus {
 }
 
 #header {
-  background: url("http://thirteenag.github.io//img/intro-bg.jpg") center center no-repeat;
+  background: url("http://thirteenag.github.io/img/intro-bg.jpg") center center no-repeat;
 }
 #header:before {
   content: '';
@@ -146,7 +146,12 @@ a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  background: transparent;
+  background: -moz-linear-gradient(to top, transparent, #000000), -moz-linear-gradient(to bottom, transparent, #000000);
+  background: -webkit-linear-gradient(to top, transparent, #000000), -webkit-linear-gradient(to bottom, transparent, #000000);
+  background: -o-linear-gradient(to top, transparent, #000000), -o-linear-gradient(to bottom, transparent, #000000);
+  background: -ms-linear-gradient(to top, transparent, #000000), -ms-linear-gradient(to bottom, transparent, #000000);
+  background: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
   opacity: 1.0;
 }
 
@@ -161,7 +166,12 @@ a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  background: transparent;
+  background: -moz-linear-gradient(to top, transparent, #000000), -moz-linear-gradient(to bottom, transparent, #000000);
+  background: -webkit-linear-gradient(to top, transparent, #000000), -webkit-linear-gradient(to bottom, transparent, #000000);
+  background: -o-linear-gradient(to top, transparent, #000000), -o-linear-gradient(to bottom, transparent, #000000);
+  background: -ms-linear-gradient(to top, transparent, #000000), -ms-linear-gradient(to bottom, transparent, #000000);
+  background: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
   opacity: 1.0;
 }
 
@@ -175,7 +185,12 @@ a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  background: transparent;
+  background: -moz-linear-gradient(to top, transparent, #000000), -moz-linear-gradient(to bottom, transparent, #000000);
+  background: -webkit-linear-gradient(to top, transparent, #000000), -webkit-linear-gradient(to bottom, transparent, #000000);
+  background: -o-linear-gradient(to top, transparent, #000000), -o-linear-gradient(to bottom, transparent, #000000);
+  background: -ms-linear-gradient(to top, transparent, #000000), -ms-linear-gradient(to bottom, transparent, #000000);
+  background: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
   opacity: 1.0;
 }
 
@@ -189,7 +204,12 @@ a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  background: transparent;
+  background: -moz-linear-gradient(to top, transparent, #000000), -moz-linear-gradient(to bottom, transparent, #000000);
+  background: -webkit-linear-gradient(to top, transparent, #000000), -webkit-linear-gradient(to bottom, transparent, #000000);
+  background: -o-linear-gradient(to top, transparent, #000000), -o-linear-gradient(to bottom, transparent, #000000);
+  background: -ms-linear-gradient(to top, transparent, #000000), -ms-linear-gradient(to bottom, transparent, #000000);
+  background: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
   opacity: 1.0;
 }
 
@@ -376,4 +396,44 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.icon-gtaiv { 
+  background-image: url("../img/ivico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center; 
+  height: 14px; 
+  width: 14px;
+}
+
+.icon-gtasa { 
+  background-image: url("../img/saico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center; 
+  height: 14px; 
+  width: 14px;
+}
+
+.icon-gtavc { 
+  background-image: url("../img/vcico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center; 
+  height: 14px; 
+  width: 14px;
+}
+
+.icon-gta3 { 
+  background-image: url("../img/3ico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center; 
+  height: 14px; 
+  width: 14px;
+}
+
+.icon-gtaforums { 
+  background-image: url("http://gtaforums.com/favicon.png");
+  background-repeat: no-repeat;
+  background-position: center center; 
+  height: 14px; 
+  width: 14px;
 }
