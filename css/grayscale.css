@@ -133,6 +133,64 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    position: relative;
+}
+
+#header {
+  background: url("http://thirteenag.github.io//img/intro-bg.jpg") center center no-repeat;
+}
+#header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  opacity: 1.0;
+}
+
+
+#about {
+  background: url("http://thirteenag.github.io/img/p2dfx_gtavcb.jpg") center center no-repeat;
+}
+#about:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  opacity: 1.0;
+}
+
+#media {
+  background: url("http://thirteenag.github.io/img/p2dfx_gta3a.jpg") center center no-repeat;
+}
+#media:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  opacity: 1.0;
+}
+
+#contact {
+  background: url("http://i.imgur.com/kkomiWG.jpg") center center no-repeat;
+}
+#contact:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to top, transparent, #000000), linear-gradient(to bottom, transparent, #000000);
+  opacity: 1.0;
 }
 
 .intro-body {
