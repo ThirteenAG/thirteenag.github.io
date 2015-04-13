@@ -176,7 +176,7 @@ a:focus {
 }
 
 #media {
-  background: url("../img/p2dfx_gta3bg.jpg) center center no-repeat;
+  background: url(../img/p2dfx_gta3bg.jpg) center center no-repeat;
 }
 #media:before {
   content: '';
