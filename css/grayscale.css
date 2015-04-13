@@ -137,7 +137,7 @@ a:focus {
 }
 
 #header {
-  background: url("http://thirteenag.github.io/img/intro-bg.jpg") center center no-repeat;
+  background: url(../img/intro-bg.jpg) center center no-repeat;
 }
 #header:before {
   content: '';
@@ -157,7 +157,7 @@ a:focus {
 
 
 #about {
-  background: url("http://thirteenag.github.io/img/p2dfx_gtavcb.jpg") center center no-repeat;
+  background: url(../img/p2dfx_gtavcbg.jpg) center center no-repeat;
 }
 #about:before {
   content: '';
@@ -176,7 +176,7 @@ a:focus {
 }
 
 #media {
-  background: url("http://thirteenag.github.io/img/p2dfx_gta3a.jpg") center center no-repeat;
+  background: url("../img/p2dfx_gta3bg.jpg) center center no-repeat;
 }
 #media:before {
   content: '';
@@ -195,7 +195,7 @@ a:focus {
 }
 
 #contact {
-  background: url("http://i.imgur.com/kkomiWG.jpg") center center no-repeat;
+  background: url(../img/p2dfx_gtaivbg.jpg) center center no-repeat;
 }
 #contact:before {
   content: '';
