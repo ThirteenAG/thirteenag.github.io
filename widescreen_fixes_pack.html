@@ -844,7 +844,7 @@
 		                <h4><a href="" target="_blank"></a></h4>
 						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=True+Crime:+New+York+City+v1.0+%5BENGLISH%5D+EXE" target="_blank">v. 1.0.0.134 (RELOADED)</a></b></p>
 						Supported exe size: <b>5,25 MB (5 509 120 bytes)</b></p>
-						<p>Installation: <b>Unpack content of archive to TrueCrimeNYC root directory. Hud will be fixed but aligned to the left side of the screen. Also i added ini parameter GameSpeed, it's 128.0 by default, 200.0 with the fix. Increasing that value makes game a little slower and smooth.</b></p>
+						<p>Installation: <b>Unpack content of archive to TrueCrimeNYC root directory. Hud will be fixed but aligned to the left side of the screen. Also I added ini parameter GameSpeed, it's 128.0 by default, 200.0 with the fix. Increasing that value makes game a little slower and smooth.</b></p>
 							<div class="btn-group">
 							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/truecrimenyc">
 							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
@@ -914,7 +914,33 @@
 			
 			<div class="tab-pane" id="s_other2">  
 		        <div class="row">
-						<div class="col-lg-7 col-md-7" id="tod">
+						<div class="col-lg-7 col-md-7" id="mafia">
+							<img style="display: none" src="screens/mafiamain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/mafiamain1.jpg';" onmouseout="this.src='screens/mafiamain2.jpg';" src="screens/mafiamain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#mafia"><h3><u>Mafia Widescreen Fix</u></h3></a>
+		                <h4><a href="http://forum.mafia-game.ru/showthread.php?t=2059" target="_blank">by behar</a></h4>
+						<p>Supported exe version: <b>Game.exe v1.0, v1.1, v1.2</b></p>
+						Supported exe size: <b>2,24 MB (2 355 200 bytes) [v1.2]</b></p>
+						<p>Installation: <b>Unpack content of archive to Mafia root directory. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/mafia">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/download/mafia/Mafia_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('mafia')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="tod">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
 							<img style="display: none" src="screens/todmain1.jpg"/>
 							<img class="img-responsive" onmouseover="this.src='screens/todmain1.jpg';" onmouseout="this.src='screens/todmain2.jpg';" src="screens/todmain2.jpg" alt="" width="700" height="394"/>
 						</div>
@@ -1079,6 +1105,9 @@
 					<tr><td>
 						<table border="0" cellspacing="1" cellpadding="1" style="font-size: small;">
 							<tbody id="update">
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">28.07.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#mafia" onclick="LocationManager($(this).attr('href'));">Mafia Widescreen Fix released, GTA3/VC fixes updated</a></td>
+								</tr>
 								<tr style="background-color: #eeeeff;">
 									<td style="padding-right: 10px; width: 5%;">28.03.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sec3" onclick="LocationManager($(this).attr('href'));">GTA 1-2, NFSU, NFSU2, NFSMW, NFSC Widescreen Fix</a></td>
 								</tr>
@@ -1316,7 +1345,7 @@
         { "tabname" : "sec4", "contentname" : "#flatout" }, //3
         { "tabname" : "sec5", "contentname" : "#th" }, //4
         { "tabname" : "s_other1", "contentname" : "#manhunt #dmc3se #gun #fahrenheit #srs #da4 #truecrimesola #truecrimenyc #stubbsthezombie #psiops" }, //5
-        { "tabname" : "s_other2", "contentname" : "#tod #punisher #secondsight #sonicheroes #sniperelite #paradisecracked" }, //6
+        { "tabname" : "s_other2", "contentname" : "#mafia #tod #punisher #secondsight #sonicheroes #sniperelite #paradisecracked" }, //6
         { "tabname" : "s_all", "contentname" : "#s_all" }, //7
         { "tabname" : "latest_updates", "contentname" : "#latest_updates" }, //8
         { "tabname" : "disqus_thread", "contentname" : "#disqus_thread" } //9
