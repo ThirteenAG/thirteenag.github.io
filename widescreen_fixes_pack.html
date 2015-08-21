@@ -80,17 +80,17 @@
 		<div class="tabbable" id="gtasa">  
 			<ul class="nav nav-tabs">  
 			<li class="active"><a href="#sec1" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Grand Theft Auto</a></li>  
-			<li><a href="#sec2" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Max Payne</a></li>  
-			<li><a href="#sec3" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Need For Speed</a></li>  
-			<li><a href="#sec4" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Flatout</a></li>  
-			<li><a href="#sec5" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Tony Hawk's</a></li>
-			<!--li><a href="#sec6" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Splinter Cell</a></li-->
-			<li><a href="#s_other1" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Other [1-10]</a></li>  
-			<li><a href="#s_other2" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Other [11-20]</a></li>  
+			<li><a href="#sec2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Max Payne</a></li>  
+			<li><a href="#sec3" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Need For Speed</a></li>  
+			<li><a href="#sec4" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Flatout</a></li>  
+			<li><a href="#sec5" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Tony Hawk's</a></li>
+			<li><a href="#sec6" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Splinter Cell</a></li>
+			<li><a href="#s_other1" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Other [1-10]</a></li>  
+			<li><a href="#s_other2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Other [11-20]</a></li>  
 			<ul></ul>
-			<li><a href="#s_all" data-toggle="tab" id="s_all" onclick="LocationManager($(this).attr('href'));">Show all</a></li>
-			<li><a href="#latest_updates" data-toggle="tab" onclick="LocationManager($(this).attr('href'));"><b>Latest updates</b></a></li>
-						<li><a href="#disqus_thread" data-toggle="tab" onclick="LocationManager($(this).attr('href'));"></a></li>
+			<li><a href="#s_all" data-toggle="tab" id="s_all" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Show all</a></li>
+			<li><a href="#latest_updates" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><b>Latest updates</b></a></li>
+			<li><a href="#disqus_thread" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"></a></li>
 			</ul> 
 		</div>
 		<!-- /Tabs -->
@@ -645,6 +645,87 @@
 				<hr>
 		    </div>  	
 			
+			<div class="tab-pane" id="sec6">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="sc">
+							<img style="display: none" src="screens/scmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/scmain1.jpg';" onmouseout="this.src='screens/scmain2.jpg';" src="screens/scmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#sc"><h3><u>Splinter Cell Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>SplinterCell.exe v1.2</b></p>
+						Supported exe size: <b>228 KB (233 472 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell folder. In theory the fix will work with any game version. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/sc">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/download/sc/SplinterCell_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('sc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/13560/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+		
+		        <hr id="scpt">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="scpt">
+							<img style="display: none" src="screens/scptmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/scptmain1.jpg';" onmouseout="this.src='screens/scptmain2.jpg';" src="screens/scptmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#scpt"><h3><u>Splinter Cell Pandora Tomorrow<br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>SplinterCell2.exe v1.1/v1.31</b></p>
+						Supported exe size: <b>164 KB (167 936 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell Pandora Tomorrow folder. In theory the fix will work with any game version. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescptreen_Fixes_Pack/releases/tag/scpt">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/download/scpt/SplinterCellPandoraTomorrow_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('scpt')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+		
+		        <hr id="scct">
+				
+		        <!--div class="row">
+						<div class="col-lg-7 col-md-7" id="scct">
+							<img style="display: none" src="scctreens/scctmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='scctreens/scctmain1.jpg';" onmouseout="this.src='scctreens/scctmain2.jpg';" src="scctreens/scctmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#scct"><h3><u>Splinter Cell Chaos Theory<br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>SplinterCell.exe v1.2</b></p>
+						Supported exe size: <b>228 KB (233 472 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell folder. In theory the fix will work with any game version.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/Widescctreen_Fixes_Pack/releases/tag/scct">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/Widescctreen_Fixes_Pack/releases/download/scct/scct_widescctreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('scct')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/13560/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+				<hr-->
+		    </div>  	
+			
 		    <div class="tab-pane" id="s_other1">  
 		        <div class="row">
 						<div class="col-lg-7 col-md-7" id="manhunt">
@@ -1108,6 +1189,9 @@
 						<table border="0" cellspacing="1" cellpadding="1" style="font-size: small;">
 							<tbody id="update">
 								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">21.08.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sec6" onclick="LocationManager($(this).attr('href'));">Splinter Cell, Splinter Cell Pandora Tomorrow Widescreen Fixes</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
 									<td style="padding-right: 10px; width: 5%;">28.07.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#mafia" onclick="LocationManager($(this).attr('href'));">Mafia Widescreen Fix released, GTA3/VC fixes updated</a></td>
 								</tr>
 								<tr style="background-color: #eeeeff;">
@@ -1192,6 +1276,9 @@
                     <li id="page-sec5">
                         <a href="#sec5" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Tony Hawk's games">5</a>
                     </li>
+                    <li id="page-sec6">
+                        <a href="#sec6" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Splinter Cell games">5</a>
+                    </li>
                     <li id="page-s_other1">
                         <a href="#s_other1" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Other games [1-10]">6</a>
                     </li>
@@ -1272,7 +1359,7 @@
     <script type="text/javascript">
 	function ShowAllTabs() 
 	{
-		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "s_other1", "s_other2", /*"latest_updates",*/ "disqus_thread")
+		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "sec6", "s_other1", "s_other2", /*"latest_updates",*/ "disqus_thread")
         for (var i = 0; i < TabsArray.length; i++)
         {
             $('a[href=#' + TabsArray[i] + ']').addClass("active");
@@ -1346,6 +1433,7 @@
         { "tabname" : "sec3", "contentname" : "#nfs" }, //2
         { "tabname" : "sec4", "contentname" : "#flatout" }, //3
         { "tabname" : "sec5", "contentname" : "#th" }, //4
+		{ "tabname" : "sec6", "contentname" : "#sc #scpt #scct" }, //10
         { "tabname" : "s_other1", "contentname" : "#manhunt #dmc3se #gun #fahrenheit #srs #da4 #truecrimesola #truecrimenyc #stubbsthezombie #psiops" }, //5
         { "tabname" : "s_other2", "contentname" : "#mafia #tod #punisher #secondsight #sonicheroes #sniperelite #paradisecracked" }, //6
         { "tabname" : "s_all", "contentname" : "#s_all" }, //7
