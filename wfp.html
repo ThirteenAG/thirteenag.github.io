@@ -4,7 +4,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="refresh" content="1;url=widescreen_fixes_pack">
         <script type="text/javascript">
-            window.location.href = "widescreen_fixes_pack"+window.location.href.indexOf("#") != 0 ? window.location.href.substring(window.location.href.indexOf("#")) : false;
+		if (window.location.href.indexOf("#") != -1)
+		{
+            window.location.href = "widescreen_fixes_pack"+window.location.href.substring(window.location.href.indexOf("#"));
+		}
+		else
+		{
+		window.location.href = "widescreen_fixes_pack";
+		}
         </script>
         <title>ThirteenAG's GitHub page</title>
     </head>
