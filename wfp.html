@@ -1,17 +1,1553 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="1;url=widescreen_fixes_pack">
-        <script type="text/javascript">
-		if (window.location.href.indexOf("#") != -1)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Widescreen Fixes Pack by ThirteenAG</title>
+	
+	<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
+	<link rel="icon" href="/img/favicon.png" type="image/x-icon" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet" />
+    <link href="css/bootstrap-modal.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://thirteenag.github.io/wfp"><font color="#FFFFFF">Widescreen Fixes Pack</font></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/ThirteenAG">GitHub</a></li>
+                    <li><a href="http://13.sannybuilder.com/">Blog</a></li>
+					<li><a href="http://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/">GTAForums thread</a></li>
+					<li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/issues">Report an issue</a></li>
+                </ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="http://sannybuilder.com/">Sanny Builder</a></li>
+					<li><a href="http://cleo.li/">CLEO Library</a></li>
+				</ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading ->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Widescreen Fixes Pack
+                    <small>Plugins to make or improve widescreen resolutions support</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+		<!-- Tabs -->
+		<div class="tabbable" id="gtasa">  
+			<ul class="nav nav-tabs">  
+			<li class="active"><a href="#sec1" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Grand Theft Auto</a></li>  
+			<li><a href="#sec2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Max Payne</a></li>  
+			<li><a href="#sec3" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Need For Speed</a></li>  
+			<li><a href="#sec4" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Flatout</a></li>  
+			<li><a href="#sec5" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Tony Hawk's</a></li>
+			<li><a href="#sec6" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Splinter Cell</a></li>
+			<li><a href="#s_other1" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Other [1-10]</a></li>  
+			<li><a href="#s_other2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Other [11-20]</a></li>  
+			<ul></ul>
+			<li><a href="#s_all" data-toggle="tab" id="s_all" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Show all</a></li>
+			<li><a href="#latest_updates" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><b>Latest updates</b></a></li>
+			<li><a href="#disqus_thread" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"></a></li>
+			</ul> 
+		</div>
+		<!-- /Tabs -->
+
+		<!-- Tabs Content -->
+		<br>
+		<div class="tab-content">  
+			<div class="tab-pane active" id="sec1">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/gtasamain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/gtasamain1.jpg';" onmouseout="this.src='screens/gtasamain2.jpg';" src="screens/gtasamain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#100b11;" href="#gtasa"><h3><u>Grand Theft Auto San Andreas Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/sanandreas/" target="_blank">http://www.rockstargames.com/sanandreas/</a></h4>
+		                <p>Supported exe version: <b>gta_sa.exe v1.0 US (HOODLUM | Compact)</b></p>
+						Supported exe size: <b>13,7 MB (14 383 616 bytes)</b></p>
+						<p>Installation: <b>GTA SA widescreen fix requires <a href="http://www.gtagarage.com/mods/show.php?id=21709">ASI Loader</a> and <a href="http://www.gtagarage.com/mods/show.php?id=25380">Widescreen HOR+ Support v1.0.2 by Wesser</a> for work. Install all of the above, then unpack content of archive to GTA SA root(or scripts) directory. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtasa">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('gtasa')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+					<a class="btn btn-success" target="_blank" href="http://gtaforums.com/topic/669618-plugos-widescreen-hor-support/">
+					<span class="glyphicon glyphicon-download-alt"></span> Widescreen HOR+</a>
+		            </div>
+		        </div>
+				
+		        <hr id="gtavc">
+		
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/gtavcmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/gtavcmain1.jpg';" onmouseout="this.src='screens/gtavcmain2.jpg';" src="screens/gtavcmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#ee77b2;" href="#gtavc"><h3><u>Grand Theft Auto Vice City<br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/vicecity/" target="_blank">http://www.rockstargames.com/vicecity/</a></h4>
+		                <p>Supported exe version: <b>gta-vc.exe v1.0 | Steam</b></p>
+						Supported exe size: <b>2,94 MB (3 088 896 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to GTA VC root directory. You may use content of scripts folder without dinput8.dll if that's necessary(copy to mss or root dir). Dinput8.dll also contains mouse fix for steam version. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavc">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/GTAVC_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('gtavc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/12110/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+				 
+		        </div>
+				
+		        <hr id="gta3">
+		
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/gta3main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/gta3main1.jpg';" onmouseout="this.src='screens/gta3main2.jpg';" src="screens/gta3main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#bd9e57;" href="#gta3"><h3><u>Grand Theft Auto 3 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/grandtheftauto3/" target="_blank">http://www.rockstargames.com/grandtheftauto3/</a></h4>
+		                <p>Supported exe version: <b>gta3.exe v1.0 | Steam</b></p>
+						Supported exe size: <b>2,27 MB (2 383 872 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to GTA 3 root directory. You may use content of scripts folder without dinput8.dll if that's necessary(copy to mss or root dir). Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gta3">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta3/GTA3_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('gta3')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/12100/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		
+		        </div>
+				
+		        <hr id="gta2">
+		
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/gta2main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/gta2main1.jpg';" onmouseout="this.src='screens/gta2main2.jpg';" src="screens/gta2main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#c70d21;" href="#gta2"><h3><u>Grand Theft Auto 2 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/gta2/" target="_blank">http://www.rockstargames.com/gta2/</a></h4>
+		                <p>Supported exe version: <b>gta2.exe v9.6.0.0</b></p>
+						Supported exe size: <b>1,58 MB (1 667 072 bytes)</b></p>
+						<p>Installation: <b>Copy everything in GTA 2 root directory. Run the game. Full game archive available in dropdown menu.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gta2">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta2/GTA2_widescreen_fix.zip">Direct Link</a></li>
+									<li><a target="_blank" href="https://dl.dropboxusercontent.com/u/13992625/gta/Grand%20Theft%20Auto%202.zip">Full Game</a></li>
+									<li><a target="_blank" href="https://mega.co.nz/#!nsJT1Q6C!xE7-D3OlYUm2wwm_shkvrrAWVoLJS14Yi4Jg8Fv4yzI">Full Game (mirror)</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('gta2')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+				
+		        <hr id="gta1">
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/gta1main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/gta1main1.jpg';" onmouseout="this.src='screens/gta1main2.jpg';" src="screens/gta1main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#e0bf00;" href="#gta1"><h3><u>Grand Theft Auto (1) Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/gta/" target="_blank">http://www.rockstargames.com/gta/</a></h4>
+		                <p>Supported exe version: <b>Grand Theft Auto.exe v1.0.0.1</b></p>
+						Supported exe size: <b>756 KB (774 144 bytes)</b></p>
+						<p>Installation: <b>Copy to Grand Theft Auto\WINO\ folder. Set the resolution to 32bit by pressing F11 in game. Full game archive available in dropdown menu.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gta1">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta1/GTA1_widescreen_fix.zip">Direct Link</a></li>
+									<li><a target="_blank" href="https://dl.dropboxusercontent.com/u/13992625/gta/Grand%20Theft%20Auto%201%20%26%20London%201969%20%26%201961.zip">Full Game</a></li>
+									<li><a target="_blank" href="https://mega.co.nz/#!30ZlSLqD!Pplsys7UYhGtT5MQBu2V3PKO7S30k2P8BMGYkCQLlXo">Full Game (mirror)</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('gta1')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+		        <hr>
+			</div>
+			
+		    <div class="tab-pane" id="sec2">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="mp1">
+							<img style="display: none" src="screens/mp1main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/mp1main1.jpg';" onmouseout="this.src='screens/mp1main2.jpg';" src="screens/mp1main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#mp1"><h3><u>Max Payne Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/maxpayne/" target="_blank">http://www.rockstargames.com/maxpayne/</a></h4>
+		                <p>Supported exe version: <b>MaxPayne.exe v1.05</b></p>
+						Supported exe size: <b>4,74 MB (4 978 176 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Max Payne folder. You can change comics display mode by pressing F2 in game.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/mp1">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/mp1/MP1_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('mp1')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/12140/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+		
+		        <hr id="mp2">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="mp2">
+							<img style="display: none" src="screens/mp2main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/mp2main1.jpg';" onmouseout="this.src='screens/mp2main2.jpg';" src="screens/mp2main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#mp2"><h3><u>Max Payne 2 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rockstargames.com/maxpayne2/" target="_blank">http://www.rockstargames.com/maxpayne2/</a></h4>
+		                <p>Supported exe version: <b>MaxPayne2.exe v1.1.102.0</b></p>
+						Supported exe size: <b>1,41 MB (1 486 848 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Max Payne 2 folder. You can change comics display mode by pressing F2 in game.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/mp2">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/mp2/MP2_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('mp2')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/12150/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+			<hr>
+		    </div>  
+			
+		    <div class="tab-pane" id="sec3">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="nfsu">
+							<img style="display: none" src="screens/nfsumain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/nfsumain1.jpg';" onmouseout="this.src='screens/nfsumain2.jpg';" src="screens/nfsumain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#nfsu"><h3><u>Need For Speed Underground <br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.needforspeed.com/" target="_blank">http://www.needforspeed.com/</a></h4>
+		                <p>Supported exe version: <b><a href="https://www.google.ru/search?&q=SPEED.EXE+v1.4+(Drunk!)" target="_blank">SPEED.EXE v1.4 (Drunk!)</a></b></p>
+						Supported exe size: 3,03 MB (3 178 496 bytes)<b></b></p>
+						<p>Installation: <b>Copy content of archive to NFSU folder. There's two HUD modes, HudMode = 0 - default hud, HudMode = 1 - alternative hud, which is smaller. You can switch between them with F2 key in game. After the switch enter and exit the menu, otherwise changes will not apply correctly.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/nfsu">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsu/NFSU_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('nfsu')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+		
+		        <hr id="nfsu2">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/nfsu2main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/nfsu2main1.jpg';" onmouseout="this.src='screens/nfsu2main2.jpg';" src="screens/nfsu2main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#nfsu2"><h3><u>Need For Speed Underground 2 <br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.needforspeed.com/" target="_blank">http://www.needforspeed.com/</a></h4>
+		                <p>Supported exe version: <b><a href="https://www.google.ru/search?&q=SPEED2.EXE+v1.2+(HOODLUM)" target="_blank">SPEED2.EXE v1.2 (HOODLUM)</a></b></p>
+						Supported exe size: 4,57 MB (4 800 512 bytes)<b></b></p>
+						<p>Installation: <b>Copy content of archive to NFSU2 folder. There's two HUD modes, HudMode = 0 - default hud, HudMode = 1 - alternative hud, which is smaller. You can switch between them with F1 key in game. After the switch enter and exit the menu, otherwise changes will not apply correctly.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/nfsu2">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsu2/NFSU2_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('nfsu2')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+		
+		        <hr id="nfsmw">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/nfsmwmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/nfsmwmain1.jpg';" onmouseout="this.src='screens/nfsmwmain2.jpg';" src="screens/nfsmwmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#nfsmw"><h3><u>Need For Speed Most Wanted (2005) Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.ea.com/need-for-speed-most-wanted" target="_blank">http://www.ea.com/need-for-speed-most-wanted</a></h4>
+		                <p>Supported exe version: <b><a href="https://www.google.ru/search?&q=NFS+MW+speed.exe+v1.3+(RELOADED)" target="_blank">speed.exe v1.3 (RELOADED)</a></b></p>
+						Supported exe size: <b>5,75 MB (6 029 312 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to NFSMW folder. There's two HUD modes, HudMode = 0 - default hud, HudMode = 1 - alternative hud, which is smaller. You can switch between them with F2 key in game. After the switch enter and exit the menu, otherwise changes will not apply correctly.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/nfsmw">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsmw/NFSMW2005_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('nfsmw')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+				
+		        <hr id="nfsc">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/nfscmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/nfscmain1.jpg';" onmouseout="this.src='screens/nfscmain2.jpg';" src="screens/nfscmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#nfsc"><h3><u>Need For Speed Carbon Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.ea.com/need-for-speed-carbon" target="_blank">http://www.ea.com/need-for-speed-carbon</a></h4>
+		                <p>Supported exe version: <b><a href="https://www.google.ru/search?&q=NFS+carbon+NFSC.exe+v1.3+UNLEASHED" target="_blank">NFSC.exe v1.3 (UNLEASHED) | v1.4</a></b></p>
+						Supported exe size: <b>6,88 MB (7 217 152 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to NFS Carbon folder. There's two HUD modes, HudMode = 0 - default hud, HudMode = 1 - alternative hud, which is smaller. You can switch between them with F2 key in game. After the switch enter and exit the menu, otherwise changes will not apply correctly.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/nfsc">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/nfsc/NFSC_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('nfsc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+			<hr>
+		    </div> 
+			
+		    <div class="tab-pane" id="sec4">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="flatout">
+							<img style="display: none" src="screens/flatoutmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/flatoutmain1.jpg';" onmouseout="this.src='screens/flatoutmain2.jpg';" src="screens/flatoutmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#flatout"><h3><u>Flatout Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.bugbear.fi/games.html" target="_blank">http://www.bugbear.fi/games.html</a></h4>
+		                <p>Supported exe version: <b>Any</b></p>
+						Supported exe size: <b>-</b></p>
+						<p>Installation: <b>Copy content of archive to Flatout\Bin folder(where game executable is located). Change FOV_multiplier option inside Flatout_widescreen_fix.ini to increase/decrease FOV value if necessary.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/flatout">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/flatout/Flatout_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('flatout')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/6220/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		
+		        </div>
+				
+		        <hr id="flatout2">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/flatout2main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/flatout2main1.jpg';" onmouseout="this.src='screens/flatout2main2.jpg';" src="screens/flatout2main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#flatout2"><h3><u>Flatout 2 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.bugbear.fi/games.html" target="_blank">http://www.bugbear.fi/games.html</a></h4>
+		                <p>Supported exe version: <b>v1.2</b></p>
+						Supported exe size: <b>5,49 MB (5 761 024 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Flatout 2\Bin folder(where game executable is located). Change FOV_multiplier option inside Flatout2_widescreen_fix.ini to increase/decrease FOV value if necessary.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/flatout2">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/flatout2/Flatout2_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('flatout2')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/2990/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		
+		        </div>
+				
+		        <hr id="flatoutuc">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/flatoutucmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/flatoutucmain1.jpg';" onmouseout="this.src='screens/flatoutucmain2.jpg';" src="screens/flatoutucmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#flatoutuc"><h3><u>Flatout Ultimate Carnage Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.bugbear.fi/games.html" target="_blank">http://www.bugbear.fi/games.html</a></h4>
+		                <p>Supported exe version: <b>v1.0.0.1</b></p>
+						Supported exe size: <b>4,04 MB (4 242 504 bytes)</b></p>
+						<p>Installation: <b>This fix calculates and overwrites game aspect ratio based on current resolution, not launcher setting. Useful for multimonitor and 21:9-like resolutions. Unfinished, ini file is not supported.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/flatoutuc">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/flatoutuc/FlatoutUC_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('flatoutuc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/12360/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	
+		            </div>
+		        </div>
+				<hr>
+		    </div> 
+			
+			<div class="tab-pane" id="sec5">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="thaw">
+							<img style="display: none" src="screens/thawmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/thawmain1.jpg';" onmouseout="this.src='screens/thawmain2.jpg';" src="screens/thawmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#thaw"><h3><u>Tony Hawk's American Wasteland Widescreen Fix</u></h3></a>
+		                <h4><a href="http://planettonyhawk.gamespy.com/thaw/" target="_blank">http://planettonyhawk.gamespy.com/thaw/</a></h4>
+		                <p>Supported exe version: <b>THAW.exe v1.01</b></p>
+						Supported exe size: <b>20,4 MB (21 491 712 bytes) | (21 442 560 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to "Tony Hawk's American Wasteland\Game" folder(where THAW.exe is located).</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thaw">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thaw/TonyHawksAmericanWasteland_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<!--button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('thaw')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button-->
+		            </div>
+		        </div>
+		
+		        <hr id="thug2">
+		
+				<div class="row">
+						<div class="col-lg-7 col-md-7" id="thug2">
+							<img style="display: none" src="screens/thug2main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/thug2main1.jpg';" onmouseout="this.src='screens/thug2main2.jpg';" src="screens/thug2main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#thug2"><h3><u>Tony Hawk's Underground 2 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://planettonyhawk.gamespy.com/thug2/" target="_blank">http://planettonyhawk.gamespy.com/thug2/</a></h4>
+		                <p>Supported exe version: <b>THUG2.exe v1.0</b></p>
+						Supported exe size: <b>2,57 MB (2 699 264 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to "Tony Hawk's Underground 2\Game" folder(where THUG2.exe is located). Fix also supports <a href="http://thugpro.thmods.com/thugpro/" target="_blank">Tony Hawk's Underground Pro mod</a>.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thug2">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thug2/TonyHawksUnderground2_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<!--button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('thug2')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button-->
+		            </div>
+		        </div>
+		
+		        <hr id="thug">
+		
+				<div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/thugmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/thugmain1.jpg';" onmouseout="this.src='screens/thugmain2.jpg';" src="screens/thugmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#thug"><h3><u>Tony Hawk's Underground Widescreen Fix</u></h3></a>
+		                <h4><a href="http://planettonyhawk.gamespy.com/thug/" target="_blank">http://planettonyhawk.gamespy.com/thug/</a></h4>
+		                <p>Supported exe version: <b>THUG.exe v1.x</b></p>
+						Supported exe size: <b>3,40 MB (3 571 612 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to "Tony Hawk's Underground\Game" folder(where THUG.exe is located).</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thug">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thug/TonyHawksUnderground_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<!--button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('thug')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button-->
+		            </div>
+		        </div>
+		
+		        <hr id="thps4">
+		
+				<div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/thps4main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/thps4main1.jpg';" onmouseout="this.src='screens/thps4main2.jpg';" src="screens/thps4main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#thps4"><h3><u>Tony Hawk's Pro Skater 4 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://planettonyhawk.gamespy.com/thps4/" target="_blank">http://planettonyhawk.gamespy.com/thps4/</a></h4>
+		                <p>Supported exe version: <b>Skate4.exe v1.x</b></p>
+						Supported exe size: <b>1,76 MB (1 855 488 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to "Tony Hawk's Pro Skater 4\Game" folder(where Skate4.exe is located).</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thps4">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thps4/TonyHawksProSkater4_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<!--button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('thps4')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button-->
+		            </div>
+		        </div>
+		
+		        <hr id="thps3">
+		
+				<div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/thps3main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/thps3main1.jpg';" onmouseout="this.src='screens/thps3main2.jpg';" src="screens/thps3main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#thps3"><h3><u>Tony Hawk's Pro Skater 3 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://planettonyhawk.gamespy.com/thps3/" target="_blank">http://planettonyhawk.gamespy.com/thps3/</a></h4>
+		                <p>Supported exe version: <b>Skate3.exe v1.01</b></p>
+						Supported exe size: <b>1,82 MB (1 908 736 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to "Tony Hawk's Pro Skater 3" folder(where Skate3.exe is located). Also it's required to create a custom 4:3 resolution, for example, if you have 1920x1080, game needs to be run in 1920x1440. (1440 = 1920 / (4 / 3)). Create 1920x1440 via you graphic card driver and you can run the game with widescreen fix.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thps3">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thps3/TonyHawksProSkater3_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<!--button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('thps3')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button-->
+		            </div>
+		        </div>
+		
+		        <hr id="thps2">
+		
+				<div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/thps2main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/thps2main1.jpg';" onmouseout="this.src='screens/thps2main2.jpg';" src="screens/thps2main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#thps2"><h3><u>Tony Hawk's Pro Skater 2 Widescreen Fix</u></h3></a>
+		                <h4><a href="http://planettonyhawk.gamespy.com/thps2/" target="_blank">http://planettonyhawk.gamespy.com/thps2/</a></h4>
+		                <p>Supported exe version: <b>THawk2.exe v1.x</b></p>
+						Supported exe size: <b>1,39 MB (1 460 224 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to "Tony Hawk's Pro Skater 2" folder(where THawk2.exe is located).</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thps2">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thps2/TonyHawksProSkater2_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<!--button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('thps2')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button-->
+		            </div>
+		        </div>
+		
+				<hr>
+		    </div>  	
+			
+			<div class="tab-pane" id="sec6">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="sc">
+							<img style="display: none" src="screens/scmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/scmain1.jpg';" onmouseout="this.src='screens/scmain2.jpg';" src="screens/scmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#sc"><h3><u>Splinter Cell Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>SplinterCell.exe v1.2</b></p>
+						Supported exe size: <b>228 KB (233 472 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell folder. In theory the fix will work with any game version. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/sc">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/sc/SplinterCell_widescreen_fix.zip">Direct Link</a></li>
+									<li><a target="_blank" href="https://dl.dropboxusercontent.com/u/13992625/SC/SC1_PS3_Textures.zip">HD Textures from PS3 version</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('sc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/13560/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+		
+		        <hr id="scpt">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/scptmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/scptmain1.jpg';" onmouseout="this.src='screens/scptmain2.jpg';" src="screens/scptmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#scpt"><h3><u>Splinter Cell Pandora Tomorrow<br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>SplinterCell2.exe v1.1/v1.31</b></p>
+						Supported exe size: <b>164 KB (167 936 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell Pandora Tomorrow folder. In theory the fix will work with any game version. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/scpt">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/scpt/SplinterCellPandoraTomorrow_widescreen_fix.zip">Direct Link</a></li>
+									<li><a target="_blank" href="https://dl.dropboxusercontent.com/u/13992625/SC/SC2_PS3_Textures.zip">HD Textures from PS3 version</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('scpt')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+		
+		        <hr id="scct">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/scctmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/scctmain1.jpg';" onmouseout="this.src='screens/scctmain2.jpg';" src="screens/scctmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#scct"><h3><u>Splinter Cell Chaos Theory<br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>splintercell3.exe v1.05</b></p>
+						Supported exe size: <b>9,41 MB (9 867 264 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell Chaos Theory folder.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/scct">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/scct/SplinterCellChaosTheory_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('scct')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/13570/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+				
+		        <hr id="scda">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/scdamain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/scdamain1.jpg';" onmouseout="this.src='screens/scdamain2.jpg';" src="screens/scdamain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#scda"><h3><u>Splinter Cell Double Agent<br>Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.splintercell.com/" target="_blank">http://www.splintercell.com/</a></h4>
+		                <p>Supported exe version: <b>splintercell4.exe v1.00+</b></p>
+						Supported exe size: <b>332 KB (339 968 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Splinter Cell Double Agent folder.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/scda">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/scda/SplinterCellDoubleAgent_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('scda')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/13580/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+				<hr>
+		    </div>  	
+			
+		    <div class="tab-pane" id="s_other1">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="manhunt">
+							<img style="display: none" src="screens/manhuntmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/manhuntmain1.jpg';" onmouseout="this.src='screens/manhuntmain2.jpg';" src="screens/manhuntmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#manhunt"><h3><u>Manhunt Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+		                <p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Manhunt.exe+v1.0+%5BENGLISH%5D+Vista+Fixed+EXE" target="_blank">Manhunt.exe v1.0 (Razor 1911)</a> | Steam</b></p>
+						Supported exe size: <b>6,01 MB (6 304 256 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Manhunt folder. Change FOV option inside Manhunt_widescreen_fix.ini to increase or decrease field of view.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/manhunt">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/manhunt/Manhunt_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('manhunt')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/12130/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+				
+		        <hr id="dmc3se">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/dmc3semain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/dmc3semain1.jpg';" onmouseout="this.src='screens/dmc3semain2.jpg';" src="screens/dmc3semain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#dmc3se"><h3><u>Devil May Cry 3 Widescreen Fix</u></h3></a>
+		                <h4>deprecated</h4>
+						<p><b>Use <a href="http://www.nexusmods.com/devilmaycry3/mods/1/?">Style Switcher</a> instead.</b></p>
+		            </div>
+		
+		        </div>
+				
+		        <hr id="gun">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/gunmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/gunmain1.jpg';" onmouseout="this.src='screens/gunmain2.jpg';" src="screens/gunmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#gun"><h3><u>Gun Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+		                <p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Gun.exe+v1.0+(DEViANCE)" target="_blank">Gun.exe v1.0 (DEViANCE)</a> | Steam</b></p>
+						Supported exe size: <b>2,89 MB (3 031 040 bytes) | 1,02 MB (1 075 200 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Gun folder. Change HUD_PATCH option inside gun_res.ini to fix hud stretching. FOV also can be altered via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gun">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gun/Gun_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('gun')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/2610/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		
+		        </div>
+				
+		        <hr id="fahrenheit">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/fahrenheitmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/fahrenheitmain1.jpg';" onmouseout="this.src='screens/fahrenheitmain2.jpg';" src="screens/fahrenheitmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#fahrenheit"><h3><u>Fahrenheit Widescreen Fix</u></h3></a>
+		                <h4>deprecated</h4>
+						<p><b>Use <a href="http://store.steampowered.com/app/312840/">Fahrenheit: Indigo Prophecy Remastered</a>.</b></p>
+		            </div>
+		        </div>
+				
+		        <hr id="srs">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/srsmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/srsmain1.jpg';" onmouseout="this.src='screens/srsmain2.jpg';" src="screens/srsmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#srs"><h3><u>Street Racing Syndicate Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+		                <p>Supported exe version: <b>srs.exe v1.0</b></p>
+						Supported exe size: <b>3,81 MB (4 001 792 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to SRS folder. This fix is unfinished, so in order to play in widescreen resolution you can't change any graphics settings.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/srs">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/srs/StreetRacingSyndicate_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('srs')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+						
+		        <hr id="da4">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/da4main1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/da4main1.jpg';" onmouseout="this.src='screens/da4main2.jpg';" src="screens/da4main2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#da4"><h3><u>Deer Avenger 4 Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+		                <p>Supported exe version: <b>DA.exe v1.1.0.0</b></p>
+						Supported exe size: <b>1,75 MB (1 839 104 bytes)</b></p>
+						<p>Installation: <b>Copy content of archive to Deer Avenger 4 folder. There's some rendering issues with objects at the screen sides when playing in widescreen.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/da4">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/da4/DeerAvenger4_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('da4')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		
+		        </div>
+				
+		        <hr id="truecrimesola">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/truecrimesolamain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/truecrimesolamain1.jpg';" onmouseout="this.src='screens/truecrimesolamain2.jpg';" src="screens/truecrimesolamain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#truecrimesola"><h3><u>True Crime Streets of LA Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=True+Crime+v1.0+%5BMULTI%5D+EXE+RELOADED" target="_blank">v. 1.0</a> | RUS</b></p>
+						Supported exe size: <b>2,79 MB (2 932 736 bytes) | (2 994 176 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to TrueCrime: Streets of LA root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/truecrimesola">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/truecrimesola/TrueCrimeLA_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('truecrimesola')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="truecrimenyc">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/truecrimenycmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/truecrimenycmain1.jpg';" onmouseout="this.src='screens/truecrimenycmain2.jpg';" src="screens/truecrimenycmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#truecrimenyc"><h3><u>True Crime New York City Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=True+Crime:+New+York+City+v1.0+%5BENGLISH%5D+EXE" target="_blank">v. 1.0.0.134 (RELOADED)</a></b></p>
+						Supported exe size: <b>5,25 MB (5 509 120 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to TrueCrimeNYC root directory. Hud will be fixed but aligned to the left side of the screen. Also I added ini parameter GameSpeed, it's 128.0 by default, 200.0 with the fix. Increasing that value makes game a little slower and smooth.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/truecrimenyc">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/truecrimenyc/TrueCrimeNYC_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('truecrimenyc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="stubbsthezombie">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/stubbsthezombiemain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/stubbsthezombiemain1.jpg';" onmouseout="this.src='screens/stubbsthezombiemain2.jpg';" src="screens/stubbsthezombiemain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#stubbsthezombie"><h3><u>Stubbs the Zombie Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Stubbs+the+Zombie+%5BENGLISH%5D+EXE" target="_blank">v. 1.01 (RELOADED)</a> | Steam</b></p>
+						Supported exe size: <b>19,8 MB (20 779 008 bytes) | (912 384 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Stubbs the Zombie root directory. Game will run in your native resolution, or you can set it manually via ini. Game text is fixed from stretching, GUI isn't.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/stubbsthezombie">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/stubbsthezombie/StubbsTheZombie_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('stubbsthezombie')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/7800/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>	  
+		            </div>
+		        </div>
+				
+		        <hr id="psiops">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/psiopsmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/psiopsmain1.jpg';" onmouseout="this.src='screens/psiopsmain2.jpg';" src="screens/psiopsmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#psiops"><h3><u>Psi-Ops: The Mindgate Conspiracy Widescreen Fix</u></h3></a>
+		                <h4><a href="" target="_blank"></a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Psi-Ops+v1.0+%5BUS/EURO%5D" target="_blank">v. 1.0 (RELOADED)</a></b></p>
+						Supported exe size: <b>6,51 MB (6 836 224 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Psi-Ops: The Mindgate Conspiracy root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/psiops">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/psiops/PsiOps_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('psiops')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				<hr>
+		    </div> 
+			
+			<div class="tab-pane" id="s_other2">  
+		        <div class="row">
+						<div class="col-lg-7 col-md-7" id="mafia">
+							<img style="display: none" src="screens/mafiamain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/mafiamain1.jpg';" onmouseout="this.src='screens/mafiamain2.jpg';" src="screens/mafiamain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#mafia"><h3><u><span style="color:#ef0002;">Mafia</span> Widescreen Fix</u></h3></a>
+		                <h4><a href="http://forum.mafia-game.ru/showthread.php?t=2059" target="_blank">by behar</a></h4>
+						<p>Supported exe version: <b>Game.exe v1.0, v1.1, v1.2</b></p>
+						Supported exe size: <b>2,24 MB (2 355 200 bytes) [v1.2]</b></p>
+						<p>Installation: <b>Unpack content of archive to Mafia root directory. Check the .ini file to get more info about available features.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/mafia">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/mafia/Mafia_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('mafia')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="tod">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/todmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/todmain1.jpg';" onmouseout="this.src='screens/todmain2.jpg';" src="screens/todmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#tod"><h3><u>Total Overdose Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.deadlinegames.com/games/total-overdose/" target="_blank">http://www.deadlinegames.com/games/total-overdose/</a></h4>
+						<p>Supported exe version: <b>TOD.exe v1.0</b></p>
+						Supported exe size: <b>6,54 MB (6 860 800 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Total Overdose root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/tod">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/tod/TotalOverdose_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('tod')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://www.gog.com/game/total_overdose_a_gunslingers_tale_in_mexico" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with GOG version</font></a>	 
+		            </div>
+		        </div>
+				
+		        <hr id="punisher">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/punishermain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/punishermain1.jpg';" onmouseout="this.src='screens/punishermain2.jpg';" src="screens/punishermain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#punisher"><h3><u>The Punisher Widescreen Fix</u></h3></a>
+		                <h4><a href="http://en.wikipedia.org/wiki/The_Punisher_(2005_video_game)" target="_blank">http://en.wikipedia.org/wiki/The_Punisher_(2005_video_game)</a></h4>
+						<p>Supported exe version: <b>Any</b></p>
+						Supported exe size: <b>2,48 MB (2 605 056 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to The Punisher root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/punisher">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/punisher/ThePunisher_widescreen_fix.zip">Direct Link</a></li>
+									<li><a target="_blank" href="http://www.wsgf.org/forums/viewtopic.php?p=135508#p135508">HUD fix for 16:9 by jackfuste</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('punisher')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="secondsight">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/secondsightmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/secondsightmain1.jpg';" onmouseout="this.src='screens/secondsightmain2.jpg';" src="screens/secondsightmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#secondsight"><h3><u>Second Sight Widescreen Fix</u></h3></a>
+		                <h4><a href="http://en.wikipedia.org/wiki/Second_Sight_(video_game)" target="_blank">http://en.wikipedia.org/wiki/Second_Sight_(video_game)</a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=secondsight.exe+v1.0+(RELOADED)" target="_blank">secondsight.exe v1.0 (RELOADED)</a></b></p>
+						Supported exe size: <b>3,80 MB (3 993 600 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Second Sight root directory. Game will run in your native resolution, or you can set it manually via ini. With default FOV game has 'see through walls' bug at some places, because it wasn't made to support HOR+ widescreen. Decreasing FOV multiplier(0.5 by default) might help to hide those bugs.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/secondsight">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/secondsight/https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/secondsight/SecondSight_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('secondsight')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="sonicheroes">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/sonicheroesmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/sonicheroesmain1.jpg';" onmouseout="this.src='screens/sonicheroesmain2.jpg';" src="screens/sonicheroesmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#sonicheroes"><h3><u>Sonic Heroes Widescreen Fix</u></h3></a>
+		                <h4><a href="http://en.wikipedia.org/wiki/Sonic_Heroes" target="_blank">http://en.wikipedia.org/wiki/Sonic_Heroes</a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=Tsonic_win.exe+v1.0+(RELOADED)" target="_blank">Tsonic_win.exe v1.0 (RELOADED)</a></b></p>
+						Supported exe size: <b>4,89 MB (5 132 288 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Sonic Heroes root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/sonicheroes">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/sonicheroes/SonicHeroes_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('sonicheroes')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+		        <hr id="sniperelite">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/sniperelitemain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/sniperelitemain1.jpg';" onmouseout="this.src='screens/sniperelitemain2.jpg';" src="screens/sniperelitemain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#sniperelite"><h3><u>Sniper Elite Widescreen Fix</u></h3></a>
+		                <h4><a href="http://www.rebellion.co.uk/" target="_blank">http://www.rebellion.co.uk/</a></h4>
+						<p>Supported exe version: <b>SniperElite.exe v1.x (steam)</b></p>
+						Supported exe size: <b>3,40 MB (3 571 712 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Sniper Elite root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/sniperelite">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/sniperelite/sniperelite_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('sniperelite')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+						<a href="http://store.steampowered.com/app/3700/" class="demo btn btn-info" target="_blank"><span class="glyphicon glyphicon-barcode"></span> <font size="1">Works with Steam version</font></a>
+					</div>
+		        </div>
+				
+		        <hr id="paradisecracked">
+				
+		        <div class="row">
+						<div class="col-lg-7 col-md-7">
+							<img style="display: none" src="screens/paradisecrackedmain1.jpg"/>
+							<img class="img-responsive" onmouseover="this.src='screens/paradisecrackedmain1.jpg';" onmouseout="this.src='screens/paradisecrackedmain2.jpg';" src="screens/paradisecrackedmain2.jpg" alt="" width="700" height="394"/>
+						</div>
+		
+		            <div class="col-lg-5 col-md-5">
+		                <a style="color:#111111;" href="#paradisecracked"><h3><u>Paradise Cracked Widescreen Fix</u></h3></a>
+		                <h4>made by <a href="https://github.com/nestdimon" target="_blank">nestdimon</a></h4>
+						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=paradise+craked+v1.06.001" target="_blank">game.exe v1.06.001</a></b></p>
+						Supported exe size: <b>2,71 MB (2 842 624 bytes)</b></p>
+						<p>Installation: <b>Unpack content of archive to Paradise Cracked root directory. Game will run in your native resolution, or you can set it manually via ini.</b></p>
+							<div class="btn-group">
+							<a style="margin-right:0;" class="btn btn-success" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/paradisecracked">
+							<span class="glyphicon glyphicon-download-alt"></span> Download</a>
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/paradisecracked/paradisecracked_widescreen_fix.zip">Direct Link</a></li>
+								</ul>
+							</div>
+							<button class="demo btn btn-primary" data-toggle="modal" onclick="OpenModal('paradisecracked')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+		            </div>
+		        </div>
+				
+				<hr>
+			</div> 
+			
+			<div class="tab-pane" id="latest_updates">  
+				<div style="margin: 0px; border-width: 1px; border-style: inset; padding: 0px; width: 100%; height: 12em; overflow: auto;">
+					<table border="0" cellspacing="0" cellpadding="0" bgcolor="#aaaabb" style="width: 100%;">
+					<tr><td>
+						<table border="0" cellspacing="1" cellpadding="1" style="font-size: small;">
+							<tbody id="update">
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">25.09.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#scda" onclick="LocationManager($(this).attr('href'));">Splinter Cell Double Agent Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">21.09.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#scct" onclick="LocationManager($(this).attr('href'));">Splinter Cell Chaos Theory Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">21.08.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sec6" onclick="LocationManager($(this).attr('href'));">Splinter Cell, Splinter Cell Pandora Tomorrow Widescreen Fixes</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">28.07.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#mafia" onclick="LocationManager($(this).attr('href'));">Mafia Widescreen Fix released, GTA3/VC fixes updated</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">28.03.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sec3" onclick="LocationManager($(this).attr('href'));">GTA 1-2, NFSU, NFSU2, NFSMW, NFSC Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">15.03.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#gtavc" onclick="LocationManager($(this).attr('href'));">GTA3/GTAVC Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">18.02.2015</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#mp2" onclick="LocationManager($(this).attr('href'));">Max Payne 2 Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">27.11.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#flatout" onclick="LocationManager($(this).attr('href'));">Flatout Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">27.11.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#paradisecracked" onclick="LocationManager($(this).attr('href'));">Paradise Cracked Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">26.11.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sec1" onclick="LocationManager($(this).attr('href'));">GTA 3/VC/SA Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">26.11.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sniperelite" onclick="LocationManager($(this).attr('href'));">Sniper Elite Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">04.09.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#sonicheroes" onclick="LocationManager($(this).attr('href'));">Sonic Heroes Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">04.09.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#secondsight" onclick="LocationManager($(this).attr('href'));">Second Sight Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">28.08.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#punisher" onclick="LocationManager($(this).attr('href'));">The Punisher Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">28.08.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#thps3" onclick="LocationManager($(this).attr('href'));">Tony Hawk's Pro Skater 3 Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">28.08.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="Update, includes new features or improvements">IMP</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#thps2" onclick="LocationManager($(this).attr('href'));">Tony Hawk's Pro Skater 2 Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">18.08.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#thps2" onclick="LocationManager($(this).attr('href'));">Tony Hawk's Pro Skater 2 Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">17.08.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#psiops" onclick="LocationManager($(this).attr('href'));">Psi-Ops: The Mindgate Conspiracy Widescreen Fix</a></td>
+								</tr>
+								<tr style="background-color: #eeeeff;">
+									<td style="padding-right: 10px; width: 5%;">11.08.2014</td><td style="padding-left: 30px; width: 10%;"><abbr title="New release">REL</abbr></td><td style="width: 100%; padding-left: 20px;"><a href="#tod" onclick="LocationManager($(this).attr('href'));">Total Overdose Widescreen Fix</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</td></tr>
+					</table>
+				</div>
+			</div>  
+			
+			<div class="tab-pane" id="disqus_thread">  
+			<div id="disqus_thread"></div>
+		    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			</div>  
+			
+		</div> 
+		<!-- /Tabs Content -->
+		
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li id="laquo" class="disabled">
+                        <a href="javascript:void(null);" onclick="LocationManager('laquo');">&laquo;</a>
+                    </li>
+                    <li id="page-sec1" class="active">
+                        <a href="#sec1" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Grand Theft Auto">1</a>
+                    </li>
+                    <li id="page-sec2">
+                        <a href="#sec2" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Max Payne">2</a>
+                    </li>
+                    <li id="page-sec3">
+                        <a href="#sec3" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Need For Speed">3</a>
+                    </li>
+                    <li id="page-sec4">
+                        <a href="#sec4" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Flatout">4</a>
+                    </li>
+                    <li id="page-sec5">
+                        <a href="#sec5" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Tony Hawk's games">5</a>
+                    </li>
+                    <li id="page-sec6">
+                        <a href="#sec6" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Splinter Cell games">6</a>
+                    </li>
+                    <li id="page-s_other1">
+                        <a href="#s_other1" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Other games [1-10]">7</a>
+                    </li>
+                    <li id="page-s_other2">
+                        <a href="#s_other2" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Other games [11-20]">8</a>
+                    </li>
+                    <li id="page-s_all">
+                        <a href="#s_all" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="List of all fixes">9</a>
+                    </li>
+                    <li id="page-latest_updates">
+                        <a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">10</a>
+                    </li>
+                    <li id="page-disqus_thread">
+                        <a href="#disqus_thread" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">11</a>
+                    </li>
+                    <li id="raquo">
+                        <a href="javascript:void(null);" onclick="LocationManager('raquo');">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+					<p align="center">Widescreen Fixes Pack - plugins to make or improve widescreen resolutions support in PC games</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+	<div id="ajax-modal" class="modal fade" tabindex="-1" style="display: none; min-height: 90%;"></div>	
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+
+	
+	<!-- Scripts ->
+	<!-- disqus -->
+    <script type="text/javascript">
+        var disqus_shortname = 'widescreenfixespack';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+	
+	<script type="text/javascript">
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'js/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+	
+	var nCommentsCount = $('a[href=\'#disqus_thread\']').eq(0);
+	if (nCommentsCount.innerText == undefined)
+	{
+		nCommentsCount.html( 'Comments' );
+	}
+    </script>
+	
+	<!-- show all tab -->
+    <script type="text/javascript">
+	function ShowAllTabs() 
+	{
+		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "sec6", "s_other1", "s_other2", /*"latest_updates",*/ "disqus_thread")
+        for (var i = 0; i < TabsArray.length; i++)
+        {
+            $('a[href=#' + TabsArray[i] + ']').addClass("active");
+            $('#' + TabsArray[i] + '').removeClass().addClass("tab-pane active");
+        }
+		$('#latest_updates').removeClass().addClass("tab-pane");
+	}
+	
+	if (window.location.href.indexOf("#s_all") > -1) {
+		ShowAllTabs();
+	} 
+	
+    $("#s_all").click(function () 
+	{
+		ShowAllTabs();
+    });
+    </script>
+	
+	<!-- spinner -->
+	<script type="text/javascript">
+       $(function () {
+            $.fn.modal.defaults.spinner = $.fn.modalmanager.defaults.spinner =
+              '<div class="loading-spinner" style="width: 200px; margin-left: -100px;">' +
+                '<div class="progress progress-striped active">' +
+                  '<div class="progress-bar" style="width: 100%;"></div>' +
+                '</div>' +
+              '</div>';
+
+            $.fn.modalmanager.defaults.resize = true;
+
+            $('[data-source]').each(function () {
+                var $this = $(this),
+                  $source = $($this.data('source'));
+
+                var text = [];
+                $source.each(function () {
+                    var $s = $(this);
+                    if ($s.attr('type') == 'text/javascript') {
+                        text.push($s.html().replace(/(\n)*/, ''));
+                    } else {
+                        text.push($s.clone().wrap('<div>').parent().html());
+                    }
+                });
+
+                $this.text(text.join('\n\n').replace(/\t/g, '    '));
+            });
+        });
+	</script>
+	
+	<!-- modals -->
+    <script type="text/javascript">
+	function OpenModal(name) 
+	{
+		var $modal = $('#ajax-modal');
+		$('body').modalmanager('loading');
+			setTimeout(function()
+			{
+				$modal.load('screens/'+name+'.html', '', function()
+				{
+					$modal.modal();
+				});
+			}, 1000);
+	}
+    </script>
+	
+	<!-- location management -->
+    <script type="text/javascript">
+        TabContentMap = new Array(
+        { "tabname" : "sec1", "contentname" : "#gta" }, //0
+        { "tabname" : "sec2", "contentname" : "#mp" },  //1
+        { "tabname" : "sec3", "contentname" : "#nfs" }, //2
+        { "tabname" : "sec4", "contentname" : "#flatout" }, //3
+        { "tabname" : "sec5", "contentname" : "#th" }, //4
+		{ "tabname" : "sec6", "contentname" : "#sc #scpt #scct #scda" }, //10
+        { "tabname" : "s_other1", "contentname" : "#manhunt #dmc3se #gun #fahrenheit #srs #da4 #truecrimesola #truecrimenyc #stubbsthezombie #psiops" }, //5
+        { "tabname" : "s_other2", "contentname" : "#mafia #tod #punisher #secondsight #sonicheroes #sniperelite #paradisecracked" }, //6
+        { "tabname" : "s_all", "contentname" : "#s_all" }, //7
+        { "tabname" : "latest_updates", "contentname" : "#latest_updates" }, //8
+        { "tabname" : "disqus_thread", "contentname" : "#disqus_thread" } //9
+        );
+		
+	function LocationManager(tab) {	
+		if (tab == undefined)
 		{
-            window.location.href = "widescreen_fixes_pack"+window.location.href.substring(window.location.href.indexOf("#"));
+		var curLocation = window.location.href.split('#')[1];
+			curLocation = "#" + curLocation;
+			for (var i = 0; i < TabContentMap.length; i++) {
+				if ((TabContentMap[i].tabname.indexOf(curLocation) > -1 || TabContentMap[i].contentname.indexOf(curLocation) > -1) || curLocation.indexOf(TabContentMap[i].tabname) > -1 || curLocation.indexOf(TabContentMap[i].contentname) > -1) {
+					$('a[href=#'+TabContentMap[i].tabname+']').tab("show");
+						if (TabContentMap[i].tabname.indexOf('#s_all') > -1) {$('a[href=#disqus_thread]').tab("show");}
+					break;
+				} else {
+					if (i == TabContentMap.length - 1 && window.location.href.indexOf("#") > -1) 
+					{
+						ShowAllTabs();
+					}
+				}
+			}
 		}
-        </script>
-        <title>ThirteenAG's GitHub page</title>
-    </head>
-    <body>
-        If you are not redirected automatically, follow the <a href='widescreen_fixes_pack'>link to my page</a>
-    </body>
+		else
+		{
+			if (tab != 'laquo' && tab != 'raquo')
+			{
+				if (tab != '#s_all')
+				{
+						for (var i = 0; i < TabContentMap.length; i++) 
+						{
+							if (tab.indexOf(TabContentMap[i].tabname) > -1) {
+								$('a[href='+tab+']').tab("show");
+								break;
+							} else 
+							{
+								if ((TabContentMap[i].contentname.indexOf(tab) > -1) || tab.indexOf(TabContentMap[i].contentname) > -1) {
+									$('a[href=#'+TabContentMap[i].tabname+']').tab("show");
+									break;
+								}
+							}
+						}
+						
+				}
+				else
+				{
+					$('a[href='+tab+']').tab("show");
+					ShowAllTabs();
+				}
+			}
+			else 
+			{
+				if (tab == 'laquo' && $('#laquo').attr('class') != "disabled")
+				{
+					var PrevPage = $('li[class=\'active\']').eq(1).closest('li').prev().find('a').attr('href');
+					$('a[href='+PrevPage+']').tab("show");
+						if (PrevPage == '#s_all')
+						{
+							ShowAllTabs();
+						}
+				} else if (tab == 'raquo' && $('#raquo').attr('class') != "disabled") {
+					var NextPage = $('li[class=\'active\']').eq(1).closest('li').next().find('a').attr('href');
+					$('a[href='+NextPage+']').tab("show");
+						if (NextPage == '#s_all')
+						{
+							ShowAllTabs();
+						}
+				}
+			}
+		}
+		
+		if ($('li[class=\'active\']').eq(1).find('a').attr('href').indexOf('#sec1') > -1)
+		{
+			$('#laquo').removeClass().addClass('disabled');
+		} 
+		else 
+		{
+			$('#laquo').removeClass().addClass('enabled');
+		}
+		
+		if ($('li[class=\'active\']').eq(1).find('a').attr('href').indexOf('#disqus_thread') > -1)
+		{
+			$('#raquo').removeClass().addClass('disabled');
+		}
+		else 
+		{
+			$('#raquo').removeClass().addClass('enabled');
+		}
+	}
+	
+	LocationManager();
+    </script>
+	
+	<!-- tooltips -->
+    <script type="text/javascript">
+	$('*').tooltip({
+		trigger: "hover",
+		selector: "a[data-toggle=tooltip]"
+	})
+	</script>
+	<!-- /Scripts -->
+</body>
+
 </html>
