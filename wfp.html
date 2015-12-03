@@ -1336,14 +1336,22 @@
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
-
+    <script src="js/jquery.lazyload.js?v=1.9.7"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-modalmanager.js"></script>
     <script src="js/bootstrap-modal.js"></script>
 
 	
-	<!-- Scripts ->
+	<!-- Scripts -->
+	<!-- lazy load -->
+    <script type="text/javascript" charset="utf-8">
+    $(function() {
+       $("img.lazy").lazyload({
+           effect : "fadeIn"
+       });
+    });
+    </script>
 	<!-- disqus -->
     <script type="text/javascript">
         var disqus_shortname = 'widescreenfixespack';
