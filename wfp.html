@@ -1530,6 +1530,13 @@
 		selector: "a[data-toggle=tooltip]"
 	})
 	</script>
+	
+	<!-- jump to anchor after page was loaded -->
+    <script type="text/javascript">
+	$(window).load(function(){ 
+		location.hash = location.hash;
+	})
+	</script>
 	<!-- /Scripts -->
 </body>
 
