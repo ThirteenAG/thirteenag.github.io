@@ -1305,11 +1305,15 @@
 	<!-- Scripts -->
 	<!-- lazy load -->
     <script type="text/javascript" charset="utf-8">
-    $(function() {
-       $("img.lazy").lazyload({
-           effect : "fadeIn"
-       });
-    });
+	function LoadImages() 
+	{
+		$(function() {
+			$("img.lazy").lazyload({
+				effect : "fadeIn"
+			});
+		});
+	}
+	LoadImages();
     </script>
 	<!-- disqus -->
     <script type="text/javascript">
@@ -1347,6 +1351,7 @@
             $('#' + TabsArray[i] + '').removeClass().addClass("tab-pane active");
         }
 		$('#latest_updates').removeClass().addClass("tab-pane");
+		LoadImages();
 	}
 	
 	if (window.location.href.indexOf("#s_all") > -1) {
@@ -1505,6 +1510,7 @@
 		{
 			$('#raquo').removeClass().addClass('enabled');
 		}
+		LoadImages();
 	}
 	
 	LocationManager();
