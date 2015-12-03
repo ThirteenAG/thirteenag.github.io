@@ -80,7 +80,7 @@
 		<!-- Tabs -->
 		<div class="tabbable" id="gtasa">  
 			<ul class="nav nav-tabs">  
-			<li class="active"><a href="#sec1" data-toggle="tab" onclick="LocationManager($(this).attr('href'));">Grand Theft Auto</a></li>  
+			<li class="active"><a href="#sec1" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"">Grand Theft Auto</a></li>  
 			<li><a href="#sec2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Max Payne</a></li>  
 			<li><a href="#sec3" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Need For Speed</a></li>  
 			<li><a href="#sec4" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Flatout</a></li>  
@@ -1351,7 +1351,7 @@
             $('#' + TabsArray[i] + '').removeClass().addClass("tab-pane active");
         }
 		$('#latest_updates').removeClass().addClass("tab-pane");
-		LoadImages();
+		$(window).trigger('scroll');
 	}
 	
 	if (window.location.href.indexOf("#s_all") > -1) {
@@ -1510,7 +1510,7 @@
 		{
 			$('#raquo').removeClass().addClass('enabled');
 		}
-		LoadImages();
+		$(window).trigger('scroll');
 	}
 	
 	LocationManager();
