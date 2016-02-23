@@ -21,6 +21,8 @@
 	
 	document.getElementById("yt").src = youtube;
 	document.getElementById("dl").href = github;
+	if (youtube == "")
+		document.getElementById("yt").outerHTML='';
 </script>
 
 <div style="width: 100%; margin-left:-5px;">
