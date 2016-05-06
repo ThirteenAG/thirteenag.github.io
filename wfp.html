@@ -82,7 +82,7 @@
 			<ul></ul>
 			<li><a href="#s_all" data-toggle="tab" id="s_all" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Show all</a></li>
 			<li><a href="#latest_updates" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><b>Latest updates</b></a></li>
-			<li><a href="#comments" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Comments</a></li>
+			<li><a href="#comments" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));" class="disqus-comment-count" data-disqus-identifier="//thirteenag.github.io/wfp">Comments</a></li>
 			</ul> 
 		</div>
 		<!-- /Tabs -->
@@ -1509,7 +1509,7 @@
 				</div>
 			</div>
 			
-			<div class="tab-pane" id="comments" class="disqus-comment-count" data-disqus-identifier="widescreenfixespack">
+			<div class="tab-pane" id="comments">
 				<div id="disqus_thread"></div>
 				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 			</div>  
