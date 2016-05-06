@@ -4,8 +4,30 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+body {
+  background-color: #FEFEFE;
+  background-image: -webkit-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -webkit-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
+  background-image: -moz-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -moz-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
+  background-image: -o-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -o-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
+  background-image: -ms-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -ms-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
+  background-image: linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
+  -webkit-background-size:30px 30px;
+  -moz-background-size:30px 30px;
+  background-size:30px 30px;
+  background-position:0 0, 15px 15px;
+}
+ 
+.row { margin: 0; padding: 0 }
+
 footer {
     margin: 50px 0;
+}
+
+.img-responsive {
+   #margin: 1px;
+   #max-height: 394px;
+   position: relative;
+   z-index: 5;
 }
 
 .btn {
@@ -29,4 +51,119 @@ text-decoration: none;
 
 .nav-tabs, .nav-pills {
     text-align:center;
+	margin-bottom: 10px;
+}
+
+.navbar-default .navbar-brand {
+    color: #333;
+}
+
+.img-col-md-5 {
+    width: 100.0%;
+	min-height: 304px;
+}
+
+.panel {
+    margin-bottom: 10px;
+}
+
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+	overflow-y: auto;
+}
+
+.panel-body {
+    padding: 0px;
+	padding-right: 0px;
+}
+
+.img-nopad { 
+   border-top-left-radius:2px;
+   border-top-right-radius:0px;
+   border-bottom-left-radius:2px;
+   border-bottom-right-radius:0px;
+}
+
+.panel-round-corners {
+   border-top-left-radius:0px;
+   border-top-right-radius:2px;
+   border-bottom-left-radius:0px;
+   border-bottom-right-radius:0px;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: inherit;
+	z-index: 1;
+}
+
+@media only screen and (max-width : 992px) {
+	.panel-heading {
+		min-width: 100px;
+		#background-color: red;
+	}	
+	.img-nopad { 
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	}
+	.panel-round-corners {
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	}
+}
+
+.indent5 {
+	position: relative;
+	left: 5px;
+	margin-right: 10px;
+}
+
+.centered {
+	position: relative;
+	text-align: center;
+}
+
+.lazy {
+	#min-width: 653px;
+	#min-height: 367px;
+}
+
+.container  .lazy {
+    display: block;
+    width: auto;
+    max-height: 367px;
+}
+
+.modal {
+    left: 0;
+    bottom: auto;
+    right: auto;
+    z-index: 1050;
+    padding: 0;
+    width: 90%;
+    margin-left: 5%;
+	margin-right: 5%;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+}
+
+@media only screen and (max-width : 992px) {
+	.container  .lazy {
+		display: block;
+		width: 800px;
+		max-height: 410px;
+	}
 }

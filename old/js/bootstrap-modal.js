@@ -1,5 +1,5 @@
 /* ===========================================================
- * bootstrap-modal.js v2.2.5
+ * bootstrap-modal.js v2.2.4
  * ===========================================================
  * Copyright 2012 Jordan Schroter
  *
@@ -81,7 +81,7 @@
 
 			this.$element.trigger(e);
 
-			if (!this.isShown || e.isDefaultPrevented()) return;
+			if (!this.isShown || e.isDefaultPrevented()) return (this.isShown = false);
 
 			this.isShown = false;
 
@@ -154,25 +154,24 @@
 			if (this.isShown && this.options.consumeTab) {
 				this.$element.on('keydown.tabindex.modal', '[data-tabindex]', function (e) {
 			    	if (e.keyCode && e.keyCode == 9){
-						var elements = [],
-							tabindex = Number($(this).data('tabindex'));
+						var $next = $(this),
+							$rollover = $(this);
 
-						that.$element.find('[data-tabindex]:enabled:visible:not([readonly])').each(function (ev) {
-							elements.push(Number($(this).data('tabindex')));
-						});
-						elements.sort(function(a,b){return a-b});
-						
-						var arrayPos = $.inArray(tabindex, elements);
-						if (!e.shiftKey){
-						 		arrayPos < elements.length-1 ?
-									that.$element.find('[data-tabindex='+elements[arrayPos+1]+']').focus() :
-									that.$element.find('[data-tabindex='+elements[0]+']').focus();
+						that.$element.find('[data-tabindex]:enabled:not([readonly])').each(function (e) {
+							if (!e.shiftKey){
+						 		$next = $next.data('tabindex') < $(this).data('tabindex') ?
+									$next = $(this) :
+									$rollover = $(this);
 							} else {
-								arrayPos == 0 ?
-									that.$element.find('[data-tabindex='+elements[elements.length-1]+']').focus() :
-									that.$element.find('[data-tabindex='+elements[arrayPos-1]+']').focus();
+								$next = $next.data('tabindex') > $(this).data('tabindex') ?
+									$next = $(this) :
+									$rollover = $(this);
 							}
-						
+						});
+
+						$next[0] !== $(this)[0] ?
+							$next.focus() : $rollover.focus();
+
 						e.preventDefault();
 					}
 				});

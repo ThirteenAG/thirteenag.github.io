@@ -1,5 +1,5 @@
 /* ===========================================================
- * bootstrap-modalmanager.js v2.2.5
+ * bootstrap-modalmanager.js v2.2.4
  * ===========================================================
  * Copyright 2012 Jordan Schroter.
  *
@@ -385,7 +385,7 @@
 	// if Boostsrap namespaced events, this would not be needed.
 	function targetIsSelf(callback){
 		return function (e) {
-			if (e && this === e.target){
+			if (this === e.target){
 				return callback.apply(this, arguments);
 			}
 		}
