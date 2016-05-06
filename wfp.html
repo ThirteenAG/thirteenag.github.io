@@ -1509,7 +1509,7 @@
 				</div>
 			</div>
 			
-			<div class="tab-pane" id="disqus_thread" class="disqus-comment-count" data-disqus-identifier="//thirteenag.github.io/wfp">  
+			<div class="tab-pane" id="comments" class="disqus-comment-count" data-disqus-identifier="//thirteenag.github.io/wfp">  
 				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 			</div>  
 		</div>
@@ -1558,7 +1558,7 @@
 				<li id="page-latest_updates">
 					<a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">11</a>
 				</li>
-				<li id="page-disqus_thread">
+				<li id="page-comments">
 					<a href="#comments" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">12</a>
 				</li>
 				<li id="raquo">
@@ -1612,7 +1612,7 @@
     <script type="text/javascript">
 	function ShowAllTabs() 
 	{
-		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "sec6", "sec7", "s_other1", "s_other2", /*"latest_updates",*/ "disqus_thread")
+		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "sec6", "sec7", "s_other1", "s_other2", /*"latest_updates",*/ "comments")
         for (var i = 0; i < TabsArray.length; i++)
         {
             $('a[href="#' + TabsArray[i] + '"]').addClass("active");
@@ -1693,7 +1693,7 @@
         { "tabname" : "s_other2", "contentname" : "#mafia #gun #punisher #secondsight #sonicheroes #sniperelite" }, //6
         { "tabname" : "s_all", "contentname" : "#s_all" }, //7
         { "tabname" : "latest_updates", "contentname" : "#latest_updates" }, //8
-        { "tabname" : "disqus_thread", "contentname" : "#comments" } //9
+        { "tabname" : "comments", "contentname" : "#comments" } //9
         );
 		
 	function LocationManager(tab) {	
