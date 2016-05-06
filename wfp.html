@@ -82,7 +82,7 @@
 			<ul></ul>
 			<li><a href="#s_all" data-toggle="tab" id="s_all" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Show all</a></li>
 			<li><a href="#latest_updates" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><b>Latest updates</b></a></li>
-			<li><a href="#disqus_thread" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Comments</a></li>
+			<li><a href="#comments" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Comments</a></li>
 			</ul> 
 		</div>
 		<!-- /Tabs -->
@@ -1509,7 +1509,7 @@
 				</div>
 			</div>
 			
-			<div class="tab-pane" id="disqus_thread">  
+			<div class="tab-pane" id="disqus_thread" class="disqus-comment-count" data-disqus-identifier="//thirteenag.github.io/wfp">  
 				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 			</div>  
 		</div>
@@ -1559,7 +1559,7 @@
 					<a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">11</a>
 				</li>
 				<li id="page-disqus_thread">
-					<a href="#disqus_thread" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">12</a>
+					<a href="#comments" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">12</a>
 				</li>
 				<li id="raquo">
 					<a href="javascript:void(null);" onclick="LocationManager('raquo');">&raquo;</a>
@@ -1693,7 +1693,7 @@
         { "tabname" : "s_other2", "contentname" : "#mafia #gun #punisher #secondsight #sonicheroes #sniperelite" }, //6
         { "tabname" : "s_all", "contentname" : "#s_all" }, //7
         { "tabname" : "latest_updates", "contentname" : "#latest_updates" }, //8
-        { "tabname" : "disqus_thread", "contentname" : "#disqus_thread" } //9
+        { "tabname" : "disqus_thread", "contentname" : "#comments" } //9
         );
 		
 	function LocationManager(tab) {	
@@ -1704,7 +1704,7 @@
 			for (var i = 0; i < TabContentMap.length; i++) {
 				if ((TabContentMap[i].tabname.indexOf(curLocation) > -1 || TabContentMap[i].contentname.indexOf(curLocation) > -1) || curLocation.indexOf(TabContentMap[i].tabname) > -1 || curLocation.indexOf(TabContentMap[i].contentname) > -1) {
 					$('a[href="#'+TabContentMap[i].tabname+'"]').tab("show");
-						if (TabContentMap[i].tabname.indexOf('#s_all') > -1) {$('a[href="#disqus_thread"]').tab("show");}
+						if (TabContentMap[i].tabname.indexOf('#s_all') > -1) {$('a[href="#comments"]').tab("show");}
 					break;
 				} else {
 					if (i == TabContentMap.length - 1 && window.location.href.indexOf("#") > -1) 
@@ -1772,7 +1772,7 @@
 			$('#laquo').removeClass().addClass('enabled');
 		}
 		
-		if ($('li[class=\'active\']').eq(1).find('a').attr('href').indexOf('#disqus_thread') > -1)
+		if ($('li[class=\'active\']').eq(1).find('a').attr('href').indexOf('#comments') > -1)
 		{
 			$('#raquo').removeClass().addClass('disabled');
 		}
