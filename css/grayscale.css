@@ -127,7 +127,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/2dfx/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -137,7 +137,7 @@ a:focus {
 }
 
 #header {
-  background: url(../img/intro-bg.jpg) center center no-repeat;
+  background: url(../img/2dfx/intro-bg.jpg) center center no-repeat;
 }
 #header:before {
   content: '';
@@ -157,7 +157,7 @@ a:focus {
 
 
 #about {
-  background: url(../img/p2dfx_gtavcbg.jpg) center center no-repeat;
+  background: url(../img/2dfx/p2dfx_gtavcbg.jpg) center center no-repeat;
 }
 #about:before {
   content: '';
@@ -176,7 +176,7 @@ a:focus {
 }
 
 #media {
-  background: url(../img/p2dfx_gta3bg.jpg) center center no-repeat;
+  background: url(../img/2dfx/p2dfx_gta3bg.jpg) center center no-repeat;
 }
 #media:before {
   content: '';
@@ -195,7 +195,7 @@ a:focus {
 }
 
 #contact {
-  background: url(../img/p2dfx_gtaivbg.jpg) center center no-repeat;
+  background: url(../img/2dfx/p2dfx_gtaivbg.jpg) center center no-repeat;
 }
 #contact:before {
   content: '';
@@ -323,7 +323,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/2dfx/downloads-bg.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -399,7 +399,7 @@ body {
 }
 
 .icon-gtaiv { 
-  background-image: url("../img/ivico.png");
+  background-image: url("../img/2dfx/ivico.png");
   background-repeat: no-repeat;
   background-position: center center; 
   height: 16px; 
@@ -408,7 +408,7 @@ body {
 }
 
 .icon-gtasa { 
-  background-image: url("../img/saico.jpg");
+  background-image: url("../img/2dfx/saico.jpg");
   background-repeat: no-repeat;
   background-position: center center; 
   height: 16px; 
@@ -417,7 +417,7 @@ body {
 }
 
 .icon-gtavc { 
-  background-image: url("../img/vcico.jpg");
+  background-image: url("../img/2dfx/vcico.jpg");
   background-repeat: no-repeat;
   background-position: center center; 
   height: 16px; 
@@ -426,7 +426,7 @@ body {
 }
 
 .icon-gta3 { 
-  background-image: url("../img/3ico.jpg");
+  background-image: url("../img/2dfx/3ico.jpg");
   background-repeat: no-repeat;
   background-position: center center; 
   height: 16px; 
