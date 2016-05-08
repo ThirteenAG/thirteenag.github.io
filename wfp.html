@@ -1717,20 +1717,19 @@
 		}
 		else
 		{
-		tab = '"' + tab + '"'; //jquery 2
-			if (tab != '"laquo"' && tab != '"raquo"')
+			if (tab != 'laquo' && tab != 'raquo')
 			{
 				if (tab != '#s_all')
 				{
 						for (var i = 0; i < TabContentMap.length; i++) 
 						{
 							if (tab.indexOf(TabContentMap[i].tabname) > -1) {
-								$('a[href='+tab+']').tab("show");
+								$('a[href="'+tab+'"]').tab("show");
 								break;
 							} else 
 							{
 								if ((TabContentMap[i].contentname.indexOf(tab) > -1) || tab.indexOf(TabContentMap[i].contentname) > -1) {
-									$('a[href=#'+TabContentMap[i].tabname+']').tab("show");
+									$('a[href="#'+TabContentMap[i].tabname+'"]').tab("show");
 									break;
 								}
 							}
@@ -1739,7 +1738,7 @@
 				}
 				else
 				{
-					$('a[href='+tab+']').tab("show");
+					$('a[href="'+tab+'"]').tab("show");
 					ShowAllTabs();
 				}
 			}
