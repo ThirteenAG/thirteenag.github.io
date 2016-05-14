@@ -1744,7 +1744,7 @@
 			}
 			else 
 			{
-				if (tab == '"laquo"' && $('#laquo').attr('class') != "disabled")
+				if (tab == 'laquo' && $('#laquo').attr('class') != "disabled")
 				{
 					var PrevPage = $('li[class=\'active\']').eq(1).closest('li').prev().find('a').attr('href');
 					$('a[href="'+PrevPage+'"]').tab("show");
@@ -1752,7 +1752,7 @@
 						{
 							ShowAllTabs();
 						}
-				} else if (tab == '"raquo"' && $('#raquo').attr('class') != "disabled") {
+				} else if (tab == 'raquo' && $('#raquo').attr('class') != "disabled") {
 					var NextPage = $('li[class=\'active\']').eq(1).closest('li').next().find('a').attr('href');
 					$('a[href="'+NextPage+'"]').tab("show");
 						if (NextPage == '#s_all')
