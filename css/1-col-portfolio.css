@@ -167,3 +167,11 @@ text-decoration: none;
 		max-height: 410px;
 	}
 }
+
+.word-wrap {
+    -ms-word-break: break-all;
+    word-break: break-all; 
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
