@@ -10,7 +10,7 @@ body {
   background-image: -moz-linear-gradient(45deg, #F9F9F9 25%, transparent 26%, transparent 75%, #F9F9F9 75%, #F9F9F9), -moz-linear-gradient(45deg, #F9F9F9 25%, transparent 26%, transparent 75%, #F9F9F9 75%, #F9F9F9);
   background-image: -o-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -o-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
   background-image: -ms-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -ms-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
-  background-image: linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
+  background-image: linear-gradient(45deg, #F9F9F9 25%, transparent 26%, transparent 75%, #F9F9F9 75%, #F9F9F9), linear-gradient(45deg, #F9F9F9 25%, transparent 26%, transparent 75%, #F9F9F9 75%, #F9F9F9);
   -webkit-background-size:30px 30px;
   -moz-background-size:30px 30px;
   background-size:30px 30px;
