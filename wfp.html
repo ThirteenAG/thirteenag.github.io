@@ -1824,8 +1824,21 @@
         })();
     </script>
 	<script id="dsq-count-scr" src="//widescreenfixespack.disqus.com/count.js" async></script>
+	
+	<!-- hashchange -->
+	<script type="text/javascript">
+		window.addEventListener("hashchange", function(e) {
+			if (location.hash != "")
+			{
+				LocationManager(location.hash);
+			}
+			else
+			{
+				LocationManager("#sec1");
+			}
+		})
+	</script>
 	<!-- /Scripts -->
-		
 </body>
 
 </html>

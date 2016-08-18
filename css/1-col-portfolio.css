@@ -20,7 +20,7 @@ body {
 .row { margin: 0; padding: 0 }
 
 footer {
-    margin: 50px 0;
+    margin: 5px 0;
 }
 
 .img-responsive {
@@ -179,6 +179,7 @@ text-decoration: none;
 .navbar-custom {
     background-color: #000;
     border-color: #fff;
+	margin-bottom: 10px;
 }
 
 .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
