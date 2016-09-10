@@ -186,7 +186,7 @@ text-decoration: none;
 	margin-bottom: 7px;
 }
 
-.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+.navbar-custom .navbar-nav > li > a:hover {
     background-color: #fff;
     color: #000;
 }
