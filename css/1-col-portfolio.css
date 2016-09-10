@@ -4,6 +4,10 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+html { 
+  overflow-y: scroll;
+}
+
 body {
   background-color: #FEFEFE;
   background-image: -webkit-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9), -webkit-linear-gradient(45deg, #F9F9F9 25%, transparent 25%, transparent 75%, #F9F9F9 75%, #F9F9F9);
@@ -51,7 +55,7 @@ text-decoration: none;
 
 .nav-tabs, .nav-pills {
     text-align:center;
-	margin-bottom: 10px;
+	margin-bottom: 7px;
 }
 
 .navbar-default .navbar-brand {
@@ -64,7 +68,7 @@ text-decoration: none;
 }
 
 .panel {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
 }
 
 .panel-primary > .panel-heading {
@@ -178,13 +182,28 @@ text-decoration: none;
 
 .navbar-custom {
     background-color: #000;
-    border-color: #fff;
-	margin-bottom: 10px;
+    border: 0;
+	margin-bottom: 7px;
 }
 
 .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
     background-color: #fff;
     color: #000;
+}
+
+.nav-tabs>li>a:hover, .nav>li>a:focus, .nav>li>a:hover {
+	background-color:transparent;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.panel-transparent {
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
+	border: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .navbar-custom .navbar-nav > li > a {
@@ -199,5 +218,40 @@ text-decoration: none;
 }
 
 .tooltip-inner {
-  white-space:nowrap;
+	white-space:nowrap;
+}
+
+.nav-tabs.nav-justified > li > a {
+    white-space:nowrap;
+	border-bottom: 0;
+}
+
+@media screen and (max-width: 1200px) {
+	.nav-tabs.nav-justified > li > a {
+		white-space:normal;
+	}
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:hover {
+    border: 1px solid transparent;
+}
+
+.nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active {
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+}
+
+.tabbable-line > .nav-tabs > li > a {
+  border-bottom: 4px solid transparent;
+}
+
+.tabbable-line > .nav-tabs > li.active > a {
+  border-bottom: 4px solid #f3565d !important;
+  position: relative;
+}
+
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+  border-bottom: 4px solid #fbcdcf;
 }

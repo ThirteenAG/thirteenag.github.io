@@ -27,7 +27,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
@@ -51,13 +50,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="https://github.com/ThirteenAG">GitHub</a></li>
-                    <!--li><a href="http://13.sannybuilder.com/">Blog</a></li-->
-					<li><a href="http://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/">GTAForums thread</a></li>
+					<li><a href="http://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/">GTAForums</a></li>
 					<li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/issues">Report an issue</a></li>
                 </ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="http://sannybuilder.com/">Sanny Builder</a></li>
-					<li><a href="http://cleo.li/">CLEO Library</a></li>
+					<li style="background-color: #e85128;"><a target="_blank" style="padding: 0px 15px;" href="https://www.patreon.com/WFP" onmouseover="patreon.src='/img/patreon_logo.png';" onmouseout="patreon.src='/img/patreon_logo_white.png';"><img name="patreon" title="Support me on Patreon" alt="Support me on Patreon" style="line-height: 50px;" src="/img/patreon_logo_white.png"></img></a></li>
+					<li style="background-color: #0070BA;"><a target="_blank" style="padding: 0px 15px;" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=77JMVFE8N42PE" onmouseover="paypal.src='/img/paypal_logo.png';" onmouseout="paypal.src='/img/paypal_logo_white.png';"><img name="paypal" title="Donate with PayPal" alt="Donate with PayPal" style="line-height: 50px;" src="/img/paypal_logo_white.png"></img></a></li>
 				</ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,22 +67,24 @@
     <div class="container">
 
 		<!-- Tabs -->
-		<div class="tabbable">  
-			<ul class="nav nav-tabs">  
-			<li class="active"><a href="#sec1" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"">Grand Theft Auto</a></li>  
+		<div class="tabbable tabbable-line">
+			<ul class="nav nav-tabs nav-justified panel panel-default panel-transparent">
+			<li class="active"><a href="#sec1" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Grand Theft Auto</a></li>  
 			<li><a href="#sec2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Max Payne</a></li>  
-			<li><a href="#sec3" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Need For Speed</a></li>  
-			<li><a href="#sec4" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Flatout</a></li>  
+			<li><a href="#sec3" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Need for Speed</a></li>  
+			<li><a href="#sec4" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">FlatOut</a></li>  
 			<li><a href="#sec5" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Tony Hawk's</a></li>
 			<li><a href="#sec6" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Splinter Cell</a></li>
 			<li><a href="#sec7" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Silent Hill</a></li>
 			<li><a href="#s_other1" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Other [1-10]</a></li>  
 			<li><a href="#s_other2" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Other [11-20]</a></li>  
-			<ul></ul>
+			<div style="margin-top:5px;"></div>
+			<li><a href="#patreon" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">
+			<img title="Patreon" alt="Patreon" src="/img/patreon.png"></img>-supported</a></li>
 			<li><a href="#s_all" data-toggle="tab" id="s_all" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Show all</a></li>
 			<li><a href="#latest_updates" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><b>Latest updates</b></a></li>
 			<li><a href="#comments" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><span class="disqus-comment-count" data-disqus-identifier="//thirteenag.github.io/wfp">Comments</span></a></li>
-			</ul> 
+			</ul>
 		</div>
 		<!-- /Tabs -->
 	
@@ -326,11 +326,11 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#nfsu">Need For Speed Underground Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#nfsu">Need for Speed Underground Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
-						<h4 class="word-wrap"><a href="http://www.needforspeed.com/" target="_blank">http://www.needforspeed.com/</a></h4>
+						<h4 class="word-wrap">Collaboration with <a href="http://gtaforums.com/user/993265-aero/" target="_blank">Aero_</a></h4>
 						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=SPEED.EXE+v1.4+(Drunk!)" target="_blank">SPEED.EXE v1.4 (Drunk!)</a></b></p>
 						<p>Supported exe size: <b>3,03 MB (3 178 496 bytes)</b></p>
 						<p align="justify">Installation: <b>Copy content of archive to NFSU folder. Check the .ini file to get more info about available features.</b></p>
@@ -356,11 +356,11 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#nfsu2">Need For Speed Underground 2 Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#nfsu2">Need for Speed Underground 2 Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
-						<h4 class="word-wrap"><a href="http://www.needforspeed.com/" target="_blank">http://www.needforspeed.com/</a></h4>
+						<h4 class="word-wrap">Collaboration with <a href="http://gtaforums.com/user/993265-aero/" target="_blank">Aero_</a></h4>
 						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=SPEED2.EXE+v1.2+(HOODLUM)" target="_blank">SPEED2.EXE v1.2 (HOODLUM)</a></b></p>
 						<p>Supported exe size: <b>4,57 MB (4 800 512 bytes)</b></p>
 						<p align="justify">Installation: <b>Copy content of archive to NFSU2 folder. Check the .ini file to get more info about available features.</b></p>
@@ -386,11 +386,11 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#nfsmw">Need For Speed Most Wanted<sup>(2005)</sup> Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#nfsmw">Need for Speed Most Wanted<sup>(2005)</sup> Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
-						<h4 class="word-wrap"><a href="http://www.ea.com/need-for-speed-most-wanted" target="_blank">http://www.ea.com/need-for-speed-most-wanted</a></h4>
+						<h4 class="word-wrap">Collaboration with <a href="http://gtaforums.com/user/993265-aero/" target="_blank">Aero_</a></h4>
 						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=NFS+MW+speed.exe+v1.3+(RELOADED)" target="_blank">speed.exe v1.3 (RELOADED)</a></b></p>
 						<p>Supported exe size: <b>5,75 MB (6 029 312 bytes)</b></p>
 						<p align="justify">Installation: <b>Copy content of archive to NFSMW folder. Check the .ini file to get more info about available features.</b></p>
@@ -416,11 +416,11 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#nfsc">Need For Speed Carbon Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#nfsc">Need for Speed Carbon Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
-						<h4 class="word-wrap"><a href="http://www.ea.com/need-for-speed-carbon" target="_blank">http://www.ea.com/need-for-speed-carbon</a></h4>
+						<h4 class="word-wrap">Collaboration with <a href="http://gtaforums.com/user/993265-aero/" target="_blank">Aero_</a></h4>
 						<p>Supported exe version: <b><a href="https://www.google.ru/search?&q=NFS+carbon+NFSC.exe+v1.3+UNLEASHED" target="_blank">NFSC.exe v1.3 (UNLEASHED) | v1.4</a></b></p>
 						<p>Supported exe size: <b>6,88 MB (7 217 152 bytes)</b></p>
 						<p align="justify">Installation: <b>Copy content of archive to NFS Carbon folder. Check the .ini file to get more info about available features.</b></p>
@@ -448,13 +448,13 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#flatout">Flatout Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#flatout">FlatOut Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
 						<h4 class="word-wrap"><a href="http://www.bugbear.fi/games.html" target="_blank">http://www.bugbear.fi/games.html</a></h4>
 						<p>Supported exe version: <b>Any</b></p>
-						<p align="justify">Installation: <b>Copy content of archive to Flatout folder, where game's executable is located. Check the .ini file to get more info about available features.</b></p>
+						<p align="justify">Installation: <b>Copy content of archive to FlatOut folder, where game's executable is located. Check the .ini file to get more info about available features.</b></p>
 					
 						<div class="centered">
 							<div class="btn-group">
@@ -478,14 +478,14 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#flatout2">Flatout 2 Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#flatout2">FlatOut 2 Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
 						<h4 class="word-wrap"><a href="http://www.bugbear.fi/games.html" target="_blank">http://www.bugbear.fi/games.html</a></h4>
 						<p>Supported exe version: <b>v1.2</b></p>
 						<p>Supported exe size: <b>5,49 MB (5 761 024 bytes)</b></p>
-						<p align="justify">Installation: <b>Copy content of archive to Flatout 2\Bin folder(where game executable is located). Check the .ini file to get more info about available features.</b></p>
+						<p align="justify">Installation: <b>Copy content of archive to FlatOut 2\Bin folder(where game executable is located). Check the .ini file to get more info about available features.</b></p>
 					
 						<div class="centered">
 							<div class="btn-group">
@@ -509,7 +509,7 @@
 					</div>
 	
 					<div class="panel-heading panel-round-corners">
-						<h4 class="panel-title pull-right centered"><a href="#flatoutuc">Flatout Ultimate Carnage Widescreen Fix</a></h4>					
+						<h4 class="panel-title pull-right centered"><a href="#flatoutuc">FlatOut Ultimate Carnage Widescreen Fix</a></h4>					
 					</div>
 										
 					<div class="panel-body indent5">
@@ -873,7 +873,7 @@
 				<!-- SILENTPATCH3 -->
 				<div class="panel panel-primary" id="sh3">
 					<div class="pull-left img-comparison">
-						<img src="https://placehold.it/653x367?text=Coming+Soon" />
+						<img class="lazy img-responsive img-rounded img-nopad" src="https://placehold.it/653x367?text=Coming+Soon" />
 						<!--img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/sh3main1.jpg';" onmouseout="this.src='screens/sh3main2.jpg';" data-original="screens/sh3main2.jpg"/-->
 					</div>
 	
@@ -904,7 +904,7 @@
 				<!-- SILENTPATCH4 -->
 				<div class="panel panel-primary" id="sh4">
 					<div class="pull-left img-comparison">
-						<img src="https://placehold.it/653x367?text=Coming+Soon" />
+						<img class="lazy img-responsive img-rounded img-nopad" src="https://placehold.it/653x367?text=Coming+Soon" />
 						<!--img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/sh4main1.jpg';" onmouseout="this.src='screens/sh4main2.jpg';" data-original="screens/sh4main2.jpg"/-->
 					</div>
 	
@@ -1443,6 +1443,46 @@
 				</div-->
 			</div>
 			
+			<div class="tab-pane" id="patreon">
+				<div class="panel panel-primary" style="border-color: #e85128;box-shadow: 0 0 5px #e85128;">
+					<div class="panel-heading panel-round-corners" style="background-color: #e85128;border-color: #e85128;">
+						<h4 class="panel-title centered">Patreon</h4>					
+					</div>
+					<br>
+					<div class="panel-body indent5 centered">
+					<p>I'm starting a <a target="_blank" href="https://www.patreon.com/WFP">Patreon campaign</a> to be able to spend more time making user requested fixes. Without your support it takes a really long time to make one, so, the more support I get, the more time I'll be able to spend working on new fixes.<b></b></p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/wH-IDF809fQ" frameborder="0" allowfullscreen></iframe>
+					<br><br>
+					<a target="_blank" href="https://www.patreon.com/WFP">
+					<img style="box-shadow: 0 0 15px #e85128;" title="Support me on Patreon" alt="Support me on Patreon" style="line-height: 50px;" src="./img/patreon_logo.png"></img>
+					</a>
+					</div>
+					</br>
+				</div>
+			
+				<!--div class="panel panel-primary" style="border-color: #e85128;box-shadow: 0 0 5px #e85128;" id="#patreon">
+					<div class="pull-left img-comparison">
+						<img class="lazy img-responsive img-rounded img-nopad" src="https://placehold.it/653x367?text=Coming+Soon" />
+						<!--img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/sh3main1.jpg';" onmouseout="this.src='screens/sh3main2.jpg';" data-original="screens/sh3main2.jpg"/->
+					</div>
+	
+					<div class="panel-heading panel-round-corners" style="background-color: #e85128;border-color: #e85128;">
+						<h4 class="panel-title pull-right centered"><a href="#">___ Widescreen Fix</a></h4>					
+					</div>
+										
+					<div class="panel-body indent5">
+						<h4 class="word-wrap"><a href="" target="_blank"></a></h4>
+						<p>Supported exe version: <b></b></p>
+						<p>Supported exe size: <b></b></p>
+						<p align="justify">Installation: <b></b></p>
+						<p align="justify">Sponsors: <b></b></p>
+						<div class="centered">
+							<div class="btn-group"></div>
+						</div>
+					</div>
+				</div-->
+			</div>
+			
 			<div class="tab-pane" id="s_all">  
 			
 			</div>
@@ -1532,10 +1572,10 @@
 					<a href="#sec2" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Max Payne">2</a>
 				</li>
 				<li id="page-sec3">
-					<a href="#sec3" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Need For Speed">3</a>
+					<a href="#sec3" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Need for Speed">3</a>
 				</li>
 				<li id="page-sec4">
-					<a href="#sec4" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Flatout">4</a>
+					<a href="#sec4" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="FlatOut">4</a>
 				</li>
 				<li id="page-sec5">
 					<a href="#sec5" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Tony Hawk's games">5</a>
@@ -1552,14 +1592,17 @@
 				<li id="page-s_other2">
 					<a href="#s_other2" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Other games [11-20]">9</a>
 				</li>
+				<li id="page-patreon">
+					<a href="#patreon" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Patreon-supported">10</a>
+				</li>
 				<li id="page-s_all">
-					<a href="#s_all" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="List of all fixes">10</a>
+					<a href="#s_all" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="List of all fixes">11</a>
 				</li>
 				<li id="page-latest_updates">
-					<a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">11</a>
+					<a href="#latest_updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Latest updates">12</a>
 				</li>
 				<li id="page-comments">
-					<a href="#comments" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">12</a>
+					<a href="#comments" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip" data-original-title="Comments">13</a>
 				</li>
 				<li id="raquo">
 					<a href="javascript:void(null);" onclick="LocationManager('raquo');">&raquo;</a>
@@ -1612,7 +1655,7 @@
     <script type="text/javascript">
 	function ShowAllTabs() 
 	{
-		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "sec6", "sec7", "s_other1", "s_other2", /*"latest_updates",*/ "comments")
+		var TabsArray = new Array("sec1", "sec2", "sec3", "sec4", "sec5", "sec6", "sec7", "s_other1", "s_other2", "patreon", /*"latest_updates",*/ "comments")
         for (var i = 0; i < TabsArray.length; i++)
         {
             $('a[href="#' + TabsArray[i] + '"]').addClass("active");
@@ -1691,6 +1734,7 @@
 		{ "tabname" : "sec7", "contentname" : "#sh" }, //11
         { "tabname" : "s_other1", "contentname" : "#manhunt #coldfear #tod #psiops #truecrimesola #truecrimenyc #stubbsthezombie #da4 #srs #paradisecracked" }, //5
         { "tabname" : "s_other2", "contentname" : "#mafia #gun #punisher #secondsight #sonicheroes #sniperelite" }, //6
+		{ "tabname" : "patreon", "contentname" : "__________" }, //12
         { "tabname" : "s_all", "contentname" : "#s_all" }, //7
         { "tabname" : "latest_updates", "contentname" : "#latest_updates" }, //8
         { "tabname" : "comments", "contentname" : "#comments" } //9
