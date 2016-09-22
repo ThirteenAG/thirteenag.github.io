@@ -4,6 +4,8 @@
 	var screen2 = "[url=/screens/nfsu/nfsuscreen2.jpg][img]/screens/nfsu/nfsuscreen2thumb.jpg[/img][/url]";
 	var screen3 = "[url=/screens/nfsu/nfsuscreen3.jpg][img]/screens/nfsu/nfsuscreen3thumb.jpg[/img][/url]";
 	var screen4 = "[url=/screens/nfsu/nfsuscreen4.jpg][img]/screens/nfsu/nfsuscreen4thumb.jpg[/img][/url]";
+	var screen5 = "[url=/screens/nfsu/nfsuscreen5.jpg][img]/screens/nfsu/nfsuscreen5thumb.jpg[/img][/url]";
+	var screen6 = "[url=/screens/nfsu/nfsuscreen6.jpg][img]/screens/nfsu/nfsuscreen6thumb.jpg[/img][/url]";
 	var youtube = "//www.youtube.com/embed/WyI-pCArooY";
 	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/"+id;
 	
@@ -13,11 +15,15 @@
 	document.getElementById("scr2").href = screen2.split(re)[1];
 	document.getElementById("scr3").href = screen3.split(re)[1];
 	document.getElementById("scr4").href = screen4.split(re)[1];
+	document.getElementById("scr5").href = screen5.split(re)[1];
+	document.getElementById("scr6").href = screen6.split(re)[1];
 	
 	document.getElementById("thumb1").src = screen1.split(re)[2];
 	document.getElementById("thumb2").src = screen2.split(re)[2];
 	document.getElementById("thumb3").src = screen3.split(re)[2];
 	document.getElementById("thumb4").src = screen4.split(re)[2];
+	document.getElementById("thumb5").src = screen5.split(re)[2];
+	document.getElementById("thumb6").src = screen6.split(re)[2];
 	
 	document.getElementById("yt").src = youtube;
 	document.getElementById("dl").href = github;
@@ -36,9 +42,11 @@
 		<center>
 		<a id="scr1"><img id="thumb1" style="margin:10px;"></a>
 		<a id="scr2"><img id="thumb2" style="margin:10px;"></a>
+		<a id="scr5"><img id="thumb5" style="margin:10px;"></a>
 		<br/>
 		<a id="scr3"><img id="thumb3" style="margin:10px;"></a>
 		<a id="scr4"><img id="thumb4" style="margin:10px;"></a>
+		<a id="scr6"><img id="thumb6" style="margin:10px;"></a>
 		</center>
 	
         <div id="ytdiv" class="row" style="margin-right: -15px; min-height: 315px;	margin-left: -15px;	text-align: center;	float: none !important;	display: block;">
