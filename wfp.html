@@ -1843,14 +1843,14 @@
 	    if (location.hash != "")
 		{
 			location.hash = location.hash;
-			var image = document.createElement('img');
-			image.src = './img/backgr/'+location.hash.substr(1)+'.jpg';
-			image.onload = function () 
+			var image = './img/backgr/'+location.hash.substr(1)+'.jpg';
+			$('<img/>').attr('src', image).load(function() 
 			{
+				$(this).remove();
 				$('body').addClass("dynbackgr");
 				$('.panel-transparent').css('background', 'rgba(255,255,255,1)');
-				$('body').css('backgroundImage', 'url('+image.src+')');
-			};
+				$('body').css('backgroundImage', 'url('+image+')');
+			});
 		}
 	})
 	</script>
