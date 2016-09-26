@@ -20,6 +20,13 @@ body {
   background-size:30px 30px;
   background-position:0 0, 15px 15px;
 }
+
+.dynbackgr { 
+	background-position: center center 0px;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;
+	background-size:  cover;
+}
  
 .row { margin: 0; padding: 0 }
 
