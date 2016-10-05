@@ -218,10 +218,8 @@ text-decoration: none;
 }
 
 .navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover {
-	color:#fff;
-	background-color:transparent;
-	background: rgba(0, 0, 0, 0.2) !important;
-	text-shadow: -1px 1px 10px #FFFFFF, 1px -1px 10px #FFFFFF;
+    background-color: #fff;
+    color: #000;
 }
 
 .tooltip-inner {
