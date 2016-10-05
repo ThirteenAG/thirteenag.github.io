@@ -270,3 +270,15 @@ text-decoration: none;
 .navbar-right {
 	margin-right: 0px;
 }
+
+.release-info {
+    background-color: #5bc0de;
+    padding: .2em .6em .3em;
+    font-size: 85%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
