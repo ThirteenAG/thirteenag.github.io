@@ -1722,7 +1722,7 @@
             $('#' + TabsArray[i] + '').removeClass().addClass("tab-pane active");
         }
 		$('#latest_updates').removeClass().addClass("tab-pane");
-		$(window).trigger('scroll');
+		ImgLazyLoad.handleScroll();
 	}
 	
 	if (window.location.href.indexOf("#s_all") > -1) {
@@ -1906,14 +1906,7 @@
 	    if (location.hash != "")
 		{
 			location.hash = location.hash;
-			var image = './img/backgr/'+location.hash.substr(1)+'.jpg';
-			$('<img/>').attr('src', image).load(function() 
-			{
-				$(this).remove();
-				$('body').addClass("dynbackgr");
-				$('.panel-transparent').css('background', 'rgba(255,255,255,1)');
-				$('body').css('backgroundImage', 'url('+image+')');
-			});
+			ImgLazyLoad.handleScroll();
 		}
 	})
 	</script>
