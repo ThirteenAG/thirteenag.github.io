@@ -12,10 +12,12 @@
     <title>Widescreen Fixes Pack - plugins to make or improve widescreen resolutions support in PC games</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/1-col-portfolio.css" rel="stylesheet">
+	<link href="css/bootstrap-modal.css" rel="stylesheet" />
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+
   </head>
 
 <body>
@@ -1692,6 +1694,8 @@
 
     </div>
     <!-- /.container -->
+
+	<div id="ajax-modal" class="modal fade" tabindex="-1" style="display: none; min-height: 90%;"></div> 
 	
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
@@ -1701,8 +1705,10 @@
 
 	<!-- Other -->
 	<script src="js/lazyload.min.js"></script>
-	<script src="js/eModal.min.js"></script>
-
+	<script src="js/bootstrap-dialog.min.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+	
 	<!-- Scripts -->
 	
 	<!-- show all tab -->
@@ -1733,7 +1739,15 @@
     <script type="text/javascript">
 	function OpenModal(name) 
 	{
-		eModal.ajax('screens/'+name+'.html');
+		var $modal = $('#ajax-modal');
+		$('body').modalmanager('loading');
+			setTimeout(function()
+			{
+				$modal.load('screens/'+name+'.html', '', function()
+				{
+					$modal.modal();
+				});
+			}, 1000);
 	}
     </script>
 
