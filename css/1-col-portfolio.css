@@ -43,6 +43,7 @@ footer {
 
 .btn {
     margin: 2px 5px 2px 0px;
+	border-radius: 0;
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-submenu:hover > a, .dropdown-submenu:focus > a { 
