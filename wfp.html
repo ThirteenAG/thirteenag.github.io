@@ -2007,8 +2007,8 @@
 		$.getJSON('https://api.twitch.tv/kraken/streams/' + user_name + '?client_id=' + api_key + '&callback=?', function(data) {	
 			if (data.stream) {
 				var game = "LIVE playing: " + data.stream.game;
-				if (game.length > 40)
-					game = game.substr(0,40)+'...';
+				if (game.length > 35)
+					game = game.substr(0,35)+'...';
 				twitch_widget.html("<span class='twitch-online'></span> Twitch<span class='twitch-game'>" + game + "</span>");
 			} else {
 				twitch_widget.html("<span class='twitch-offline'></span> Twitch");
