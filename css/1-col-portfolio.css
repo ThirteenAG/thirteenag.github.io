@@ -281,3 +281,29 @@ text-decoration: none;
     white-space: nowrap;
     vertical-align: baseline;
 }
+
+.twitch-widget {
+	max-height: 50px;
+}
+
+.twitch-online, .twitch-offline {
+	border-radius: 5px;
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+}
+
+.twitch-online {
+	background: red;
+}
+
+.twitch-offline {
+	background: #ccc;
+}
+
+.twitch-game {
+	display: block;
+	margin: 0 0 0 15px;
+	font-size: 0.8em;
+	line-height: 90%;
+}
