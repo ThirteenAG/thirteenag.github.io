@@ -2003,7 +2003,7 @@
 		user_name = "ThirteenAG";
 		api_key = "lhs5zwrb8eth8ucnmzupcdld7kie31g";
 		twitch_widget = $("#twitch-widget");
-		twitch_widget.attr("href","http://twitch.tv/" + user_name);
+		twitch_widget.attr("href","https://twitch.tv/" + user_name);
 		$.getJSON('https://api.twitch.tv/kraken/streams/' + user_name + '?client_id=' + api_key + '&callback=?', function(data) {	
 			if (data.stream) {
 				var game = "LIVE playing: " + data.stream.game;
