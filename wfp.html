@@ -39,10 +39,11 @@
     		<!-- Collect the nav links, forms, and other content for toggling -->
     		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     		    <ul class="nav navbar-nav">
-					<li><a href="https://github.com/ThirteenAG/WidescreenFixesPack">GitHub</a></li>
-					<li><a href="https://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/">GTAForums</a></li>
-					<li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/issues">Report an issue</a></li>
-					<li><a href="https://twitch.tv/ThirteenAG" class="twitch-widget" id="twitch-widget" target="_blank">Twitch</a></li>
+					<li><a href="https://github.com/ThirteenAG/WidescreenFixesPack" target="_blank">GitHub</a></li>
+					<li><a href="https://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/" target="_blank">GTAForums</a></li>
+					<li><a href="https://www.youtube.com/SergeyP13" target="_blank">YouTube</a></li>
+					<li><a href="https://twitch.tv/ThirteenAG" class="twitch-widget" id="twitch-widget" target="_blank" data-placement='bottom' data-toggle='tooltip'>Twitch</a></li>
+					<li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/issues" target="_blank">Report an issue</a></li>
     		    </ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li style="background-color: #e85128;"><a target="_blank" style="padding: 0px 15px;" href="https://www.patreon.com/WFP" onmouseover="patreon.src='/img/patreon_logo.png';" onmouseout="patreon.src='/img/patreon_logo_white.png';"><img name="patreon" title="Support me on Patreon" 	alt="Support me on Patreon" style="line-height: 50px;" src="/img/patreon_logo_white.png"></img></a></li>
@@ -2007,12 +2008,14 @@
 		$.getJSON('https://api.twitch.tv/kraken/streams/' + user_name + '?client_id=' + api_key + '&callback=?', function(data) {	
 			if (data.stream) {
 				var game = "LIVE playing: " + data.stream.game;
-				if (game.length > 35)
-					game = game.substr(0,35)+'...';
+				if (game.length > 25)
+					game = game.substr(0,25)+'...';
 				twitch_widget.html("<span class='twitch-online'></span> Twitch<span class='twitch-game'>" + game + "</span>");
+				twitch_widget.attr("data-original-title", data.stream.game);
 			} else {
 				twitch_widget.html("<span class='twitch-offline'></span> Twitch");
-			}  
+				twitch_widget.attr("data-original-title","Offline");
+			}
 		});
 		})();
 	</script>	
