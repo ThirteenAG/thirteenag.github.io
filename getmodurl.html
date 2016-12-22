@@ -51,10 +51,13 @@
         }, function parseResult(result) {
 		  	object = $('<div/>').html(result).contents();
 		  	document.write(object.find(selectorField).attr("href"));
+			document.close();
         });
 	  }
-    else
+    else {
     document.write("");
+	document.close();
+	}
   })();
 </script>
 
