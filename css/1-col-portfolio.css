@@ -239,7 +239,7 @@ text-decoration: none;
 }
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:hover {
-    border: 1px solid transparent;
+    border: 0px solid transparent;
 }
 
 .nav-tabs.nav-justified > .active > a, .nav-tabs.nav-justified > .active {
@@ -306,4 +306,8 @@ text-decoration: none;
 	margin: 0 0 0 15px;
 	font-size: 0.8em;
 	line-height: 90%;
+}
+
+.list-group-item > span {
+	vertical-align: middle;
 }
