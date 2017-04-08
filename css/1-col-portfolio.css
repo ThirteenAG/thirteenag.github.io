@@ -329,13 +329,3 @@ footer {
 .list-group-item>span {
     vertical-align: middle;
 }
-
-#top{
-
-    width:100px;
-    height:200px;
-    background-color:red;
-
-    z-index: 999;      <-- the z index property will push the #top div above the bottom div
-
-}   
