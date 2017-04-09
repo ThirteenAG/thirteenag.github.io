@@ -96,8 +96,9 @@
                 <!-- GTA SA -->
                 <div class="panel panel-primary" style="border-color: #C6D9EF;" id="gtasa">
                     <div class="pull-left img-comparison">
-                        <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/gtasamain1.jpg';"
-                            onmouseout="this.src='screens/gtasamain2.jpg';" data-original="screens/gtasamain2.jpg" />
+                        <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/gtasa/main1.jpg';"
+                            onmouseout="this.src='screens/gtasa/main2.jpg';" data-original="screens/gtasa/main2.jpg" />
+                            <div class="logo" data-original="screens/gtasa/logo.png" onmouseover="this.remove();"></div>
                     </div>
 
                     <div class="panel-heading panel-round-corners" style="color: #000; background-color: #C6D9EF;border-color: #C6D9EF;">
@@ -2011,6 +2012,7 @@
     <!-- lazy load -->
     <script type="text/javascript" charset="utf-8">
         ImgLazyLoad = new LazyLoad({
+            elements_selector: "img, div .logo", 
             callback_load: function (element) {
                 par = $(element).parent().parent();
                 GetReleaseInfo(par.attr('id'), par.find('.release-info'));
