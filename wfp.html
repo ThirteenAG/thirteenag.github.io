@@ -98,7 +98,7 @@
                     <div class="pull-left img-comparison">
                         <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/gtasa/main1.jpg';"
                             onmouseout="this.src='screens/gtasa/main2.jpg';" data-original="screens/gtasa/main2.jpg" />
-                            <div class="logo" data-original="screens/gtasa/logo.png" onmouseover="this.remove();"></div>
+                        <div class="logo" data-original="screens/gtasa/logo.png" onmouseover="this.remove();"></div>
                     </div>
 
                     <div class="panel-heading panel-round-corners" style="color: #000; background-color: #C6D9EF;border-color: #C6D9EF;">
@@ -1907,16 +1907,16 @@
     <div id="ajax-modal" class="modal fade" tabindex="-1" style="display: none; min-height: 90%;"></div>
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <script defer src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script defer src="js/bootstrap.min.js"></script>
 
     <!-- Other -->
-    <script src="js/lazyload.min.js"></script>
-    <script src="js/bootstrap-dialog.min.js"></script>
-    <script src="js/bootstrap-modalmanager.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
+    <script defer src="js/bootstrap-dialog.min.js"></script>
+    <script defer src="js/bootstrap-modalmanager.js"></script>
+    <script defer src="js/bootstrap-modal.js"></script>
+    <script defer src="js/lazyload.min.js" onload="initLazy()"></script>
 
     <!-- Scripts -->
 
@@ -2011,13 +2011,15 @@
 
     <!-- lazy load -->
     <script type="text/javascript" charset="utf-8">
-        ImgLazyLoad = new LazyLoad({
-            elements_selector: "img, div .logo", 
-            callback_load: function (element) {
-                par = $(element).parent().parent();
-                GetReleaseInfo(par.attr('id'), par.find('.release-info'));
-            }
-        });
+        function initLazy() {
+            ImgLazyLoad = new LazyLoad({
+                elements_selector: "img, div .logo",
+                callback_load: function (element) {
+                    par = $(element).parent().parent();
+                    GetReleaseInfo(par.attr('id'), par.find('.release-info'));
+                }
+            });
+        }
     </script>
 
     <!-- location management -->
@@ -2184,7 +2186,7 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <script id="dsq-count-scr" src="//widescreenfixespack.disqus.com/count.js" async></script>
+    <script defer id="dsq-count-scr" src="//widescreenfixespack.disqus.com/count.js" async></script>
 
     <!-- hashchange -->
     <script type="text/javascript">
