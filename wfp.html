@@ -1908,16 +1908,15 @@
     <div id="ajax-modal" class="modal fade" tabindex="-1" style="display: none; min-height: 90%;"></div>
 
     <!-- jQuery -->
-    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/jquery.min.js" onload="initAllTabs(); initTwitch();"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script defer src="js/bootstrap.min.js"></script>
+    <script defer src="js/bootstrap.min.js" onload="initTooltips();"></script>
 
     <!-- Other -->
-    <script defer src="js/bootstrap-dialog.min.js"></script>
     <script defer src="js/bootstrap-modalmanager.js"></script>
-    <script defer src="js/bootstrap-modal.js"></script>
-    <script defer src="js/lazyload.min.js" onload="initLazy(); LocationManager();"></script>
+    <script defer src="js/bootstrap-modal.js" onload="initModals();"></script>
+    <script defer src="js/lazyload.min.js" onload="initLazy(); LocationManager(); jmpToHash();"></script>
 
     <!-- Scripts -->
 
@@ -1935,40 +1934,44 @@
             ImgLazyLoad.handleScroll();
         }
 
-        if (window.location.href.indexOf("#all") > -1) {
-            ShowAllTabs();
-        }
+        function initAllTabs() {
+            if (window.location.href.indexOf("#all") > -1) {
+                ShowAllTabs();
+            }
 
-        $("#all").click(function () {
-            ShowAllTabs();
-        });
+            $("#all").click(function () {
+                ShowAllTabs();
+            });
+        }
     </script>
 
     <!-- modals -->
     <script type="text/javascript">
-        $(function () {
-            $.fn.modal.defaults.spinner = $.fn.modalmanager.defaults.spinner =
-                '<div class="loading-spinner" style="width: 200px; margin-left: -100px;">' +
-                '<div class="progress progress-striped active">' +
-                '<div class="progress-bar" style="width: 100%;"></div>' +
-                '</div>' +
-                '</div>';
-            $.fn.modalmanager.defaults.resize = true;
-            $('[data-source]').each(function () {
-                var $this = $(this),
-                    $source = $($this.data('source'));
-                var text = [];
-                $source.each(function () {
-                    var $s = $(this);
-                    if ($s.attr('type') == 'text/javascript') {
-                        text.push($s.html().replace(/(\n)*/, ''));
-                    } else {
-                        text.push($s.clone().wrap('<div>').parent().html());
-                    }
+        function initModals() {
+            $(function () {
+                $.fn.modal.defaults.spinner = $.fn.modalmanager.defaults.spinner =
+                    '<div class="loading-spinner" style="width: 200px; margin-left: -100px;">' +
+                    '<div class="progress progress-striped active">' +
+                    '<div class="progress-bar" style="width: 100%;"></div>' +
+                    '</div>' +
+                    '</div>';
+                $.fn.modalmanager.defaults.resize = true;
+                $('[data-source]').each(function () {
+                    var $this = $(this),
+                        $source = $($this.data('source'));
+                    var text = [];
+                    $source.each(function () {
+                        var $s = $(this);
+                        if ($s.attr('type') == 'text/javascript') {
+                            text.push($s.html().replace(/(\n)*/, ''));
+                        } else {
+                            text.push($s.clone().wrap('<div>').parent().html());
+                        }
+                    });
+                    $this.text(text.join('\n\n').replace(/\t/g, '    '));
                 });
-                $this.text(text.join('\n\n').replace(/\t/g, '    '));
             });
-        });
+        }
 
         function OpenModal(name) {
             var $modal = $('#ajax-modal');
@@ -2140,20 +2143,22 @@
 
     <!-- tooltips -->
     <script type="text/javascript">
-        $('*').tooltip({
-            trigger: "hover",
-            selector: "a[data-toggle=tooltip]"
-        });
+        function initTooltips() {
+            $('*').tooltip({
+                trigger: "hover",
+                selector: "a[data-toggle=tooltip]"
+            });
+        }
     </script>
 
     <!-- jump to anchor after page was loaded / background -->
     <script type="text/javascript">
-        $(window).load(function () {
+        function jmpToHash() {
             if (location.hash != "") {
                 location.hash = location.hash;
                 ImgLazyLoad.handleScroll();
             }
-        })
+        }
     </script>
 
     <script>
@@ -2199,7 +2204,7 @@
     </script>
 
     <script type="text/javascript">
-        (function () {
+        function initTwitch() {
             var user_name, api_key, twitch_widget;
             user_name = "ThirteenAG";
             api_key = "lhs5zwrb8eth8ucnmzupcdld7kie31g";
@@ -2221,7 +2226,7 @@
                         twitch_widget.attr("data-original-title", "Offline");
                     }
                 });
-        })();
+        };
     </script>
     <!-- /Scripts -->
 </body>
