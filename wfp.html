@@ -1917,7 +1917,7 @@
     <script defer src="js/bootstrap-dialog.min.js"></script>
     <script defer src="js/bootstrap-modalmanager.js"></script>
     <script defer src="js/bootstrap-modal.js"></script>
-    <script defer src="js/lazyload.min.js" onload="initLazy()"></script>
+    <script defer src="js/lazyload.min.js" onload="initLazy(); LocationManager();"></script>
 
     <!-- Scripts -->
 
@@ -2136,8 +2136,6 @@
             }
             ImgLazyLoad.handleScroll();
         }
-
-        LocationManager();
     </script>
 
     <!-- tooltips -->
