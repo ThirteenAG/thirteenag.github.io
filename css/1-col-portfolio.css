@@ -346,3 +346,23 @@ footer {
     background-position: center;
     z-index: 100;
 }
+
+.flash {
+    -webkit-animation-name: flash-animation;
+    -webkit-animation-duration: 0.5s;
+    animation-name: flash-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flash-animation {  
+    0%   {box-shadow: 0 0 15px red;}
+    50%  {box-shadow: 0 0 15px blue;}
+    100% {box-shadow: 0 0 15px red;}
+}
+
+@keyframes flash-animation {  
+    0%   {box-shadow: 0 0 15px red;}
+    50%  {box-shadow: 0 0 15px blue;}
+    100% {box-shadow: 0 0 15px red;}
+}
