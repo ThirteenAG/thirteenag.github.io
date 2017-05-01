@@ -1923,7 +1923,7 @@
     <script defer src="js/bootstrap-modalmanager.js"></script>
     <script defer src="js/bootstrap-modal.js" onload="initModals();"></script>
     <script defer src="js/lazyload.transpiled.min.js" onload="initLazy(); LocationManager(); jmpToHash(); initAllTabs();"></script>
-    <script defer src="js/github-comments.js"></script>
+    <script defer src="js/github-comments.js" onload="GetCommentsCount(236);"></script>
 
     <!-- Scripts -->
 
@@ -2198,7 +2198,6 @@
     <!-- comments -->
     <script type="text/javascript">
         function initComments() {
-            GetCommentsCount(236);
             DoGithubComments(236);
         }
     </script>
