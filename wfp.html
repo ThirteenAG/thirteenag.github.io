@@ -85,7 +85,7 @@
                 <li><a href="#updates" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><b>Updates & Misc</b></a></li>
                 <li><a href="#all" data-toggle="tab" id="all" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));">Show all</a></li>
                 <li>
-                    <a href="#comments" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><span class="disqus-comment-count" data-disqus-identifier="//thirteenag.github.io/wfp">Comments</span></a>
+                    <a href="#comments" data-toggle="tab" onclick="window.location.hash = $(this).attr('href'); LocationManager($(this).attr('href'));"><span id="comments-count">Comments</span></a>
                 </li>
             </ul>
         </div>
@@ -1830,8 +1830,8 @@
             </div>
 
             <div class="tab-pane" id="comments">
-                <div id="disqus_thread"></div>
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <div id="gh-comments-list"></div>
+                <noscript>Please enable JavaScript to <a href="https://github.com/ThirteenAG/WidescreenFixesPack/issues/236">view the comments</a>.</noscript>
             </div>
         </div>
         <!-- /Tabs Content -->
@@ -1899,10 +1899,10 @@
                 <p align="center">Widescreen Fixes Pack - plugins to make or improve widescreen resolutions support in PC games</p>
                 <br>
                 <p align="center">The software is provided "as is", without warranty of any kind, express or implied, including but not limited
-                    to the warranties of merchantability, fitness for a particular purpose and noninfringement. <br>In no event
-                    shall the authors or copyright holders be liable for any claim, damages or other liability, whether in
-                    an action of contract, tort or otherwise, arising from, out of or in connection with the software or
-                    the use or other dealings in the software.</p>
+                    to the warranties of merchantability, fitness for a particular purpose and noninfringement. <br>In no
+                    event shall the authors or copyright holders be liable for any claim, damages or other liability, whether
+                    in an action of contract, tort or otherwise, arising from, out of or in connection with the software
+                    or the use or other dealings in the software.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -1922,7 +1922,8 @@
     <!-- Other -->
     <script defer src="js/bootstrap-modalmanager.js"></script>
     <script defer src="js/bootstrap-modal.js" onload="initModals();"></script>
-    <script defer src="js/lazyload.min.js" onload="initLazy(); LocationManager(); jmpToHash(); initAllTabs();"></script>
+    <script defer src="js/lazyload.transpiled.min.js" onload="initLazy(); LocationManager(); jmpToHash(); initAllTabs();"></script>
+    <script defer src="js/github-comments.js"></script>
 
     <!-- Scripts -->
 
@@ -1938,6 +1939,7 @@
             }
             $('#updates').removeClass().addClass("tab-pane");
             ImgLazyLoad.handleScroll();
+            CommentsLazyLoad.handleScroll();
         }
 
         function initAllTabs() {
@@ -2027,6 +2029,13 @@
                 callback_load: function (element) {
                     par = $(element).parent().parent();
                     GetReleaseInfo(par.attr('id'), par.find('.release-info'));
+                }
+            });
+
+            CommentsLazyLoad = new LazyLoad({
+                elements_selector: "#gh-comments-list",
+                callback_set: function (e) {
+                    initComments();
                 }
             });
         }
@@ -2144,6 +2153,7 @@
                 $('#raquo').removeClass().addClass('enabled');
             }
             ImgLazyLoad.handleScroll();
+            CommentsLazyLoad.handleScroll();
         }
     </script>
 
@@ -2163,6 +2173,7 @@
             if (location.hash != "") {
                 location.hash = location.hash;
                 ImgLazyLoad.handleScroll();
+                CommentsLazyLoad.handleScroll();
             }
         }
     </script>
@@ -2184,19 +2195,13 @@
         ga('send', 'pageview');
     </script>
 
-    <!-- disqus -->
+    <!-- comments -->
     <script type="text/javascript">
-        var disqus_shortname = 'widescreenfixespack';
-        var disqus_identifier = '//thirteenag.github.io/wfp';
-        (function () {
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+        function initComments() {
+            GetCommentsCount(236);
+            DoGithubComments(236);
+        }
     </script>
-    <script defer id="dsq-count-scr" src="//widescreenfixespack.disqus.com/count.js" async></script>
 
     <!-- hashchange -->
     <script type="text/javascript">
