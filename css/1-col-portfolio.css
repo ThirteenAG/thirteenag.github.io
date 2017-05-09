@@ -49,6 +49,14 @@ footer {
     border-radius: 0;
 }
 
+.btn-outline {
+    border-color: #000;
+}
+
+.btn-outline:hover {
+    border-color: #000;
+}
+
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus,
 .dropdown-submenu:hover>a,
