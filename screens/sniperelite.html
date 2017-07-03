@@ -1,54 +1,63 @@
 <script type="text/javascript">
 	var id = "sniperelite";
-	var screen1 = "[url=http://i.imgur.com/ZrIbeZl.jpg][img]http://i.imgur.com/ZrIbeZlm.jpg[/img][/url]";
-	var screen2 = "[url=http://i.imgur.com/KvFAnFy.jpg][img]http://i.imgur.com/KvFAnFym.jpg[/img][/url]";
-	var screen3 = "[url=http://i.imgur.com/CAalcDy.jpg][img]http://i.imgur.com/CAalcDym.jpg[/img][/url]";
-	var screen4 = "[url=http://i.imgur.com/lYM6tmd.jpg][img]http://i.imgur.com/lYM6tmdm.jpg[/img][/url]";
 	var youtube = "";
-	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/"+id;
-	
-	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
-	
-	document.getElementById("scr1").href = screen1.split(re)[1];
-	document.getElementById("scr2").href = screen2.split(re)[1];
-	document.getElementById("scr3").href = screen3.split(re)[1];
-	document.getElementById("scr4").href = screen4.split(re)[1];
-	
-	document.getElementById("thumb1").src = screen1.split(re)[2];
-	document.getElementById("thumb2").src = screen2.split(re)[2];
-	document.getElementById("thumb3").src = screen3.split(re)[2];
-	document.getElementById("thumb4").src = screen4.split(re)[2];
-	
-	document.getElementById("yt").src = youtube;
-	document.getElementById("dl").href = github;
-	if (youtube == "")
-	{
-		var ytdiv = document.getElementById('ytdiv');
-		ytdiv.parentNode.removeChild(ytdiv);
-	}
+
+	var arr = [
+		"[url=http://i.imgur.com/ZrIbeZl.jpg][img]http://i.imgur.com/ZrIbeZlm.jpg[/img][/url]",
+		"[url=http://i.imgur.com/KvFAnFy.jpg][img]http://i.imgur.com/KvFAnFym.jpg[/img][/url]",
+		"[url=http://i.imgur.com/CAalcDy.jpg][img]http://i.imgur.com/CAalcDym.jpg[/img][/url]",
+		"[url=http://i.imgur.com/lYM6tmd.jpg][img]http://i.imgur.com/lYM6tmdm.jpg[/img][/url]",
+	];
 </script>
 
 <div style="width: 100%; margin-left:-5px;">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 </div>
 <br>
-	<div class="container" style="width: 100%;">
-		<center>
-		<a id="scr1"><img id="thumb1" style="margin:10px;"></a>
-		<a id="scr2"><img id="thumb2" style="margin:10px;"></a>
-		<br/>
-		<a id="scr3"><img id="thumb3" style="margin:10px;"></a>
-		<a id="scr4"><img id="thumb4" style="margin:10px;"></a>
-		</center>
-	
-        <div id="ytdiv" class="row" style="margin-right: -15px; min-height: 315px;	margin-left: -15px;	text-align: center;	float: none !important;	display: block;">
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="position: relative; max-width: 560px; width: 100%; height: 100%;  min-height: 1px; max-height: 315px;  padding-right: 15px;  padding-left: 15px;  text-align: center;  float: none !important;  display: inline-block;">
-                <iframe id="yt" style="height: 315px;" class="img-responsive" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-	
-		<div class="modal-footer" style="width: 100%; text-align: center; float: none !important;">
-			<a class="btn btn-success" id="dl"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
-			<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+<div class="container" style="width: 100%;">
+	<center>
+		<div id="pics"></div>
+	</center>
+
+	<div id="ytdiv" class="row" style="margin-right: -15px; min-height: 315px;	margin-left: -15px;	text-align: center;	float: none !important;	display: block;">
+		<div class="col-lg-3 col-md-4 col-xs-6 thumb" style="position: relative; max-width: 560px; width: 100%; height: 100%;  min-height: 1px; max-height: 315px;  padding-right: 15px;  padding-left: 15px;  text-align: center;  float: none !important;  display: inline-block;">
+			<iframe id="yt" style="height: 315px;" class="img-responsive" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
+
+	<div class="modal-footer" style="width: 100%; text-align: center; float: none !important;">
+		<a class="btn btn-success" id="dl"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+		<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/" + id;
+	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
+	var output = document.getElementById('pics');
+
+	var x = 2;
+	if (arr.length % 3 == 0)
+		x = 3;
+
+	arr.forEach(function (item, i, arr) {
+		var scr = item.split(re)[1];
+		var thumb = item.split(re)[2];
+		var e = document.createElement("a");
+		e.setAttribute("src", scr);
+		e.innerHTML = "<img src='" + thumb + "' style='margin:10px;' />";
+		output.appendChild(e);
+
+		if (((i + 1) % x) == 0) {
+			var br = document.createElement("br");
+			output.appendChild(br);
+		}
+	});
+
+	document.getElementById("yt").src = youtube;
+	document.getElementById("dl").href = github;
+	if (youtube == "") {
+		var ytdiv = document.getElementById('ytdiv');
+		ytdiv.parentNode.removeChild(ytdiv);
+	}
+</script>

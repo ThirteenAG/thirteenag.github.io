@@ -591,7 +591,6 @@
                                     <li><a href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/FlatoutUltimateCarnage.WidescreenFix.zip">Developer build (untested)</a></li>
                                 </ul>
                             </div>
-                            <button class="demo btn btn-default btn-outline" data-toggle="modal" onclick="OpenModal('flatoutuc')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
                             <a href="http://store.steampowered.com/app/12360/" class="demo btn btn-default btn-outline" target="_blank"><span class="icon-steam"></span> <font size="2">Works with Steam version</font></a>
                         </div>
                     </div>
@@ -1630,6 +1629,41 @@
                     </br>
                 </div>
 
+                <div class="panel panel-primary" style="border-color: #e85128;box-shadow: 0 0 5px #e85128;" id="driv3r">
+                    <div class="pull-left img-comparison">
+                        <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/driv3r/main1.jpg';"
+                            onmouseout="this.src='screens/driv3r/main2.jpg';" data-original="screens/driv3r/main2.jpg" />
+                        <div class="logo" data-original="screens/driv3r/logo.png" onmouseover="this.remove();"></div>
+                    </div>
+
+                    <div class="panel-heading panel-round-corners" style="background-color: #e85128;border-color: #e85128;">
+                        <h4 class="panel-title pull-right centered"><a href="#driv3r">DRIV3R Widescreen Fix</a></h4>
+                    </div>
+
+                    <div class="release-info"></div>
+
+                    <div class="panel-body indent5">
+                        <h4 class="word-wrap">For Driv3r</h4>
+                        <p>Supported exe version: <b>Any</b></p>
+                        <p align="justify">Installation: <b>Copy content of archive to DRIV3R folder. Check the .ini file to get more info about available features.</b></p>
+                        <div class="centered">
+                            <div class="btn-group">
+                                <a style="margin-right:0;" class="btn btn-default btn-outline" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/driv3r">
+                                    <span class="glyphicon glyphicon-download-alt"></span> Download</a>
+                                <a class="btn btn-default btn-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/driv3r/Driv3r.WidescreenFix.zip">Direct Link</a></li>
+                                    <li><a href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/Driv3r.WidescreenFix.zip">Developer build (untested)</a></li>
+                                </ul>
+                            </div>
+                            <button class="demo btn btn-default btn-outline" data-toggle="modal" onclick="OpenModal('driv3r')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+                            <a href="https://www.patreon.com/posts/12437675" class="demo btn btn-default btn-outline" target="_blank"><span class="glyphicon glyphicon-pencil"></span> Release notes</a>
+                            <br><br>
+                            <p>Thank you, everyone, who supported the development of this fix on <a href="https://www.patreon.com/WFP">patreon.com/wfp</a>!</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="panel panel-primary" style="border-color: #e85128;box-shadow: 0 0 5px #e85128;" id="thesuffering">
                     <div class="pull-left img-comparison">
                         <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/thesuffering/main1.jpg';"
@@ -1847,10 +1881,16 @@
                             <tr>
                                 <td>
                                     <tbody>
+                                        <a href="#driv3r" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
+                                            <span class="label label-success">03.07.2017</span> <span class="label label-info"
+                                                title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">DRIV3R Widescreen Fix</span>
+                                        </a>
+
                                         <a href="#thesuffering" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
                                             <span class="label label-success">27.05.2017</span> <span class="label label-info"
                                                 title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">The Suffering Widescreen Fix</span>
                                         </a>
+
                                         <a href="#driverpl" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
                                             <span class="label label-success">09.05.2017</span> <span class="label label-info"
                                                 title="Improvements or bugfixes">UPD</span> <span style="color: #428bca;margin-left:10px;">Bugfixes and improvements (everything)</span>
@@ -1859,11 +1899,6 @@
                                         <a href="#driverpl" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
                                             <span class="label label-success">09.05.2017</span> <span class="label label-info"
                                                 title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">Driver Parallel Lines Widescreen Fix</span>
-                                        </a>
-
-                                        <a href="#callofcthulhu" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
-                                            <span class="label label-success">09.12.2016</span> <span class="label label-info"
-                                                title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">Call of Cthulhu Widescreen Fix</span>
                                         </a>
                                     </tbody>
                                 </td>
@@ -2155,7 +2190,7 @@
             "contentname": "#mafia #gun #punisher #secondsight #sonicheroes #sniperelite"
         }, {
             "tabname": "patreon",
-            "contentname": "#thesuffering #driverpl #callofcthulhu #kingkong #onimusha3"
+            "contentname": "#driv3r #thesuffering #driverpl #callofcthulhu #kingkong #onimusha3"
         }, {
             "tabname": "all",
             "contentname": "#all"

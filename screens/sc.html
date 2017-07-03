@@ -1,75 +1,68 @@
 <script type="text/javascript">
 	var id = "sc";
-	var screen1 = "[url=http://i.imgur.com/F2f0quA.jpg][img]http://i.imgur.com/F2f0quAm.jpg[/img][/url]";
-	var screen2 = "[url=http://i.imgur.com/nIpPtL5.jpg][img]http://i.imgur.com/nIpPtL5m.jpg[/img][/url]";
-	var screen3 = "[url=http://i.imgur.com/2sgdWNo.png][img]http://i.imgur.com/2sgdWNom.jpg[/img][/url]";
-	var screen4 = "[url=http://i.imgur.com/1dRvJxn.jpg][img]http://i.imgur.com/1dRvJxnm.jpg[/img][/url]";
-	var screen5 = "[url=http://i.imgur.com/BdDykMq.jpg][img]http://i.imgur.com/BdDykMqm.jpg[/img][/url]";
-	var screen6 = "[url=http://i.imgur.com/cPuXS7C.jpg][img]http://i.imgur.com/cPuXS7Cm.jpg[/img][/url]";
-	var screen7 = "[url=http://i.imgur.com/T5iRSxO.png][img]http://i.imgur.com/T5iRSxOm.jpg[/img][/url]";
-	var screen8 = "[url=http://i.imgur.com/ebyvmp8.jpg][img]http://i.imgur.com/ebyvmp8m.jpg[/img][/url]";
-	var screen9 = "[url=http://i.imgur.com/U5svQ58.jpg][img]http://i.imgur.com/U5svQ58m.jpg[/img][/url]";
 	var youtube = "";
-	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/"+id;
-	
-	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
-	
-	document.getElementById("scr1").href = screen1.split(re)[1];
-	document.getElementById("scr2").href = screen2.split(re)[1];
-	document.getElementById("scr3").href = screen3.split(re)[1];
-	document.getElementById("scr4").href = screen4.split(re)[1];
-	document.getElementById("scr5").href = screen5.split(re)[1];
-	document.getElementById("scr6").href = screen6.split(re)[1];
-	document.getElementById("scr7").href = screen7.split(re)[1];
-	document.getElementById("scr8").href = screen8.split(re)[1];
-	document.getElementById("scr9").href = screen9.split(re)[1];
-	
-	document.getElementById("thumb1").src = screen1.split(re)[2];
-	document.getElementById("thumb2").src = screen2.split(re)[2];
-	document.getElementById("thumb3").src = screen3.split(re)[2];
-	document.getElementById("thumb4").src = screen4.split(re)[2];
-	document.getElementById("thumb5").src = screen5.split(re)[2];
-	document.getElementById("thumb6").src = screen6.split(re)[2];
-	document.getElementById("thumb7").src = screen7.split(re)[2];
-	document.getElementById("thumb8").src = screen8.split(re)[2];
-	document.getElementById("thumb9").src = screen9.split(re)[2];
-	
-	document.getElementById("yt").src = youtube;
-	document.getElementById("dl").href = github;
-	if (youtube == "")
-	{
-		var ytdiv = document.getElementById('ytdiv');
-		ytdiv.parentNode.removeChild(ytdiv);
-	}
+
+	var arr = [
+		"[url=http://i.imgur.com/F2f0quA.jpg][img]http://i.imgur.com/F2f0quAm.jpg[/img][/url]",
+		"[url=http://i.imgur.com/nIpPtL5.jpg][img]http://i.imgur.com/nIpPtL5m.jpg[/img][/url]",
+		"[url=http://i.imgur.com/2sgdWNo.png][img]http://i.imgur.com/2sgdWNom.jpg[/img][/url]",
+		"[url=http://i.imgur.com/1dRvJxn.jpg][img]http://i.imgur.com/1dRvJxnm.jpg[/img][/url]",
+		"[url=http://i.imgur.com/BdDykMq.jpg][img]http://i.imgur.com/BdDykMqm.jpg[/img][/url]",
+		"[url=http://i.imgur.com/cPuXS7C.jpg][img]http://i.imgur.com/cPuXS7Cm.jpg[/img][/url]",
+		"[url=http://i.imgur.com/T5iRSxO.png][img]http://i.imgur.com/T5iRSxOm.jpg[/img][/url]",
+		"[url=http://i.imgur.com/ebyvmp8.jpg][img]http://i.imgur.com/ebyvmp8m.jpg[/img][/url]",
+		"[url=http://i.imgur.com/U5svQ58.jpg][img]http://i.imgur.com/U5svQ58m.jpg[/img][/url]",
+	];
 </script>
 
 <div style="width: 100%; margin-left:-5px;">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 </div>
 <br>
-	<div class="container" style="width: 100%;">
-		<center>
-		<a id="scr1"><img id="thumb1" style="margin:10px;"></a>
-		<a id="scr2"><img id="thumb2" style="margin:10px;"></a>
-		<a id="scr3"><img id="thumb3" style="margin:10px;"></a>
-		<br/>
-		<a id="scr4"><img id="thumb4" style="margin:10px;"></a>
-		<a id="scr5"><img id="thumb5" style="margin:10px;"></a>
-		<a id="scr6"><img id="thumb6" style="margin:10px;"></a>
-		<br/>
-		<a id="scr7"><img id="thumb7" style="margin:10px;"></a>
-		<a id="scr8"><img id="thumb8" style="margin:10px;"></a>
-		<a id="scr9"><img id="thumb9" style="margin:10px;"></a>
-		</center>
-	
-        <div id="ytdiv" class="row" style="margin-right: -15px; min-height: 315px;	margin-left: -15px;	text-align: center;	float: none !important;	display: block;">
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="position: relative; max-width: 560px; width: 100%; height: 100%;  min-height: 1px; max-height: 315px;  padding-right: 15px;  padding-left: 15px;  text-align: center;  float: none !important;  display: inline-block;">
-                <iframe id="yt" style="height: 315px;" class="img-responsive" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-	
-		<div class="modal-footer" style="width: 100%; text-align: center; float: none !important;">
-			<a class="btn btn-success" id="dl"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
-			<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+<div class="container" style="width: 100%;">
+	<center>
+		<div id="pics"></div>
+	</center>
+
+	<div id="ytdiv" class="row" style="margin-right: -15px; min-height: 315px;	margin-left: -15px;	text-align: center;	float: none !important;	display: block;">
+		<div class="col-lg-3 col-md-4 col-xs-6 thumb" style="position: relative; max-width: 560px; width: 100%; height: 100%;  min-height: 1px; max-height: 315px;  padding-right: 15px;  padding-left: 15px;  text-align: center;  float: none !important;  display: inline-block;">
+			<iframe id="yt" style="height: 315px;" class="img-responsive" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
 		</div>
 	</div>
+
+	<div class="modal-footer" style="width: 100%; text-align: center; float: none !important;">
+		<a class="btn btn-success" id="dl"><span class="glyphicon glyphicon-download-alt"></span> Download</a>
+		<button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/" + id;
+	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
+	var output = document.getElementById('pics');
+
+	var x = 2;
+	if (arr.length % 3 == 0)
+		x = 3;
+
+	arr.forEach(function (item, i, arr) {
+		var scr = item.split(re)[1];
+		var thumb = item.split(re)[2];
+		var e = document.createElement("a");
+		e.setAttribute("src", scr);
+		e.innerHTML = "<img src='" + thumb + "' style='margin:10px;' />";
+		output.appendChild(e);
+
+		if (((i + 1) % x) == 0) {
+			var br = document.createElement("br");
+			output.appendChild(br);
+		}
+	});
+
+	document.getElementById("yt").src = youtube;
+	document.getElementById("dl").href = github;
+	if (youtube == "") {
+		var ytdiv = document.getElementById('ytdiv');
+		ytdiv.parentNode.removeChild(ytdiv);
+	}
+</script>
