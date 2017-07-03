@@ -44,7 +44,7 @@
 		var scr = item.split(re)[1];
 		var thumb = item.split(re)[2];
 		var e = document.createElement("a");
-		e.setAttribute("src", scr);
+		e.setAttribute("href", scr);
 		e.innerHTML = "<img src='" + thumb + "' style='margin:10px;' />";
 		output.appendChild(e);
 
