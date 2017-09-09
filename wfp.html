@@ -1634,7 +1634,8 @@
                 <div class="panel panel-primary" style="border-color: #e85128;box-shadow: 0 0 5px #e85128;" id="thematrixpathofneo">
                     <div class="pull-left img-comparison">
                         <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/thematrixpathofneo/main1.jpg';"
-                            onmouseout="this.src='screens/thematrixpathofneo/main2.jpg';" data-original="screens/thematrixpathofneo/main2.jpg" />
+                            onmouseout="this.src='screens/thematrixpathofneo/main2.jpg';" data-original="screens/thematrixpathofneo/main2.jpg"
+                        />
                         <div class="logo" data-original="screens/thematrixpathofneo/logo.png" onmouseover="this.remove();"></div>
                     </div>
 
@@ -1668,7 +1669,8 @@
                 <div class="panel panel-primary" style="border-color: #e85128;box-shadow: 0 0 5px #e85128;" id="enterthematrix">
                     <div class="pull-left img-comparison">
                         <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/enterthematrix/main1.jpg';"
-                            onmouseout="this.src='screens/enterthematrix/main2.jpg';" data-original="screens/enterthematrix/main2.jpg" />
+                            onmouseout="this.src='screens/enterthematrix/main2.jpg';" data-original="screens/enterthematrix/main2.jpg"
+                        />
                         <div class="logo" data-original="screens/enterthematrix/logo.png" onmouseover="this.remove();"></div>
                     </div>
 
@@ -2249,30 +2251,33 @@
     <!-- release dates -->
     <script type="text/javascript">
         function GetReleaseInfo(ghtag, obj) {
-            $.getJSON("https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases/tags/" + ghtag +
-                "?access_token=63c1f1cc5782c8f1dafad05448e308f0cf8c9198").done(function (release) {
-                var asset = release.assets[0];
-                var downloadCount = 0;
-                for (var i = 0; i < release.assets.length; i++) {
-                    if (release.assets[i].name.includes("WidescreenFix"))
-                        downloadCount += release.assets[i].download_count;
-                }
-                var oneHour = 60 * 60 * 1000;
-                var oneDay = 24 * oneHour;
-                var dateDiff = new Date() - new Date(asset.updated_at);
-                var timeAgo;
-                if (dateDiff < oneDay) {
-                    timeAgo = (dateDiff / oneHour).toFixed(0) + " hours ago";
-                } else {
-                    timeAgo = (dateDiff / oneDay).toFixed(0) + " days ago";
-                }
-                var releaseInfo = "Updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() +
-                    " times since";
-                obj.html("<a style='color: inherit;text-decoration: inherit;' href='#updates'>" + releaseInfo +
-                    "</a>")
-                //obj.text(releaseInfo);
-                obj.fadeIn("fast");
-            });
+            if (ghtag != undefined) {
+                $.getJSON("https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases/tags/" + ghtag +
+                    "?access_token=63c1f1cc5782c8f1dafad05448e308f0cf8c9198").done(function (release) {
+                    var asset = release.assets[0];
+                    var downloadCount = 0;
+                    for (var i = 0; i < release.assets.length; i++) {
+                        if (release.assets[i].name.includes("WidescreenFix"))
+                            downloadCount += release.assets[i].download_count;
+                    }
+                    var oneHour = 60 * 60 * 1000;
+                    var oneDay = 24 * oneHour;
+                    var dateDiff = new Date() - new Date(asset.updated_at);
+                    var timeAgo;
+                    if (dateDiff < oneDay) {
+                        timeAgo = (dateDiff / oneHour).toFixed(0) + " hours ago";
+                    } else {
+                        timeAgo = (dateDiff / oneDay).toFixed(0) + " days ago";
+                    }
+                    var releaseInfo = "Updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() +
+                        " times since";
+                    obj.html("<a style='color: inherit;text-decoration: inherit;' href='#updates'>" +
+                        releaseInfo +
+                        "</a>")
+                    //obj.text(releaseInfo);
+                    obj.fadeIn("fast");
+                });
+            }
         }
     </script>
 
