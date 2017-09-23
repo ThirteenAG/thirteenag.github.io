@@ -2528,6 +2528,7 @@
             var comboplete = new Awesomplete('input.dropdown-input', {
                 minChars: 0,
                 maxItems: 100,
+                autoFirst: true,
                 filter: function (text, input) {
                     return (Awesomplete.FILTER_CONTAINS(text.label, input.match(/[^,]*$/)[0]) ||
                         Awesomplete.FILTER_CONTAINS(text.value, input.match(/[^,]*$/)[0]));
