@@ -2382,7 +2382,7 @@
                 if (tab != 'laquo' && tab != 'raquo') {
                     if (tab != '#all') {
                         for (var i = 0; i < TabContentMap.length; i++) {
-                            if (tab.indexOf(TabContentMap[i].tabname) > -1) {
+                            if (tab.startsWith(TabContentMap[i].tabname)) {
                                 $('a[href="' + tab + '"]').tab("show");
                                 break;
                             } else {
@@ -2393,7 +2393,6 @@
                                 }
                             }
                         }
-
                     } else {
                         $('a[href="' + tab + '"]').tab("show");
                         ShowAllTabs();
@@ -2428,6 +2427,7 @@
             }
             ImgLazyLoad.handleScroll();
             CommentsLazyLoad.handleScroll();
+            jmpToHash();
         }
     </script>
 
@@ -2553,7 +2553,8 @@
             });
             Awesomplete.$('input.dropdown-input').addEventListener("awesomplete-select", function (event) {
                 LocationManager(event.text.value);
-                window.location = event.text.value;
+                window.location.hash = event.text.value;
+                jmpToHash();
             });
         };
     </script>

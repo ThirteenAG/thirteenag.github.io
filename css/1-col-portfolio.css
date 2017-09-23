@@ -43,8 +43,8 @@ footer {
 }
 
 .img-responsive {
-  #margin: 1px;
-  #max-height: 394px;
+  /*margin: 1px;
+  max-height: 394px;*/
   position: relative;
   z-index: 5;
 }
@@ -139,7 +139,7 @@ footer {
 @media only screen and (max-width: 992px) {
   .panel-heading {
     min-width: 100px;
-    #background-color: red;
+    /*background-color: red;*/
   }
   .img-nopad {
     border-top-left-radius: 2px;
@@ -166,10 +166,10 @@ footer {
   text-align: center;
 }
 
-.lazy {
-  #min-width: 653px;
-  #min-height: 367px;
-}
+/*.lazy {
+  min-width: 653px;
+  min-height: 367px;
+}*/
 
 .container .lazy {
   display: block;
@@ -462,4 +462,5 @@ footer {
 
 .awesomplete > input {
   margin-top: 11px;
+  padding-left: 3px;
 }
