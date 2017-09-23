@@ -18,8 +18,9 @@
 
     <!-- Custom styles for this template -->
     <link href="css/bootstrap-modal.css" rel="stylesheet" />
-    <link href="css/1-col-portfolio.css" rel="stylesheet" />
     <link href="css/icomoon.css" rel="stylesheet" />
+    <link href="css/awesomplete.css" rel="stylesheet" />
+    <link href="css/1-col-portfolio.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -42,11 +43,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <li><input class="dropdown-input" placeholder="search" /><button class="dropdown-btn" type="button"><span class="caret"></span></button></li>
                     <li><a href="https://github.com/ThirteenAG/WidescreenFixesPack" target="_blank">GitHub</a></li>
                     <li><a href="https://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/" target="_blank">GTAForums</a></li>
-                    <li><a href="https://www.youtube.com/SergeyP13" target="_blank">YouTube</a></li>
-                    <li><a href="https://twitch.tv/ThirteenAG" class="twitch-widget" id="twitch-widget" target="_blank" data-placement='bottom'
-                            data-toggle='tooltip'>Twitch</a></li>
+                    <!--li><a href="https://www.youtube.com/SergeyP13" target="_blank">YouTube</a></li-->
+                    <!--li><a href="https://twitch.tv/ThirteenAG" class="twitch-widget" id="twitch-widget" target="_blank" data-placement='bottom' data-toggle='tooltip'>Twitch</a></li-->
                     <li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/issues" target="_blank">Report an issue</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -2171,7 +2172,8 @@
     <div id="ajax-modal" class="modal fade" tabindex="-1" style="display: none; min-height: 90%;"></div>
 
     <!-- jQuery -->
-    <script defer src="js/jquery.min.js" onload="initTwitch();"></script>
+    <script defer src="js/jquery.min.js"></script>
+    <!-- onload="initTwitch();" -->
 
     <!-- Bootstrap Core JavaScript -->
     <script defer src="js/bootstrap.min.js" onload="initTooltips();"></script>
@@ -2181,6 +2183,7 @@
     <script defer src="js/bootstrap-modal.js" onload="initModals();"></script>
     <script defer src="js/lazyload.transpiled.min.js" onload="initLazy(); LocationManager(); jmpToHash(); initAllTabs(); checkRateLimit();"></script>
     <script defer src="js/github-comments.js" onload="GetCommentsCount(236);"></script>
+    <script defer src="js/awesomplete.min.js" onload="initSearch();"></script>
 
     <!-- Scripts -->
 
@@ -2484,6 +2487,7 @@
         })
     </script>
 
+    <!-- twitch -->
     <script type="text/javascript">
         function initTwitch() {
             var user_name, api_key, twitch_widget;
@@ -2507,6 +2511,49 @@
                         twitch_widget.attr("data-original-title", "Offline");
                     }
                 });
+        };
+    </script>
+
+    <!-- search -->
+    <script type="text/javascript">
+        function initSearch() {
+            let list = [];
+            Array.from(document.querySelectorAll('h4.panel-title a')).forEach(function (data) {
+                var myObj = {
+                    label: data.innerText,
+                    value: data.getAttribute('href')
+                };
+                list.push(myObj);
+            });
+            var comboplete = new Awesomplete('input.dropdown-input', {
+                minChars: 0,
+                maxItems: 100,
+                filter: function (text, input) {
+                    return (Awesomplete.FILTER_CONTAINS(text.label, input.match(/[^,]*$/)[0]) ||
+                        Awesomplete.FILTER_CONTAINS(text.value, input.match(/[^,]*$/)[0]));
+                },
+                sort: function sort(a, b) {
+                    return (a.toLowerCase() > b.toLowerCase()) ? 1 : -1;
+                },
+                replace: function (text) {
+                    this.input.value = text;
+                },
+                list: list
+            });
+            Awesomplete.$('.dropdown-btn').addEventListener("click", function () {
+                if (comboplete.ul.childNodes.length === 0) {
+                    comboplete.minChars = 0;
+                    comboplete.evaluate();
+                } else if (comboplete.ul.hasAttribute('hidden')) {
+                    comboplete.open();
+                } else {
+                    comboplete.close();
+                }
+            });
+            Awesomplete.$('input.dropdown-input').addEventListener("awesomplete-select", function (event) {
+                LocationManager(event.text.value);
+                window.location = event.text.value;
+            });
         };
     </script>
     <!-- /Scripts -->
