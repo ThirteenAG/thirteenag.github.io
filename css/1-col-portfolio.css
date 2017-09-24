@@ -430,22 +430,32 @@ footer {
 }
 
 .awesomplete > ul {
-  width: 350px;
+  width: 370px;
   max-height: 200px;
   overflow-y: auto;
 }
 
+.awesomplete > ul > li[aria-selected="true"] {
+  background: #337ab7;
+  color: white;
+}
+
+.awesomplete > ul > li:hover {
+  background: rgba(0, 129, 194, 0.45);
+  color: black;
+}
+
 .awesomplete mark {
-  background: #97cfff;
+  background: rgba(0, 129, 194, 0.45);
   padding: 0em;
 }
 
 .awesomplete li:hover mark {
-  background: #51afff;
+  background: #0081c2;
 }
 
 .awesomplete li[aria-selected="true"] mark {
-  background: hsl(205, 100%, 60%);
+  background: rgba(255, 255, 255, 0.2);
   color: inherit;
 }
 
