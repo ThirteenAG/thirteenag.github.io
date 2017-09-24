@@ -430,7 +430,7 @@ footer {
 }
 
 .awesomplete > ul {
-  width: 370px;
+  width: 400px;
   max-height: 200px;
   overflow-y: auto;
 }
@@ -471,6 +471,13 @@ footer {
 }
 
 .awesomplete > input {
-  margin-top: 11px;
   padding-left: 3px;
+}
+
+.awesomplete a {
+  color: #333;
+}
+
+.awesomplete a:focus, a:hover {
+	color: #fff;
 }

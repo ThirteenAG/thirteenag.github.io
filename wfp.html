@@ -43,7 +43,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><input class="dropdown-input" placeholder="search" /><button class="dropdown-btn" type="button"><span class="caret"></span></button></li>
+                    <li style="margin-top: 11px;"><input class="dropdown-input" placeholder="search" /><button class="dropdown-btn" type="button"><span class="caret"></span></button></li>
                     <li><a href="https://github.com/ThirteenAG/WidescreenFixesPack" target="_blank">GitHub</a></li>
                     <li><a href="https://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/" target="_blank">GTAForums</a></li>
                     <!--li><a href="https://www.youtube.com/SergeyP13" target="_blank">YouTube</a></li-->
@@ -2518,17 +2518,28 @@
     <script type="text/javascript">
         function initSearch() {
             let list = [];
-            Array.from(document.querySelectorAll('h4.panel-title a')).forEach(function (data) {
-                var myObj = {
-                    label: data.innerText,
-                    value: data.getAttribute('href')
-                };
-                list.push(myObj);
+            Array.from(document.querySelectorAll('h4.panel-title')).forEach(function (data) {
+                if (data.firstElementChild != null) {
+                    list.push({
+                        label: data.innerText,
+                        value: data.firstElementChild.getAttribute('href'),
+                        url: (([].slice.call(data.parentNode.parentNode.querySelectorAll(
+                            'div > div.btn-group > ul > li > a'))).filter(e => e.innerText ==
+                            "Direct Link"))
+                    });
+                }
             });
             var comboplete = new Awesomplete('input.dropdown-input', {
                 minChars: 0,
                 maxItems: 100,
                 autoFirst: true,
+                data: function (item, input) {
+                    return {
+                        label: item.label + " " + "<a href=" + item.url +
+                            " title='Direct Link'><span class='glyphicon glyphicon-download-alt'></span></a>",
+                        value: item.value
+                    };
+                },
                 filter: function (text, input) {
                     return (Awesomplete.FILTER_CONTAINS(text.label, input.match(/[^,]*$/)[0]) ||
                         Awesomplete.FILTER_CONTAINS(text.value, input.match(/[^,]*$/)[0]));
@@ -2538,6 +2549,22 @@
                 },
                 replace: function (text) {
                     this.input.value = this.input.value;
+                },
+                item: function item(text, input) {
+                    var splitstr = (str, delim) => {
+                        var p = str.indexOf(delim);
+                        if (p !== -1) {
+                            return [str.substring(0, p), str.substring(p)];
+                        } else {
+                            return [str];
+                        }
+                    };
+                    var newText = splitstr(text, "<a href");
+                    return Awesomplete.$.create("li", {
+                        innerHTML: newText[0].replace(RegExp(input.trim(), "gi"), "<mark>$&</mark>") +
+                            newText[1],
+                        "aria-selected": "false"
+                    });
                 },
                 list: list
             });
@@ -2551,10 +2578,20 @@
                     comboplete.close();
                 }
             });
+            Awesomplete.$('input.dropdown-input').addEventListener("click", function () {
+                if (comboplete.ul.hasAttribute('hidden')) {
+                    comboplete.evaluate();
+                    comboplete.open();
+                }
+            });
             Awesomplete.$('input.dropdown-input').addEventListener("awesomplete-select", function (event) {
-                LocationManager(event.text.value);
-                window.location.hash = event.text.value;
-                jmpToHash();
+                if (event.origin.tagName == 'LI') {
+                    LocationManager(event.text.value);
+                    window.location.hash = event.text.value;
+                    jmpToHash();
+                } else {
+                    event.preventDefault();
+                }
             });
         };
     </script>
