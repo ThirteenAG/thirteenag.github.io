@@ -473,11 +473,3 @@ footer {
 .awesomplete > input {
   padding-left: 3px;
 }
-
-.awesomplete a {
-  color: #333;
-}
-
-.awesomplete a:focus, a:hover {
-	color: #fff;
-}
