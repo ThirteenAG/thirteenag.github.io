@@ -1618,21 +1618,42 @@
             </div>
 
             <div class="tab-pane" id="patreon">
-                <!--div class="panel panel-primary patreon-color">
+
+                <div class="panel panel-primary patreon-color" id="psychonauts">
+                    <div class="pull-left img-comparison">
+                        <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/psychonauts/main1.jpg';"
+                            onmouseout="this.src='screens/psychonauts/main2.jpg';" data-original="screens/psychonauts/main2.jpg"
+                        />
+                        <div class="logo" data-original="screens/psychonauts/logo.png" onmouseover="this.remove();"></div>
+                    </div>
+
                     <div class="panel-heading panel-round-corners" style="background-color: #e85128;border-color: #e85128;">
-                        <h4 class="panel-title centered">Patreon</h4>
+                        <h4 class="panel-title pull-right centered"><a href="#psychonauts">Psychonauts Widescreen Fix</a></h4>
                     </div>
-                    <br>
-                    <div class="panel-body indent5 centered">
-                        <p>I'm starting a <a target="_blank" href="https://www.patreon.com/WFP">Patreon campaign</a> to be able
-                            to spend more time making user requested fixes. Without your support it takes a really long time
-                            to make one, so, the more support I get, the more time I'll be able to spend working on new fixes.<b></b></p>
-                        <a target="_blank" href="https://www.patreon.com/WFP">
-                            <img title="Support me on Patreon" alt="Support me on Patreon" style="line-height: 50px;" src="./img/becomeAPatronBanner.png"></img>
-                        </a>
+
+                    <div class="release-info"></div>
+
+                    <div class="panel-body indent5">
+                        <p>Supported exe version: <b>Any</b></p>
+                        <p align="justify">Installation: <b>Copy content of archive to Psychonauts folder. Check the .ini file to get more info about available features.</b></p>
+                        <div class="centered">
+                            <div class="btn-group">
+                                <a style="margin-right:0;" class="btn btn-default btn-outline" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/psychonauts">
+                                    <span class="glyphicon glyphicon-download-alt"></span> Download</a>
+                                <a class="btn btn-default btn-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/psychonauts/Psychonauts.WidescreenFix.zip">Direct Link</a></li>
+                                    <li><a href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/Psychonauts.WidescreenFix.zip">Developer build (untested)</a></li>
+                                </ul>
+                            </div>
+                            <button class="demo btn btn-default btn-outline" data-toggle="modal" onclick="OpenModal('psychonauts')"><span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+                            <a href="https://www.patreon.com/posts/15177187" class="demo btn btn-default btn-outline" target="_blank"><span class="glyphicon glyphicon-pencil"></span> Release notes</a>
+                            <a href="http://store.steampowered.com/app/3830/" class="demo btn btn-default btn-outline" target="_blank"><span class="icon-steam"></span><font size="2"> Works with Steam version</font></a>
+                            <br><br>
+                            <p>Thank you, everyone, who supported the development of this fix on <a href="https://www.patreon.com/WFP">patreon.com/wfp</a>!</p>
+                        </div>
                     </div>
-                    </br>
-                </div-->
+                </div>
 
                 <div class="panel panel-primary patreon-color" id="justcause">
                     <div class="pull-left img-comparison">
@@ -2059,6 +2080,11 @@
                             <tr>
                                 <td>
                                     <tbody>
+                                        <a href="#psychonauts" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
+                                            <span class="label label-success">02.11.2017</span> <span class="label label-info"
+                                                title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">Psychonauts Widescreen Fix</span>
+                                        </a>
+                                        
                                         <a href="#justcause" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
                                                     <span class="label label-success">04.10.2017</span> <span class="label label-info"
                                                         title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">Just Cause Widescreen Fix</span>
@@ -2072,11 +2098,6 @@
                                         <a href="#enterthematrix" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
                                             <span class="label label-success">07.09.2017</span> <span class="label label-info"
                                                 title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">Enter the Matrix Widescreen Fix</span>
-                                        </a>
-
-                                        <a href="#hd2" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
-                                            <span class="label label-success">04.08.2017</span> <span class="label label-info"
-                                                title="New release">REL</span> <span style="color: #428bca;margin-left:10px;">Hidden and Dangerous 2 Widescreen Fix</span>
                                         </a>
                                     </tbody>
                                 </td>
@@ -2384,7 +2405,7 @@
             "contentname": "#mafia #gun #punisher #secondsight #sonicheroes #sniperelite"
         }, {
             "tabname": "patreon",
-            "contentname": "#justcause #thematrixpathofneo #enterthematrix #hd2 #usm #driv3r #thesuffering #driverpl #callofcthulhu #kingkong #onimusha3"
+            "contentname": "#psychonauts #justcause #thematrixpathofneo #enterthematrix #hd2 #usm #driv3r #thesuffering #driverpl #callofcthulhu #kingkong #onimusha3"
         }, {
             "tabname": "all",
             "contentname": "#all"
