@@ -3388,12 +3388,12 @@
     <!-- release dates -->
     <script type="text/javascript">
         var getCachedJSON = function (url, callback) {
-            var cachedData = window.localStorage[url];
+            var cachedData = window.sessionStorage[url];
             if (cachedData) {
                 callback(JSON.parse(cachedData));
             } else {
                 $.getJSON(url, function (data) {
-                    window.localStorage[url] = JSON.stringify(data);
+                    window.sessionStorage[url] = JSON.stringify(data);
                     callback(data);
                 });
             }
