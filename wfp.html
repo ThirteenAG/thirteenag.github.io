@@ -2286,6 +2286,53 @@
                     </div>
                 </div>
 
+                <!-- GODFATHER -->
+                <div class="panel panel-primary" id="thegodfather">
+                    <div class="pull-left img-comparison">
+                        <img class="lazy img-responsive img-rounded img-nopad" alt="" width="653" height="367" onmouseover="this.src='screens/thegodfather/main1.jpg';"
+                            onmouseout="this.src='screens/thegodfather/main2.jpg';" data-original="screens/thegodfather/main2.jpg"
+                        />
+                        <div class="logo" data-original="screens/thegodfather/logo.png" onmouseover="this.remove();"></div>
+                    </div>
+
+                    <div class="panel-heading panel-round-corners">
+                        <h4 class="panel-title pull-right centered">
+                            <a href="#thegodfather">The Godfather Widescreen Fix</a>
+                        </h4>
+                    </div>
+
+                    <div class="release-info"></div>
+
+                    <div class="panel-body indent5">
+                        <p>Supported exe version:
+                            <b>Any</b>
+                        </p>
+                        <p align="justify">Installation:
+                            <b>Unpack content of archive to The Godfather root directory.</b>
+                        </p>
+
+                        <div class="centered">
+                            <div class="btn-group">
+                                <a style="margin-right:0;" class="btn btn-default btn-outline" target="_blank" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/thegodfather">
+                                    <span class="glyphicon glyphicon-download-alt"></span> Download</a>
+                                <a class="btn btn-default btn-outline dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/thegodfather/TheGodfather.WidescreenFix.zip">Direct Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/TheGodfather.WidescreenFix.zip">Developer build (untested)</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="demo btn btn-default btn-outline" data-toggle="modal" onclick="OpenModal('thegodfather')">
+                                <span class="glyphicon glyphicon-picture"></span> Screenshots</button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- SECONSIGHT -->
                 <div class="panel panel-primary" id="secondsight">
                     <div class="pull-left img-comparison">
@@ -3112,8 +3159,9 @@
                         <p>
                             <b>Installation:</b>
                             <br> Put
-                            <b>modupdater.asi</b> in the folder with widescreen fix. It's already included with all archives
-                            on this page, no need to download it separately anymore.</p>
+                            <b>modupdater.asi</b> in the folder with widescreen fix.
+                            <u>It's already included with all archives on this page, no need to download it separately.</u>
+                        </p>
                         <p align="justify">With
                             <b>"Update all downloaded files"</b> checkbox, updater will replace
                             <b>all</b> downloaded files from the archive. That means, in case ini file is in the archive, it
@@ -3122,17 +3170,23 @@
                             <b>one</b> file will be updated from that downloaded archive (.asi by default).</p>
 
                         <a style="margin-right:0;" class="btn btn-danger btn-lg" target="_blank" href="https://github.com/ThirteenAG/modupdater/releases/latest">
-                            <span class="glyphicon glyphicon-download-alt"></span> Download*</a>
+                            <span class="glyphicon glyphicon-download-alt"></span> Download</a>
                     </div>
                 </div>
 
-                <div style="float: left; margin: 0px; padding-top: 10px; padding-bottom: 10px; padding-right: 3px; width: 50%;">
+                <div style="float: left; margin: 0px; padding-top: 0px; padding-bottom: 0px; padding-right: 3px; width: 50%;">
                     <div class="panel panel-info">
                         <div class="panel-heading">Latest releases</div>
                         <table border="0" cellspacing="0" cellpadding="0" style="width: 50%;">
                             <tr>
                                 <td>
                                     <tbody>
+                                        <a href="#thegodfather" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
+                                            <span class="label label-success">01.03.2018</span>
+                                            <span class="label label-info" title="New release">REL</span>
+                                            <span style="color: #428bca;margin-left:10px;">The Godfather Widescreen Fix</span>
+                                        </a>
+
                                         <a href="#maxpayne" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
                                             <span class="label label-success">21.02.2018</span>
                                             <span class="label label-info" title="Update">UPD</span>
@@ -3150,12 +3204,6 @@
                                             <span class="label label-info" title="New release">REL</span>
                                             <span style="color: #428bca;margin-left:10px;">Just Cause Widescreen Fix</span>
                                         </a>
-
-                                        <a href="#thematrixpathofneo" class="list-group-item" onclick="LocationManager($(this).attr('href'));">
-                                            <span class="label label-success">07.09.2017</span>
-                                            <span class="label label-info" title="New release">REL</span>
-                                            <span style="color: #428bca;margin-left:10px;">The Matrix: Path of Neo Widescreen Fix</span>
-                                        </a>
                                     </tbody>
                                 </td>
                             </tr>
@@ -3163,7 +3211,7 @@
                     </div>
                 </div>
 
-                <div style="float: right; margin: 0px; padding-top: 10px; padding-bottom: 10px; padding-left: 3px; width: 50%;">
+                <div style="float: right; margin: 0px; padding-top: 0px; padding-bottom: 0px; padding-left: 3px; width: 50%;">
                     <div class="panel panel-info">
                         <div class="panel-heading" align="right">Deprecated fixes</div>
                         <table border="0" cellspacing="0" cellpadding="0" style="width: 50%;">
@@ -3211,6 +3259,11 @@
                                         <a href="https://www.youtube.com/watch?v=DZ0nYNiqDGA" class="list-group-item">
                                             <span class="label label-success" style="width:30px;">Resident Evil 7 Demo</span>
                                             <span style="color: #428bca;margin-left:10px;">Infinite Ammo mod</span>
+                                        </a>
+
+                                        <a href="https://github.com/ThirteenAG/DyingLight.BorderlessWindowedMode#readme" class="list-group-item">
+                                            <span class="label label-success" style="width:30px;">Dying Light</span>
+                                            <span style="color: #428bca;margin-left:10px;">Borderless Windowed Mode for Dying Light Enhanced Edition</span>
                                         </a>
                                     </tbody>
                                 </td>
@@ -3485,7 +3538,7 @@
             "contentname": "#manhunt #coldfear #tod #psiops #truecrimesola #truecrimenyc #stubbsthezombie #da4 #srs #paradisecracked"
         }, {
             "tabname": "other2",
-            "contentname": "#mafia #gun #punisher #secondsight #sonicheroes #sniperelite"
+            "contentname": "#mafia #gun #punisher #thegodfather #secondsight #sonicheroes #sniperelite"
         }, {
             "tabname": "patreon",
             "contentname": "#psychonauts #justcause #thematrixpathofneo #enterthematrix #hd2 #usm #driv3r #thesuffering #driverpl #callofcthulhu #kingkong #onimusha3"
