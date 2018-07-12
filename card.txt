@@ -1,0 +1,71 @@
+<div class="card" id="$tag">
+  <div class="card-body row p-0 mx-0">
+    <div class="img-comparison">
+      <img class="lazy img-fluid" onerror="this.style.display='none'" onmouseover="this.src='screens/$tag/main1.jpg';" onmouseout="this.src='screens/$tag/main2.jpg';"
+        data-src="screens/$tag/main2.jpg" />
+      <div class="logo" data-src="screens/$tag/logo.png" onmouseover="this.remove();"></div>
+    </div>
+    <div class="col p-0 panel-primary d-flex flex-column">
+      <div class="p-2 panel-heading">
+        <h4 class="card-title panel-title centered m-0 p-0">
+          <a href="#$tag"> Widescreen Fix</a>
+        </h4>
+      </div>
+      <div class="release-info"></div>
+      <div class="p-1">
+        <div class="clearfix">
+          <p class="card-text float-left mb-0">Supported exe version:
+            <b>Any</b>
+            <br>
+            <b>
+              <u>Installation:</u>
+            </b>
+          </p>
+          <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank" href="" data-placement="left" data-toggle="tooltip"
+            data-original-title="$externallinkdescr">
+            <i class="icon-link d-flex justify-content-center align-items-center"></i>
+          </a>
+          <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank" href="" data-placement="left" data-toggle="tooltip"
+            data-original-title="Works with Steam version">
+            <i class="icon-steam steam-icon d-flex justify-content-center align-items-center"></i>
+          </a>
+          <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank" href="" data-placement="left" data-toggle="tooltip"
+            data-original-title="Works with GOG version">
+            <i class="icon-gog d-flex justify-content-center align-items-center"></i>
+          </a>
+          <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank" href="" data-placement="left" data-toggle="tooltip"
+            data-original-title="Official website">
+            <i class="icon-earth d-flex justify-content-center align-items-center"></i>
+          </a>
+        </div>
+        <div class="card-text text-justify p-0 m-0 mt-1">
+          <ol class="font-weight-bold pb-1 mb-1 pl-4">
+            <li>list1</li>
+            <li>list2</li>
+          </ol>
+          <p class="pb-1 mb-1">descr cont.</p>
+        </div>
+      </div>
+      <div class="text-center btn-block mt-auto">
+        <div class="btn-group mb-2">
+          <a target="_blank" class="btn btn-warning rounded-0 border border-dark" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/$tag">
+            <i class="icon-download"></i> Download</a>
+          <button type="button" class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu dropdown-btn-width">
+            <a class="dropdown-item" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/$tag/$zipname">Direct Link</a>
+            <a class="dropdown-item" href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/$zipname">Developer build (untested)</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-primary btn-block rounded-0 mt-0 btn-screens" data-toggle="modal" data-remote="screens/$tag.html"
+          data-target="#screensModal">
+          <i class="icon-images align-items-center"></i> Screenshots
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

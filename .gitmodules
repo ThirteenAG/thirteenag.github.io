@@ -1,0 +1,18 @@
+[submodule "vendor/jquery"]
+	path = vendor/jquery
+	url = https://github.com/jquery/jquery-dist
+[submodule "vendor/bootstrap"]
+	path = vendor/bootstrap
+	url = https://github.com/twbs/bootstrap
+	branch = v4-without-jquery
+[submodule "vendor/awesomplete"]
+	path = vendor/awesomplete
+	url = https://github.com/LeaVerou/awesomplete
+	branch = gh-pages
+[submodule "vendor/lazyload"]
+	path = vendor/lazyload
+	url = https://github.com/verlok/lazyload
+[submodule "vendor/bootstrap-social"]
+	path = vendor/bootstrap-social
+	url = https://github.com/lipis/bootstrap-social
+	branch = gh-pages

@@ -1,0 +1,198 @@
+/*
+  https://codepen.io/lbebber/pen/XJRdrV
+  CSS CRT screen effect
+  A Pen By Lucas Bebber
+*/
+
+@keyframes flicker {
+  0% {
+    opacity: 0.96164;
+  }
+  5% {
+    opacity: 0.70882;
+  }
+  10% {
+    opacity: 0.16919;
+  }
+  15% {
+    opacity: 0.80093;
+  }
+  20% {
+    opacity: 0.13297;
+  }
+  25% {
+    opacity: 0.59235;
+  }
+  30% {
+    opacity: 0.02806;
+  }
+  35% {
+    opacity: 0.20636;
+  }
+  40% {
+    opacity: 0.52937;
+  }
+  45% {
+    opacity: 0.48143;
+  }
+  50% {
+    opacity: 0.51993;
+  }
+  55% {
+    opacity: 0.14268;
+  }
+  60% {
+    opacity: 0.68884;
+  }
+  65% {
+    opacity: 0.06551;
+  }
+  70% {
+    opacity: 0.43865;
+  }
+  75% {
+    opacity: 0.37498;
+  }
+  80% {
+    opacity: 0.23408;
+  }
+  85% {
+    opacity: 0.99895;
+  }
+  90% {
+    opacity: 0.99303;
+  }
+  95% {
+    opacity: 0.89599;
+  }
+  100% {
+    opacity: 0.54639;
+  }
+}
+
+.crt-container::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.crt-container::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.crt-container::after {
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes turn-on {
+  0% {
+    transform: scale(1, 0.8) translate3d(0, 0, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 1;
+  }
+  3.5% {
+    transform: scale(1, 0.8) translate3d(0, 100%, 0);
+  }
+  3.6% {
+    transform: scale(1, 0.8) translate3d(0, -100%, 0);
+    opacity: 1;
+  }
+  9% {
+    transform: scale(1, 0.6) translate3d(0, 100%, 0);
+    -webkit-filter: brightness(30);
+    filter: brightness(30);
+    opacity: 0;
+  }
+  11% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(0) brightness(0);
+    filter: contrast(0) brightness(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: contrast(1) brightness(1.2) saturate(1.3);
+    filter: contrast(1) brightness(1.2) saturate(1.3);
+    opacity: 1;
+  }
+}
+@keyframes turn-off {
+  0% {
+    transform: scale(1, 1) translate3d(0, 0, 0);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1, 0.001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(10);
+    filter: brightness(10);
+  }
+  100% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: scale(0, 0.0001) translate3d(0, 0, 0);
+    -webkit-filter: brightness(50);
+    filter: brightness(50);
+  }
+}
+
+/*
+.crt-container > .screen {
+  animation: turn-off 0.55s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: forwards;
+}
+*/
+
+.crt-container > .screen {
+  animation: turn-on 4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes crt-overlay-anim {
+  0% {
+    visibility: hidden;
+  }
+  20% {
+    visibility: hidden;
+  }
+  21% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.crt-overlay {
+  color: #ff0000;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  /*visibility: hidden;*/
+  pointer-events: none;
+}
+
+/*
+.crt-container .crt-overlay {
+  animation: crt-overlay-anim 5s linear;
+  animation-fill-mode: forwards;
+}
+*/
