@@ -1,11 +1,3 @@
-<style>
-	.modal-content {
-		background: url('https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-underground-2-keyart.jpg');
-		background-position: center;
-		background-size: cover;
-	}
-</style>
-
 <script type="text/javascript">
 	var id = "nfsu2";
 	var youtube = "//www.youtube.com/embed/j-u62ICMelU";
@@ -18,10 +10,14 @@
 		"[url=http://i.imgur.com/Cbtt06Z.jpg][img]http://i.imgur.com/Cbtt06Zm.jpg[/img][/url]",
 		"[url=http://i.imgur.com/OdAUNmQ.jpg][img]http://i.imgur.com/OdAUNmQm.jpg[/img][/url]",
 	];
+
+	var styles = { "background": "#fff url('https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-underground-2-keyart.jpg')", "background-position": "center", "background-size": "cover" };
 </script>
 
 <div style="width: 100%; margin-left:-5px;">
-	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;">
+		<span aria-hidden="true">&times;</span>
+	</button>
 </div>
 <br>
 <div class="container" style="width: 100%;">
@@ -36,8 +32,8 @@
 	</div>
 
 	<div class="modal-footer">
-		<a class="btn btn-warning" id="dl">Download</a>
-		<button type="button" data-dismiss="modal" class="btn btn-light">Close</button>
+		<a class="btn btn-warning rounded-0 border border-dark" id="dl">Download</a>
+		<button type="button" data-dismiss="modal" class="btn btn-light rounded-0 border border-dark">Close</button>
 	</div>
 </div>
 
@@ -70,4 +66,6 @@
 		var ytdiv = document.getElementById('ytdiv');
 		ytdiv.parentNode.removeChild(ytdiv);
 	}
+
+	$(".modal-content").css(styles);
 </script>

@@ -13,10 +13,14 @@
 		"[url=http://i.imgur.com/ZGFSTiM.jpg][img]http://i.imgur.com/ZGFSTiMm.jpg[/img][/url]",
 		"[url=http://i.imgur.com/ik5Ck1t.jpg][img]http://i.imgur.com/ik5Ck1tm.jpg[/img][/url]",
 	];
+
+	var styles = { "background": "#fff url('')", "background-position": "center", "background-size": "cover" };
 </script>
 
 <div style="width: 100%; margin-left:-5px;">
-	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;">
+		<span aria-hidden="true">&times;</span>
+	</button>
 </div>
 <br>
 <div class="container" style="width: 100%;">
@@ -31,8 +35,8 @@
 	</div>
 
 	<div class="modal-footer">
-		<a class="btn btn-outline-dark" id="dl">Download</a>
-		<button type="button" data-dismiss="modal" class="btn btn-outline-dark">Close</button>
+		<a class="btn btn-warning rounded-0 border border-dark" id="dl">Download</a>
+		<button type="button" data-dismiss="modal" class="btn btn-light rounded-0 border border-dark">Close</button>
 	</div>
 </div>
 
@@ -65,4 +69,6 @@
 		var ytdiv = document.getElementById('ytdiv');
 		ytdiv.parentNode.removeChild(ytdiv);
 	}
+
+	$(".modal-content").css(styles);
 </script>
