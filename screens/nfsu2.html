@@ -14,24 +14,48 @@
 	var styles = { "background": "#fff url('https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-underground-2-keyart.jpg')", "background-position": "center", "background-size": "cover" };
 </script>
 
-<div style="width: 100%; margin-left:-5px;">
-	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;">
+<div>
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; 
+	text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;">
 		<span aria-hidden="true">&times;</span>
 	</button>
 </div>
-<br>
-<div class="container" style="width: 100%;">
-	<center>
-		<div id="pics"></div>
-	</center>
 
-	<div id="ytdiv" class="row" style="margin-right: -15px; min-height: 315px;	margin-left: -15px;	text-align: center;	float: none !important;	display: block;">
-		<div class="col-lg-3 col-md-4 col-xs-6 thumb" style="position: relative; max-width: 560px; width: 100%; height: 100%;  min-height: 1px; max-height: 315px;  padding-right: 15px;  padding-left: 15px;  text-align: center;  float: none !important;  display: inline-block;">
-			<iframe id="yt" style="height: 315px;" class="img-responsive" width="100%" height="100%" src="" frameborder="0" allowfullscreen></iframe>
+<div class="container gallery-container">
+	<div class="tz-gallery">
+		<div class="row">
+			<div class="pic col-md-4"></div>
+			<div class="pic col-md-4"></div>
+			<div class="pic col-md-4"></div>
+		</div>
+		<div class="row">
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8 text-justify" id="yt">
+				<a style="z-index: 1000; padding-right: 4px;" class="lightbox position-absolute w-100 d-none d-md-block" href="" id="img-main-src">
+					<img src="" id="img-main" />
+				</a>
+			</div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8"></div>
+			<div class="pic col-md-2"></div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
 		</div>
 	</div>
-
-	<div class="modal-footer">
+	<div class="pt-2">
 		<a class="btn btn-warning rounded-0 border border-dark" id="dl">Download</a>
 		<button type="button" data-dismiss="modal" class="btn btn-light rounded-0 border border-dark">Close</button>
 	</div>
@@ -40,32 +64,33 @@
 <script type="text/javascript">
 	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/" + id;
 	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
-	var output = document.getElementById('pics');
 
-	var x = 2;
-	if (arr.length % 3 == 0)
-		x = 3;
-
-	arr.forEach(function (item, i, arr) {
-		var scr = item.split(re)[1];
-		var thumb = item.split(re)[2];
-		var e = document.createElement("a");
-		e.setAttribute("href", scr);
-		e.innerHTML = "<img src='" + thumb + "' style='margin:10px;' />";
-		output.appendChild(e);
-
-		if (((i + 1) % x) == 0) {
-			var br = document.createElement("br");
-			output.appendChild(br);
+	document.querySelectorAll('.pic').forEach(function (item, i, ar) {
+		if (arr[i]) {
+			var scr = arr[i].split(re)[1];
+			var thumb = arr[i].split(re)[2];
+			var e = document.createElement("a");
+			e.setAttribute("class", "lightbox");
+			e.setAttribute("href", scr);
+			e.innerHTML = "<img src='" + thumb + "' />";
+			item.appendChild(e);
+		}
+		else {
+			var e = document.createElement("div");
+			e.setAttribute("class", "lightbox invisible d-none d-md-block");
+			e.innerHTML = "<img src='" + "./screens/" + id + "/main2.jpg" + "' />";
+			item.appendChild(e);
 		}
 	});
 
-	document.getElementById("yt").src = youtube;
-	document.getElementById("dl").href = github;
-	if (youtube == "") {
-		var ytdiv = document.getElementById('ytdiv');
-		ytdiv.parentNode.removeChild(ytdiv);
+	if (!youtube) {
+		document.getElementById("img-main-src").href = "./screens/" + id + "/main2.png";
+		document.getElementById("img-main").src = "./screens/" + id + "/main2.jpg";
 	}
-
+	else {
+		var s = "<div class='embed-responsive embed-responsive-16by9 position-absolute w-100'><iframe style='z-index: 1000; padding-right: 4px;' class='embed-responsive-item' src='" + youtube + "' allowfullscreen></iframe></div>";
+		document.getElementById("yt").innerHTML = s;
+	}
+	document.getElementById("dl").href = github;
 	$(".modal-content").css(styles);
 </script>

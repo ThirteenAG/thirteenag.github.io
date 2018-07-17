@@ -16,3 +16,6 @@
 	path = vendor/bootstrap-social
 	url = https://github.com/lipis/bootstrap-social
 	branch = gh-pages
+[submodule "vendor/baguetteBox.js"]
+	path = vendor/baguetteBox.js
+	url = https://github.com/feimosi/baguetteBox.js
