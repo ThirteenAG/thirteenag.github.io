@@ -208,6 +208,14 @@ body {
   z-index: 100;
 }
 
+.bs-30 {
+  background-size: 30% !important;
+}
+
+.bs-40 {
+  background-size: 40% !important;
+}
+
 .img-responsive {
   position: relative;
   z-index: 5;
