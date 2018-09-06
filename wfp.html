@@ -4981,6 +4981,7 @@
     function initTabs() {
       $().ready(function () {
         $("ul.nav-tabs > li > a").click(function (e) {
+          LocationManager($(e.target).attr("href"));
           if (history.pushState) {
             history.pushState(null, null, $(e.target).attr("href"));
           } else {
