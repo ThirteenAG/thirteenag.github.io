@@ -601,3 +601,9 @@ fieldset[disabled] .btn-social-light.focus {
 .tz-gallery .lightbox:not(.invisible):hover:before {
   opacity: 1;
 }
+
+.stripe {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

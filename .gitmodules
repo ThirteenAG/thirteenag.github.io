@@ -19,3 +19,6 @@
 [submodule "vendor/baguetteBox.js"]
 	path = vendor/baguetteBox.js
 	url = https://github.com/feimosi/baguetteBox.js
+[submodule "vendor/github-buttons"]
+	path = vendor/github-buttons
+	url = https://github.com/ntkme/github-buttons

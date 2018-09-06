@@ -4,6 +4,41 @@
     {
       "icon": {
         "paths": [
+          "M762.922 438.585c15.868 76.165 6.982 157.197-24.965 228.073-67.702 144.714-181.95 267.213-321.587 344.86-4.443 2.116-11.002 2.116-14.175-2.327-3.597-4.655-2.116-11.425 1.481-15.656 18.83-26.235 31.947-56.489 39.14-88.013 1.269-6.559 3.174-13.117 2.75-19.888-2.327-2.962-6.136-2.116-9.309-1.904-67.914 6.77-137.732-5.289-198.876-35.332-65.587-31.736-121.441-83.359-158.255-146.195-34.063-57.759-52.046-125.25-50.777-192.317 0.212-61.567 17.137-122.711 46.757-176.661 68.76-132.655 176.873-244.364 307.623-316.509 5.501-2.962 13.54-0.846 15.445 5.501 2.116 5.289-1.481 9.944-4.443 13.964-20.311 28.985-33.851 62.413-40.198 97.111-3.808 1.693-5.078 5.712-3.808 9.521 1.904 0.635 3.808 1.269 5.712 1.904 39.564-3.385 79.55-2.75 118.479 5.501 70.876 14.175 137.098 50.142 187.874 101.342 50.988 50.988 86.744 116.787 101.131 187.028zM538.023 556.43c18.407-56.701-3.597-123.134-51.623-158.255-30.255-23.061-69.818-33.217-107.266-27.716-40.41 5.501-77.646 29.197-100.073 62.836-15.233 23.273-24.542 50.777-24.331 78.704-1.058 37.448 13.752 74.896 39.564 101.765 22.638 24.331 53.95 40.198 86.744 44.43 33.428 4.443 68.337-3.385 96.688-21.792 28.562-18.407 50.565-47.18 60.298-79.974z"
+        ],
+        "attrs": [
+          {}
+        ],
+        "width": 787,
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 14,
+        "tags": [
+          "origin"
+        ],
+        "colorPermutations": {
+          "125525525514311": [
+            {}
+          ]
+        }
+      },
+      "attrs": [
+        {}
+      ],
+      "properties": {
+        "order": 317,
+        "id": 24,
+        "name": "origin",
+        "prevSize": 32,
+        "code": 59663
+      },
+      "setIdx": 0,
+      "setId": 3,
+      "iconIdx": 0
+    },
+    {
+      "icon": {
+        "paths": [
           "M632.672 267.84l-410.88 0.64-66.88 106.88h410.24l67.52-107.52zM455.072 656.64c-4.8 0-243.2 0.64-259.52 0.64 8-12.48 53.44-83.52 55.68-87.36h168.64l67.84-107.2-387.84 0.32-67.52 106.88h90.56l-122.88 193.92h516.8c9.28-14.4 180.8-288.64 188.8-301.12 7.040 10.56 53.12 83.84 60.8 96h-53.76l-67.2 106.88h189.12c2.88 4.48 58.56 92.16 61.44 96.64h128l-318.72-502.080c-12.48 19.52-247.36 391.68-250.24 396.48z"
         ],
         "attrs": [
@@ -25,7 +60,7 @@
         {}
       ],
       "properties": {
-        "order": 295,
+        "order": 318,
         "id": 23,
         "name": "ea",
         "prevSize": 32,
@@ -33,7 +68,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 0
+      "iconIdx": 1
     },
     {
       "icon": {
@@ -60,7 +95,7 @@
         {}
       ],
       "properties": {
-        "order": 296,
+        "order": 319,
         "id": 22,
         "prevSize": 32,
         "code": 59660,
@@ -68,7 +103,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 1
+      "iconIdx": 2
     },
     {
       "icon": {
@@ -110,7 +145,7 @@
         {}
       ],
       "properties": {
-        "order": 298,
+        "order": 321,
         "id": 20,
         "name": "notes",
         "prevSize": 32,
@@ -118,7 +153,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 3
+      "iconIdx": 4
     },
     {
       "icon": {
@@ -145,7 +180,7 @@
         {}
       ],
       "properties": {
-        "order": 299,
+        "order": 322,
         "id": 19,
         "name": "ubisoft",
         "prevSize": 32,
@@ -153,7 +188,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 4
+      "iconIdx": 5
     },
     {
       "icon": {
@@ -192,7 +227,7 @@
         {}
       ],
       "properties": {
-        "order": 300,
+        "order": 323,
         "id": 18,
         "name": "mafia-1-hero",
         "prevSize": 32,
@@ -200,7 +235,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 5
+      "iconIdx": 6
     },
     {
       "icon": {
@@ -227,7 +262,7 @@
         {}
       ],
       "properties": {
-        "order": 301,
+        "order": 324,
         "id": 17,
         "prevSize": 32,
         "code": 59656,
@@ -235,7 +270,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 6
+      "iconIdx": 7
     },
     {
       "icon": {
@@ -354,7 +389,7 @@
         {}
       ],
       "properties": {
-        "order": 302,
+        "order": 325,
         "id": 16,
         "name": "shill",
         "prevSize": 32,
@@ -362,7 +397,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 7
+      "iconIdx": 8
     },
     {
       "icon": {
@@ -400,7 +435,7 @@
       },
       "attrs": [],
       "properties": {
-        "order": 303,
+        "order": 326,
         "id": 15,
         "name": "scgoggles",
         "prevSize": 32,
@@ -411,7 +446,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 8
+      "iconIdx": 9
     },
     {
       "icon": {
@@ -434,7 +469,7 @@
       },
       "attrs": [],
       "properties": {
-        "order": 305,
+        "order": 328,
         "id": 13,
         "name": "rockstar",
         "prevSize": 32,
@@ -447,7 +482,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 10
+      "iconIdx": 11
     },
     {
       "icon": {
@@ -474,7 +509,7 @@
         {}
       ],
       "properties": {
-        "order": 306,
+        "order": 329,
         "id": 12,
         "name": "steam",
         "prevSize": 32,
@@ -482,7 +517,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 11
+      "iconIdx": 12
     },
     {
       "icon": {
@@ -508,7 +543,7 @@
         {}
       ],
       "properties": {
-        "order": 313,
+        "order": 336,
         "id": 4,
         "name": "github-issue",
         "prevSize": 32,
@@ -516,7 +551,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 18
+      "iconIdx": 19
     },
     {
       "icon": {
@@ -542,7 +577,7 @@
         {}
       ],
       "properties": {
-        "order": 314,
+        "order": 337,
         "id": 3,
         "prevSize": 32,
         "code": 59651,
@@ -550,7 +585,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 19
+      "iconIdx": 20
     },
     {
       "icon": {
@@ -575,14 +610,14 @@
       "properties": {
         "ligatures": "search, magnifier",
         "name": "search2",
-        "order": 297,
+        "order": 320,
         "id": 21,
         "prevSize": 32,
         "code": 59782
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 2
+      "iconIdx": 3
     },
     {
       "icon": {
@@ -609,14 +644,14 @@
       "properties": {
         "ligatures": "earth, globe2",
         "name": "earth",
-        "order": 304,
+        "order": 327,
         "id": 14,
         "prevSize": 32,
         "code": 59850
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 9
+      "iconIdx": 10
     },
     {
       "icon": {
@@ -642,14 +677,14 @@
       "properties": {
         "ligatures": "link, chain",
         "name": "link",
-        "order": 307,
+        "order": 330,
         "id": 11,
         "prevSize": 32,
         "code": 59851
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 12
+      "iconIdx": 13
     },
     {
       "icon": {
@@ -673,14 +708,14 @@
       "properties": {
         "ligatures": "github, brand40",
         "name": "github",
-        "order": 308,
+        "order": 331,
         "id": 10,
         "prevSize": 32,
         "code": 60080
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 13
+      "iconIdx": 14
     },
     {
       "icon": {
@@ -707,14 +742,14 @@
       "properties": {
         "ligatures": "images, pictures",
         "name": "images",
-        "order": 309,
+        "order": 332,
         "id": 9,
         "prevSize": 32,
         "code": 59662
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 14
+      "iconIdx": 15
     },
     {
       "icon": {
@@ -738,14 +773,14 @@
       "properties": {
         "ligatures": "download, save",
         "name": "download",
-        "order": 310,
+        "order": 333,
         "id": 8,
         "prevSize": 32,
         "code": 59744
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 15
+      "iconIdx": 16
     },
     {
       "icon": {
@@ -770,14 +805,14 @@
       "properties": {
         "ligatures": "twitch, brand23",
         "name": "twitch",
-        "order": 311,
+        "order": 334,
         "id": 7,
         "prevSize": 32,
         "code": 60063
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 16
+      "iconIdx": 17
     },
     {
       "icon": {
@@ -800,14 +835,14 @@
       "properties": {
         "ligatures": "youtube, brand21",
         "name": "youtube",
-        "order": 312,
+        "order": 335,
         "id": 5,
         "prevSize": 32,
         "code": 60061
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 17
+      "iconIdx": 18
     },
     {
       "icon": {
@@ -829,7 +864,7 @@
       },
       "attrs": [],
       "properties": {
-        "order": 315,
+        "order": 338,
         "id": 1,
         "name": "gog",
         "prevSize": 32,
@@ -837,7 +872,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 20
+      "iconIdx": 21
     },
     {
       "icon": {
@@ -857,7 +892,7 @@
       },
       "attrs": [],
       "properties": {
-        "order": 316,
+        "order": 339,
         "id": 0,
         "name": "gtaforums",
         "prevSize": 32,
@@ -865,7 +900,7 @@
       },
       "setIdx": 0,
       "setId": 3,
-      "iconIdx": 21
+      "iconIdx": 22
     }
   ],
   "height": 1024,
