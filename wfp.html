@@ -4570,9 +4570,9 @@
               </div>
               <div class="col p-0 panel-primary d-flex flex-column">
                 <div class="p-2 panel-heading">
-                  <h3 class="card-title panel-title float-right m-0 p-0">
+                  <h4 class="card-title panel-title float-right m-0 p-0">
                     <a href="#modupdater">Updater for Widescreen Fixes</a>
-                  </h3>
+                  </h4>
                 </div>
                 <div class="p-1">
                   <div class="clearfix">
@@ -5135,7 +5135,7 @@
     function initSearch() {
       let list = [];
       Array.from(document.querySelectorAll('h4.card-title')).forEach(function (data) {
-        if (data.firstElementChild != null) {
+        if (data.firstElementChild != null && !data.innerText.includes("Updater for Widescreen Fixes")) {
           list.push({
             label: data.innerText,
             value: data.firstElementChild.getAttribute('href'),
