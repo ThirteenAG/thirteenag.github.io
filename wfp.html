@@ -5239,8 +5239,7 @@
             label: data.innerText,
             value: data.firstElementChild.getAttribute('href'),
             url: (([].slice.call(data.parentNode.parentNode.querySelectorAll(
-              'div > div.dropdown-menu > a'))).filter(e => e.innerText ==
-                "Direct Link"))
+              'div > div.dropdown-menu > a'))).filter(e => (e.innerText.includes("Direct") && e.innerText.includes("Link"))))
           });
         }
       });
