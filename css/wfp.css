@@ -607,3 +607,177 @@ fieldset[disabled] .btn-social-light.focus {
   background-position: center;
   background-size: cover;
 }
+
+@-webkit-keyframes lightUp {
+  0% {
+    background-color: #ff5040;
+  }
+  20% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  90% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  95% {
+    background-color: #ff5040;
+  }
+  100% {
+    background-color: #ff5040;
+  }
+}
+@keyframes lightUp {
+  0% {
+    background-color: #ff5040;
+  }
+  20% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  90% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  95% {
+    background-color: #ff5040;
+  }
+  100% {
+    background-color: #ff5040;
+  }
+}
+
+@-webkit-keyframes lightUp2 {
+  0% {
+    background-color: #e5ed58;
+  }
+  20% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  90% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  95% {
+    background-color: #e5ed58;
+  }
+  100% {
+    background-color: #e5ed58;
+  }
+}
+@keyframes lightUp2 {
+  0% {
+    background-color: #e5ed58;
+  }
+  20% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  90% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  95% {
+    background-color: #e5ed58;
+  }
+  100% {
+    background-color: #e5ed58;
+  }
+}
+
+ul.scanning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+ul.scanning li,
+ul.scanning li::before {
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 10%;
+  height: 10px;
+  margin: 1px;
+  -webkit-animation-name: lightUp;
+  animation-name: lightUp;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 2.6s;
+  animation-duration: 2.6s;
+}
+ul.karr li,
+ul.karr li::before {
+  -webkit-animation-name: lightUp2;
+  animation-name: lightUp2;
+}
+ul.scanning {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.scanning li::before {
+  content: "";
+  position: absolute;
+  margin: -1px;
+}
+ul.scanning li:nth-child(1) {
+  -webkit-animation-delay: 0.1625s;
+  animation-delay: 0.1625s;
+}
+ul.scanning li:nth-child(1)::before {
+  -webkit-animation-delay: 2.4375s;
+  animation-delay: 2.4375s;
+}
+ul.scanning li:nth-child(2) {
+  -webkit-animation-delay: 0.325s;
+  animation-delay: 0.325s;
+}
+ul.scanning li:nth-child(2)::before {
+  -webkit-animation-delay: 2.275s;
+  animation-delay: 2.275s;
+}
+ul.scanning li:nth-child(3) {
+  -webkit-animation-delay: 0.4875s;
+  animation-delay: 0.4875s;
+}
+ul.scanning li:nth-child(3)::before {
+  -webkit-animation-delay: 2.1125s;
+  animation-delay: 2.1125s;
+}
+ul.scanning li:nth-child(4) {
+  -webkit-animation-delay: 0.65s;
+  animation-delay: 0.65s;
+}
+ul.scanning li:nth-child(4)::before {
+  -webkit-animation-delay: 1.95s;
+  animation-delay: 1.95s;
+}
+ul.scanning li:nth-child(5) {
+  -webkit-animation-delay: 0.8125s;
+  animation-delay: 0.8125s;
+}
+ul.scanning li:nth-child(5)::before {
+  -webkit-animation-delay: 1.7875s;
+  animation-delay: 1.7875s;
+}
+ul.scanning li:nth-child(6) {
+  -webkit-animation-delay: 0.975s;
+  animation-delay: 0.975s;
+}
+ul.scanning li:nth-child(6)::before {
+  -webkit-animation-delay: 1.625s;
+  animation-delay: 1.625s;
+}
+ul.scanning li:nth-child(7) {
+  -webkit-animation-delay: 1.1375s;
+  animation-delay: 1.1375s;
+}
+ul.scanning li:nth-child(7)::before {
+  -webkit-animation-delay: 1.4625s;
+  animation-delay: 1.4625s;
+}
+ul.scanning li:nth-child(8) {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+ul.scanning li:nth-child(8)::before {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}

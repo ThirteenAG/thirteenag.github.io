@@ -1,0 +1,110 @@
+<script type="text/javascript">
+	var id = "kr";
+	var youtube = "";
+
+	var arr = [
+		"[url=https://i.imgur.com/a7p4Aoo.jpg][img]https://i.imgur.com/a7p4Aoom.jpg[/img][/url]",
+		"[url=https://i.imgur.com/Sh6tNBX.jpg][img]https://i.imgur.com/Sh6tNBXm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/95BaaPO.jpg][img]https://i.imgur.com/95BaaPOm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/zsCabs6.jpg][img]https://i.imgur.com/zsCabs6m.jpg[/img][/url]",
+		"[url=https://i.imgur.com/2jD4Q5H.jpg][img]https://i.imgur.com/2jD4Q5Hm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/ChT2Zf4.jpg][img]https://i.imgur.com/ChT2Zf4m.jpg[/img][/url]",
+		"[url=https://i.imgur.com/8SX8rvu.jpg][img]https://i.imgur.com/8SX8rvum.jpg[/img][/url]",
+		"[url=https://i.imgur.com/dfdW1xf.jpg][img]https://i.imgur.com/dfdW1xfm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/XRTsd5a.jpg][img]https://i.imgur.com/XRTsd5am.jpg[/img][/url]",
+		"[url=https://i.imgur.com/XTsBX0y.jpg][img]https://i.imgur.com/XTsBX0ym.jpg[/img][/url]",
+		"[url=https://i.imgur.com/0VzPbFI.jpg][img]https://i.imgur.com/0VzPbFIm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/2sR0LdY.png][img]https://i.imgur.com/2sR0LdYm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/DOUgKTf.jpg][img]https://i.imgur.com/DOUgKTfm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/R1QL0JR.jpg][img]https://i.imgur.com/R1QL0JRm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/FDc1LpR.jpg][img]https://i.imgur.com/FDc1LpRm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/BGb4OyV.jpg][img]https://i.imgur.com/BGb4OyVm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/jbjq6lZ.jpg][img]https://i.imgur.com/jbjq6lZm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/eiUsO5d.jpg][img]https://i.imgur.com/eiUsO5dm.jpg[/img][/url]",
+		"[url=https://i.imgur.com/VTF3Sz0.jpg][img]https://i.imgur.com/VTF3Sz0m.jpg[/img][/url]",
+		"[url=https://i.imgur.com/1SvtMup.jpg][img]https://i.imgur.com/1SvtMupm.jpg[/img][/url]"
+	];
+
+	var styles = { "background": "#fff url('https://i.imgur.com/OUQlReb.jpg')", "background-position": "center", "background-size": "cover" };
+</script>
+
+<div>
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; 
+	text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;">
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+
+<div class="container gallery-container">
+	<div class="tz-gallery">
+		<div class="row">
+			<div class="pic col-md-4"></div>
+			<div class="pic col-md-4"></div>
+			<div class="pic col-md-4"></div>
+		</div>
+		<div class="row">
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8 text-justify" id="yt">
+				<a style="z-index: 1000; padding-right: 4px;" class="lightbox position-absolute w-100 d-none d-md-block" href="" id="img-main-src">
+					<img src="" id="img-main" />
+				</a>
+			</div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="col-md-8"></div>
+			<div class="pic col-md-2"></div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+			<div class="pic col-md-2"></div>
+		</div>
+	</div>
+	<div class="pt-2">
+		<a class="btn btn-warning rounded-0 border border-dark" id="dl">Download</a>
+		<button type="button" data-dismiss="modal" class="btn btn-light rounded-0 border border-dark">Close</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/" + id;
+	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
+
+	document.querySelectorAll('.pic').forEach(function (item, i, ar) {
+		if (arr[i]) {
+			var scr = arr[i].split(re)[1];
+			var thumb = arr[i].split(re)[2];
+			var e = document.createElement("a");
+			e.setAttribute("class", "lightbox");
+			e.setAttribute("href", scr);
+			e.innerHTML = "<img src='" + thumb + "' />";
+			item.appendChild(e);
+		}
+		else {
+			var e = document.createElement("div");
+			e.setAttribute("class", "lightbox invisible d-none d-md-block");
+			e.innerHTML = "<img src='" + "./screens/" + id + "/main2.jpg" + "' />";
+			item.appendChild(e);
+		}
+	});
+
+	if (!youtube) {
+		document.getElementById("img-main-src").href = "./screens/" + id + "/main2.png";
+		document.getElementById("img-main").src = "./screens/" + id + "/main2.jpg";
+	}
+	else {
+		var s = "<div class='embed-responsive embed-responsive-16by9 position-absolute w-100'><iframe style='z-index: 1000; padding-right: 4px;' class='embed-responsive-item' src='" + youtube + "' allowfullscreen></iframe></div>";
+		document.getElementById("yt").innerHTML = s;
+	}
+	document.getElementById("dl").href = github;
+	$(".modal-content").css(styles);
+</script>
