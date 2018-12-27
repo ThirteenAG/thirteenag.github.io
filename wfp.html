@@ -73,7 +73,7 @@
               <i class="icon-youtube"></i> YouTube</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pl-2" href="https://twitch.tv/ThirteenAG" class="twitch-widget" id="twitch-widget" target="_blank" data-placement='bottom'
+            <a class="nav-link pl-2 twitch-widget" href="https://twitch.tv/ThirteenAG" id="twitch-widget" target="_blank" data-placement='bottom'
               data-toggle='tooltip'>
               <i class="icon-twitch"></i> Twitch</a>
           </li>
@@ -433,7 +433,7 @@
               <div class="logo bs-30" data-src="screens/gta2/logo.svg" onmouseover="this.remove();"></div>
             </div>
             <div class="col p-0 panel-primary d-flex flex-column">
-              <div class="p-2 panel-heading" style="background-color: #c70d21;">
+              <div class="p-2 panel-heading stripe" style="background-color: #c70d21; background-image: url('./screens/gta2/stripe.jpg');">
                 <h4 class="card-title panel-title centered m-0 p-0">
                   <a href="#gta2">Grand Theft Auto 2 Widescreen Fix</a>
                 </h4>
@@ -507,7 +507,7 @@
               <div class="logo bs-30" data-src="screens/gta1/logo.svg" onmouseover="this.remove();"></div>
             </div>
             <div class="col p-0 panel-primary d-flex flex-column">
-              <div class="p-2 panel-heading" style="background-color: #e0bf00;">
+              <div class="p-2 panel-heading" stripe" style="background-color: #e0bf00; background-image: url('./screens/gta1/stripe.jpg');">
                 <h4 class="card-title panel-title centered m-0 p-0">
                   <a href="#gta1">Grand Theft Auto (1) Widescreen Fix</a>
                 </h4>
@@ -3052,7 +3052,7 @@
         </div>
 
         <!-- LARUSH -->
-        <div class="card" id="larush">
+        <div class="card" id="larush" style="border-color: #ec7135;">
           <div class="card-body row p-0 mx-0">
             <div class="img-comparison">
               <img class="lazy img-fluid" onerror="this.style.display='none'" onmouseover="this.src='screens/larush/main1.jpg';" onmouseout="this.src='screens/larush/main2.jpg';"
@@ -3060,7 +3060,7 @@
               <div class="logo" data-src="screens/larush/logo.png" onmouseover="this.remove();"></div>
             </div>
             <div class="col p-0 panel-primary d-flex flex-column">
-              <div class="p-2 panel-heading">
+              <div class="p-2 panel-heading stripe" style="background-color: #ec7135; background-image: url('./screens/larush/stripe.jpg');">
                 <h4 class="card-title panel-title centered m-0 p-0">
                   <a href="#larush">L.A. Rush Widescreen Fix</a>
                 </h4>
@@ -5036,7 +5036,7 @@
   <!-- /Modal -->
 
   <!-- Bootstrap core JavaScript -->
-  <script defer src="vendor/jquery/dist/jquery.min.js" onload="initTabs();"></script>
+  <script defer src="vendor/jquery/dist/jquery.min.js" onload="initTabs(); changeBG();"></script>
   <script defer src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js" onload="initTooltips(); initModals(); initAllTabs();"></script>
 
   <!-- Other -->
@@ -5462,6 +5462,28 @@
       $('#screensModal').on('shown.bs.modal', function () {
         baguetteBox.run('.tz-gallery');
       })
+    }
+  </script>
+
+  <!-- baguetteBox -->
+  <script>
+    function initBB() {
+      $('#screensModal').on('shown.bs.modal', function () {
+        baguetteBox.run('.tz-gallery');
+      })
+    }
+  </script>
+
+  <!-- background -->
+  <script>
+    function changeBG() {
+      var dt = new Date();
+      var m = dt.getMonth();
+      var d = dt.getDate();
+      if ((m == 0 && d <= 2) || (m == 11 && d >= 30)) {
+        $('body').css('background-image', 'url(./img/snowf.svg)');
+        $('body').css('background-size', 'cover');
+      }
     }
   </script>
   <!-- /Scripts -->
