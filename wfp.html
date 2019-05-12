@@ -192,10 +192,6 @@
                       <img src="img/modloader.svg" width="32px" />
                     </i>
                   </a>
-                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank" href="https://gtaforums.com/topic/669618-plugos-widescreen-hor-support/"
-                    data-placement="left" data-toggle="tooltip" data-original-title="Widescreen HOR+">
-                    <i class="icon-link d-flex justify-content-center align-items-center"></i>
-                  </a>
                   <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank" href="https://www.rockstargames.com/sanandreas/"
                     data-placement="left" data-toggle="tooltip" data-original-title="Official website">
                     <i class="icon-rockstar d-flex justify-content-center align-items-center"></i>
@@ -204,19 +200,10 @@
                 <div class="card-text text-justify p-0 m-0 mt-1">
                   <ol class="font-weight-bold pb-1 mb-1 pl-4">
                     <li>Download and extract the archive to the game directory, where the exe is located.</li>
-                    <li>Download and install
-                      <a href="https://www.gtagarage.com/mods/show.php?id=25380" target="_blank">Widescreen HOR+</a> by Wesser
-                      (required).
-                    </li>
+                    <li>Download and extract Widescreen Frontend Textures to the game directory
+                      <i>(optional)</i>.</li>
                     <li>Check the ini file for available features.</li>
                   </ol>
-                  <p class="pb-1 mb-1">Notes: </p>
-                  <ul class="font-weight-bold pb-0 mb-0 pl-4">
-                    <li style="list-style-type: disclosure-closed;">A recompiled
-                      <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/wshps.asi">wshps.asi</a>
-                      (Widescreen HOR+) is available if the original does not work.
-                    </li>
-                  </ul>
                 </div>
               </div>
               <div class="text-center btn-block mt-auto">
@@ -233,8 +220,8 @@
                     </a>
                     <a class="dropdown-item" href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/GTASA.WidescreenFix.zip">Developer
                       build (untested)</a>
-                    <a class="dropdown-item" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/wshps.asi">Recompiled
-                      wshps.asi (in case original doesn't work)</a>
+                    <a class="dropdown-item" href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA.WidescreenFrontend.zip">Widescreen
+                        Frontend Textures</a>
                   </div>
                 </div>
               </div>
@@ -5410,10 +5397,7 @@
   <!-- tooltips -->
   <script type="text/javascript">
     function initTooltips() {
-      $('*').tooltip({
-        trigger: "hover",
-        selector: "a[data-toggle=tooltip]"
-      });
+      $('[data-toggle="tooltip"]').tooltip();
     }
   </script>
 
@@ -5598,15 +5582,6 @@
         }
       });
     };
-  </script>
-
-  <!-- baguetteBox -->
-  <script>
-    function initBB() {
-      $('#screensModal').on('shown.bs.modal', function () {
-        baguetteBox.run('.tz-gallery');
-      })
-    }
   </script>
 
   <!-- baguetteBox -->
