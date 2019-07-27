@@ -81,11 +81,11 @@
         display: none !important;
       }
       td.details-control {
-        background: url("./img/details_open.png") no-repeat center center;
+        background: url("./img/details_open.svg") no-repeat center center;
         cursor: pointer;
       }
       tr.shown td.details-control {
-        background: url("./img/details_close.png") no-repeat center center;
+        background: url("./img/details_close.svg") no-repeat center center;
       }
       .dataTables_info {
         white-space: pre-wrap !important;
@@ -103,6 +103,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            <li class="nav-item nav-yellow">
+              <a class="nav-link" href="https://thirteenag.github.io/gta-one-liners">GTA One Liners</a>
+            </li>
             <li class="nav-item nav-yellow">
               <a class="nav-link" href="https://thirteenag.github.io/wfp">WFP</a>
             </li>
@@ -370,7 +373,7 @@
           colReorder: true,
           responsive: true,
           stateSave: true,
-          columns: [{ className: "dt-body-nowrap dt-center", width: "10%" }, { className: "dt-center" }],
+          columns: [{ className: "dt-body-nowrap dt-center", width: "15%" }, { className: "dt-center" }],
           drawCallback: function(settings) {
             var api = this.api();
             api.$("td").click(function() {
