@@ -294,7 +294,7 @@
           order: [[1, "asc"]],
           columns: [
             { data: null, className: "details-control", orderable: false, defaultContent: "" },
-            { data: 0, className: "dt-body-nowrap dt-center not-mobile", width: "10%" },
+            { data: 0, className: "dt-body-nowrap dt-center", width: "10%" },
             { data: 1, className: "dt-body-nowrap dt-center", width: "27%" },
             { data: 2, className: "dt-center" }
           ],
@@ -351,7 +351,7 @@
 
         // Add event listener for opening and closing details
         function format(d) {
-          return '<img class="img-fluid" src="' + d["1"] + '" width="480" height="270">';
+          return '<img onclick="copyToClipboard(this.src);" class="img-fluid" src="' + d["1"] + '" width="480" height="270">';
         }
         $.fn.dataTable.tables({ visible: false, api: true }).on("click", "tbody td.details-control", function() {
           var tr = $(this).closest("tr");

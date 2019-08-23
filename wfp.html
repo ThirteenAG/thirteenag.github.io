@@ -149,11 +149,11 @@
           <a class="nav-link" href="#all" data-toggle="tab" id="all">Show all
           </a>
         </li>
-        <li class="nav-item">
+        <!--li class="nav-item">
           <a class="nav-link" href="#comments" data-toggle="tab">
             <span id="comments-count">Comments</span>
           </a>
-        </li>
+        </li-->
       </ul>
     </div>
     <!-- /Tabs -->
@@ -5047,9 +5047,9 @@
         </div>
       </div>
 
-      <div class="tab-pane" id="comments">
+      <!--div class="tab-pane" id="comments">
         <div id="gh-comments-list" class="p-2"></div>
-      </div>
+      </div-->
     </div>
     <!-- /Tabs Content -->
 
@@ -5107,10 +5107,10 @@
           <a class="page-link" href="#updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip"
             data-original-title="Latest updates">12</a>
         </li>
-        <li id="page-comments" class="page-item">
+        <!--li id="page-comments" class="page-item">
           <a class="page-link" href="#comments" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip"
             data-original-title="Comments">13</a>
-        </li>
+        </li-->
         <li id="raquo" class="page-item">
           <a class="page-link" href="javascript:void(null);" onclick="LocationManager('raquo');">&raquo;</a>
         </li>
@@ -5171,8 +5171,8 @@
   <script defer src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js" onload="initTooltips(); initModals(); initAllTabs();"></script>
 
   <!-- Other -->
-  <script defer src="vendor/lazyload/dist/lazyload.min.js" onload="initLazy(); LocationManager(); jmpToHash(); GetCommentsCount(236);"></script>
-  <!-- onload="initTwitch();" -->
+  <script defer src="vendor/lazyload/dist/lazyload.min.js" onload="initLazy(); LocationManager(); jmpToHash();"></script>
+  <!-- onload="initTwitch(); GetCommentsCount(236);" -->
   <script defer src="vendor/awesomplete/awesomplete.min.js" onload="initSearch();"></script>
   <script defer src="vendor/baguetteBox.js/dist/baguetteBox.min.js" onload="initBB();"></script>
   <script async defer src="vendor/github-buttons/dist/buttons.min.js"></script>
@@ -5260,12 +5260,12 @@
         }
       });
 
-      CommentsLazyLoad = new LazyLoad({
-        elements_selector: "#gh-comments-list",
-        callback_enter: function (e) {
-          initComments();
-        }
-      });
+      //CommentsLazyLoad = new LazyLoad({
+      //  elements_selector: "#gh-comments-list",
+      //  callback_enter: function (e) {
+      //    initComments();
+      //  }
+      //});
 
       CRTLazyLoad = new LazyLoad({
         elements_selector: "#manhunt",
