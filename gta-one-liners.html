@@ -156,11 +156,11 @@
             <li class="nav-item flex-sm-fill text-sm-center">
               <a class="nav-link" id="pills-gtavcs-tab" data-toggle="pill" href="#pills-gtavcs" role="tab" aria-controls="pills-gtavcs" aria-selected="false">GTA Vice City Stories</a>
             </li>
-            <!--div class="w-100" style="margin-top: 5px;"></div>
+            <div class="w-100" style="margin-top: 5px;"></div>
             <li class="nav-item flex-sm-fill text-sm-center">
               <a class="nav-link" id="pills-gtaiv-tab" data-toggle="pill" href="#pills-gtaiv" role="tab" aria-controls="pills-gtaiv" aria-selected="false">Grand Theft Auto IV</a>
             </li>
-            <li class="nav-item flex-sm-fill text-sm-center">
+            <!--li class="nav-item flex-sm-fill text-sm-center">
               <a class="nav-link" id="pills-tlad-tab" data-toggle="pill" href="#pills-tlad" role="tab" aria-controls="pills-tlad" aria-selected="false">GTA IV The Lost and Damned</a>
             </li>
             <li class="nav-item flex-sm-fill text-sm-center">
@@ -246,8 +246,18 @@
                 </thead>
               </table>
             </div>
-            <!--div class="tab-pane fade" id="pills-gtaiv" role="tabpanel" aria-labelledby="pills-gtaiv-tab"></div>
-            <div class="tab-pane fade" id="pills-tlad" role="tabpanel" aria-labelledby="pills-tlad-tab"></div>
+            <div class="tab-pane fade" id="pills-gtaiv" role="tabpanel" aria-labelledby="pills-gtaiv-tab">
+              <table id="gtaiv-table" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>GXT</th>
+                    <th>GIF LINK</th>
+                    <th>SUBTITLE</th>
+                  </tr>
+                </thead>
+            </div>
+            <!--div class="tab-pane fade" id="pills-tlad" role="tabpanel" aria-labelledby="pills-tlad-tab"></div>
             <div class="tab-pane fade" id="pills-tbogt" role="tabpanel" aria-labelledby="pills-tbogt-tab"></div-->
             <!--div class="tab-pane fade" id="pills-gtav" role="tabpanel" aria-labelledby="pills-gtav-tab"></div>
             <div class="tab-pane fade" id="pills-manhunt" role="tabpanel" aria-labelledby="pills-manhunt-tab"></div>
@@ -347,6 +357,10 @@
 
         $("#gtavcs-table").DataTable({
           ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAVCS/gtavcs.json"
+        });
+
+        $("#gtaiv-table").DataTable({
+          ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAIV/GTAIV.json"
         });
 
         // Add event listener for opening and closing details
