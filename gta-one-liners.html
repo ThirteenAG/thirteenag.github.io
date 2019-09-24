@@ -170,7 +170,7 @@
               <a class="nav-link" id="pills-tlad-tab" data-toggle="pill" href="#pills-tlad" role="tab" aria-controls="pills-tlad" aria-selected="false">GTA IV The Lost and Damned</a>
             </li>
             <li class="nav-item flex-sm-fill text-sm-center">
-              <a class="nav-link disabled" id="pills-tbogt-tab" data-toggle="pill" href="#pills-tbogt" role="tab" aria-controls="pills-tbogt" aria-selected="false">GTA IV The Ballad of Gay Tony</a>
+              <a class="nav-link" id="pills-tbogt-tab" data-toggle="pill" href="#pills-tbogt" role="tab" aria-controls="pills-tbogt" aria-selected="false">GTA IV The Ballad of Gay Tony</a>
             </li>
             <li class="nav-item flex-sm-fill text-sm-center">
               <a class="nav-link" id="pills-gtav-tab" data-toggle="pill" href="#pills-gtav" role="tab" aria-controls="pills-gtav" aria-selected="false">Grand Theft Auto V</a>
@@ -406,9 +406,9 @@
           ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAIVTLAD/gtaivtlad.json"
         });
 
-        //$("#tbogt-table").DataTable({
-        //  ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAIVTBOGT/gtaivtbogt.json"
-        //});
+        $("#tbogt-table").DataTable({
+          ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAIVTBOGT/gtaivtbogt.json"
+        });
 
         $("#gtav-table").DataTable({
           ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAV/gtav.json"
