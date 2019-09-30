@@ -192,6 +192,9 @@
             <li class="nav-item flex-sm-fill text-sm-center">
               <a class="nav-link" id="pills-manhunt2-tab" data-toggle="pill" href="#pills-manhunt2" role="tab" aria-controls="pills-manhunt2" aria-selected="false">Manhunt 2</a>
             </li>
+            <li class="nav-item flex-sm-fill text-sm-center">
+              <a class="nav-link" id="pills-bully-tab" data-toggle="pill" href="#pills-bully" role="tab" aria-controls="pills-bully" aria-selected="false">Bully</a>
+            </li>
           </ul>
 
           <div class="row">
@@ -351,6 +354,16 @@
                 </thead>
               </table>
             </div>
+            <div class="tab-pane fade" id="pills-bully" role="tabpanel" aria-labelledby="pills-bully-tab">
+              <table id="bully-table" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>GXT</th>
+                    <th>SUBTITLE</th>
+                  </tr>
+                </thead>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -464,6 +477,10 @@
 
         $("#manhunt2-table").DataTable({
           ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/plugins/data/text/MANHUNT2.json"
+        });
+
+        $("#bully-table").DataTable({
+          ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/plugins/data/text/BULLY.json"
         });
       }
       document.addEventListener("DOMContentLoaded", Init);
