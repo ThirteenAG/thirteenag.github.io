@@ -174,7 +174,7 @@
             </li>
             <div class="w-100" style="margin-top: 5px;"></div>
             <li class="nav-item flex-sm-fill text-sm-center">
-              <a class="nav-link disabled" id="pills-bully-tab" data-toggle="pill" href="#pills-bully" role="tab" aria-controls="pills-bully" aria-selected="false">Bully</a>
+              <a class="nav-link" id="pills-bully-tab" data-toggle="pill" href="#pills-bully" role="tab" aria-controls="pills-bully" aria-selected="false">Bully</a>
             </li>
             <li class="nav-item flex-sm-fill text-sm-center">
               <a class="nav-link" id="pills-gtav-tab" data-toggle="pill" href="#pills-gtav" role="tab" aria-controls="pills-gtav" aria-selected="false">Grand Theft Auto V</a>
@@ -440,9 +440,9 @@
           ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/GTAV/gtav.json"
         });
 
-        //$("#bully-table").DataTable({
-        //  ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/BULLY/bully.json"
-        //});
+        $("#bully-table").DataTable({
+          ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/BULLY/bully.json"
+        });
 
         $("#manhunt-table").DataTable({
           ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MANHUNT/manhunt.json"
@@ -450,7 +450,7 @@
 
         // Add event listener for opening and closing details
         function format(d) {
-          return '<img onclick="copyToClipboard(this.src);" class="img-fluid" src="' + d["1"] + '" width="480" height="270">';
+          return '<img onclick="copyToClipboard(this.src);" class="img-fluid" src="' + d["1"] + '" width="480">';
         }
         $.fn.dataTable.tables({ visible: false, api: true }).on("click", "tbody td.details-control", function() {
           var tr = $(this).closest("tr");
