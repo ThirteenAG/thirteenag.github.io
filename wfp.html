@@ -65,18 +65,18 @@
               <i class="icon-github"></i> GitHub</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pl-2" href="https://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/" target="_blank">
-              <i class="icon-gtaforums"></i> GTAForums</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link pl-2" href="https://www.youtube.com/SergeyP13" target="_blank">
               <i class="icon-youtube"></i> YouTube</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link pl-2" href="https://gtaforums.com/topic/547841-gtanfsmpother-widescreen-fixes-pack/" target="_blank">
+              <i class="icon-gtaforums"></i> GTAForums</a>
+          </li>
+          <!--li class="nav-item">
             <a class="nav-link pl-2 twitch-widget" href="https://twitch.tv/ThirteenAG" id="twitch-widget" target="_blank" data-placement='bottom'
               data-toggle='tooltip'>
               <i class="icon-twitch"></i> Twitch</a>
-          </li>
+          </li-->
           <li class="nav-item">
             <a class="nav-link pl-2" href="https://github.com/ThirteenAG/WidescreenFixesPack/issues" target="_blank">
               <i class="icon-github-issue"></i> Report an issue</a>
@@ -97,6 +97,15 @@
       </div>
     </nav>
     <!-- /Navigation -->
+
+    <!-- Alert -->
+    <div id="top-alert" class="alert alert-danger text-center my-1 alert-dismissible fade show d-none" role="alert">
+      Happy Holidays and have a wonderful New Year!
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+   <!-- /Alert -->
 
     <!-- Tabs -->
     <div class="tabbable tabbable-line py-1">
@@ -5639,7 +5648,9 @@
       var d = dt.getDate();
       if ((m == 0 && d <= 2) || (m == 11 && d >= 30)) {
         $('body').css('background-image', 'url(./img/snowf.svg)');
-        $('body').css('background-size', 'cover');
+        $('body').css('background-size', 'auto');
+        $('body').css('background-attachment', 'fixed');
+        $('#top-alert').removeClass('d-none');
       }
     }
   </script>
