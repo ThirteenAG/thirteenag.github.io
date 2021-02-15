@@ -21,3 +21,4 @@
 [submodule "vendor/github-buttons"]
 	path = vendor/github-buttons
 	url = https://github.com/ntkme/github-buttons
+	branch = main
