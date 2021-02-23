@@ -447,10 +447,11 @@
         },
         initComplete: function () { },
         drawCallback: function (settings) {
-          var api = this.api();
-          api.$("td").click(function () {
-            copyToClipboard(this.innerText);
-          });
+          //var api = this.api();
+          //api.$("td").click(function () {
+          //  if (this.innerText.length)
+          //    copyToClipboard(this.innerText);
+          //});
         }
       });
 
@@ -525,6 +526,14 @@
           { data: 3, className: "dt-center" }
         ]
       });
+
+      $.fn.dataTable.tables({ visible: false, api: true }).on("click", "td", function () {
+        if (this.firstChild != null && this.firstChild.href != undefined)
+          copyToClipboard(this.firstChild.href);
+        else if (this.innerText.length != 0)
+          copyToClipboard(this.innerText);
+      });
+
 
       $('a.toggle-vis').on('click', function (e) {
         e.preventDefault();
