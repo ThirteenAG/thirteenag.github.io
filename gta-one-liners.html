@@ -23,7 +23,8 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Iceland|Pacifico&display=swap" rel="stylesheet" />
-  <link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/datatables.min.css" />
 
   <style>
     body {
@@ -349,11 +350,17 @@
             </table>
           </div>
           <div class="tab-pane fade" id="pills-maxpayne3" role="tabpanel" aria-labelledby="pills-maxpayne3-tab">
+            <div>
+              GIF Location: <a class="toggle-vis" style="cursor: pointer;" data-column="2">Imgur</a> | <a
+                class="toggle-vis" style="cursor: pointer;" data-column="3">Discord</a> | <i>Click on any empty space
+                within URL cell to copy link to clipboard</i>
+            </div>
             <table id="maxpayne3-table" class="table table-striped table-bordered" style="width:100%">
               <thead>
                 <tr>
                   <th></th>
                   <th>GXT</th>
+                  <th>GIF LINK</th>
                   <th>GIF LINK</th>
                   <th>SUBTITLE</th>
                 </tr>
@@ -383,7 +390,7 @@
   <script type="text/javascript" defer src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"
     onload="InitTabs();"></script>
   <script type="text/javascript" defer
-    src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/b-1.5.6/b-html5-1.5.6/cr-1.5.0/kt-2.5.0/datatables.min.js"></script>
+    src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/datatables.min.js"></script>
 
   <script type="text/javascript">
     function copyToClipboard(text) {
@@ -413,7 +420,7 @@
         deferRender: true,
         colReorder: false,
         responsive: true,
-        stateSave: true,
+        stateSave: false,
         order: [[1, "asc"]],
         columns: [
           { data: null, className: "details-control", orderable: false, defaultContent: "" },
@@ -422,19 +429,21 @@
           { data: 2, className: "dt-center" }
         ],
         createdRow: function (row, data, index) {
-          $("td", row)
-            .eq(2)
-            .html(
-              "<a href='" +
-              $("td", row)
-                .eq(2)
-                .text() +
-              "'>" +
-              $("td", row)
-                .eq(2)
-                .text() +
-              "</a>"
-            );
+          if (data.length == 3) {
+            $("td", row)
+              .eq(2)
+              .html(
+                "<a href='" +
+                $("td", row)
+                  .eq(2)
+                  .text() +
+                "'>" +
+                $("td", row)
+                  .eq(2)
+                  .text() +
+                "</a>"
+              );
+          }
         },
         initComplete: function () { },
         drawCallback: function (settings) {
@@ -497,12 +506,47 @@
       });
 
       $("#maxpayne3-table").DataTable({
-        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MAXPAYNE3/maxpayne3alt.json"
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MAXPAYNE3/maxpayne3wdalt.json",
+        columns: [
+          { data: null, className: "details-control", orderable: false, defaultContent: "" },
+          { data: 0, className: "dt-body-nowrap dt-center", width: "10%", visible: false, searchable: true },
+          {
+            data: 1, className: "dt-body-nowrap dt-center gif-link", width: "27%", searchable: false,
+            render: function (data, type, row, meta) {
+              return '<a href="' + data + '">' + data + '</a>';
+            }
+          },
+          {
+            data: 2, className: "dt-body-nowrap dt-center gif-link", width: "27%", visible: false, searchable: false,
+            render: function (data, type, row, meta) {
+              return '<a href="' + data + '">' + data.substring(data.lastIndexOf('/') + 1) + '</a>';
+            }
+          },
+          { data: 3, className: "dt-center" }
+        ]
+      });
+
+      $('a.toggle-vis').on('click', function (e) {
+        e.preventDefault();
+        var table = $.fn.dataTable.tables({ visible: true, api: true });
+        switch (table.column($(this).attr('data-column')).index()) {
+          case 2:
+            table.column(2).visible(true);
+            table.column(3).visible(false);
+            break;
+          case 3:
+            table.column(2).visible(false);
+            table.column(3).visible(true);
+            break;
+          default:
+            return false;
+        }
+        return false;
       });
 
       // Add event listener for opening and closing details
-      function format(d) {
-        return '<img onclick="copyToClipboard(this.src);" class="img-fluid" src="' + d["1"] + '" width="480">';
+      function format(d, vis_column) {
+        return '<img onclick="copyToClipboard(this.src);" class="img-fluid" src="' + d[vis_column] + '" width="480">';
       }
       $.fn.dataTable.tables({ visible: false, api: true }).on("click", "tbody td.details-control", function () {
         var tr = $(this).closest("tr");
@@ -517,8 +561,15 @@
           tr.removeClass("shown");
         } else {
           // Open this row
-          row.child(format(row.data())).show();
-          tr.addClass("shown");
+          var cols = Array.from(row.columns('.gif-link')[0]);
+          if (cols.length == 0) {
+            row.child(format(row.data(), 1)).show();
+          } else {
+            var arr = Array.from(row.columns('.gif-link').visible());
+            var vis_column = cols[arr.flatMap((bool, index) => bool ? index : [])] - 1;
+            row.child(format(row.data(), vis_column)).show();
+            tr.addClass("shown");
+          }
         }
       });
     }
