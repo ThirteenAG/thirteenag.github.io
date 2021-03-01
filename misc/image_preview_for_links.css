@@ -1,0 +1,58 @@
+.mini-preview-anchor {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.mini-preview-wrapper {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: sticky;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  transition: z-index steps(1) 0.3s, opacity 0.3s;
+}
+
+.mini-preview-anchor .mini-preview-wrapper {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.mini-preview-loading,
+.mini-preview-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.mini-preview-loading {
+  display: table;
+  height: 100%;
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #55595c;
+  background-color: #55595c;
+}
+
+.mini-preview-loading::before {
+  content: "Loading...";
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mini-preview-cover {
+  background-color: rgba(0, 0, 0, 0); /* IE fix */
+}
+
+.mini-preview-frame {
+  border: none;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
