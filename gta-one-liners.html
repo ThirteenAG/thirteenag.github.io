@@ -419,7 +419,7 @@
           {
             data: 2, className: "dt-body-nowrap dt-center gif-link", width: "27%", visible: false, searchable: false,
             render: function (data, type, row, meta) {
-              return '<a href="' + data + '">' + data.substring(data.lastIndexOf('/') + 1) + '</a>';
+              return '<a href="' + data + '">' + data.substring(data.lastIndexOf('/') + 1, data.lastIndexOf('.gif')) + '</a>';
             }
           },
           { data: 3, className: "dt-center" }
