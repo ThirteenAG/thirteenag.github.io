@@ -250,7 +250,7 @@
               aria-controls="pills-mcla" aria-selected="false">Midnight Club LA</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center">
-            <a class="nav-link disabled" id="pills-rdr-tab" data-toggle="pill" href="#pills-rdr" role="tab"
+            <a class="nav-link" id="pills-rdr-tab" data-toggle="pill" href="#pills-rdr" role="tab"
               aria-controls="pills-rdr" aria-selected="false">Red Dead Redemption</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center">
@@ -794,9 +794,9 @@
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MCLA/mclawd.json"
       });
 
-      //$("#rdr-table").DataTable({
-      //  ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/RDR/rdrwd.json"
-      //});
+      $("#rdr-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/RDR/rdrwd.json"
+      });
 
       //$("#rdr2-table").DataTable({
       //  ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/RDR2/rdr2wd.json"
