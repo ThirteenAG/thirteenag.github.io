@@ -176,6 +176,22 @@
             <a class="nav-link" id="pills-thegodfather-tab" data-toggle="pill" href="#pills-thegodfather" role="tab"
               aria-controls="pills-thegodfather" aria-selected="false">The Godfather</a>
           </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link disabled" id="pills-thegodfather2-tab" data-toggle="pill" href="#pills-thegodfather2"
+              role="tab" aria-controls="pills-thegodfather2" aria-selected="false">The Godfather Part II</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link disabled" id="pills-thegodfather3-tab" data-toggle="pill" href="#pills-thegodfather3"
+              role="tab" aria-controls="pills-thegodfather3" aria-selected="false">The Godfather Part III</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link" id="pills-theterminator-tab" data-toggle="pill" href="#pills-theterminator" role="tab"
+              aria-controls="pills-theterminator" aria-selected="false">The Terminator</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link disabled" id="pills-theterminator2-tab" data-toggle="pill" href="#pills-theterminator2"
+              role="tab" aria-controls="pills-theterminator2" aria-selected="false">Terminator 2: Judgment Day</a>
+          </li>
         </ul>
 
         <div class="row p-3">
@@ -205,9 +221,65 @@
               </thead>
             </table>
           </div>
-          <div class="tab-pane fade show active" id="pills-thegodfather" role="tabpanel"
+          <div class="tab-pane fade show" id="pills-thegodfather" role="tabpanel"
             aria-labelledby="pills-thegodfather-tab">
             <table id="thegodfather-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tab-pane fade show" id="pills-thegodfather2" role="tabpanel"
+            aria-labelledby="pills-thegodfather2-tab">
+            <table id="thegodfather2-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tab-pane fade show" id="pills-thegodfather3" role="tabpanel"
+            aria-labelledby="pills-thegodfather3-tab">
+            <table id="thegodfather3-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tab-pane fade show" id="pills-theterminator" role="tabpanel"
+            aria-labelledby="pills-theterminator-tab">
+            <table id="theterminator-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tab-pane fade show" id="pills-theterminator2" role="tabpanel"
+            aria-labelledby="pills-theterminator2-tab">
+            <table id="theterminator2-table" class="table table-striped table-bordered" style="width:100%">
               <thead>
                 <tr>
                   <th></th>
@@ -320,6 +392,10 @@
 
       $("#thegodfather-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/thegodfather.json"
+      });
+
+      $("#theterminator-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/theterminator.json"
       });
 
       $.fn.dataTable.tables({ visible: false, api: true }).on("click", "td", function () {
