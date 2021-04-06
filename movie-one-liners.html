@@ -189,8 +189,8 @@
               aria-controls="pills-theterminator" aria-selected="false">The Terminator</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link disabled" id="pills-theterminator2-tab" data-toggle="pill" href="#pills-theterminator2"
-              role="tab" aria-controls="pills-theterminator2" aria-selected="false">Terminator 2: Judgment Day</a>
+            <a class="nav-link" id="pills-theterminator2-tab" data-toggle="pill" href="#pills-theterminator2" role="tab"
+              aria-controls="pills-theterminator2" aria-selected="false">Terminator 2: Judgment Day</a>
           </li>
         </ul>
 
@@ -396,6 +396,10 @@
 
       $("#theterminator-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/theterminator.json"
+      });
+
+      $("#theterminator2-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/terminator2.json"
       });
 
       $.fn.dataTable.tables({ visible: false, api: true }).on("click", "td", function () {
