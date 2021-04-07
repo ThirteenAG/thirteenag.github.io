@@ -177,12 +177,16 @@
               aria-controls="pills-thegodfather" aria-selected="false">The Godfather</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link disabled" id="pills-thegodfather2-tab" data-toggle="pill" href="#pills-thegodfather2"
-              role="tab" aria-controls="pills-thegodfather2" aria-selected="false">The Godfather Part II</a>
+            <a class="nav-link" id="pills-thegodfather2-tab" data-toggle="pill" href="#pills-thegodfather2" role="tab"
+              aria-controls="pills-thegodfather2" aria-selected="false">The Godfather Part II</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link disabled" id="pills-thegodfather3-tab" data-toggle="pill" href="#pills-thegodfather3"
-              role="tab" aria-controls="pills-thegodfather3" aria-selected="false">The Godfather Part III</a>
+            <a class="nav-link" id="pills-thegodfather3-tab" data-toggle="pill" href="#pills-thegodfather3" role="tab"
+              aria-controls="pills-thegodfather3" aria-selected="false">The Godfather Part III</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link" id="pills-goodfellas-tab" data-toggle="pill" href="#pills-goodfellas" role="tab"
+              aria-controls="pills-goodfellas" aria-selected="false">Goodfellas</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
             <a class="nav-link" id="pills-theterminator-tab" data-toggle="pill" href="#pills-theterminator" role="tab"
@@ -191,6 +195,10 @@
           <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
             <a class="nav-link" id="pills-theterminator2-tab" data-toggle="pill" href="#pills-theterminator2" role="tab"
               aria-controls="pills-theterminator2" aria-selected="false">Terminator 2: Judgment Day</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link" id="pills-avengersendgame-tab" data-toggle="pill" href="#pills-avengersendgame"
+              role="tab" aria-controls="pills-avengersendgame" aria-selected="false">Avengers: Endgame</a>
           </li>
         </ul>
 
@@ -263,6 +271,19 @@
               </thead>
             </table>
           </div>
+          <div class="tab-pane fade show" id="pills-goodfellas" role="tabpanel" aria-labelledby="pills-goodfellas-tab">
+            <table id="goodfellas-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
           <div class="tab-pane fade show" id="pills-theterminator" role="tabpanel"
             aria-labelledby="pills-theterminator-tab">
             <table id="theterminator-table" class="table table-striped table-bordered" style="width:100%">
@@ -280,6 +301,20 @@
           <div class="tab-pane fade show" id="pills-theterminator2" role="tabpanel"
             aria-labelledby="pills-theterminator2-tab">
             <table id="theterminator2-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tab-pane fade show" id="pills-avengersendgame" role="tabpanel"
+            aria-labelledby="pills-avengersendgame-tab">
+            <table id="avengersendgame-table" class="table table-striped table-bordered" style="width:100%">
               <thead>
                 <tr>
                   <th></th>
@@ -394,12 +429,28 @@
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/thegodfather.json"
       });
 
+      $("#thegodfather2-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/thegodfather2.json"
+      });
+
+      $("#thegodfather3-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/thegodfather3.json"
+      });
+
+      $("#goodfellas-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/goodfellas.json"
+      });
+
       $("#theterminator-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/theterminator.json"
       });
 
       $("#theterminator2-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/terminator2.json"
+      });
+
+      $("#avengersendgame-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/avengersendgame.json"
       });
 
       $.fn.dataTable.tables({ visible: false, api: true }).on("click", "td", function () {
