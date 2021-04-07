@@ -197,6 +197,10 @@
               aria-controls="pills-theterminator2" aria-selected="false">Terminator 2: Judgment Day</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link" id="pills-avengersinfinitywar-tab" data-toggle="pill" href="#pills-avengersinfinitywar"
+              role="tab" aria-controls="pills-avengersinfinitywar" aria-selected="false">Avengers: Infinity War</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
             <a class="nav-link" id="pills-avengersendgame-tab" data-toggle="pill" href="#pills-avengersendgame"
               role="tab" aria-controls="pills-avengersendgame" aria-selected="false">Avengers: Endgame</a>
           </li>
@@ -301,6 +305,20 @@
           <div class="tab-pane fade show" id="pills-theterminator2" role="tabpanel"
             aria-labelledby="pills-theterminator2-tab">
             <table id="theterminator2-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tab-pane fade show" id="pills-avengersinfinitywar" role="tabpanel"
+            aria-labelledby="pills-avengersinfinitywar-tab">
+            <table id="avengersinfinitywar-table" class="table table-striped table-bordered" style="width:100%">
               <thead>
                 <tr>
                   <th></th>
@@ -447,6 +465,10 @@
 
       $("#theterminator2-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/terminator2.json"
+      });
+
+      $("#avengersinfinitywar-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/avengersinfinitywar.json"
       });
 
       $("#avengersendgame-table").DataTable({
