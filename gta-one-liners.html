@@ -250,6 +250,10 @@
             <a class="nav-link" id="pills-mafia2-tab" data-toggle="pill" href="#pills-mafia2" role="tab"
               aria-controls="pills-mafia2" aria-selected="false">Mafia II</a>
           </li>
+          <li class="nav-item flex-sm-fill text-sm-center">
+            <a class="nav-link" id="pills-mafia3-tab" data-toggle="pill" href="#pills-mafia3" role="tab"
+              aria-controls="pills-mafia3" aria-selected="false">Mafia III</a>
+          </li>
           <div class="w-100" style="margin-top: 5px;"></div>
           <li class="nav-item flex-sm-fill text-sm-center">
             <a class="nav-link" id="pills-mcla-tab" data-toggle="pill" href="#pills-mcla" role="tab"
@@ -260,8 +264,12 @@
               aria-controls="pills-rdr" aria-selected="false">Red Dead Redemption</a>
           </li>
           <li class="nav-item flex-sm-fill text-sm-center">
-            <a class="nav-link disabled" id="pills-rdr2-tab" data-toggle="pill" href="#pills-rdr2" role="tab"
+            <a class="nav-link" id="pills-rdr2-tab" data-toggle="pill" href="#pills-rdr2" role="tab"
               aria-controls="pills-rdr2" aria-selected="false">Red Dead Redemption II</a>
+          </li>
+          <li class="nav-item flex-sm-fill text-sm-center">
+            <a class="nav-link" id="pills-thewarriors-tab" data-toggle="pill" href="#pills-thewarriors" role="tab"
+              aria-controls="pills-thewarriors" aria-selected="false">The Warriors</a>
           </li>
         </ul>
 
@@ -570,6 +578,23 @@
                 overall be wrong or missing.</i>
             </div>
           </div>
+          <div class="tab-pane fade" id="pills-mafia3" role="tabpanel" aria-labelledby="pills-mafia3-tab">
+            <table id="mafia3-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="text-center">
+              <i>Gifs in this table were made using OCR software and subtitle text may not match the actual game text or
+                overall be wrong or missing.</i>
+            </div>
+          </div>
           <div class="tab-pane fade" id="pills-mcla" role="tabpanel" aria-labelledby="pills-mcla-tab">
             <table id="mcla-table" class="table table-striped table-bordered" style="width:100%">
               <thead>
@@ -606,6 +631,23 @@
           </div>
           <div class="tab-pane fade" id="pills-rdr2" role="tabpanel" aria-labelledby="pills-rdr2-tab">
             <table id="rdr2-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="text-center">
+              <i>Gifs in this table were made using OCR software and subtitle text may not match the actual game text or
+                overall be wrong or missing.</i>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-thewarriors" role="tabpanel" aria-labelledby="pills-thewarriors-tab">
+            <table id="thewarriors-table" class="table table-striped table-bordered" style="width:100%">
               <thead>
                 <tr>
                   <th></th>
@@ -796,6 +838,10 @@
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MAFIA2/mafia2wd.json"
       });
 
+      $("#mafia3-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MAFIA3/mafia3wd.json"
+      });
+
       $("#mcla-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/MCLA/mclawd.json"
       });
@@ -804,9 +850,13 @@
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/RDR/rdrwd.json"
       });
 
-      //$("#rdr2-table").DataTable({
-      //  ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/RDR2/rdr2wd.json"
-      //});
+      $("#rdr2-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/RDR2/rdr2wd.json"
+      });
+
+      $("#thewarriors-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/master/THEWARRIORS/thewarriorswd.json"
+      });
 
       $.fn.dataTable.tables({ visible: false, api: true }).on("click", "td", function () {
         if (this.firstChild != null && this.firstChild.href != undefined)
