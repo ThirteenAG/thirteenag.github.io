@@ -220,6 +220,11 @@
             <a class="nav-link" id="pills-aliens-tab" data-toggle="pill" href="#pills-aliens" role="tab"
               aria-controls="pills-aliens" aria-selected="false">Aliens</a>
           </li>
+          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
+            <a class="nav-link" id="pills-themanysaintsofnewark-tab" data-toggle="pill"
+              href="#pills-themanysaintsofnewark" role="tab" aria-controls="pills-themanysaintsofnewark"
+              aria-selected="false">The Many Saints Of Newark</a>
+          </li>
         </ul>
 
         <div class="row p-3">
@@ -412,6 +417,20 @@
               </thead>
             </table>
           </div>
+          <div class="tab-pane fade show" id="pills-themanysaintsofnewark" role="tabpanel"
+            aria-labelledby="pills-themanysaintsofnewark-tab">
+            <table id="themanysaintsofnewark-table" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>GXT</th>
+                  <th>GIF LINK</th>
+                  <th>GIF LINK</th>
+                  <th>SUBTITLE</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -557,6 +576,10 @@
 
       $("#aliens-table").DataTable({
         ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/aliens.json"
+      });
+
+      $("#themanysaintsofnewark-table").DataTable({
+        ajax: "https://raw.githubusercontent.com/ThirteenAG/GTA-One-Liners/movies/datasets/themanysaintsofnewark.json"
       });
 
       $.fn.dataTable.tables({ visible: false, api: true }).on("click", "td", function () {
