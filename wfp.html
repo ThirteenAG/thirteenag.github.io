@@ -119,8 +119,8 @@
     <!-- Tabs -->
     <div class="tabbable tabbable-line py-1">
       <ul class="nav nav-tabs nav-justified panel panel-default panel-transparent" id="wfpTabs" role="tablist">
-        <li class="nav-item active">
-          <a class="nav-link active" href="#gta" data-toggle="tab">Grand Theft Auto</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#gta" data-toggle="tab">Grand Theft Auto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#maxpayne" data-toggle="tab">Max Payne
@@ -156,11 +156,11 @@
         <div class="w-100" style="margin-top: 5px;"></div>
         <li class="nav-item">
           <a class="nav-link" href="#patreon" data-toggle="tab">
-            <img width="78px" title="Patreon" alt="Patreon" src="./img/patreon.svg" />-supported</a>
+            Patreon-supported</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#updates" data-toggle="tab">
-            <b>Updates &amp; Misc</b>
+        <li class="nav-item active">
+          <a class="nav-link active" href="#mods" data-toggle="tab">
+            <b>Other Mods</b>
           </a>
         </li>
         <li class="nav-item">
@@ -185,7 +185,7 @@
 
     <!-- Tabs Content -->
     <div class="tab-content">
-      <div class="tab-pane active" id="gta">
+      <div class="tab-pane" id="gta">
         <!--div id="top-alert" class="alert alert-danger text-center my-1 alert-dismissible fade show" role="alert">
           <p><b>This software plainly infringes Take-Two’s exclusive rights to copy, adapt, and distribute GTA
               Games.<br>The files provided on this page can only be used for unauthorized “modding purposes.”<br>
@@ -276,13 +276,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card adsense border-0">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
-            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
         <!-- GTA VC -->
@@ -387,13 +380,6 @@
           </div>
         </div>
 
-        <div class="card adsense border-0">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
-            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
         <!-- GTA III -->
         <div class="card" id="gta3" style="border-color: #F9B005;">
           <div class="card-body row p-0 mx-0">
@@ -496,13 +482,6 @@
           </div>
         </div>
 
-        <div class="card adsense border-0">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
-            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-
         <!-- GTA 2 -->
         <div class="card" id="gta2" style="border-color: #c70d21;">
           <div class="card-body row p-0 mx-0">
@@ -584,13 +563,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="card adsense border-0">
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
-            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
         <!-- GTA 1 -->
@@ -5575,137 +5547,409 @@
 
       </div>
 
-      <div class="tab-pane" id="all"></div>
-
-      <div class="tab-pane" id="updates">
-        <div class="clearfix">
-          <div class="card" id="modupdater">
-            <div class="card-body row p-0 mx-0">
-              <div class="img-comparison">
-                <img class="lazy img-fluid" onerror="this.style.display='none'"
-                  data-src="screens/modupdater/modupdater.jpg" />
-                <div class="logo" data-bg="screens/modupdater/logo.png" onmouseover="this.remove();"></div>
+      <div class="tab-pane active" id="mods">
+        <!-- GTA SA DE-->
+        <!--div class="card" id="gtasade" style="border-color: #C1D5A2;">
+          <div class="card-body row p-0 mx-0">
+            <div class="img-comparison">
+              <img class="lazy img-fluid" onerror="this.style.display='none'"
+                onmouseover="this.src='screens/gtasade/main1.jpg';" onmouseout="this.src='screens/gtasade/main2.jpg';"
+                data-src="screens/gtasade/main2.jpg" />
+              <div class="logo" style='scale: 60%;' data-bg="screens/gtasade/logo.svg" onmouseover="this.remove();">
               </div>
-              <div class="col p-0 panel-primary d-flex flex-column">
-                <div class="p-2 panel-heading">
-                  <h4 class="card-title panel-title float-right m-0 p-0">
-                    <a href="#modupdater">Updater for Widescreen Fixes</a>
-                  </h4>
+            </div>
+            <div class="col p-0 panel-primary d-flex flex-column">
+              <div class="p-2 panel-heading stripe"
+                style="background-color: #C1D5A2; background-image: url('./screens/gtasade/stripe.jpg');">
+                <h4 class="card-title panel-title centered m-0 p-0">
+                  <a style="color: #fff;" href="#gtasade">GTA San Andreas The Definitive Edition Fusion
+                    Mod</a>
+                </h4>
+              </div>
+              <div class="release-info"></div>
+              <div class="p-1">
+                <div class="clearfix">
+                  <p class="card-text float-left mb-0">Supported exe version:
+                    <b>Any</b>
+                    <br>
+                    <b>
+                      <u>Installation:</u>
+                    </b>
+                  </p>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://www.rockstargames.com/GTATrilogy" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Official website">
+                    <i class="icon-rockstar d-flex justify-content-center align-items-center"></i>
+                  </a>
                 </div>
-                <div class="p-1">
-                  <div class="clearfix">
-                    <p class="card-text float-left mb-0">Modupdater is a plugin that allows to automatically update
-                      outdated
-                      plugins (and other files).
-                      <br>
-                      <br>
-                      <b>
-                        <u>Installation:</u>
-                      </b>
-                    </p>
-                  </div>
-                  <div class="card-text text-justify p-0 m-0 mt-1">
-                    <ul class="font-weight-bold pb-1 mb-1 pl-4">
-                      <li>Download modupdater.asi and put it to scripts folder (alongside any other asi).</li>
-                    </ul>
-                  </div>
-                  <div class="clearfix">
-                    <p class="card-text float-left mb-0">
-                      <br>
-                      <b>
-                        <u>Uninstallation:</u>
-                      </b>
-                    </p>
-                  </div>
-                  <div class="card-text text-justify p-0 m-0 mt-1">
-                    <ul class="font-weight-bold pb-1 mb-1 pl-4">
-                      <li>Delete modupdater.asi and modupdater.ini to stop receiving updates.</li>
-                    </ul>
-                  </div>
+                <div class="card-text text-justify p-0 m-0 mt-1">
+                  <ol class="font-weight-bold pb-1 mb-1 pl-4">
+                    <li>Download and extract the archive to the game directory, where the exe is located.</li>
+                    <li>Check the ini file for available features.</li>
+                  </ol>
                 </div>
-                <div class="text-center btn-block mt-auto">
-                  <div class="btn-group mb-2">
-                    <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
-                      href="https://github.com/ThirteenAG/modupdater/releases/latest">
-                      <i class="icon-download"></i> Download</a>
+              </div>
+              <div class="text-center btn-block mt-auto">
+                <div class="btn-group mb-2">
+                  <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
+                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtasa">
+                    <i class="icon-download"></i> Download</a>
+                  <button type="button"
+                    class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-btn-width">
+                    <a class="dropdown-item"
+                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA.WidescreenFix.zip">Direct
+                      Link
+                    </a>
+                    <a class="dropdown-item"
+                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/GTASA.WidescreenFix.zip">Developer
+                      build (untested)</a>
                   </div>
                 </div>
                 <div>
+                  <button class="btn btn-primary btn-block rounded-0 mt-0 btn-screens" data-toggle="modal"
+                    data-remote="screens/gtasade.html" data-target="#screensModal">
+                    <i class="icon-images align-items-center"></i> Screenshots
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="list-group float-left w-50 m-0 pt-0 pb-2 pr-1">
-            <div class="list-group-item list-group-item-primary">
-              Latest releases
-            </div>
-            <a href="#burnout3" class="list-group-item list-group-item-action">
-              <span class="badge badge-success p-1">11.02.2019</span>
-              <span class="badge badge-info p-1 mr-2" title="New release">REL</span> Burnout 3: Takedown Widescreen Fix
-              [PCSX2]
-            </a>
-            <a href="#scdaps2" class="list-group-item list-group-item-action">
-              <span class="badge badge-success p-1">11.02.2019</span>
-              <span class="badge badge-info p-1 mr-2" title="New release">REL</span> Splinter Cell Double Agent
-              Widescreen Fix [PCSX2]
-            </a>
-            <a href="#condemned" class="list-group-item list-group-item-action">
-              <span class="badge badge-success p-1">16.12.2018</span>
-              <span class="badge badge-info p-1 mr-2" title="New release">REL</span> Condemned: Criminal Origins
-              Widescreen Fix</a>
-            <a href="#kr" class="list-group-item list-group-item-action">
-              <span class="badge badge-success p-1">22.10.2018</span>
-              <span class="badge badge-info p-1 mr-2" title="New release">REL</span> Knight Rider The Game 1 & 2
-              Widescreen
-              Fix</a>
-          </div>
+        <div class="card adsense border-0">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
+            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div-->
 
-          <div class="list-group float-right w-50 m-0 pt-0 pb-2 pr-1">
-            <div class="list-group-item list-group-item-primary text-right">
-              Deprecated fixes
+        <!-- GTA VC DE-->
+        <div class="card" id="gtavcde" style="border-color: #00B3C9;">
+          <div class="card-body row p-0 mx-0">
+            <div class="img-comparison">
+              <img class="lazy img-fluid" onerror="this.style.display='none'"
+                onmouseover="this.src='screens/gtavcde/main1.jpg';" onmouseout="this.src='screens/gtavcde/main2.jpg';"
+                data-src="screens/gtavcde/main2.jpg" />
+              <div class="logo" style='scale: 60%;' data-bg="screens/gtavcde/logo.svg" onmouseover="this.remove();">
+              </div>
             </div>
-            <a href="https://store.steampowered.com/app/631510/" class="list-group-item list-group-item-action">
-              <span class="badge badge-success p-1 mr-2">Devil May Cry 3</span> Use Devil May Cry HD Collection</a>
-            <a href="https://store.steampowered.com/app/312840/" class="list-group-item list-group-item-action">
-              <span class="badge badge-success p-1 mr-2">Fahrenheit</span> Use Fahrenheit: Indigo Prophecy
-              Remastered</a>
-            <button type="button" class="list-group-item list-group-item-action" disabled>&nbsp;</button>
-            <button type="button" class="list-group-item list-group-item-action" disabled>&nbsp;</button>
+            <div class="col p-0 panel-primary d-flex flex-column">
+              <div class="p-2 panel-heading stripe"
+                style="background-color: #00B3C9; background-image: url('./screens/gtavcde/stripe.jpg');">
+                <h4 class="card-title panel-title centered m-0 p-0">
+                  <a style="color: #fff;" href="#gtavcde">GTA Vice City The Definitive Edition Fusion
+                    Mod</a>
+                </h4>
+              </div>
+              <div class="release-info"></div>
+              <div class="p-1">
+                <div class="clearfix">
+                  <p class="card-text float-left mb-0">Supported exe version:
+                    <b>Any</b>
+                    <br>
+                    <b>
+                      <u>Installation:</u>
+                    </b>
+                  </p>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://www.rockstargames.com/GTATrilogy" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Official website">
+                    <i class="icon-rockstar d-flex justify-content-center align-items-center"></i>
+                  </a>
+                </div>
+                <div class="card-text text-justify p-0 m-0 mt-1">
+                  <ol class="font-weight-bold pb-1 mb-1 pl-4">
+                    <li>Download and extract the archive to the game directory, where the exe is located.</li>
+                  </ol>
+                  <p>
+                    Experimental release, so far only adds an ability to qucksave anywhere by pressing F5.<br>
+                    More features maybe coming in the future.<br>
+                    Support for III and SA coming soon.
+                  </p>
+                </div>
+              </div>
+              <div class="text-center btn-block mt-auto">
+                <div class="btn-group mb-2">
+                  <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
+                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavcde">
+                    <i class="icon-download"></i> Download</a>
+                  <button type="button"
+                    class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-btn-width">
+                    <a class="dropdown-item"
+                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavcde/GTAVCDE.FusionMod.zip">Direct
+                      Link
+                    </a>
+                    <a class="dropdown-item"
+                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/GTAVCDE.FusionMod.zip">Developer
+                      build (untested)</a>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-block rounded-0 mt-0 btn-screens" data-toggle="modal"
+                    data-remote="screens/gtavcde.html" data-target="#screensModal">
+                    <i class="icon-images align-items-center"></i> Screenshots
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="list-group m-0 pt-0 pb-2 pr-1">
-          <div class="list-group-item list-group-item-warning text-center">
-            Miscellaneous
-          </div>
-          <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/scarface"
-            class="list-group-item list-group-item-action">
-            <span class="badge badge-success p-1 mr-2">Scarface</span> Scarface Graphics Corruption Fix / Workaround</a>
-          <a href="https://www.youtube.com/watch?v=DZ0nYNiqDGA&hd=1" class="list-group-item list-group-item-action">
-            <span class="badge badge-success p-1 mr-2">Resident Evil 7 Demo</span> Infinite Ammo mod</a>
-          <a href="https://github.com/ThirteenAG/DyingLight.BorderlessWindowedMode#readme"
-            class="list-group-item list-group-item-action">
-            <span class="badge badge-success p-1 mr-2">Dying Light</span> Borderless Windowed Mode for Dying Light
-            Enhanced
-            Edition
-          </a>
-          <a href="https://www.youtube.com/watch?v=5oFyVSWNsoY&hd=1" class="list-group-item list-group-item-action">
-            <span class="badge badge-success p-1 mr-2">Alien: Isolation</span> Save confirmation dialog skipper for
-            Alien:
-            Isolation
-          </a>
-          <a href="https://github.com/ThirteenAG/XboxRainDroplets#readme"
-            class="list-group-item list-group-item-action">
-            <span class="badge badge-success p-1 mr-2">Mafia / NFS</span> Xbox Rain Droplets mod</a>
+        <div class="card adsense border-0">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
+            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
-      </div>
 
-      <!--
+        <!-- GTA III DE-->
+        <!--div class="card" id="gta3de" style="border-color: #2F4455;">
+          <div class="card-body row p-0 mx-0">
+            <div class="img-comparison">
+              <img class="lazy img-fluid" onerror="this.style.display='none'"
+                onmouseover="this.src='screens/gta3de/main1.jpg';" onmouseout="this.src='screens/gta3de/main2.jpg';"
+                data-src="screens/gta3de/main2.jpg" />
+              <div class="logo" style='scale: 60%;' data-bg="screens/gta3de/logo.svg" onmouseover="this.remove();">
+              </div>
+            </div>
+            <div class="col p-0 panel-primary d-flex flex-column">
+              <div class="p-2 panel-heading stripe"
+                style="background-color: #2F4455; background-image: url('./screens/gta3de/stripe.jpg');">
+                <h4 class="card-title panel-title centered m-0 p-0">
+                  <a style="color: #fff;" href="#gta3de">GTA III The Definitive Edition Fusion
+                    Mod</a>
+                </h4>
+              </div>
+              <div class="release-info"></div>
+              <div class="p-1">
+                <div class="clearfix">
+                  <p class="card-text float-left mb-0">Supported exe version:
+                    <b>Any</b>
+                    <br>
+                    <b>
+                      <u>Installation:</u>
+                    </b>
+                  </p>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://www.rockstargames.com/GTATrilogy" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Official website">
+                    <i class="icon-rockstar d-flex justify-content-center align-items-center"></i>
+                  </a>
+                </div>
+                <div class="card-text text-justify p-0 m-0 mt-1">
+                  <ol class="font-weight-bold pb-1 mb-1 pl-4">
+                    <li>Download and extract the archive to the game directory, where the exe is located.</li>
+                    <li>Check the ini file for available features.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="text-center btn-block mt-auto">
+                <div class="btn-group mb-2">
+                  <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
+                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavc">
+                    <i class="icon-download"></i> Download</a>
+                  <button type="button"
+                    class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-btn-width">
+                    <a class="dropdown-item"
+                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/gtavc.WidescreenFix.zip">Direct
+                      Link
+                    </a>
+                    <a class="dropdown-item"
+                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/gtavc.WidescreenFix.zip">Developer
+                      build (untested)</a>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-block rounded-0 mt-0 btn-screens" data-toggle="modal"
+                    data-remote="screens/gta3de.html" data-target="#screensModal">
+                    <i class="icon-images align-items-center"></i> Screenshots
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card adsense border-0">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
+            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div-->
+
+        <!-- GTA IV -->
+        <div class="card" id="gtaivfusionfix" style="border-color: #B2B2B2;">
+          <div class="card-body row p-0 mx-0">
+            <div class="img-comparison">
+              <img class="lazy img-fluid" onerror="this.style.display='none'"
+                onmouseover="this.src='screens/gtaivfusionfix/main1.jpg';"
+                onmouseout="this.src='screens/gtaivfusionfix/main2.jpg';" data-src="screens/gtaivfusionfix/main2.jpg" />
+              <div class="logo" style='scale: 60%;' data-bg="screens/gtaivfusionfix/logo.svg"
+                onmouseover="this.remove();">
+              </div>
+            </div>
+            <div class="col p-0 panel-primary d-flex flex-column">
+              <div class="p-2 panel-heading stripe"
+                style="background-color: #B2B2B2; background-image: url('./screens/gtaivfusionfix/stripe.jpg');">
+                <h4 class="card-title panel-title centered m-0 p-0">
+                  <a style="color: #000;" href="#gtaivfusionfix">GTA IV Complete Edition Fusion Fix</a>
+                </h4>
+              </div>
+              <div class="release-info"></div>
+              <div class="p-1">
+                <div class="clearfix">
+                  <p class="card-text float-left mb-0">Supported exe version:
+                    <b>Any</b>
+                    <br>
+                    <b>
+                      <u>Installation:</u>
+                    </b>
+                  </p>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://store.steampowered.com/app/12210/" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Works with Steam version">
+                    <i class="icon-steam steam-icon d-flex justify-content-center align-items-center"></i>
+                  </a>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://www.rockstargames.com/games/IV" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Official website">
+                    <i class="icon-rockstar d-flex justify-content-center align-items-center"></i>
+                  </a>
+                </div>
+                <div class="card-text text-justify p-0 m-0 mt-1">
+                  <ol class="font-weight-bold pb-1 mb-1 pl-4">
+                    <li>Download and extract the archive to the game directory, where the exe is located.</li>
+                    <li>Check the download link below for available features.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="text-center btn-block mt-auto">
+                <div class="btn-group mb-2">
+                  <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
+                    href="https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix#readme">
+                    <i class="icon-download"></i> Download</a>
+                  <button type="button"
+                    class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-btn-width">
+                    <a class="dropdown-item"
+                      href="https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix/releases/latest/download/GTAIV.EFLC.FusionFix.zip">Direct
+                      Link
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-block rounded-0 mt-0 btn-screens" data-toggle="modal"
+                    data-remote="screens/gtaivfusionfix.html" data-target="#screensModal">
+                    <i class="icon-images align-items-center"></i> Screenshots
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card adsense border-0">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
+            data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- AI -->
+        <div class="card" id="alienisolation" style="border-color: #B2B2B2;">
+          <div class="card-body row p-0 mx-0">
+            <div class="img-comparison">
+              <img class="lazy img-fluid" onerror="this.style.display='none'"
+                onmouseover="this.src='screens/alienisolation/main1.jpg';"
+                onmouseout="this.src='screens/alienisolation/main2.jpg';" data-src="screens/alienisolation/main2.jpg" />
+              <div class="logo" data-bg="screens/alienisolation/logo.svg" onmouseover="this.remove();">
+              </div>
+            </div>
+            <div class="col p-0 panel-primary d-flex flex-column">
+              <div class="p-2 panel-heading stripe"
+                style="background-color: #B2B2B2; background-image: url('./screens/alienisolation/stripe.jpg');">
+                <h4 class="card-title panel-title centered m-0 p-0">
+                  <a style="color: #fff;" href="#alienisolation">Alien: Isolation Save Confirmation Dialog Skipper</a>
+                </h4>
+              </div>
+              <div class="release-info"></div>
+              <div class="p-1">
+                <div class="clearfix">
+                  <p class="card-text float-left mb-0">Supported exe version:
+                    <b>Any</b>
+                    <br>
+                    <b>
+                      <u>Installation:</u>
+                    </b>
+                  </p>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://store.steampowered.com/app/214490/" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Works with Steam version">
+                    <i class="icon-steam steam-icon d-flex justify-content-center align-items-center"></i>
+                  </a>
+                  <a class="btn btn-social-icon btn-social-light float-right ml-1 mb-1" target="_blank"
+                    href="https://www.alienisolation.com/" data-placement="left" data-toggle="tooltip"
+                    data-original-title="Official website">
+                    <i class="icon-earth d-flex justify-content-center align-items-center"></i>
+                  </a>
+                </div>
+                <div class="card-text text-justify p-0 m-0 mt-1">
+                  <ol class="font-weight-bold pb-1 mb-1 pl-4">
+                    <li>Download and extract the archive to the game directory, where the exe is located.</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="text-center btn-block mt-auto">
+                <div class="btn-group mb-2">
+                  <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
+                    href="https://github.com/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog#readme">
+                    <i class="icon-download"></i> Download</a>
+                  <button type="button"
+                    class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-btn-width">
+                    <a class="dropdown-item"
+                      href="https://github.com/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog/releases/latest/download/AlienIsolation.SkipSaveConfirmationDialog.zip">Direct
+                      Link
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-block rounded-0 mt-0 btn-screens" data-toggle="modal"
+                    data-remote="screens/alienisolation.html" data-target="#screensModal">
+                    <i class="icon-images align-items-center"></i> Screenshots
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--
       <div class="tab-pane" id="comments">
         <div id="gh-comments-list" class="p-2"></div>
       </div>
       -->
+      </div>
+
+      <div class="tab-pane" id="all"></div>
     </div>
     <!-- /Tabs Content -->
 
@@ -5755,13 +5999,13 @@
           <a class="page-link" href="#patreon" onclick="LocationManager($(this).attr('href'));" data-placement="bottom"
             data-toggle="tooltip" data-original-title="Patreon-supported">10</a>
         </li>
+        <li id="page-mods" class="page-item">
+          <a class="page-link" href="#mods" onclick="LocationManager($(this).attr('href'));" data-placement="bottom"
+            data-toggle="tooltip" data-original-title="Other mods">11</a>
+        </li>
         <li id="page-all" class="page-item">
           <a class="page-link" href="#all" onclick="LocationManager($(this).attr('href'));" data-placement="bottom"
-            data-toggle="tooltip" data-original-title="List of all fixes">11</a>
-        </li>
-        <li id="page-updates" class="page-item">
-          <a class="page-link" href="#updates" onclick="LocationManager($(this).attr('href'));" data-placement="bottom"
-            data-toggle="tooltip" data-original-title="Latest updates">12</a>
+            data-toggle="tooltip" data-original-title="List of all fixes">12</a>
         </li>
         <!--li id="page-comments" class="page-item">
           <a class="page-link" href="#comments" onclick="LocationManager($(this).attr('href'));" data-placement="bottom" data-toggle="tooltip"
@@ -5817,7 +6061,8 @@
         noninfringement.
         <br>In no event shall the authors or copyright holders be liable for any claim, damages or other liability,
         whether
-        in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use
+        in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the
+        use
         or
         other dealings in the software.
       </p>
@@ -5916,9 +6161,9 @@
             }
             var releaseInfo = "Updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() +
               " times since";
-            obj.html("<a style='color: inherit;text-decoration: inherit;' href='#updates'>" +
+            obj.html("<p class='my-0' style='color: inherit;text-decoration: inherit;'>" +
               releaseInfo +
-              "</a>")
+              "</p>")
             //obj.text(releaseInfo);
             obj.fadeIn("fast");
           });
@@ -5957,7 +6202,7 @@
   <script type="text/javascript">
     TabContentMap = new Array({
       "tabname": "gta",
-      "contentname": "#gta"
+      "contentname": "#gtasa #gtavc #gta3 #gta2 #gta1"
     }, {
       "tabname": "maxpayne",
       "contentname": "#mp"
@@ -5989,8 +6234,8 @@
       "tabname": "all",
       "contentname": "#all"
     }, {
-      "tabname": "updates",
-      "contentname": "#updates"
+      "tabname": "mods",
+      "contentname": "#gtasade #gtavcde #gta3de #gtaivfusionfix #alienisolation"
     }, {
       "tabname": "comments",
       "contentname": "#comment"
@@ -6000,18 +6245,28 @@
       if (tab == undefined) {
         var curLocation = window.location.href.split('#')[1];
         curLocation = "#" + curLocation;
+        var SwitchTab = (i) => {
+          $('.tabbable .nav-item a[href="#' + TabContentMap[i].tabname + '"]').tab("show");
+          $('.pagination li a[href="#' + TabContentMap[i].tabname + '"]').parent().addClass("active").siblings().removeClass("active");
+          if (TabContentMap[i].tabname.indexOf('#all') > -1) {
+            $('.tabbable .nav-item a[href="#comments"]').tab("show");
+            $('.pagination li a[href="#comments"]').parent().addClass("active").siblings().removeClass("active");
+          }
+        };
+        var switched = false;
         for (var i = 0; i < TabContentMap.length; i++) {
-          if ((TabContentMap[i].tabname.indexOf(curLocation) > -1 || TabContentMap[i].contentname.indexOf(
-            curLocation) > -1) ||
-            curLocation.indexOf(TabContentMap[i].tabname) > -1 || curLocation.indexOf(TabContentMap[i].contentname) >
-            -1) {
-            $('.tabbable .nav-item a[href="#' + TabContentMap[i].tabname + '"]').tab("show");
-            $('.pagination li a[href="#' + TabContentMap[i].tabname + '"]').parent().addClass("active").siblings().removeClass("active");
-            if (TabContentMap[i].tabname.indexOf('#all') > -1) {
-              $('.tabbable .nav-item a[href="#comments"]').tab("show");
-              $('.pagination li a[href="#comments"]').parent().addClass("active").siblings().removeClass("active");
-            }
+          if ((TabContentMap[i].contentname.indexOf(curLocation) > -1) || curLocation.indexOf(TabContentMap[i].contentname) > -1) {
+            SwitchTab(i);
+            switched = true;
             break;
+          }
+        }
+        if (!switched) {
+          for (var i = 0; i < TabContentMap.length; i++) {
+            if (TabContentMap[i].tabname.indexOf(curLocation) > -1 || curLocation.indexOf(TabContentMap[i].tabname) > -1) {
+              SwitchTab(i);
+              break;
+            }
           }
         }
       } else {
@@ -6054,7 +6309,7 @@
         $('#laquo').removeClass('disabled');
       }
 
-      if ($('.pagination li[class*=\'active\'] a').attr('href').indexOf('#comments') > -1) {
+      if ($('.pagination li[class*=\'active\'] a').attr('href').indexOf('#all') > -1) {
         $('#raquo').addClass('disabled');
       } else {
         $('#raquo').removeClass('disabled');
@@ -6083,11 +6338,12 @@
     function initTabs() {
       $().ready(function () {
         $("ul.nav-tabs > li > a").click(function (e) {
-          LocationManager($(e.target).attr("href"));
+          let v = $(e.currentTarget).attr("href");
+          LocationManager($(e.currentTarget).attr("href"));
           if (history.pushState) {
-            history.pushState(null, null, $(e.target).attr("href"));
+            history.pushState(null, null, $(e.currentTarget).attr("href"));
           } else {
-            window.location.hash = $(e.target).attr("href");
+            window.location.hash = $(e.currentTarget).attr("href");
           }
         });
       });
