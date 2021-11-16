@@ -3,12 +3,7 @@
 	var youtube = "";
 
 	var arr = [
-		"[url=https://i.imgur.com/4dof6Vc.jpg][img]https://i.imgur.com/0KsTbO9.png[/img][/url]",
-		"[url=https://i.imgur.com/A9eSvu5.jpg][img]https://i.imgur.com/LrADA8b.png[/img][/url]",
-		"[url=https://i.imgur.com/udFhfM6.jpg][img]https://i.imgur.com/hSv1Cix.png[/img][/url]",
-		"[url=https://i.imgur.com/qjK3OyJ.jpg][img]https://i.imgur.com/B2K1YWX.png[/img][/url]",
-		"[url=https://i.imgur.com/PLbJlO3.png][img]https://i.imgur.com/PLbJlO3m.jpg[/img][/url]",
-		"[url=https://i.imgur.com/71ntbRI.png][img]https://i.imgur.com/71ntbRIm.jpg[/img][/url]",
+
 	];
 
 	var styles = { "background": "#fff url('https://media-rockstargames-com.akamaized.net/mfe2/sites-gta-trilogy/feb1da3/img/a29f5feb418cc2b7914e.jpg')", "background-position": "center", "background-size": "cover" };
@@ -62,7 +57,6 @@
 </div>
 
 <script type="text/javascript">
-	var github = "https://github.com/ThirteenAG/Widescreen_Fixes_Pack/releases/tag/" + id;
 	var re = /\[url=([^\s\]]+)\s*\]\[img\](.*(?=\[\/img\]))\[\/img\]\[\/url\]/
 
 	document.querySelectorAll('.pic').forEach(function (item, i, ar) {
@@ -91,6 +85,6 @@
 		var s = "<div class='embed-responsive embed-responsive-16by9 position-absolute w-100'><iframe style='z-index: 1000; padding-right: 4px;' class='embed-responsive-item' src='" + youtube + "' allowfullscreen></iframe></div>";
 		document.getElementById("yt").innerHTML = s;
 	}
-	document.getElementById("dl").href = github;
+	document.getElementById("dl").href = "https://github.com/ThirteenAG/GTAIV.EFLC.FusionFix#readme";
 	$(".modal-content").css(styles);
 </script>
