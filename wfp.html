@@ -5549,7 +5549,7 @@
 
       <div class="tab-pane active" id="mods">
         <!-- GTA SA DE-->
-        <!--div class="card" id="gtasade" style="border-color: #C1D5A2;">
+        <div class="card" id="gtasade" style="border-color: #C1D5A2;">
           <div class="card-body row p-0 mx-0">
             <div class="img-comparison">
               <img class="lazy img-fluid" onerror="this.style.display='none'"
@@ -5585,14 +5585,17 @@
                 <div class="card-text text-justify p-0 m-0 mt-1">
                   <ol class="font-weight-bold pb-1 mb-1 pl-4">
                     <li>Download and extract the archive to the game directory, where the exe is located.</li>
-                    <li>Check the ini file for available features.</li>
                   </ol>
+                  <p>
+                    Experimental release, so far only adds an ability to quicksave anywhere by pressing F5.<br>
+                    More features maybe coming in the future.<br>
+                  </p>
                 </div>
               </div>
               <div class="text-center btn-block mt-auto">
                 <div class="btn-group mb-2">
                   <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
-                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtasa">
+                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtasade">
                     <i class="icon-download"></i> Download</a>
                   <button type="button"
                     class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
@@ -5601,11 +5604,11 @@
                   </button>
                   <div class="dropdown-menu dropdown-btn-width">
                     <a class="dropdown-item"
-                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA.WidescreenFix.zip">Direct
+                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavcde/GTASADE.FusionMod.zip">Direct
                       Link
                     </a>
                     <a class="dropdown-item"
-                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/GTASA.WidescreenFix.zip">Developer
+                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/GTASADE.FusionMod.zip">Developer
                       build (untested)</a>
                   </div>
                 </div>
@@ -5625,7 +5628,7 @@
           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
             data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div-->
+        </div>
 
         <!-- GTA VC DE-->
         <div class="card" id="gtavcde" style="border-color: #00B3C9;">
@@ -5668,7 +5671,6 @@
                   <p>
                     Experimental release, so far only adds an ability to quicksave anywhere by pressing F5.<br>
                     More features maybe coming in the future.<br>
-                    Support for III and SA coming soon.
                   </p>
                 </div>
               </div>
@@ -5711,7 +5713,7 @@
         </div>
 
         <!-- GTA III DE-->
-        <!--div class="card" id="gta3de" style="border-color: #2F4455;">
+        <div class="card" id="gta3de" style="border-color: #2F4455;">
           <div class="card-body row p-0 mx-0">
             <div class="img-comparison">
               <img class="lazy img-fluid" onerror="this.style.display='none'"
@@ -5747,14 +5749,17 @@
                 <div class="card-text text-justify p-0 m-0 mt-1">
                   <ol class="font-weight-bold pb-1 mb-1 pl-4">
                     <li>Download and extract the archive to the game directory, where the exe is located.</li>
-                    <li>Check the ini file for available features.</li>
                   </ol>
+                  <p>
+                    Experimental release, so far only adds an ability to quicksave anywhere by pressing F5.<br>
+                    More features maybe coming in the future.<br>
+                  </p>
                 </div>
               </div>
               <div class="text-center btn-block mt-auto">
                 <div class="btn-group mb-2">
                   <a target="_blank" class="btn btn-warning rounded-0 border border-dark"
-                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavc">
+                    href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gta3de">
                     <i class="icon-download"></i> Download</a>
                   <button type="button"
                     class="btn btn-warning rounded-0 dropdown-toggle dropdown-toggle-split border border-dark"
@@ -5763,11 +5768,11 @@
                   </button>
                   <div class="dropdown-menu dropdown-btn-width">
                     <a class="dropdown-item"
-                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/gtavc.WidescreenFix.zip">Direct
+                      href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavcde/GTA3DE.FusionMod.zip">Direct
                       Link
                     </a>
                     <a class="dropdown-item"
-                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/gtavc.WidescreenFix.zip">Developer
+                      href="https://ci.appveyor.com/api/projects/ThirteenAG/widescreenfixespack/artifacts/GTA3DE.FusionMod.zip">Developer
                       build (untested)</a>
                   </div>
                 </div>
@@ -5787,7 +5792,7 @@
           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4724836920024351"
             data-ad-slot="9660043345" data-ad-format="auto" data-full-width-responsive="true"></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div-->
+        </div>
 
         <!-- GTA IV -->
         <div class="card" id="gtaivfusionfix" style="border-color: #B2B2B2;">
@@ -6138,16 +6143,31 @@
 
     function GetReleaseInfo(ghtag, obj) {
       if (ghtag != undefined) {
-        getCachedJSON("https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases?per_page=100",
+        let r = "https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases?per_page=100";
+        switch (ghtag) {
+          case "gtaivfusionfix":
+            r = "https://api.github.com/repos/ThirteenAG/GTAIV.EFLC.FusionFix/releases/latest";
+            break;
+          case "alienisolation":
+            r = "https://api.github.com/repos/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog/releases/latest";
+            break;
+          default:
+            break;
+        }
+        getCachedJSON(r,
           function (releases) {
-            var release = jQuery.grep(releases, function (obj) {
-              return obj.tag_name === ghtag;
-            })[0];
+            let release = releases;
+            if (Array.isArray(release)) {
+              release = jQuery.grep(releases, function (obj) {
+                return obj.tag_name === ghtag;
+              })[0];
+            }
             if (!release) return;
             var asset = release.assets[0];
             var downloadCount = 0;
             for (var i = 0; i < release.assets.length; i++) {
-              if ((release.assets[i].name.includes("Fix") || release.assets[i].name.includes("Mod")) && !release.assets[i].name.includes("FilesFix"))
+              if ((release.assets[i].name.includes("Fix") || release.assets[i].name.includes("Mod") ||
+                release.assets[i].name.includes("Skip")) && !release.assets[i].name.includes("FilesFix"))
                 downloadCount += release.assets[i].download_count;
             }
             var oneHour = 60 * 60 * 1000;
