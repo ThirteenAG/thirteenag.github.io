@@ -24,7 +24,7 @@
   <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Iceland|Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" type="text/css"
-    href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/datatables.min.css" />
+    href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.1.1/b-colvis-2.1.1/b-html5-2.1.1/datatables.min.css" />
 
   <style>
     body {
@@ -45,13 +45,19 @@
       background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
     }
 
-    .dt-body-nowrap {
+    .dt-body-nowrap2 {
+      white-space: normal;
       overflow-wrap: anywhere;
       word-break: break-all;
     }
 
     .dt-center {
       text-align: center;
+    }
+	
+    table.dataTable tr td {
+      height: 36px;
+	  vertical-align: middle;
     }
 
     .dt-buttons .btn-secondary {
@@ -94,7 +100,7 @@
       white-space: pre-wrap !important;
     }
 
-    .form-group.position-relative input {
+    .mb-3.position-relative input {
       padding-right: 32px;
     }
 
@@ -130,12 +136,12 @@
     <div class="container">
       <a class="navbar-brand nav-yellow" href="#"
         style="font-family: Pacifico; color: #FFDD1B; text-shadow: 0 0 5px #000;">Movie One Liners</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item nav-yellow">
             <a class="nav-link"
               href="https://discordapp.com/api/oauth2/authorize?client_id=623910002893127700&permissions=18432&scope=bot">Discord
@@ -168,67 +174,67 @@
     <div class="card border-0 shadow my-2">
       <div class="card-body">
         <ul class="nav nav-pills flex-column flex-sm-row text-center" id="pills-tab" role="tablist">
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link active" id="pills-scarface-tab" data-toggle="pill" href="#pills-scarface" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link active" id="pills-scarface-tab" data-bs-toggle="pill" href="#pills-scarface" role="tab"
               aria-controls="pills-scarface" aria-selected="false">Scarface</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-thegodfather-tab" data-toggle="pill" href="#pills-thegodfather" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-thegodfather-tab" data-bs-toggle="pill" href="#pills-thegodfather" role="tab"
               aria-controls="pills-thegodfather" aria-selected="false">The Godfather</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-thegodfather2-tab" data-toggle="pill" href="#pills-thegodfather2" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-thegodfather2-tab" data-bs-toggle="pill" href="#pills-thegodfather2" role="tab"
               aria-controls="pills-thegodfather2" aria-selected="false">The Godfather Part II</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-thegodfather3-tab" data-toggle="pill" href="#pills-thegodfather3" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-thegodfather3-tab" data-bs-toggle="pill" href="#pills-thegodfather3" role="tab"
               aria-controls="pills-thegodfather3" aria-selected="false">The Godfather Part III</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-goodfellas-tab" data-toggle="pill" href="#pills-goodfellas" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-goodfellas-tab" data-bs-toggle="pill" href="#pills-goodfellas" role="tab"
               aria-controls="pills-goodfellas" aria-selected="false">Goodfellas</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-theterminator-tab" data-toggle="pill" href="#pills-theterminator" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-theterminator-tab" data-bs-toggle="pill" href="#pills-theterminator" role="tab"
               aria-controls="pills-theterminator" aria-selected="false">The Terminator</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-theterminator2-tab" data-toggle="pill" href="#pills-theterminator2" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-theterminator2-tab" data-bs-toggle="pill" href="#pills-theterminator2" role="tab"
               aria-controls="pills-theterminator2" aria-selected="false">Terminator 2: Judgment Day</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-avengersinfinitywar-tab" data-toggle="pill" href="#pills-avengersinfinitywar"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-avengersinfinitywar-tab" data-bs-toggle="pill" href="#pills-avengersinfinitywar"
               role="tab" aria-controls="pills-avengersinfinitywar" aria-selected="false">Avengers: Infinity War</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-avengersendgame-tab" data-toggle="pill" href="#pills-avengersendgame"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-avengersendgame-tab" data-bs-toggle="pill" href="#pills-avengersendgame"
               role="tab" aria-controls="pills-avengersendgame" aria-selected="false">Avengers: Endgame</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-diehard1-tab" data-toggle="pill" href="#pills-diehard1" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-diehard1-tab" data-bs-toggle="pill" href="#pills-diehard1" role="tab"
               aria-controls="pills-diehard1" aria-selected="false">Die Hard</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-diehard2-tab" data-toggle="pill" href="#pills-diehard2" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-diehard2-tab" data-bs-toggle="pill" href="#pills-diehard2" role="tab"
               aria-controls="pills-diehard2" aria-selected="false">Die Hard 2</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-alien-tab" data-toggle="pill" href="#pills-alien" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-alien-tab" data-bs-toggle="pill" href="#pills-alien" role="tab"
               aria-controls="pills-alien" aria-selected="false">Alien</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-aliens-tab" data-toggle="pill" href="#pills-aliens" role="tab"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-aliens-tab" data-bs-toggle="pill" href="#pills-aliens" role="tab"
               aria-controls="pills-aliens" aria-selected="false">Aliens</a>
           </li>
-          <li class="nav-item flex-sm-fill text-sm-center font-weight-bold">
-            <a class="nav-link" id="pills-themanysaintsofnewark-tab" data-toggle="pill"
+          <li class="nav-item flex-sm-fill text-sm-center fw-bold">
+            <a class="nav-link" id="pills-themanysaintsofnewark-tab" data-bs-toggle="pill"
               href="#pills-themanysaintsofnewark" role="tab" aria-controls="pills-themanysaintsofnewark"
               aria-selected="false">The Many Saints Of Newark</a>
           </li>
         </ul>
 
-        <div class="row p-3">
-          <div class="form-group position-relative col-lg-4 pr-0 pl-0 col-lg-offset-4 m-auto text-center">
+        <div class="row p-1">
+          <div class="mb-1 position-relative col-lg-4 pe-0 ps-0 col-lg-offset-4 m-auto text-center">
             <input type="search" id="search" value="" class="form-control" placeholder="Search in all tables" />
             <span class="form-clear d-none">x</span>
           </div>
@@ -441,7 +447,7 @@
   <script type="text/javascript" defer src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"
     onload="InitTabs();"></script>
   <script type="text/javascript" defer
-    src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.23/b-1.6.5/b-colvis-1.6.5/b-html5-1.6.5/datatables.min.js"></script>
+    src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.11.3/b-2.1.1/b-colvis-2.1.1/b-html5-2.1.1/datatables.min.js"></script>
 
   <script type="text/javascript">
     function copyToClipboard(text) {
@@ -493,16 +499,16 @@
         stateSave: true,
         order: [[1, "asc"]],
         columns: [
-          { data: null, className: "details-control", width: "1%", orderable: false, defaultContent: "" },
-          { data: 0, className: "dt-body-nowrap dt-center", width: "10%", visible: false, searchable: true },
+          { data: null, className: "details-control", width: "2%", orderable: false, defaultContent: "" },
+          { data: 0, className: "dt-body-nowrap2 dt-center", width: "10%", visible: false, searchable: true },
           {
-            data: 1, className: "dt-body-nowrap dt-center gif-link", width: "27%", visible: false, searchable: false,
+            data: 1, className: "dt-body-nowrap2 dt-center gif-link", width: "27%", visible: false, searchable: false,
             render: function (data, type, row, meta) {
               return '<a href="' + data + '">' + data + '</a>';
             }
           },
           {
-            data: 2, className: "dt-body-nowrap dt-center gif-link", width: "27%", visible: true, searchable: false,
+            data: 2, className: "dt-body-nowrap2 dt-center gif-link", width: "27%", visible: true, searchable: false,
             render: function (data, type, row, meta) {
               return '<a href="' + data + '">' + data.substring(data.lastIndexOf('/') + 1, data.lastIndexOf('.gif')) + '</a>';
             }
@@ -645,7 +651,7 @@
     document.addEventListener("DOMContentLoaded", Init);
 
     function InitTabs() {
-      $('a[data-toggle="pill"]').on("shown.bs.tab", function (e) {
+      $('a[data-bs-toggle="pill"]').on("shown.bs.tab", function (e) {
         $.fn.dataTable
           .tables({ visible: true, api: true })
           .order([[1, "asc"]])

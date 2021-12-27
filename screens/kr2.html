@@ -28,50 +28,50 @@
 	var styles = { "background": "#fff url('https://i.imgur.com/ohQxtsR.jpg')", "background-position": "center", "background-size": "cover" };
 </script>
 
-<div>
-	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: white; 
+<div class="text-end">
+	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true" style="color: white; 
 	text-shadow: 3px 3px 5px #000, -1px -1px 5px #000, 1px -1px 5px #000, -1px 1px 5px #000, 1px 1px 5px #000;">
-		<span aria-hidden="true">&times;</span>
+		<span aria-hidden="true"></span>
 	</button>
 </div>
 
 <div class="container gallery-container">
 	<div class="tz-gallery">
 		<div class="row">
-			<div class="pic col-md-4"></div>
-			<div class="pic col-md-4"></div>
-			<div class="pic col-md-4"></div>
+			<div class="pic position-relative col-md-4"></div>
+			<div class="pic position-relative col-md-4"></div>
+			<div class="pic position-relative col-md-4"></div>
 		</div>
 		<div class="row">
-			<div class="pic col-md-2"></div>
-			<div class="col-md-8 text-justify" id="yt">
+			<div class="pic position-relative col-md-2"></div>
+			<div class="col-md-8 text-justify position-relative" id="yt">
 				<a style="z-index: 1000; padding-right: 4px;" class="lightbox position-absolute w-100 d-none d-md-block" href="" id="img-main-src">
 					<img src="" id="img-main" />
 				</a>
 			</div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
 			<div class="col-md-8"></div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
 			<div class="col-md-8"></div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
 			<div class="col-md-8"></div>
-			<div class="pic col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
 		</div>
 		<div class="row justify-content-center">
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
-			<div class="pic col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
+			<div class="pic position-relative col-md-2"></div>
 		</div>
 	</div>
 	<div class="pt-2">
 		<a class="btn btn-warning rounded-0 border border-dark" id="dl">Download</a>
-		<button type="button" data-dismiss="modal" class="btn btn-light rounded-0 border border-dark">Close</button>
+		<button type="button" data-bs-dismiss="modal" class="btn btn-light rounded-0 border border-dark">Close</button>
 	</div>
 </div>
 
@@ -102,7 +102,7 @@
 		document.getElementById("img-main").src = "./screens/" + id + "/main2.jpg";
 	}
 	else {
-		var s = "<div class='embed-responsive embed-responsive-16by9 position-absolute w-100'><iframe style='z-index: 1000; padding-right: 4px;' class='embed-responsive-item' src='" + youtube + "' allowfullscreen></iframe></div>";
+		var s = "<div class='ratio ratio-16x9 position-absolute w-100'><iframe style='z-index: 1000; padding-right: 4px;' class='embed-responsive-item' src='" + youtube + "' allowfullscreen></iframe></div>";
 		document.getElementById("yt").innerHTML = s;
 	}
 	document.getElementById("dl").href = github;

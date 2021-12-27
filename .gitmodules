@@ -4,6 +4,7 @@
 [submodule "vendor/bootstrap"]
 	path = vendor/bootstrap
 	url = https://github.com/twbs/bootstrap
+	branch = main
 [submodule "vendor/awesomplete"]
 	path = vendor/awesomplete
 	url = https://github.com/LeaVerou/awesomplete
