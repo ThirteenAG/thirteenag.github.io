@@ -187,7 +187,6 @@ a:not([class]):hover {
   line-height: 1;
   color: #fff;
   text-align: center;
-  white-space: nowrap;
   vertical-align: baseline;
 }
 
