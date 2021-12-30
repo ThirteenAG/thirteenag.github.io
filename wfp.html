@@ -10,7 +10,8 @@
   <meta name="author" content="ThirteenAG" />
   <meta http-equiv="cache-control" content="Public" />
   <meta property="og:title" content="Widescreen Fixes Pack" />
-  <meta property="og:description" content="Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs" />
+  <meta property="og:description"
+    content="Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs" />
   <meta property="og:image" content="https://thirteenag.github.io/img/icon.png" />
   <meta property="og:url" content="https://thirteenag.github.io/wfp" />
   <meta property="og:site_name" content="Widescreen Fixes Pack" />
@@ -21,7 +22,8 @@
   <link rel="icon" href="./img/favicon.svg" />
   <link rel="shortcut icon" href="./img/favicon.svg" />
 
-  <title>Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs</title>
+  <title>Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more
+    features and fix bugs</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -6898,7 +6900,8 @@
   <hr>
   <footer>
     <div class="col-lg-12 footer-text">
-      <p class="m-0 text-center text-black">Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs</p>
+      <p class="m-0 text-center text-black">Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions
+        support in PC games, add more features and fix bugs</p>
       <p class="m-1 text-center text-black">
         <a class="github-button me-2" href="https://github.com/ThirteenAG/WidescreenFixesPack" data-icon="octicon-star"
           data-size="large" data-show-count="true" aria-label="Star ThirteenAG/WidescreenFixesPack on GitHub">Star</a>
@@ -6957,7 +6960,7 @@
 
   <!-- Other -->
   <script defer src="vendor/lazyload/dist/lazyload.min.js"
-    onload="initLazy(); LocationManager(); jmpToHash();"></script>
+    onload="initLazy(); LocationManager(); jmpToHash(); initNotifications();"></script>
   <!-- onload="initTwitch(); GetCommentsCount(236);" -->
   <script defer src="vendor/awesomplete/awesomplete.min.js" onload="initSearch();"></script>
   <script defer src="vendor/baguetteBox.js/dist/baguetteBox.min.js" onload="initBB();"></script>
@@ -7001,21 +7004,24 @@
     };
 
     function updateNotificationIcons(releases) {
-      if (updateNotificationIcons.done) return;
       $('a.nav-link > span').each(function (index) {
         var span = $(this);
         var id = $(this).parent()[0].hash.replace("#", "");
         $("div.tab-content > div[id=" + id + "]").children(".card").each(function (index) {
           var spinner = $(this).children("div.spinner-grow-sm").first();
-          var rel = releases.filter(obj => {
-            return obj.tag_name == $(this).attr('id')
-          });
-          if (rel.length != 0) {
+          let rel = releases;
+          if (Array.isArray(rel)) {
+            rel = releases.filter(obj => {
+              return obj.tag_name === $(this).attr('id');
+            })[0];
+          }
+          if (!rel) return;
+          if (rel && rel.length != 0) {
             var oneHour = 60 * 60 * 1000;
             var oneDay = 24 * oneHour;
             var oneMonth = oneDay * 31;
-            var releaseDate = new Date() - new Date(rel[0].created_at);
-            var assetDate = new Date() - new Date(rel[0].assets[0].updated_at);
+            var releaseDate = new Date() - new Date(rel.created_at);
+            var assetDate = new Date() - new Date(rel.assets[0].updated_at);
             if (assetDate < oneMonth) {
               spinner.removeClass("d-none");
               span.removeClass("d-none");
@@ -7030,7 +7036,6 @@
           }
         });
       });
-      updateNotificationIcons.done = true;
     }
 
     function getDownloadCount(release) {
@@ -7056,29 +7061,26 @@
       return timeAgo;
     }
 
+    function getUrlFromTag(tag) {
+      switch (tag) {
+        case "gtaivfusionfix":
+          return "https://api.github.com/repos/ThirteenAG/GTAIV.EFLC.FusionFix/releases/latest";
+        case "mp3fusionfix":
+          return "https://api.github.com/repos/ThirteenAG/MaxPayne3.FusionFix/releases/latest";
+        case "alienisolation":
+          return "https://api.github.com/repos/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog/releases/latest";
+        default:
+          return "https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases?per_page=100";
+      }
+    }
+
     function GetReleaseInfo(ghtag, obj) {
       if (ghtag != undefined) {
-        let r = "https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases?per_page=100";
-        switch (ghtag) {
-          case "gtaivfusionfix":
-            r = "https://api.github.com/repos/ThirteenAG/GTAIV.EFLC.FusionFix/releases/latest";
-            break;
-          case "mp3fusionfix":
-            r = "https://api.github.com/repos/ThirteenAG/MaxPayne3.FusionFix/releases/latest";
-            break;
-          case "alienisolation":
-            r = "https://api.github.com/repos/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog/releases/latest";
-            break;
-          default:
-            break;
-        }
-        getCachedJSON(r,
+        getCachedJSON(getUrlFromTag(ghtag),
           function (releases) {
-            updateNotificationIcons(releases);
-
             let release = releases;
             if (Array.isArray(release)) {
-              release = jQuery.grep(releases, function (obj) {
+              release = releases.filter(obj => {
                 return obj.tag_name === ghtag;
               })[0];
             }
@@ -7096,6 +7098,25 @@
           });
       }
     };
+
+    function initNotifications() {
+      getCachedJSON(getUrlFromTag("wfp"),
+        function (releases) {
+          updateNotificationIcons(releases);
+        });
+      getCachedJSON(getUrlFromTag("gtaivfusionfix"),
+        function (releases) {
+          updateNotificationIcons(releases);
+        });
+      getCachedJSON(getUrlFromTag("mp3fusionfix"),
+        function (releases) {
+          updateNotificationIcons(releases);
+        });
+      getCachedJSON(getUrlFromTag("alienisolation"),
+        function (releases) {
+          updateNotificationIcons(releases);
+        });
+    }
   </script>
 
   <!-- lazy load -->
