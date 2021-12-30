@@ -6992,12 +6992,12 @@
   <!-- release dates -->
   <script type="text/javascript">
     var getCachedJSON = function (url, callback) {
-      var cachedData = window.sessionStorage[url];
+      var cachedData = window.sessionStorage.getItem(url);
       if (cachedData) {
         callback(JSON.parse(cachedData));
       } else {
         $.getJSON(url, function (data) {
-          window.sessionStorage[url] = JSON.stringify(data);
+          window.sessionStorage.setItem(url, JSON.stringify(data));
           callback(data);
         });
       }
@@ -7485,6 +7485,7 @@
         $('body').css('background-size', 'auto');
         $('body').css('background-attachment', 'fixed');
         $('#top-alert').removeClass('d-none');
+        $.getScript("https://cdnjs.cloudflare.com/ajax/libs/Snowstorm/20131208/snowstorm-min.js");
       }
     }
   </script>
