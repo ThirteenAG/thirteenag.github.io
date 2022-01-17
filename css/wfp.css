@@ -902,3 +902,7 @@ ul.scanning li:nth-child(8)::before {
 .badge-inverse:hover {
   background-color: #1a1a1a;
 }
+
+.tooltip-inner {
+  max-width: 100% !important;
+}
