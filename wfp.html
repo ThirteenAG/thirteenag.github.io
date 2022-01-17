@@ -6976,7 +6976,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://github.com/ThirteenAG/RE0.RE1.DoorSkipPlugin/releases/latest">RE0.RE1.DoorSkipPlugin</a>
                 </h4>
@@ -6989,7 +6989,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://thirteenag.github.io/p2dfx">III.VC.SA.IV.Project2DFX</a>
                 </h4>
@@ -7002,7 +7002,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://github.com/ThirteenAG/III.VC.SA.SaveLoader">III.VC.SA.SaveLoader</a>
                 </h4>
@@ -7015,7 +7015,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://github.com/ThirteenAG/III.VC.SA.WindowedMode">III.VC.SA.WindowedMode</a>
                 </h4>
@@ -7028,7 +7028,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://github.com/ThirteenAG/XboxRainDroplets">XboxRainDroplets</a>
                 </h4>
@@ -7041,7 +7041,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://github.com/ThirteenAG/IV.EFLC.ColAccel">IV.EFLC.ColAccel</a>
                 </h4>
@@ -7054,7 +7054,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;" href="https://github.com/ThirteenAG/ViceCityNeons">Vice City
                     Neons</a>
                 </h4>
@@ -7067,7 +7067,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;"
                     href="https://github.com/ThirteenAG/III.VC.SA.CLEOScripts">III.VC.SA.CLEOScripts</a>
                 </h4>
@@ -7080,7 +7080,7 @@
           <div class="card-body row gx-0 p-0 mx-0">
             <div class="col p-0 text-dark bg-light border border-dark rounded d-flex flex-column">
               <div class="p-2 panel-heading">
-                <h4 class="card-title panel-title centered m-0 p-0">
+                <h4 class="card-title panel-title centered m-0 p-0 external">
                   <a target="_blank" style="color: #000;" href="https://github.com/ThirteenAG/MafiaWaterShaderMod">Mafia
                     Water Shader Mod</a>
                 </h4>
@@ -7668,7 +7668,7 @@
     function initSearch() {
       let list = [];
       Array.from(document.querySelectorAll('h4.card-title')).forEach(function (data) {
-        if (data.firstElementChild != null && !data.innerText.includes("Updater for Widescreen Fixes")) {
+        if (data.firstElementChild != null && !data.innerText.includes("Updater for Widescreen Fixes") && !data.className.includes("external")) {
           list.push({
             label: data.innerText,
             value: data.firstElementChild.getAttribute('href'),
