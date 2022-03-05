@@ -403,6 +403,24 @@ body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
+.icon-gtavcs {
+  background-image: url("../screens/2dfx/vcsico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 16px;
+  width: 16px;
+  margin-bottom: -3px;
+}
+
+.icon-gtalcs {
+  background-image: url("../screens/2dfx/lcsico.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 16px;
+  width: 16px;
+  margin-bottom: -3px;
+}
+
 .icon-gtaiv {
   background-image: url("../screens/2dfx/ivico.png");
   background-repeat: no-repeat;
