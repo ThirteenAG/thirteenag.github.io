@@ -7371,12 +7371,6 @@
         $("div.tab-content > div[id=" + id + "]").children(".card").each(function (index) {
           var spinner = $(this).children("div.spinner-grow-sm").first();
           let rel = undefined;
-
-          var retre = $(this).attr('id');
-          if (id == "mods") {
-            var zzzzz = 0;
-          }
-
           if (Array.isArray(releases)) {
             rel = releases.filter(obj => {
               return obj.tag_name === $(this).attr('id');
