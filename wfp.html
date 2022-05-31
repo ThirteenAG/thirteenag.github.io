@@ -7391,7 +7391,7 @@
             var oneHour = 60 * 60 * 1000;
             var oneDay = 24 * oneHour;
             var oneMonth = oneDay * 31;
-            var releaseDate = new Date() - new Date(rel.created_at);
+            var releaseDate = new Date() - new Date(rel.published_at);
             var assetDate = new Date() - new Date(rel.assets[0].updated_at);
             if (assetDate < oneMonth) {
               spinner.removeClass("d-none");
