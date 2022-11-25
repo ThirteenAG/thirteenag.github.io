@@ -7476,7 +7476,7 @@
         <li id="laquo" class="page-item disabled">
           <a class="page-link" href="javascript:void(null);" onclick="LocationManager('laquo');">&laquo;</a>
         </li>
-        <li id="page-gta" class="page-item active">
+        <li id="page-gta" class="page-item">
           <a class="page-link" href="#gta" onclick="LocationManager($(this).attr('href'));" data-bs-placement="bottom"
             data-bs-toggle="tooltip" data-bs-original-title="Grand Theft Auto">1</a>
         </li>
@@ -7516,7 +7516,7 @@
           <a class="page-link" href="#patreon" onclick="LocationManager($(this).attr('href'));"
             data-bs-placement="bottom" data-bs-toggle="tooltip" data-bs-original-title="Patreon-supported">10</a>
         </li>
-        <li id="page-mods" class="page-item">
+        <li id="page-mods" class="page-item active">
           <a class="page-link" href="#mods" onclick="LocationManager($(this).attr('href'));" data-bs-placement="bottom"
             data-bs-toggle="tooltip" data-bs-original-title="Other mods">11</a>
         </li>
@@ -7622,16 +7622,16 @@
     function initAllTabs() {
       $('a[data-bs-toggle="tab"]').on('show.bs.tab', function (e) {
         if (e.target.hash == '#all') {
+          $(this).removeClass('tabforceshow');
           $('.tab-pane').each(function (i, t) {
-            $(this).removeClass('active');
             if (t.id != 'comments' && t.id != 'updates') {
-              $(this).addClass("active");
+              $(this).addClass("tabforceshow");
             }
           });
         }
         else {
           $('.tab-pane').each(function (i, t) {
-            $(this).removeClass('active');
+            $(this).removeClass('tabforceshow');
           });
         }
       })
