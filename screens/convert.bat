@@ -17,3 +17,6 @@ convert.ex "./bully/main2.png" -strip -resize 652x -background white -gravity ce
 
 convert.ex "./condemned/main1.png" -strip -resize 652x -background white -gravity center -extent 652x "./condemned/main1.jpg"
 convert.ex "./condemned/main2.png" -strip -resize 652x -background white -gravity center -extent 652x "./condemned/main2.jpg"
+
+convert.ex "./rerev/main1.png" -strip -resize 652x -background white -gravity center -extent 652x "./rerev/main1.jpg"
+convert.ex "./rerev/main2.png" -strip -resize 652x -background white -gravity center -extent 652x "./rerev/main2.jpg"
