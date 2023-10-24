@@ -8171,9 +8171,19 @@
       if (cachedData) {
         callback(JSON.parse(cachedData));
       } else {
-        $.getJSON(url, function (data) {
-          window.sessionStorage.setItem(url, JSON.stringify(data));
-          callback(data);
+        $.getJSON(url, function (data, status, xhr) {
+          var link = xhr.getResponseHeader("Link");
+          if (link && link.indexOf("next") !== -1) {
+            $.getJSON(link.substring(link.indexOf("<") + 1, link.indexOf(">")), function (data2, status2, xhr2) {
+              $.merge(data, data2);
+              window.sessionStorage.setItem(url, JSON.stringify(data));
+              callback(data);
+            });
+          }
+          else {
+            window.sessionStorage.setItem(url, JSON.stringify(data));
+            callback(data);
+          }
         });
       }
     };
