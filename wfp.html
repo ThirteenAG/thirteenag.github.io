@@ -8219,8 +8219,7 @@
     function getDownloadCount(release) {
       let downloadCount = 0;
       for (var i = 0; i < release.assets.length; i++) {
-        if ((release.assets[i].name.includes("Fix") || release.assets[i].name.includes("Mod") ||
-          release.assets[i].name.includes("Skip")) && !release.assets[i].name.includes("FilesFix"))
+        if (!release.assets[i].name.includes("FilesFix") && !release.assets[i].name.includes("Frontend"))
           downloadCount += release.assets[i].download_count;
       }
       return downloadCount;
@@ -8229,7 +8228,12 @@
     function getUploadTimeString(release) {
       var oneHour = 60 * 60 * 1000;
       var oneDay = 24 * oneHour;
-      var dateDiff = new Date() - new Date(release.assets[0].updated_at);
+      var dateDiff;
+      for (var i = 0; i < release.assets.length; i++) {
+        d = new Date() - new Date(release.assets[i].updated_at);
+        if (!dateDiff || dateDiff > d)
+          dateDiff = d
+      }
       var timeAgo;
       if (dateDiff < oneDay) {
         timeAgo = (dateDiff / oneHour).toFixed(0) + " hours ago";
