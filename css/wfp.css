@@ -193,6 +193,17 @@ a:not([class]):hover {
   vertical-align: baseline;
 }
 
+.release-info-deprecated {
+  background-color: #4c9ed9;
+  padding: 0.3em 0.6em 0.3em;
+  font-size: 85%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  vertical-align: baseline;
+}
+
 .steam-icon:before {
   background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#00adee));
   background-clip: text;
@@ -908,4 +919,8 @@ ul.scanning li:nth-child(8)::before {
 
 .tooltip-inner {
   max-width: 100% !important;
+}
+
+.grayscale {
+  filter: grayscale(1);
 }

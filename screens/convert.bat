@@ -29,3 +29,7 @@ convert.ex "./rerev/main2.png" -strip -resize 652x -background white -gravity ce
 
 convert.ex "./spyro/main1.png" -strip -resize 652x -background white -gravity center -extent 652x "./spyro/main1.jpg"
 convert.ex "./spyro/main2.png" -strip -resize 652x -background white -gravity center -extent 652x "./spyro/main2.jpg"
+
+convert.ex "./thesaboteur/main1.png" -strip -resize 652x -background white -gravity center -extent 652x "./thesaboteur/main1.jpg"
+convert.ex "./thesaboteur/main2.png" -strip -resize 652x -background white -gravity center -extent 652x "./thesaboteur/main2.jpg"
+convert.ex "./thesaboteur/main3.png" -strip -resize 652x -background white -gravity center -extent 652x "./thesaboteur/main3.jpg"
