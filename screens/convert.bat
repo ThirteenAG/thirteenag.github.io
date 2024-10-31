@@ -33,3 +33,5 @@ convert.ex "./spyro/main2.png" -strip -resize 652x -background white -gravity ce
 convert.ex "./thesaboteur/main1.png" -strip -resize 652x -background white -gravity center -extent 652x "./thesaboteur/main1.jpg"
 convert.ex "./thesaboteur/main2.png" -strip -resize 652x -background white -gravity center -extent 652x "./thesaboteur/main2.jpg"
 convert.ex "./thesaboteur/main3.png" -strip -resize 652x -background white -gravity center -extent 652x "./thesaboteur/main3.jpg"
+
+convert.ex "./rdr/main2.png" -strip -resize 652x -background black -gravity center -extent 652x "./rdr/main2.jpg"
