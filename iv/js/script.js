@@ -43,9 +43,14 @@ const tl = gsap.timeline({
   },
 });
 
+// Use responsive background sizes based on screen width
+const initialBackgroundSize = "1000vh"; // Always start large
+const finalBackgroundSize = window.innerWidth <= 768 ? "50vh" : "28vh";
+
 // Need to ensure that the scale is like this otherwise some flicks happens
 tl.set(".hero-main-container", {
   scale: 1.25,
+  backgroundSize: initialBackgroundSize, // Ensure we start from the large size
 });
 
 tl.to(".hero-main-container", {
@@ -74,7 +79,7 @@ tl.to(
 tl.to(
   ".hero-main-container",
   {
-    backgroundSize: "28vh",
+    backgroundSize: finalBackgroundSize,
     duration: 1.5,
   },
   "<+=0.2"

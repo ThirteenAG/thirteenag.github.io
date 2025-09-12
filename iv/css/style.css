@@ -949,9 +949,8 @@ a.jx-knightlab {
     }
 
     .hero-main-container {
-        transform: scale(1.0);
-        /* No scale on mobile */
-        background-size: cover;
+        /* Allow GSAP animations to control scale and background-size on mobile */
+        position: relative;
     }
 
     .hero-main-logo_mobile {
