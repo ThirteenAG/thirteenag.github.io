@@ -496,6 +496,19 @@
         transform: translate(-50%, -50%);
       }
     }
+
+    body {
+      overflow: visible !important;
+    }
+
+    html {
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+    }
+
+    .container {
+      overflow: visible !important;
+    }
   </style>
 
   <!-- Google tag (gtag.js) -->
@@ -813,14 +826,14 @@
                 <div class="mobile-comparison-slider" data-position="50">
                   <div class="mobile-comparison-images">
                     <img class="mobile-comparison-image-base"
-                      src="./iv/img/3motionblur/1vanilla_motionblur120fps_preview.webp" alt="After">
+                      src="./iv/img/3motionblur/1vanilla_motionblur120fps_preview.webp" alt="Motion Blur at 120fps">
                     <div class="mobile-comparison-image-overlay">
-                      <img src="./iv/img/3motionblur/1vanilla_motionblur10fps_preview.webp" alt="Before">
+                      <img src="./iv/img/3motionblur/1vanilla_motionblur10fps_preview.webp" alt="Motion Blur at 10fps">
                     </div>
                     <div class="mobile-comparison-handle"></div>
                     <div class="mobile-comparison-labels">
-                      <span class="mobile-comparison-label left">Before</span>
-                      <span class="mobile-comparison-label right">After</span>
+                      <span class="mobile-comparison-label left">Motion Blur at 10fps</span>
+                      <span class="mobile-comparison-label right">Motion Blur at 120fps</span>
                     </div>
                   </div>
                 </div>
@@ -3025,6 +3038,13 @@
             property
             of their respective owners.
           </p>
+          <br /> <br />
+          <br /> <br />
+          <br /> <br />
+          <br /> <br />
+          <br /> <br />
+          <br /> <br />
+          <br /> <br />
         </div>
       </div>
     </div>
@@ -3230,8 +3250,10 @@
       <div class="image-comparison-wrapper">
         <div class="comparison-container juxtapose" data-startingposition="50%" data-showlabels="true"
           data-showcredits="true" data-animate="true">
-          <img loading="lazy" src="./iv/img/3motionblur/1vanilla_motionblur10fps.webp" data-label="Before">
-          <img loading="lazy" src="./iv/img/3motionblur/1vanilla_motionblur120fps.webp" data-label="After">
+          <img loading="lazy" src="./iv/img/3motionblur/1vanilla_motionblur10fps.webp"
+            data-label="Motion Blur at 10fps">
+          <img loading="lazy" src="./iv/img/3motionblur/1vanilla_motionblur120fps.webp"
+            data-label="Motion Blur at 120fps">
         </div>
         <span class="modal-close">×</span>
         <span class="modal-prev"></span>
@@ -3245,8 +3267,8 @@
       <div class="image-comparison-wrapper">
         <div class="comparison-container juxtapose" data-startingposition="50%" data-showlabels="true"
           data-showcredits="true" data-animate="true">
-          <img loading="lazy" src="./iv/img/4bloom/1vanilla_bloomat720p.webp" data-label="Before">
-          <img loading="lazy" src="./iv/img/4bloom/1vanilla_bloomat1440p.webp" data-label="After">
+          <img loading="lazy" src="./iv/img/4bloom/1vanilla_bloomat720p.webp" data-label="Original Bloom at 720p">
+          <img loading="lazy" src="./iv/img/4bloom/1vanilla_bloomat1440p.webp" data-label="Original Bloom at 1440p">
         </div>
         <span class="modal-close">×</span>
         <span class="modal-prev"></span>
@@ -3260,8 +3282,8 @@
       <div class="image-comparison-wrapper">
         <div class="comparison-container juxtapose" data-startingposition="50%" data-showlabels="true"
           data-showcredits="true" data-animate="true">
-          <img loading="lazy" src="./iv/img/4bloom/2vanilla_bloomat1440p.webp" data-label="Before">
-          <img loading="lazy" src="./iv/img/4bloom/2fusionfix_bloomat1440p.webp" data-label="After">
+          <img loading="lazy" src="./iv/img/4bloom/2vanilla_bloomat1440p.webp" data-label="Original Bloom at 1440p">
+          <img loading="lazy" src="./iv/img/4bloom/2fusionfix_bloomat1440p.webp" data-label="Fusion Fix Bloom at 1440p">
         </div>
         <span class="modal-close">×</span>
         <span class="modal-prev"></span>
