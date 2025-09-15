@@ -1,0 +1,29 @@
+---
+export interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	author?: string;
+}
+
+const {
+	title = "Title",
+	description = "Description",
+	keywords = "Keywords",
+	author = "Author",
+} = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+<meta name="author" content={author} />
+
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:type" content="website" />

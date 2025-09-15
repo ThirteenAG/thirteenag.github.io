@@ -1,0 +1,57 @@
+---
+interface Props {
+	type: "rain" | "storm" | "fallout" | "drizzle" | "sunny";
+}
+
+const { type } = Astro.props;
+---
+
+<div class="fixed -z-50 top-0 left-0 w-full h-full">
+	<div class="slideshow">
+		<canvas width="1" height="1" id="container-weather"></canvas>
+		<div class="slide hidden" id="slide-1" data-weather={type}></div>
+	</div>
+	<p class="nosupport">Sorry, but your browser does not support WebGL!</p>
+</div>
+
+<script>
+	import { loadTextures } from "@/lib/rain-effect";
+
+	window.onload = () => {
+		loadTextures("container-weather");
+	};
+</script>
+
+<style>
+	.nosupport {
+		display: none;
+		margin: 0 auto;
+		font-size: 1.25em;
+		padding: 1em;
+		position: fixed;
+		bottom: 0;
+		width: 100vw;
+		text-align: center;
+		background: #a74e71;
+		z-index: 1000;
+	}
+
+	.no-webgl .nosupport {
+		display: block;
+	}
+
+	.slideshow {
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		background: url(/city.jpg) no-repeat center top;
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	@media screen and (max-height: 39em) {
+		.slideshow {
+			font-size: 75%;
+		}
+	}
+</style>

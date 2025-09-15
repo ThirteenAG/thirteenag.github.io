@@ -1,0 +1,24 @@
+---
+import HomeCard from "@/components/widgets/HomeCard.astro";
+import Weather from "@/components/widgets/Weather.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import { getCollection } from "astro:content";
+
+const entries = await getCollection("home");
+---
+
+<BaseLayout
+	title="Warp zone of ThirteenAG's Github"
+	description="Warp zone of ThirteenAG's Github"
+	keywords="widescreen, fixes, pack, widescreen fixes pack, Project2DFX, GTA One Liners"
+	author="ThirteenAG"
+>
+	<Weather type="rain" />
+
+	<main class="min-h-screen w-screen flex align-middle justify-center p-10">
+		<div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+			{entries.map((entry) => <HomeCard entry={entry} />)}
+		</div>
+	</main>
+</BaseLayout>
