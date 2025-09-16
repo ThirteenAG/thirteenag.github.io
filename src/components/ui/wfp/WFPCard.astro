@@ -1,0 +1,170 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
+import {
+	Tooltip,
+	TooltipTrigger,
+	TooltipContent,
+} from "@/components/starwind/tooltip";
+import { Button } from "@/components/starwind/button";
+import Icons from "@/assets/icons";
+import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/components/starwind/dropdown";
+
+interface Props {
+	entry: CollectionEntry<"wfp">;
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+---
+
+<div
+	id={entry.id}
+	class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl w-full bg-white shadow-lg overflow-clip"
+>
+	<div class="relative w-auto">
+		<Image
+			src={entry.data.before}
+			alt={entry.data.title}
+			class="z-0 block w-full h-full object-cover"
+		/>
+		<Image
+			src={entry.data.after}
+			alt={entry.data.title}
+			class="z-1 absolute inset-0 w-full h-full object-cover hover:opacity-0 transition-opacity duration-100"
+		/>
+		<Image
+			src={entry.data.logo}
+			alt={entry.data.title}
+			class="game-logo z-2 absolute inset-[25%] w-[50%] h-[50%] object-contain visible hover:invisible"
+		/>
+	</div>
+	<div class="flex flex-col w-auto">
+		<h3 class="flex-none relative w-full">
+			{
+				entry.data.stripe ? (
+					<Image
+						src={entry.data.stripe}
+						alt={entry.data.title}
+						class="w-full h-[50px] object-cover"
+					/>
+				) : (
+					<div
+						class="w-full h-[50px]"
+						style={`background-color: ${entry.data.color === "rgba(0, 0, 0, 0)" ? "#000" : entry.data.color}`}
+					/>
+				)
+			}
+			<a
+				href=`#${entry.id}`
+				class="absolute inset-0 flex items-center justify-center text-xl text-white drop-shadow-lg hover:underline"
+			>
+				{entry.data.title}
+			</a>
+		</h3>
+		<div class="p-2 text-sm flex-auto">
+			<div class="flex flex-row justify-between items-center">
+				<div class="flex flex-col">
+					<div class="flex flex-row">
+						{
+							entry.data.support.tooltip ? (
+								<span> Supported version:&nbsp; </span>
+								<Tooltip>
+									<TooltipTrigger>
+										<span class="font-bold underline decoration-dashed">
+											{entry.data.support.version}
+										</span>
+									</TooltipTrigger>
+									<TooltipContent side="bottom">
+										{entry.data.support.tooltip}
+									</TooltipContent>
+								</Tooltip>
+							) : (
+								<p> Supported version:&nbsp; 
+									<span class="font-bold">
+										{entry.data.support.version}
+									</span>
+								</p>
+							)
+						}
+					</div>
+					<h4 class="font-bold text-lg underline">Installation:</h4>
+				</div>
+				<div class="flex flex-row gap-2">
+					{
+						entry.data.icons && entry.data.icons.map((icon) => (
+							<Tooltip>
+								<TooltipTrigger>
+									{((icon) => {
+										const IconComponent =
+											Icons[
+												icon.name as keyof typeof Icons
+											];
+										return IconComponent ? (
+											<a
+												href={icon.url}
+												target="_blank"
+												class="hover:text-blue-500"
+											>
+												<IconComponent class="h-8 w-8 fill-current" />
+											</a>
+										) : null;
+									})(icon)}
+								</TooltipTrigger>
+								<TooltipContent side="left">
+									{icon.tooltip}
+								</TooltipContent>
+							</Tooltip>
+						))
+					}
+				</div>
+			</div>
+			<section
+				class="prose text-sm line leading-none prose-a:text-blue-500"
+			>
+				<Content />
+			</section>
+		</div>
+		<div
+			class="flex-none p-2 flex flex-row items-center justify-center"
+		>
+			<Button
+				variant="warning"
+				href={entry.data.download}
+				target="_blank"
+				class="rounded-r-none pr-[8px]"
+			>
+				<Icons.download class="fill-current" />Download
+			</Button>
+			{
+				entry.data.downloads && (
+					<Dropdown>
+						<DropdownTrigger asChild>
+							<Button variant="warning" class="rounded-l-none pl-[8px]"><Icons.chevronDown class="fill-current"/></Button>
+						</DropdownTrigger>
+						<DropdownContent>
+						{
+							entry.data.downloads.map((download)=>(
+								<DropdownItem as="a" href={download.url} target="_blank">{download.name}</DropdownItem>
+							))
+						}
+						</DropdownContent>
+					</Dropdown>
+				)
+			}
+			
+			<Button variant="primary" class="ml-4">
+				<Icons.images class="fill-current" />Screenshots
+			</Button>
+		</div>
+	</div>
+</div>
+
+<style>
+	.game-logo {
+		transition: 0s 180s;
+	}
+	.game-logo:hover {
+		transition: 0s;
+	}
+</style>

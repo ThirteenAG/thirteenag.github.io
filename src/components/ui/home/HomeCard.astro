@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import LiquidGlassCard from "@/components/widgets/LiquidGlassCard.astro";
+
+interface Props {
+	entry: CollectionEntry<"home">;
+}
+
+const { entry } = Astro.props as Props;
+const { Content } = await render(entry);
+---
+
+<LiquidGlassCard
+	title={entry.data.title}
+	coverImage={entry.data.image}
+	href={entry.data.href}
+>
+	<Content />
+</LiquidGlassCard>

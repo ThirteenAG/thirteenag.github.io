@@ -1,0 +1,27 @@
+{
+  "$schema": "https://starwind.dev/config-schema.json",
+  "tailwind": {
+    "css": "src/styles/starwind.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "componentDir": "src/components",
+  "components": [
+    {
+      "name": "card",
+      "version": "1.1.0"
+    },
+    {
+      "name": "tooltip",
+      "version": "1.1.2"
+    },
+    {
+      "name": "button",
+      "version": "2.0.1"
+    },
+    {
+      "name": "dropdown",
+      "version": "1.0.3"
+    }
+  ]
+}

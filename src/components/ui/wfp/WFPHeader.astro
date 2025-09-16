@@ -1,0 +1,42 @@
+---
+import LogoSvg from "@/assets/icons/wfp.svg";
+import Sponsors from "./Sponsors.astro";
+import Icons from "@/assets/icons";
+---
+
+<header class="flex-none bg-black text-white w-full h-[50px] text-sm">
+	<nav role="navigation" class="flex flex-row align-middle h-full">
+		<div class="flex-none flex items-center justify-center">
+			<a href="#" class="hover:bg-white px-2">
+				<LogoSvg class="w-[250px] h-[50px] object-contain" />
+			</a>
+		</div>
+
+		<!-- Navbar -->
+		<div class="flex-auto hidden lg:flex flex-row align-middle">
+			<a
+				href="https://github.com/ThirteenAG/WidescreenFixesPack"
+				target="_blank"
+				class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
+			>
+				<Icons.github class="h-4 w-4 fill-current" />
+				Github
+			</a>
+
+			<a
+				href="https://github.com/ThirteenAG/WidescreenFixesPack/issues"
+				target="_blank"
+				class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
+			>
+				<Icons.githubIssue class="h-4 w-4 fill-current" />
+				Report an issue
+			</a>
+		</div>
+
+		<Sponsors class="flex-none hidden lg:flex" />
+
+		<!-- Collapsed -->
+
+		<div></div>
+	</nav>
+</header>

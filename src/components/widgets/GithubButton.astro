@@ -1,0 +1,23 @@
+---
+import type { GitHubButtonProps } from "github-buttons";
+
+interface Props extends GitHubButtonProps {}
+---
+
+<a class="github-button" {...Astro.props}>
+	<slot />
+</a>
+
+<script>
+	import { render } from "github-buttons";
+
+	const buttons = document.querySelectorAll(
+		".github-button",
+	) as NodeListOf<HTMLAnchorElement>;
+
+	buttons.forEach((button) => {
+		render(button, (el) => {
+			button.parentNode?.replaceChild(el, button);
+		});
+	});
+</script>
