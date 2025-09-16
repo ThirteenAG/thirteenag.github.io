@@ -1,8 +1,9 @@
 ---
 tag: gta
 title: "GTA Vice City Stories Widescreen Fix [PPSSPP]"
-support: "Any"
-tooltip: "Tested with PPSSPP build v1.12.3-410-gb352f6107"
+support: 
+    version: "Any"
+    tooltip: "Tested with PPSSPP build v1.12.3-410-gb352f6107"
 color: "#D94983"
 download: "https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavcspsp"
 icons:
@@ -12,7 +13,6 @@ icons:
     - name: "ppsspp"
       url: "https://www.ppsspp.org/"
       tooltip: "Works with PPSSPP"
-
 logo: "./logo.svg"
 main1: "./main1.png"
 main2: "./main2.png"

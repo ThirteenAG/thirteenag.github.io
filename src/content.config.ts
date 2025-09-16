@@ -13,10 +13,12 @@ const homeCollection = defineCollection({
 const WFPCollection = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./content/wfp" }),
     schema: ({ image }) => z.object({
-        title: z.string(),
         tag: z.string(),
-        support: z.string(),
-        tooltip: z.string().optional(),
+        title: z.string(),
+        support: z.object({
+            version: z.string(),
+            tooltip: z.string().optional(),
+        }),
         color: z.string(),
         download: z.string().url(),
         icons: z.array(z.object({

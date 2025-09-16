@@ -59,20 +59,20 @@ const { Content } = await render(entry);
 					<div class="flex flex-row">
 						<span> Supported version:&nbsp; </span>
 						{
-							entry.data.tooltip ? (
+							entry.data.support.tooltip ? (
 								<Tooltip>
 									<TooltipTrigger>
 										<span class="font-bold underline decoration-dashed">
-											{entry.data.support}
+											{entry.data.support.version}
 										</span>
 									</TooltipTrigger>
 									<TooltipContent side="bottom">
-										{entry.data.tooltip}
+										{entry.data.support.tooltip}
 									</TooltipContent>
 								</Tooltip>
 							) : (
 								<span class="font-bold">
-									{entry.data.support}
+									{entry.data.support.version}
 								</span>
 							)
 						}
@@ -123,9 +123,11 @@ const { Content } = await render(entry);
 				href={entry.data.download}
 				target="_blank"
 			>
-				Download
+				<Icons.download class="fill-current" />Download
 			</Button>
-			<Button variant="primary"> Screenshots </Button>
+			<Button variant="primary">
+				<Icons.images class="fill-current" />Screenshots
+			</Button>
 		</div>
 	</div>
 </div>

@@ -1,8 +1,9 @@
 ---
 tag: gta
 title: "GTA Vice City Stories Widescreen Fix [PCSX2F]"
-support: "SLUS-21590"
-tooltip: ""
+support: 
+    version: "SLUS-21590"
+    tooltip: ""
 color: "#D94983"
 download: "https://github.com/ThirteenAG/WidescreenFixesPack/releases/tag/gtavcs"
 icons:
@@ -12,7 +13,6 @@ icons:
     - name: "pcsx2"
       url: "https://github.com/ASI-Factory/PCSX2-Fork-With-Plugins/releases/tag/latest"
       tooltip: "Works with PCSX2 Fork With Plugins (PCSX2F)"
-
 logo: "./logo.png"
 main1: "./main1.png"
 main2: "./main2.png"
