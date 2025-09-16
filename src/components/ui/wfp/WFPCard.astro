@@ -8,6 +8,7 @@ import {
 } from "@/components/starwind/tooltip";
 import { Button } from "@/components/starwind/button";
 import Icons from "@/assets/icons";
+import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/components/starwind/dropdown";
 
 interface Props {
 	entry: CollectionEntry<"wfp">;
@@ -19,17 +20,16 @@ const { Content } = await render(entry);
 
 <div
 	id={entry.id}
-	class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-clip w-full bg-white shadow-lg"
-	,
+	class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl w-full bg-white shadow-lg overflow-clip"
 >
 	<div class="relative w-auto">
 		<Image
-			src={entry.data.main1}
+			src={entry.data.before}
 			alt={entry.data.title}
 			class="z-0 block w-full h-full object-cover"
 		/>
 		<Image
-			src={entry.data.main2}
+			src={entry.data.after}
 			alt={entry.data.title}
 			class="z-1 absolute inset-0 w-full h-full object-cover hover:opacity-0 transition-opacity duration-100"
 		/>
@@ -41,11 +41,20 @@ const { Content } = await render(entry);
 	</div>
 	<div class="flex flex-col w-auto">
 		<h3 class="flex-none relative w-full">
-			<Image
-				src={entry.data.stripe}
-				alt={entry.data.title}
-				class="w-full h-[50px] object-cover"
-			/>
+			{
+				entry.data.stripe ? (
+					<Image
+						src={entry.data.stripe}
+						alt={entry.data.title}
+						class="w-full h-[50px] object-cover"
+					/>
+				) : (
+					<div
+						class="w-full h-[50px]"
+						style={`background-color: ${entry.data.color === "rgba(0, 0, 0, 0)" ? "#000" : entry.data.color}`}
+					/>
+				)
+			}
 			<a
 				href=`#${entry.id}`
 				class="absolute inset-0 flex items-center justify-center text-xl text-white drop-shadow-lg hover:underline"
@@ -57,9 +66,9 @@ const { Content } = await render(entry);
 			<div class="flex flex-row justify-between items-center">
 				<div class="flex flex-col">
 					<div class="flex flex-row">
-						<span> Supported version:&nbsp; </span>
 						{
 							entry.data.support.tooltip ? (
+								<span> Supported version:&nbsp; </span>
 								<Tooltip>
 									<TooltipTrigger>
 										<span class="font-bold underline decoration-dashed">
@@ -71,9 +80,11 @@ const { Content } = await render(entry);
 									</TooltipContent>
 								</Tooltip>
 							) : (
-								<span class="font-bold">
-									{entry.data.support.version}
-								</span>
+								<p> Supported version:&nbsp; 
+									<span class="font-bold">
+										{entry.data.support.version}
+									</span>
+								</p>
 							)
 						}
 					</div>
@@ -81,31 +92,30 @@ const { Content } = await render(entry);
 				</div>
 				<div class="flex flex-row gap-2">
 					{
-						entry.data.icons &&
-							entry.data.icons.map((icon) => (
-								<Tooltip>
-									<TooltipTrigger>
-										{((icon) => {
-											const IconComponent =
-												Icons[
-													icon.name as keyof typeof Icons
-												];
-											return IconComponent ? (
-												<a
-													href={icon.url}
-													target="_blank"
-													class="hover:text-blue-500"
-												>
-													<IconComponent class="h-8 w-8 fill-current" />
-												</a>
-											) : null;
-										})(icon)}
-									</TooltipTrigger>
-									<TooltipContent side="left">
-										{icon.tooltip}
-									</TooltipContent>
-								</Tooltip>
-							))
+						entry.data.icons && entry.data.icons.map((icon) => (
+							<Tooltip>
+								<TooltipTrigger>
+									{((icon) => {
+										const IconComponent =
+											Icons[
+												icon.name as keyof typeof Icons
+											];
+										return IconComponent ? (
+											<a
+												href={icon.url}
+												target="_blank"
+												class="hover:text-blue-500"
+											>
+												<IconComponent class="h-8 w-8 fill-current" />
+											</a>
+										) : null;
+									})(icon)}
+								</TooltipTrigger>
+								<TooltipContent side="left">
+									{icon.tooltip}
+								</TooltipContent>
+							</Tooltip>
+						))
 					}
 				</div>
 			</div>
@@ -116,16 +126,34 @@ const { Content } = await render(entry);
 			</section>
 		</div>
 		<div
-			class="flex-none p-2 flex flex-row items-center justify-center gap-4"
+			class="flex-none p-2 flex flex-row items-center justify-center"
 		>
 			<Button
 				variant="warning"
 				href={entry.data.download}
 				target="_blank"
+				class="rounded-r-none pr-[8px]"
 			>
 				<Icons.download class="fill-current" />Download
 			</Button>
-			<Button variant="primary">
+			{
+				entry.data.downloads && (
+					<Dropdown>
+						<DropdownTrigger asChild>
+							<Button variant="warning" class="rounded-l-none pl-[8px]"><Icons.chevronDown class="fill-current"/></Button>
+						</DropdownTrigger>
+						<DropdownContent>
+						{
+							entry.data.downloads.map((download)=>(
+								<DropdownItem as="a" href={download.url} target="_blank">{download.name}</DropdownItem>
+							))
+						}
+						</DropdownContent>
+					</Dropdown>
+				)
+			}
+			
+			<Button variant="primary" class="ml-4">
 				<Icons.images class="fill-current" />Screenshots
 			</Button>
 		</div>

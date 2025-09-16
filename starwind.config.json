@@ -18,6 +18,10 @@
     {
       "name": "button",
       "version": "2.0.1"
+    },
+    {
+      "name": "dropdown",
+      "version": "1.0.3"
     }
   ]
 }

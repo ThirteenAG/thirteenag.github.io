@@ -7,6 +7,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 
 const entries = await getCollection("wfp");
+
+entries.sort((a, b) => {
+	return a.data.title.localeCompare(b.data.title);
+});
 ---
 
 <BaseLayout

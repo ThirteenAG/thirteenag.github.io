@@ -13,6 +13,7 @@ const homeCollection = defineCollection({
 const WFPCollection = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./content/wfp" }),
     schema: ({ image }) => z.object({
+        id: z.string(),
         tag: z.string(),
         title: z.string(),
         support: z.object({
@@ -21,15 +22,19 @@ const WFPCollection = defineCollection({
         }),
         color: z.string(),
         download: z.string().url(),
+        downloads: z.array(z.object({
+            name: z.string(),
+            url: z.string().url(),
+        })).optional(),
         icons: z.array(z.object({
             name: z.string(),
             url: z.string().url(),
             tooltip: z.string().optional(),
         })).optional(),
         logo: image(),
-        main1: image(),
-        stripe: image(),
-        main2: image(),
+        stripe: image().optional(),
+        before: image(),
+        after: image(),
     }),
 });
 
