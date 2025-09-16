@@ -1,13 +1,13 @@
 ---
 import Head, { type Props } from "@/components/partials/Head.astro";
-import "@/styles/global.css";
+import "@/styles/starwind.css";
 ---
 
 <!doctype html>
 <html lang="en">
 	<head> <Head {...Astro.props} /></head>
 
-	<body class="min-h-screen w-full">
+	<body class="min-h-screen w-full h-full flex flex-col">
 		<slot />
 	</body>
 </html>

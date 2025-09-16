@@ -1,0 +1,66 @@
+---
+import WFPCard from "@/components/ui/wfp/WFPCard.astro";
+import WFPFooter from "@/components/ui/wfp/WFPFooter.astro";
+import WFPHeader from "@/components/ui/wfp/WFPHeader.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import { getCollection } from "astro:content";
+
+const entries = await getCollection("wfp");
+---
+
+<BaseLayout
+	title="Widescreen Fixes Pack"
+	description="Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs"
+>
+	<WFPHeader />
+
+	<main
+		class="flex-auto flex flex-col max-w-2xl lg:max-w-7xl mx-auto p-5 gap-5"
+	>
+		{entries.map((entry) => <WFPCard entry={entry} />)}
+	</main>
+
+	<hr />
+	<WFPFooter />
+</BaseLayout>
+
+<style>
+	body {
+		background: #fefefe
+			url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" fill-opacity=".03" ><rect x="200" width="200" height="200" /><rect y="200" width="200" height="200" /></svg>');
+		background-size: 30px 30px;
+		background-position:
+			0 0,
+			15px 15px;
+	}
+
+	body.snow {
+		background: #fefefe url("/snowf.svg");
+		background-size: auto;
+		background-attachment: fixed;
+	}
+</style>
+
+<script>
+	import { SnowStorm } from "@/lib/snowstorm";
+
+	document.addEventListener("DOMContentLoaded", () => {
+		var dt = new Date();
+		var m = dt.getMonth();
+		var d = dt.getDate();
+
+		if ((m == 0 && d <= 2) || (m == 11 && d >= 30)) {
+			document.body.classList.add("snow");
+
+			const snow = new SnowStorm({
+				followMouse: false,
+				useGPU: true,
+				excludeMobile: false,
+				zIndex: 999,
+			});
+
+			snow.start();
+		}
+	});
+</script>

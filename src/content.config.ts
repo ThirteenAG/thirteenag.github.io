@@ -10,6 +10,28 @@ const homeCollection = defineCollection({
     }),
 });
 
+const WFPCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./content/wfp" }),
+    schema: ({ image }) => z.object({
+        title: z.string(),
+        tag: z.string(),
+        support: z.string(),
+        tooltip: z.string().optional(),
+        color: z.string(),
+        download: z.string().url(),
+        icons: z.array(z.object({
+            name: z.string(),
+            url: z.string().url(),
+            tooltip: z.string().optional(),
+        })).optional(),
+        logo: image(),
+        main1: image(),
+        stripe: image(),
+        main2: image(),
+    }),
+});
+
 export const collections = {
     'home': homeCollection,
+    'wfp': WFPCollection,
 };
