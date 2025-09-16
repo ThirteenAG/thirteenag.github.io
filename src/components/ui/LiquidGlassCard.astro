@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+	title: string;
+	coverImage: ImageMetadata;
+	href?: string;
+}
+
+const { title, coverImage, href } = Astro.props as Props;
+---
+
+<!-- SVG Filter for Glass Distortion -->
+<svg style="display: none">
+	<filter id="glass-distortion">
+		<feTurbulence
+			type="turbulence"
+			baseFrequency="0.008"
+			numOctaves="2"
+			result="noise"></feTurbulence>
+		<feDisplacementMap in="SourceGraphic" in2="noise" scale="77"
+		></feDisplacementMap>
+	</filter>
+</svg>
+
+<div
+	class="glass-card max-w-sm relative p-4 hover:p-5 rounded-3xl overflow-hidden shadow-[0_6px_24px_rgba(0,0,0,0.2)]"
+>
+	<!-- Blurred + distorted backdrop -->
+	<div
+		class="absolute inset-0 z-[1] rounded-[inherit] backdrop-blur-sm [filter:url(#glass-distortion)_saturate(1.2)_brightness(1.15)]"
+	>
+	</div>
+
+	<!-- Subtle animated distortion highlight overlay -->
+	<div
+		class="absolute inset-0 z-[2] rounded-[inherit] pointer-events-none mix-blend-overlay bg-[radial-gradient(circle_at_20%_30%,rgba(255,255,255,0.05)_0%,transparent_80%),radial-gradient(circle_at_80%_70%,rgba(255,255,255,0.05)_0%,transparent_80%)] bg-[length:300%_300%] animate-[floatDistort_10s_infinite_ease-in-out]"
+	>
+	</div>
+
+	<!-- Glass tint (light/dark aware) -->
+	<div
+		class="absolute inset-0 z-[2] rounded-[inherit] bg-white/25 dark:bg-black/25"
+	>
+	</div>
+
+	<!-- Specular highlights (light/dark variants) -->
+	<div
+		class="absolute inset-0 z-[3] rounded-[inherit] shadow-[inset_1px_1px_1px_rgba(255,255,255,0.75)] dark:hidden"
+	>
+	</div>
+	<div
+		class="absolute inset-0 z-[3] hidden rounded-[inherit] shadow-[inset_1px_1px_1px_rgba(255,255,255,0.15)] dark:block"
+	>
+	</div>
+
+	<!-- Content -->
+	<div
+		class="relative z-[4] h-full text-white text-center flex flex-col items-center justify-center gap-2"
+	>
+		<Image
+			class="w-full flex-none rounded-xl object-cover"
+			src={coverImage}
+			alt={title}
+		/>
+		<h3 class="m-0 text-xl flex-none font-semibold">{title}</h3>
+		<div class="m-0 flex-auto flex flex-col align-middle justify-center">
+			<slot />
+		</div>
+	</div>
+
+	<a href={href} class="z-[5] absolute top-0 bottom-0 left-0 right-0"></a>
+</div>
+
+<style>
+	.glass-card {
+	}
+
+	@keyframes floatDistort {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 0% 0%;
+		}
+	}
+</style>

@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { render } from "astro:content";
 import { Image } from "astro:assets";
+import LiquidGlassCard from "../ui/LiquidGlassCard.astro";
 
 interface Props {
 	entry: CollectionEntry<"home">;
@@ -11,26 +12,10 @@ const { entry } = Astro.props as Props;
 const { Content } = await render(entry);
 ---
 
-<div
-	class="relative flex flex-col hover:scale-[1.025] select-none max-w-sm rounded overflow-hidden shadow-lg bg-white"
+<LiquidGlassCard
+	title={entry.data.title}
+	coverImage={entry.data.image}
+	href={entry.data.href}
 >
-	<Image
-		class="w-full flex-none"
-		src={entry.data.image}
-		alt={entry.data.title}
-	/>
-
-	<div class="px-6 py-4 flex-auto flex flex-col">
-		<div
-			class="flex-auto flex flex-col align-middle justify-center text-gray-700 text-base text-center"
-		>
-			<Content />
-		</div>
-		<div class="flex-none font-bold text-xl mb-2 text-center">
-			{entry.data.title}
-		</div>
-	</div>
-
-	<a href={entry.data.href} class="absolute top-0 bottom-0 left-0 right-0"
-	></a>
-</div>
+	<Content />
+</LiquidGlassCard>
