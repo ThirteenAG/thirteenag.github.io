@@ -1,7 +1,7 @@
 ---
 import LogoSvg from "@/assets/icons/wfp.svg";
 import Sponsors from "./Sponsors.astro";
-import Icons from "@/assets/icons";
+import { Icon } from "astro-icon/components";
 ---
 
 <header id="top" class="flex-none bg-black text-white w-full h-[50px] text-sm">
@@ -19,7 +19,7 @@ import Icons from "@/assets/icons";
 				target="_blank"
 				class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
 			>
-				<Icons.github class="h-4 w-4 fill-current" />
+				<Icon name="github" class="h-4 w-4 fill-current" />
 				Github
 			</a>
 
@@ -28,7 +28,7 @@ import Icons from "@/assets/icons";
 				target="_blank"
 				class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
 			>
-				<Icons.githubIssue class="h-4 w-4 fill-current" />
+				<Icon name="github-issue" class="h-4 w-4 fill-current" />
 				Report an issue
 			</a>
 		</div>

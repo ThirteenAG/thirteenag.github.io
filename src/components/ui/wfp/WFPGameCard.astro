@@ -6,12 +6,12 @@ import {
 	TooltipContent,
 } from "@/components/starwind/tooltip";
 import { Button } from "@/components/starwind/button";
-import Icons from "@/assets/icons";
 import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/components/starwind/dropdown";
 import WFPScreenshots from "./card/WFPScreenshots.astro";
 import { Image } from "astro:assets";
 import WFPImageStack from "./card/WFPImageStack.astro";
 import type { ReleaseInfo } from "@/lib/github/release";
+import { Icon } from "astro-icon/components";
 
 interface Props {
 	entry: CollectionEntry<"wfp-games">;
@@ -96,21 +96,13 @@ const { Content } = await render(entry);
 						entry.data.icons && entry.data.icons.map((icon) => (
 							<Tooltip>
 								<TooltipTrigger>
-									{((icon) => {
-										const IconComponent =
-											Icons[
-												icon.name as keyof typeof Icons
-											];
-										return IconComponent ? (
-											<a
-												href={icon.url}
-												target="_blank"
-												class="hover:text-blue-500"
-											>
-												<IconComponent class="h-8 w-8 fill-current" />
-											</a>
-										) : null;
-									})(icon)}
+									<a
+										href={icon.url}
+										target="_blank"
+										class="hover:text-blue-500"
+									>
+										<Icon name={icon.name} class="h-8 w-8 fill-current" />
+									</a>
 								</TooltipTrigger>
 								<TooltipContent side="left">
 									{icon.tooltip}
@@ -135,13 +127,13 @@ const { Content } = await render(entry);
 				target="_blank"
 				class="rounded-r-none pr-[8px]"
 			>
-				<Icons.download class="fill-current" />Download
+				<Icon name="download" class="fill-current" />Download
 			</Button>
 			{
 				entry.data.downloads && (
 					<Dropdown>
 						<DropdownTrigger asChild>
-							<Button variant="warning" class="rounded-l-none pl-[8px]"><Icons.chevronDown class="fill-current"/></Button>
+							<Button variant="warning" class="rounded-l-none pl-[8px]"><Icon name="chevron-down" class="fill-current"/></Button>
 						</DropdownTrigger>
 						<DropdownContent>
 						{

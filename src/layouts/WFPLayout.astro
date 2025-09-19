@@ -7,6 +7,7 @@ import WFPTagButton from "@/components/ui/wfp/WFPTagButton.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { wfpReleasesInfo } from "@/components/ui/wfp/helpers";
+import Snow from "@/components/widgets/Snow.astro";
 
 interface Props {
 	tag: string;
@@ -31,7 +32,10 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 <BaseLayout
 	title="Widescreen Fixes Pack"
 	description="Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs"
+	favicon="/wfp/favicon.svg"
 >
+	<Snow />
+
 	<WFPHeader />
 
 	<main
@@ -87,33 +91,4 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 			0 0,
 			15px 15px;
 	}
-
-	body.snow {
-		background: #fefefe url("/snowf.svg");
-		background-size: auto;
-		background-attachment: fixed;
-	}
 </style>
-
-<script>
-	import { SnowStorm } from "@/lib/snowstorm";
-
-	document.addEventListener("DOMContentLoaded", () => {
-		var dt = new Date();
-		var m = dt.getMonth();
-		var d = dt.getDate();
-
-		if ((m == 0 && d <= 2) || (m == 11 && d >= 30)) {
-			document.body.classList.add("snow");
-
-			const snow = new SnowStorm({
-				followMouse: false,
-				useGPU: true,
-				excludeMobile: false,
-				zIndex: 999,
-			});
-
-			snow.start();
-		}
-	});
-</script>

@@ -1,10 +1,11 @@
 ---
-import Icons from "@/assets/icons";
 import {
 	Tooltip,
 	TooltipTrigger,
 	TooltipContent,
 } from "@/components/starwind/tooltip";
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
 
 interface Props {
 	class?: string;
@@ -12,46 +13,7 @@ interface Props {
 
 const { class: className } = Astro.props;
 
-import PatreonLogoSvg from "@tabler/icons/filled/brand-patreon.svg";
-import PayPalLogoSvg from "@tabler/icons/filled/brand-paypal.svg";
-
-const sponsors = [
-	{
-		name: "Ko-fi",
-		color: "#0067fc",
-		href: "https://ko-fi.com/thirteenag",
-		tooltip: "Donate with Ko-fi. Thank You!",
-		logo: Icons.kofi,
-	},
-	{
-		name: "PayPal",
-		color: "#0070BA",
-		href: "https://paypal.me/SergeyP13",
-		tooltip: "Donate with PayPal. Thank You!",
-		logo: PayPalLogoSvg,
-	},
-	{
-		name: "Patreon",
-		color: "#FF424D",
-		href: "https://www.patreon.com/ThirteenAG",
-		tooltip: "Donate with Patreon. Thank You!",
-		logo: PatreonLogoSvg,
-	},
-	{
-		name: "Boosty",
-		color: "#F15F2C",
-		href: "https://boosty.to/thirteenag/donate",
-		tooltip: "Donate with Boosty. Thank You!",
-		logo: Icons.boosty,
-	},
-	{
-		name: "Github Sponsors",
-		color: "#000000",
-		href: "https://github.com/sponsors/ThirteenAG",
-		tooltip: "Join GitHub Sponsors. Thank You!",
-		logo: Icons.github,
-	},
-];
+const sponsors = await getCollection("sponsors");
 ---
 
 <div class:list={["flex flex-row align-middle", className]}>
@@ -60,15 +22,20 @@ const sponsors = [
 			<Tooltip>
 				<TooltipTrigger>
 					<a
-						href={sponsor.href}
+						href={sponsor.data.url}
 						target="_blank"
-						style={`--sponsor-color: ${sponsor.color}`}
+						style={`--sponsor-color: ${sponsor.data.color}`}
 						class={`bg-[var(--sponsor-color)] hover:bg-white text-white hover:text-[var(--sponsor-color)] px-2 h-full flex items-center`}
 					>
-						<sponsor.logo class="h-5 w-5 fill-current" />
+						<Icon
+							name={sponsor.data.icon}
+							class="h-5 w-5 fill-current"
+						/>
 					</a>
 				</TooltipTrigger>
-				<TooltipContent side="bottom">{sponsor.tooltip}</TooltipContent>
+				<TooltipContent side="bottom">
+					{sponsor.data.tooltip}
+				</TooltipContent>
 			</Tooltip>
 		))
 	}

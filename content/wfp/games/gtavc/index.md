@@ -11,7 +11,7 @@ downloads:
 - name: Widescreen Frontend Textures
   url: https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/GTAVC.WidescreenFrontend.zip
 icons:
-- name: d-flex
+- name: modloader
   tooltip: You can also install this via modloader
   url: https://gtaforums.com/topic/669520-mod-loader/
 - name: steam

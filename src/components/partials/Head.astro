@@ -1,21 +1,25 @@
 ---
+import { siteConfig } from "@/site.config";
+
 export interface Props {
 	title?: string;
 	description?: string;
 	keywords?: string;
 	author?: string;
+	favicon?: string;
 }
 
 const {
-	title = "Title",
-	description = "Description",
-	keywords = "Keywords",
-	author = "Author",
+	title = siteConfig.title,
+	description = siteConfig.description,
+	keywords = siteConfig.keywords,
+	author = siteConfig.author,
+	favicon = siteConfig.favicon,
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href={favicon} />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content={Astro.generator} />
 

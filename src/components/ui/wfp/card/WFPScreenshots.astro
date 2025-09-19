@@ -1,5 +1,4 @@
 ---
-import Icons from "@/assets/icons";
 import Button from "@/components/starwind/button";
 import {
 	Dialog,
@@ -9,6 +8,7 @@ import {
 } from "@/components/starwind/dialog";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
 
 interface Props {
 	entry: CollectionEntry<"wfp-games">;
@@ -22,7 +22,7 @@ if (!screenshots) return;
 <Dialog>
 	<DialogTrigger asChild>
 		<Button variant="primary" class="ml-4">
-			<Icons.images class="fill-current" />Screenshots
+			<Icon name="images" class="fill-current" />Screenshots
 		</Button>
 	</DialogTrigger>
 	<DialogContent
