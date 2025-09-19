@@ -10,8 +10,8 @@ const homeCollection = defineCollection({
     }),
 });
 
-const WFPCollection = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./content/wfp" }),
+const WFPGamesCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./content/wfp/games" }),
     schema: ({ image }) => z.object({
         id: z.string(),
         tag: z.string(),
@@ -40,5 +40,5 @@ const WFPCollection = defineCollection({
 
 export const collections = {
     'home': homeCollection,
-    'wfp': WFPCollection,
+    'wfp-games': WFPGamesCollection,
 };

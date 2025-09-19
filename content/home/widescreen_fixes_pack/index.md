@@ -1,6 +1,6 @@
 ---
 title: Widescreen Fixes Pack
-href: https://thirteenag.github.io/wfp
+href: /wfp
 image: cover.png
 ---
 

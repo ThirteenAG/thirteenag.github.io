@@ -22,6 +22,10 @@
     {
       "name": "dropdown",
       "version": "1.0.3"
+    },
+    {
+      "name": "tabs",
+      "version": "1.2.0"
     }
   ]
 }

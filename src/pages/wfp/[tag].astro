@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+	const games = await getCollection("wfp-games");
+	const tags = [...new Set(games.map((game) => game.data.tag))];
+
+	return tags.map((tag) => ({
+		params: { tag },
+		props: { tag },
+	}));
+}
+
+import WFPLayout from "@/layouts/WFPLayout.astro";
+
+const { tag } = Astro.props;
+---
+
+<WFPLayout tag={tag} />

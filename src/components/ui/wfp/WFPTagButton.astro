@@ -1,0 +1,37 @@
+---
+import Button from "@/components/starwind/button";
+
+const tagName: Record<string, string> = {
+	all: "Show All",
+	other: "Other Games",
+	mods: "Mods",
+	driver: "Driver",
+	gta: "Grand Theft Auto",
+	maxpayne: "Max Payne",
+	nfs: "Need For Speed",
+	re: "Resident Evil",
+	splintercell: "Splinter Cell",
+	silenthill: "Silent Hill",
+	tonyhawk: "Tony Hawk's",
+};
+
+interface Props {
+	tag: string;
+	selected?: boolean;
+}
+
+const { tag, selected = false } = Astro.props as Props;
+---
+
+<Button
+	variant="ghost"
+	href={tag === "all" ? "/wfp/" : `/wfp/${tag}/`}
+	class:list={[
+		"rounded-[0] rounded-t-lg font-normal border-b-4 border-transparent grow-1",
+		selected
+			? "text-black border-[#f3565d] bg-white hover:bg-white"
+			: "text-blue-500 hover:border-[#fbcdcf] hover:bg-black/5",
+	]}
+>
+	{tagName[tag] ?? tag}
+</Button>

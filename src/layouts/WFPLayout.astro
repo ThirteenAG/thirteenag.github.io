@@ -1,16 +1,30 @@
 ---
-import WFPCard from "@/components/ui/wfp/WFPCard.astro";
+import Button from "@/components/starwind/button";
+import WFPGameCard from "@/components/ui/wfp/WFPGameCard.astro";
 import WFPFooter from "@/components/ui/wfp/WFPFooter.astro";
 import WFPHeader from "@/components/ui/wfp/WFPHeader.astro";
+import WFPTagButton from "@/components/ui/wfp/WFPTagButton.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
 import { getCollection } from "astro:content";
 
-const entries = await getCollection("wfp");
+interface Props {
+	tag: string;
+}
 
-entries.sort((a, b) => {
-	return a.data.title.localeCompare(b.data.title);
-});
+const { tag } = Astro.props as Props;
+
+const nonGameTags = ["other", "mods", "all"];
+
+const gamesCollection = await getCollection("wfp-games");
+
+const tags = ["all", ...new Set(gamesCollection.map((game) => game.data.tag))];
+
+const games =
+	tag === "all"
+		? gamesCollection
+		: gamesCollection.filter((game) => game.data.tag === tag);
+
+games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
 <BaseLayout
@@ -22,7 +36,34 @@ entries.sort((a, b) => {
 	<main
 		class="flex-auto flex flex-col max-w-2xl lg:max-w-7xl mx-auto p-5 gap-5"
 	>
-		{entries.map((entry) => <WFPCard entry={entry} />)}
+		<div>
+			<div
+				class="w-full flex flex-row flex-wrap justify-evenly bg-transparent"
+			>
+				{
+					tags
+						.filter((t) => !nonGameTags.includes(t))
+						.map((t) => (
+							<WFPTagButton tag={t} selected={t === tag} />
+						))
+				}
+			</div>
+			<div
+				class="w-full flex flex-row flex-wrap justify-evenly bg-transparent"
+			>
+				{
+					nonGameTags.map((t) => (
+						<WFPTagButton tag={t} selected={t === tag} />
+					))
+				}
+			</div>
+		</div>
+
+		{games.map((entry) => <WFPGameCard entry={entry} />)}
+
+		<div class="flex justify-center">
+			<Button href="#top" variant="primary">Back to Top</Button>
+		</div>
 	</main>
 
 	<hr />

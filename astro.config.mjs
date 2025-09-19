@@ -5,7 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
 	site: "https://fusionfix.io",
 	base: "/",
-
+	prefetch: {
+		defaultStrategy: "load",
+		prefetchAll: true,
+	},
 	vite: {
 		plugins: [tailwindcss()],
 	},
