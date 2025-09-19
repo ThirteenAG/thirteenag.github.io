@@ -1,4 +1,5 @@
 ---
+import { DropdownItem } from "@/components/starwind/dropdown";
 import {
 	Tooltip,
 	TooltipTrigger,
@@ -9,34 +10,50 @@ import { getCollection } from "astro:content";
 
 interface Props {
 	class?: string;
+	type?: "header" | "dropdown";
 }
 
-const { class: className } = Astro.props;
+const { class: className, type = "header" } = Astro.props;
 
 const sponsors = await getCollection("sponsors");
 ---
 
-<div class:list={["flex flex-row align-middle", className]}>
-	{
+{
+	type === "header" ? (
+		<div class:list={["flex flex-row align-middle", className]}>
+			{sponsors.map((sponsor) => (
+				<Tooltip>
+					<TooltipTrigger>
+						<a
+							href={sponsor.data.url}
+							target="_blank"
+							style={`--sponsor-color: ${sponsor.data.color}`}
+							class={`bg-[var(--sponsor-color)] hover:bg-white text-white hover:text-[var(--sponsor-color)] px-2 h-full flex items-center`}
+						>
+							<Icon
+								name={sponsor.data.icon}
+								class="h-5 w-5 fill-current"
+							/>
+						</a>
+					</TooltipTrigger>
+					<TooltipContent side="bottom">
+						{sponsor.data.tooltip}
+					</TooltipContent>
+				</Tooltip>
+			))}
+		</div>
+	) : (
 		sponsors.map((sponsor) => (
-			<Tooltip>
-				<TooltipTrigger>
-					<a
-						href={sponsor.data.url}
-						target="_blank"
-						style={`--sponsor-color: ${sponsor.data.color}`}
-						class={`bg-[var(--sponsor-color)] hover:bg-white text-white hover:text-[var(--sponsor-color)] px-2 h-full flex items-center`}
-					>
-						<Icon
-							name={sponsor.data.icon}
-							class="h-5 w-5 fill-current"
-						/>
-					</a>
-				</TooltipTrigger>
-				<TooltipContent side="bottom">
-					{sponsor.data.tooltip}
-				</TooltipContent>
-			</Tooltip>
+			<DropdownItem
+				as="a"
+				href={sponsor.data.url}
+				target="_blank"
+				style={`--sponsor-color: ${sponsor.data.color}`}
+				class={`text-[var(--sponsor-color)] hover:bg-[var(--sponsor-color)] hover:text-white`}
+			>
+				<Icon name={sponsor.data.icon} class="h-5 w-5 fill-current" />
+				{sponsor.data.name}
+			</DropdownItem>
 		))
-	}
-</div>
+	)
+}

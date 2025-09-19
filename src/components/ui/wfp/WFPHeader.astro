@@ -2,6 +2,16 @@
 import LogoSvg from "@/assets/icons/wfp.svg";
 import Sponsors from "./Sponsors.astro";
 import { Icon } from "astro-icon/components";
+import {
+	Dropdown,
+	DropdownContent,
+	DropdownItem,
+	DropdownLabel,
+	DropdownSeparator,
+	DropdownTrigger,
+} from "@/components/starwind/dropdown";
+import Button from "@/components/starwind/button";
+import MenuIcon from "@tabler/icons/outline/menu.svg";
 ---
 
 <header id="top" class="flex-none bg-black text-white w-full h-[50px] text-sm">
@@ -37,6 +47,31 @@ import { Icon } from "astro-icon/components";
 
 		<!-- Collapsed -->
 
-		<div></div>
+		<div class="flex lg:hidden flex-auto justify-end">
+			<Dropdown>
+				<DropdownTrigger asChild>
+					<Button size="icon"
+						><MenuIcon class="fill-current" /></Button
+					>
+				</DropdownTrigger>
+				<DropdownContent class="min-w-[15rem]">
+					<DropdownItem
+						><Icon name="github" class="h-4 w-4 fill-current" /><a
+							>Github</a
+						></DropdownItem
+					>
+					<DropdownItem
+						><Icon
+							name="github-issue"
+							class="h-4 w-4 fill-current"
+						/><a>Report an issue</a></DropdownItem
+					>
+					<DropdownSeparator />
+					<DropdownLabel>Sponsors</DropdownLabel>
+					<Sponsors type="dropdown" />
+					<DropdownSeparator />
+				</DropdownContent>
+			</Dropdown>
+		</div>
 	</nav>
 </header>
