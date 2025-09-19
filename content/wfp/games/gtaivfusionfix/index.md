@@ -23,6 +23,13 @@ support:
   version: Any
 tag: mods
 title: GTA IV The Complete Edition Fusion Fix
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/theballadofgaytony_wallpaper3_2560x1600.jpg
+  images:
+  - https://i.imgur.com/fymlijG.jpeg
+  - https://i.imgur.com/TtWyqyO.jpeg
+  - https://i.imgur.com/nejeVUl.jpeg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

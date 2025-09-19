@@ -20,6 +20,10 @@ support:
   version: v1.112.48699928
 tag: gta
 title: GTA San Andreas The Definitive Edition Fusion Mod
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/mfe2/sites-gta-trilogy/feb1da3/img/a29f5feb418cc2b7914e.jpg
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

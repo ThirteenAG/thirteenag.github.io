@@ -16,6 +16,14 @@ support:
   version: Any
 tag: tonyhawk
 title: Tony Hawk's Underground Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/P8ljKtL.jpg
+  images:
+  - https://i.imgur.com/pV9DA4o.jpg
+  - https://i.imgur.com/RSoxVbl.jpg
+  - https://i.imgur.com/qYxjbhh.jpg
+  - https://i.imgur.com/vA5UMSm.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the 'Game' folder, where the exe is located.

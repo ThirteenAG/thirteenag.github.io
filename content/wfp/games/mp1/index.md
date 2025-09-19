@@ -23,6 +23,14 @@ support:
   version: Any
 tag: maxpayne
 title: Max Payne Widescreen Fix
+screenshots:
+  background: http://i.imgur.com/alQal.jpg
+  images:
+  - https://i.imgur.com/DYGxaZn.jpg
+  - https://i.imgur.com/VHPpWR2.jpg
+  - https://i.imgur.com/BuJgSkt.jpg
+  - https://i.imgur.com/u6jMzFA.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

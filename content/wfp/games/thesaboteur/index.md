@@ -20,6 +20,10 @@ support:
   version: Any
 tag: mods
 title: The Saboteur Fusion Fix
+screenshots:
+  background: https://i.imgur.com/xOzKkHU.jpeg
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

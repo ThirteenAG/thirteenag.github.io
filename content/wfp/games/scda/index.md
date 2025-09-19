@@ -29,6 +29,19 @@ support:
   version: Any
 tag: splintercell
 title: Splinter Cell Double Agent Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/TLG3z2P.png
+  images:
+  - https://i.imgur.com/oiljIYi.jpg
+  - https://i.imgur.com/sv2DX48.jpg
+  - https://i.imgur.com/DrixEPv.jpg
+  - https://i.imgur.com/KKJzs3u.png
+  - https://i.imgur.com/WdvbOTZ.png
+  - https://i.imgur.com/FO4yawo.jpg
+  - https://i.imgur.com/30R5YmM.jpg
+  - https://i.imgur.com/OjPtCBK.jpg
+  - https://i.imgur.com/T3mCABV.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

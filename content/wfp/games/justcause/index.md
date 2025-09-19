@@ -22,6 +22,14 @@ support:
   version: Any
 tag: other
 title: Just Cause Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/zwRV1vs.jpg
+  images:
+  - https://i.imgur.com/mO2b7kV.jpg
+  - https://i.imgur.com/gFavzxx.jpg
+  - https://i.imgur.com/vDrlJfR.jpg
+  - https://i.imgur.com/oUfKYVX.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

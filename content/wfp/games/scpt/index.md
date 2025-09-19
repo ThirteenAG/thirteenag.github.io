@@ -22,6 +22,19 @@ support:
   version: Any
 tag: splintercell
 title: Splinter Cell Pandora Tomorrow Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/7OAyYVD.jpg
+  images:
+  - https://i.imgur.com/siMckN1.jpg
+  - https://i.imgur.com/jzZh2nW.jpg
+  - https://i.imgur.com/jAYvSFI.jpg
+  - https://i.imgur.com/gOtoJva.jpg
+  - https://i.imgur.com/eSqRSE6.jpg
+  - https://i.imgur.com/xoeq2YX.png
+  - https://i.imgur.com/IV9dmJE.jpg
+  - https://i.imgur.com/NaJA4ek.jpg
+  - https://i.imgur.com/Cpkit7r.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

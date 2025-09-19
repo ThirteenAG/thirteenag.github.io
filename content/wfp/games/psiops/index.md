@@ -16,6 +16,14 @@ support:
   version: Any
 tag: other
 title: 'Psi-Ops: The Mindgate Conspiracy Widescreen Fix'
+screenshots:
+  background: https://i.imgur.com/ZREY9U7.jpg
+  images:
+  - https://i.imgur.com/WESeNWG.jpg
+  - https://i.imgur.com/8TL6ycG.jpg
+  - https://i.imgur.com/puuJkxe.jpg
+  - https://i.imgur.com/vYnUN27.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -22,6 +22,14 @@ support:
   version: Any
 tag: other
 title: The Suffering Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/H77SXLf.jpg
+  images:
+  - https://i.imgur.com/S9GpAkk.jpg
+  - https://i.imgur.com/W8Oob9e.jpg
+  - https://i.imgur.com/SPtrOOP.jpg
+  - https://i.imgur.com/RQcdf4Z.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

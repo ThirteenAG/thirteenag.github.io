@@ -16,6 +16,19 @@ support:
   version: Any
 tag: other
 title: Onimusha 3 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/7RSRjLM.jpg
+  images:
+  - https://i.imgur.com/Pu8dKiH.jpg
+  - https://i.imgur.com/DhhtcO2.png
+  - https://i.imgur.com/mfo5XSR.jpg
+  - https://i.imgur.com/XBr64ET.jpg
+  - https://i.imgur.com/WSeoDUj.jpg
+  - https://i.imgur.com/JukXA7X.jpg
+  - https://i.imgur.com/6Ey5wV5.jpg
+  - https://i.imgur.com/kfVDIFn.jpg
+  - https://i.imgur.com/pxkjX1Z.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -23,6 +23,16 @@ support:
   version: Any
 tag: nfs
 title: Need for Speed Underground Widescreen Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-underground-rivals-keyart.jpg
+  images:
+  - https://i.imgur.com/zoer523.jpg
+  - https://i.imgur.com/I6rS0Dy.jpg
+  - https://i.imgur.com/35STkw5.jpg
+  - https://i.imgur.com/edMiqne.jpg
+  - https://i.imgur.com/Cbtt06Z.jpg
+  - https://i.imgur.com/OdAUNmQ.jpg
+  youtube: https://www.youtube.com/embed/WyI-pCArooY
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

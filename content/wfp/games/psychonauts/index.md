@@ -25,6 +25,14 @@ support:
   version: Any
 tag: other
 title: Psychonauts Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/kTosUa3.jpg
+  images:
+  - https://i.imgur.com/7PgPbPE.jpg
+  - https://i.imgur.com/df7Gjx6.jpg
+  - https://i.imgur.com/15tBGmB.jpg
+  - https://i.imgur.com/SsmgNpK.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

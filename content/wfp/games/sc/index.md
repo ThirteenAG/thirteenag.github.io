@@ -31,6 +31,19 @@ support:
   version: Any
 tag: splintercell
 title: Splinter Cell Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/3Z2JG8O.jpg
+  images:
+  - https://i.imgur.com/F2f0quA.jpg
+  - https://i.imgur.com/nIpPtL5.jpg
+  - https://i.imgur.com/2sgdWNo.png
+  - https://i.imgur.com/1dRvJxn.jpg
+  - https://i.imgur.com/BdDykMq.jpg
+  - https://i.imgur.com/cPuXS7C.jpg
+  - https://i.imgur.com/T5iRSxO.png
+  - https://i.imgur.com/ebyvmp8.jpg
+  - https://i.imgur.com/U5svQ58.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

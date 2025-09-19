@@ -23,6 +23,16 @@ support:
   version: Any
 tag: nfs
 title: Need for Speed Carbon Widescreen Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/nfs-carbon-key-art.jpg
+  images:
+  - https://i.imgur.com/wJrTwhI.jpg
+  - https://i.imgur.com/NignCGg.jpg
+  - https://i.imgur.com/4QLA4yH.jpg
+  - https://i.imgur.com/hpyxyKT.jpg
+  - https://i.imgur.com/hlinBGF.jpg
+  - https://i.imgur.com/CqyXUO3.jpg
+  youtube: https://www.youtube.com/embed/dAim-sIXCoo
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

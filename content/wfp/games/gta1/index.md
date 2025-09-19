@@ -23,6 +23,14 @@ support:
   version: Any
 tag: gta
 title: Grand Theft Auto (1) Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/2gPPTH5.jpg
+  images:
+  - https://i.imgur.com/h6ZwEqM.jpg
+  - https://i.imgur.com/dhYQmA6.jpg
+  - https://i.imgur.com/7bYNx0J.jpg
+  - https://i.imgur.com/2r004po.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the 'WINO' folder, where the exe is located.

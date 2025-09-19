@@ -23,6 +23,14 @@ support:
   version: Any
 tag: maxpayne
 title: Max Payne 2 Widescreen Fix
+screenshots:
+  background: https://media.rockstargames.com/rockstargames-newsite/img/global/downloads/wallpapers/games/maxpayne2_graphicnovel02_1600x1200.jpg
+  images:
+  - https://i.imgur.com/jo0Wr3b.jpg
+  - https://i.imgur.com/oIWieMY.jpg
+  - https://i.imgur.com/HAdB3SV.jpg
+  - https://i.imgur.com/mVgpBqN.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

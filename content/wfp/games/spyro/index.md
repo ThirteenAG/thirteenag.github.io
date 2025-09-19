@@ -23,6 +23,14 @@ support:
   version: Any
 tag: other
 title: Spyro Reignited Trilogy Widescreen Fix
+screenshots:
+  background: https://spyrothedragon.com/content/dam/atvi/spyro/common/3-games/3in1-bg.png
+  images:
+  - https://i.imgur.com/bJkoZTW.jpeg
+  - https://i.imgur.com/N3HGWAA.jpeg
+  - https://i.imgur.com/SMA9KIZ.jpeg
+  - https://i.imgur.com/OdXy6aP.jpeg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

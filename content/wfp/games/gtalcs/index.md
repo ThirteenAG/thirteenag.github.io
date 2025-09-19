@@ -23,6 +23,10 @@ support:
   version: SLUS-21423
 tag: gta
 title: GTA Liberty City Stories Widescreen Fix [PCSX2F]
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/libertycitystories_bridge_1600x1200.jpg
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract [PCSX2 Fork With Plugins](https://github.com/ASI-Factory/PCSX2-Fork-With-Plugins/releases/tag/latest).

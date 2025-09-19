@@ -22,6 +22,14 @@ support:
   version: Any
 tag: other
 title: Gun Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/IgUNy8t.jpg
+  images:
+  - https://i.imgur.com/DJ3gzYw.jpg
+  - https://i.imgur.com/HZG9o0X.jpg
+  - https://i.imgur.com/7CFvk8Z.jpg
+  - https://i.imgur.com/hvJbJOK.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

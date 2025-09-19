@@ -18,6 +18,17 @@ support:
     an open source Limit Adjuster to enhance and improve certain game limits.'
 tag: mods
 title: Project2DFX
+screenshots:
+  background: https://thirteenag.github.io/screens/2dfx/intro-bg.jpg
+  images:
+  - https://i.imgur.com/zt2vjAG.jpeg
+  - https://i.imgur.com/7nBlS2x.jpeg
+  - https://i.imgur.com/4cvBmmu.png
+  - https://i.imgur.com/RzMSTN1.jpeg
+  - https://i.imgur.com/0LPBSkP.jpeg
+  - https://i.imgur.com/qcOFiaz.jpeg
+  - https://i.imgur.com/OfS82JG.jpeg
+  youtube: https://www.youtube.com/embed/DJUdUjdw3VQ
 ---
 
  

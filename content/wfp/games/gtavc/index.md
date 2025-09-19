@@ -28,6 +28,14 @@ support:
   version: Any | v1.0 recommended
 tag: gta
 title: Grand Theft Auto Vice City Widescreen Fix
+screenshots:
+  background: https://media.rockstargames.com/rockstargames-newsite/img/global/downloads/wallpapers/games/gtavc_flash_2880x1800.jpg
+  images:
+  - https://i.imgur.com/scpTJIW.jpg
+  - https://i.imgur.com/AvM0TLj.jpg
+  - https://i.imgur.com/rEKpBbf.jpg
+  - https://i.imgur.com/gQnhOzv.jpg
+  youtube: https://www.youtube.com/embed/9B-JQlI5wtQ
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

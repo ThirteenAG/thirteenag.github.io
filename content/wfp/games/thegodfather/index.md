@@ -22,6 +22,19 @@ support:
   version: Any
 tag: other
 title: The Godfather Widescreen Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-godfather-keyart.jpg
+  images:
+  - https://i.imgur.com/MkpG6fW.jpg
+  - https://i.imgur.com/wODB5Ay.jpg
+  - https://i.imgur.com/2msYCTg.jpg
+  - https://i.imgur.com/2CioEmd.jpg
+  - https://i.imgur.com/fv5AQzl.jpg
+  - https://i.imgur.com/o4N6tqV.jpg
+  - https://i.imgur.com/eI5R3Ka.jpg
+  - https://i.imgur.com/V5PmoFM.jpg
+  - https://i.imgur.com/cRXFKDt.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

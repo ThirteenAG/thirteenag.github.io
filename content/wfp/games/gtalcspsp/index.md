@@ -23,6 +23,17 @@ support:
   version: Any
 tag: gta
 title: GTA Liberty City Stories Widescreen Fix [PPSSPP]
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/libertycitystories_bridge_1600x1200.jpg
+  images:
+  - https://i.imgur.com/77YLj8w.jpeg
+  - https://i.imgur.com/GXY7ZJo.jpeg
+  - https://i.imgur.com/kzxopKl.jpeg
+  - https://i.imgur.com/sckpxZ7.jpeg
+  - https://i.imgur.com/OPVJenN.jpeg
+  - https://i.imgur.com/WDiZrl0.jpeg
+  - https://i.imgur.com/ubvkDHK.jpeg
+  youtube: https://www.youtube.com/embed/xaW3t5Q8qTU
 ---
 
 1. Download and extract the archive to the directory, where PPSSPP's memstick folder is located.

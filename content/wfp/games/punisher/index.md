@@ -16,6 +16,14 @@ support:
   version: Any
 tag: other
 title: The Punisher Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/tLvp1mF.jpg
+  images:
+  - https://i.imgur.com/BNIwSZx.jpg
+  - https://i.imgur.com/VS0MPLG.jpg
+  - https://i.imgur.com/HyvOFe4.png
+  - https://i.imgur.com/B0nadgx.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

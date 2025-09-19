@@ -25,6 +25,19 @@ support:
   version: Any
 tag: silenthill
 title: Silent Hill 2 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/sVAGP7U.jpg
+  images:
+  - https://i.imgur.com/pa7gGLv.jpg
+  - https://i.imgur.com/yn4XSqs.png
+  - https://i.imgur.com/cWBanMl.jpg
+  - https://i.imgur.com/LmjQGgH.png
+  - https://i.imgur.com/SgfkcOM.jpg
+  - https://i.imgur.com/ftNbyqd.jpg
+  - https://i.imgur.com/sWbNLjR.jpg
+  - https://i.imgur.com/Gst7jNE.png
+  - https://i.imgur.com/ftVsTDA.jpg
+  youtube: https://www.youtube.com/embed/Phu63fdOKwc
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -23,6 +23,16 @@ support:
   version: Any
 tag: nfs
 title: Need for Speed Underground 2 Widescreen Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-underground-2-keyart.jpg
+  images:
+  - https://i.imgur.com/hjKZSlj.jpg
+  - https://i.imgur.com/vAcFSeC.jpg
+  - https://i.imgur.com/N65f2TS.jpg
+  - https://i.imgur.com/ecApq0O.jpg
+  - https://i.imgur.com/VqSAtlB.jpg
+  - https://i.imgur.com/xOjGfdh.jpg
+  youtube: https://www.youtube.com/embed/j-u62ICMelU
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -16,6 +16,14 @@ support:
   version: Any
 tag: other
 title: Enter the Matrix Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/7vU9xze.jpg
+  images:
+  - https://i.imgur.com/q2TeHcw.png
+  - https://i.imgur.com/QSC0R1z.jpg
+  - https://i.imgur.com/ulim4nc.jpg
+  - https://i.imgur.com/5icM0F5.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

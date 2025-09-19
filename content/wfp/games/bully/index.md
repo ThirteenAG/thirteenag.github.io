@@ -29,6 +29,15 @@ support:
   version: Any
 tag: other
 title: 'Bully: Scholarship Edition Widescreen Fix'
+screenshots:
+  background: https://media.rockstargames.com/rockstargames-newsite/img/global/downloads/wallpapers/games/bullyse_boxart_2560x1600.jpg
+  images:
+  - https://i.imgur.com/Dmyr7UU.jpg
+  - https://i.imgur.com/qvRwkLl.png
+  - https://i.imgur.com/6Td11In.jpg
+  - https://i.imgur.com/QPHTYHi.jpg
+  - https://i.imgur.com/YZPQogb.jpg
+  youtube: https://www.youtube.com/embed/RRtlTpN3pQ4
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

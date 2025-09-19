@@ -16,6 +16,19 @@ support:
   version: Any
 tag: other
 title: King Kong Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/dNq1Tn9.jpg
+  images:
+  - https://i.imgur.com/c67N7uB.jpg
+  - https://i.imgur.com/8PNZAw0.jpg
+  - https://i.imgur.com/jXDNQnO.jpg
+  - https://i.imgur.com/eCcwzyY.jpg
+  - https://i.imgur.com/LDc3KDr.png
+  - https://i.imgur.com/CVHl9uy.jpg
+  - https://i.imgur.com/n5To4aP.jpg
+  - https://i.imgur.com/Hdfj8AM.jpg
+  - https://i.imgur.com/JohXzMq.jpg
+  youtube: https://www.youtube.com/embed/oOdP_E0seg8
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

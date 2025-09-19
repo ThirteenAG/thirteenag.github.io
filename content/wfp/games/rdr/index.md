@@ -20,6 +20,10 @@ support:
   version: Any
 tag: mods
 title: Red Dead Redemption Fusion Mod
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/tina-uploads/tina-modules/reddeadredemption/c8ea0d475119f039f52c478451fa67ef1205188b.png
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

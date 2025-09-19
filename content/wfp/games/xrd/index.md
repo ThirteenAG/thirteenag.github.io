@@ -17,6 +17,21 @@ support:
     in game.
 tag: mods
 title: Xbox Rain Droplets
+screenshots:
+  background: https://camo.githubusercontent.com/e09fde71c64f747854ac06b4cbed178754560a7422ceeb031565639ad900ca44/68747470733a2f2f692e696d6775722e636f6d2f4d7951417737662e706e67
+  images:
+  - https://i.imgur.com/GynWHbN.jpeg
+  - https://i.imgur.com/UbCTod6.jpeg
+  - https://i.imgur.com/bMGzBbY.jpeg
+  - https://i.imgur.com/LxCMcSG.jpeg
+  - https://i.imgur.com/81qEQEk.jpeg
+  - https://i.imgur.com/ZZVAMmz.jpeg
+  - https://i.imgur.com/d7MTkw6.jpeg
+  - https://i.imgur.com/CQILSYl.jpeg
+  - https://i.imgur.com/fb6aubD.jpeg
+  - https://i.imgur.com/5rFKPmS.jpeg
+  - https://i.imgur.com/5YYcss4.jpeg
+  youtube: https://www.youtube.com/embed/IiEXixRWUMU
 ---
 
  

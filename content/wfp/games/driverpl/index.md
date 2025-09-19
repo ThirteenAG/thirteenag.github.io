@@ -26,6 +26,14 @@ support:
   version: Any
 tag: driver
 title: Driver Parallel Lines Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/IEnHlHr.jpg
+  images:
+  - https://i.imgur.com/Hj7nilj.jpg
+  - https://i.imgur.com/80UB32p.png
+  - https://i.imgur.com/bs8eTan.jpg
+  - https://i.imgur.com/MXyQncG.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -16,6 +16,15 @@ support:
   version: Any
 tag: other
 title: Ultimate Spider-Man Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/mzVTp09.jpg
+  images:
+  - https://i.imgur.com/o9Hlvc8.jpg
+  - https://i.imgur.com/zKSf8A6.jpg
+  - https://i.imgur.com/hRtuPYi.jpg
+  - https://i.imgur.com/1WlOVFE.jpg
+  - https://i.imgur.com/X53DKHU.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

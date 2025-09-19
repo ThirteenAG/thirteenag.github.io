@@ -1,0 +1,8 @@
+---
+screenshots:
+  background: https://i.imgur.com/2pSW9sD.jpg
+  images:
+  - https://i.imgur.com/sHt2RkA.jpg
+  - https://i.imgur.com/bvtgRAL.jpg
+  youtube: ''
+---

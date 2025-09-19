@@ -26,6 +26,13 @@ support:
   version: Any
 tag: splintercell
 title: Splinter Cell Conviction Fusion Mod
+screenshots:
+  background: https://i.imgur.com/PcKaUwG.png
+  images:
+  - https://i.imgur.com/OyTCH3y.jpeg
+  - https://i.imgur.com/6K1es6H.jpeg
+  - https://i.imgur.com/4qRaeXX.jpeg
+  youtube: https://www.youtube.com/embed/ECDDyDNWeNI
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -23,6 +23,19 @@ support:
   version: Any
 tag: splintercell
 title: Splinter Cell Essentials Fusion Mod [PPSSPP]
+screenshots:
+  background: https://i.imgur.com/q76jDqz.jpg
+  images:
+  - https://i.imgur.com/WstoVAF.png
+  - https://i.imgur.com/oJP918t.jpeg
+  - https://i.imgur.com/F0Q1OPz.jpeg
+  - https://i.imgur.com/5eyw2MG.jpeg
+  - https://i.imgur.com/HEHcVsZ.jpeg
+  - https://i.imgur.com/q0DEQra.jpeg
+  - https://i.imgur.com/ioGds9n.png
+  - https://i.imgur.com/YMaRHxP.jpeg
+  - https://i.imgur.com/QnywfOT.jpeg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the directory, where PPSSPP's memstick folder is located.

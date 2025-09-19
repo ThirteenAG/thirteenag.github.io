@@ -1,0 +1,79 @@
+---
+import Icons from "@/assets/icons";
+import Button from "@/components/starwind/button";
+import {
+	Dialog,
+	DialogTrigger,
+	DialogContent,
+	DialogClose,
+} from "@/components/starwind/dialog";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+	entry: CollectionEntry<"wfp-games">;
+}
+
+const { entry } = Astro.props;
+const { screenshots } = entry.data;
+if (!screenshots) return;
+---
+
+<Dialog>
+	<DialogTrigger asChild>
+		<Button variant="primary" class="ml-4">
+			<Icons.images class="fill-current" />Screenshots
+		</Button>
+	</DialogTrigger>
+	<DialogContent
+		style={`background-image: url(${screenshots.background}); background-size: cover; background-position: center;`}
+		class="h-[90vh] max-h-[90vh] w-[95vw] max-w-[95vw] border-transparent bg-white"
+	>
+		<div class="h-full w-full overflow-auto">
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4"
+			>
+				{
+					screenshots.youtube ? (
+						<div class="w-full aspect-video">
+							<iframe
+								class="w-full h-full"
+								src={screenshots.youtube}
+								title="YouTube video player"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen
+							/>
+						</div>
+					) : null
+				}
+				{
+					screenshots.images && screenshots.images.length > 0 ? (
+						screenshots.images.map((img) => (
+							<div class="w-full aspect-video bg-black">
+								<img
+									src={img}
+									alt="Screenshot"
+									class="w-full h-full object-contain"
+								/>
+							</div>
+						))
+					) : (
+						<Image
+							src={entry.data.after}
+							alt="Screenshot"
+							class="w-full h-full object-contain bg-black"
+						/>
+					)
+				}
+			</div>
+		</div>
+		<div
+			class="absolute bottom-0 left-0 right-0 flex flex-row justify-center items-center p-2 gap-2"
+		>
+			<Button variant="warning" target="_blank"> Download </Button>
+			<DialogClose asChild>
+				<Button variant="default">Close</Button>
+			</DialogClose>
+		</div>
+	</DialogContent>
+</Dialog>

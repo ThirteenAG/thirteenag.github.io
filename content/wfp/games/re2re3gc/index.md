@@ -21,6 +21,10 @@ support:
   version: 'RE3: GLE(E|P|J)08, RE2: GHA(E|P|J)08'
 tag: re
 title: 'Resident Evil 2 / RE3: Nemesis Fusion Mod [Dolphin]'
+screenshots:
+  background: https://game.capcom.com/residentevil/pc/img/about/history/re3/image.jpg
+  images: []
+  youtube: https://www.youtube.com/embed/1dEQrxXSygQ
 ---
 
 1. Download and extract the archive to the directory, where  [**Dolphin 2412**](https://dl.dolphin-emu.org/releases/2412/dolphin-2412-x64.7z)  executable is located.

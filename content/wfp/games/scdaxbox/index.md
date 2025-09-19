@@ -20,6 +20,10 @@ support:
   version: US-094 v1.02
 tag: splintercell
 title: Splinter Cell Double Agent Widescreen Fix [CXBXR]
+screenshots:
+  background: https://i.imgur.com/q76jDqz.jpg
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract the archive to the directory, where cxbx.exe is located.

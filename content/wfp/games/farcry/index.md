@@ -34,6 +34,29 @@ support:
   version: Any (x86/x64)
 tag: other
 title: Far Cry Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/wRXWzFa.jpg
+  images:
+  - https://i.imgur.com/dMdLXPk.jpg
+  - https://i.imgur.com/vh6BhM9.jpg
+  - https://i.imgur.com/1549bXk.jpg
+  - https://i.imgur.com/QhH7sCE.jpg
+  - https://i.imgur.com/spaPvFT.jpg
+  - https://i.imgur.com/ZPj4Vvz.jpg
+  - https://i.imgur.com/seqs9Qz.jpg
+  - https://i.imgur.com/cxKZzdx.jpg
+  - https://i.imgur.com/tkX6YAx.jpg
+  - https://i.imgur.com/naiG2hR.jpg
+  - https://i.imgur.com/r2sXOmg.jpg
+  - https://i.imgur.com/60fywam.jpg
+  - https://i.imgur.com/lK1kkrV.jpg
+  - https://i.imgur.com/ebLSFrV.jpg
+  - https://i.imgur.com/Q7hhfil.jpg
+  - https://i.imgur.com/Gv4gKF7.jpg
+  - https://i.imgur.com/ECTayaD.jpg
+  - https://i.imgur.com/wCvlUeo.jpg
+  - https://i.imgur.com/nvJ1ty5.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game root directory.

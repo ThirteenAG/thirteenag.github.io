@@ -19,6 +19,14 @@ support:
   version: Any
 tag: other
 title: Call of Cthulhu Widescreen Fix
+screenshots:
+  background: ''
+  images:
+  - https://i.imgur.com/ZUblubq.jpg
+  - https://i.imgur.com/FvYUHU5.jpg
+  - https://i.imgur.com/mAXMkuM.jpg
+  - https://i.imgur.com/MQeN9Zd.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

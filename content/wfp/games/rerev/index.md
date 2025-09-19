@@ -20,6 +20,13 @@ support:
   version: Feb 5 2024 (steam latest)
 tag: re
 title: Resident Evil Revelations Fusion Fix
+screenshots:
+  background: https://game.capcom.com/residentevil/rev/pc/img/top/bg_rev.png
+  images:
+  - https://i.imgur.com/Fp4H8jJ.jpeg
+  - https://i.imgur.com/FFbWf0r.jpeg
+  - https://i.imgur.com/IpNP8Ev.png
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

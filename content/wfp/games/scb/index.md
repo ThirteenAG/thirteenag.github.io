@@ -26,6 +26,11 @@ support:
   version: Any
 tag: mods
 title: Splinter Cell Blacklist Fusion Mod
+screenshots:
+  background: https://i.imgur.com/G4SvSBY.jpeg
+  images:
+  - https://i.imgur.com/U4PCwMi.jpeg
+  youtube: https://www.youtube.com/embed/su47XbCcVyw
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -23,6 +23,16 @@ support:
   version: Any
 tag: nfs
 title: Need for Speed Most Wanted (2005) Widescreen Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/need-for-speed-most-wanted-2005-key-art.jpg
+  images:
+  - https://i.imgur.com/ouhh2ER.jpg
+  - https://i.imgur.com/ch0BRJw.jpg
+  - https://i.imgur.com/Nn4o1QH.jpg
+  - https://i.imgur.com/WOirIQG.jpg
+  - https://i.imgur.com/3wVYlZx.jpg
+  - https://i.imgur.com/HlMM6nx.jpg
+  youtube: https://www.youtube.com/embed/7IErsDSUBTA
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

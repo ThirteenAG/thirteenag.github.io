@@ -1,6 +1,5 @@
 ---
 import { render, type CollectionEntry } from "astro:content";
-import { Image } from "astro:assets";
 import {
 	Tooltip,
 	TooltipTrigger,
@@ -9,6 +8,9 @@ import {
 import { Button } from "@/components/starwind/button";
 import Icons from "@/assets/icons";
 import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/components/starwind/dropdown";
+import WFPScreenshots from "./card/WFPScreenshots.astro";
+import { Image } from "astro:assets";
+import WFPImageStack from "./card/WFPImageStack.astro";
 
 interface Props {
 	entry: CollectionEntry<"wfp-games">;
@@ -22,23 +24,7 @@ const { Content } = await render(entry);
 	id={entry.id}
 	class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl w-full bg-white shadow-lg overflow-clip"
 >
-	<div class="relative w-auto">
-		<Image
-			src={entry.data.before}
-			alt={entry.data.title}
-			class="z-0 block w-full h-full object-cover"
-		/>
-		<Image
-			src={entry.data.after}
-			alt={entry.data.title}
-			class="z-1 absolute inset-0 w-full h-full object-cover hover:opacity-0 transition-opacity duration-100"
-		/>
-		<Image
-			src={entry.data.logo}
-			alt={entry.data.title}
-			class="game-logo z-2 absolute inset-[25%] w-[50%] h-[50%] object-contain visible hover:invisible"
-		/>
-	</div>
+	<WFPImageStack entry={entry} />
 	<div class="flex flex-col w-auto">
 		<h3 class="flex-none relative w-full">
 			{
@@ -152,19 +138,8 @@ const { Content } = await render(entry);
 					</Dropdown>
 				)
 			}
-			
-			<Button variant="primary" class="ml-4">
-				<Icons.images class="fill-current" />Screenshots
-			</Button>
+			<WFPScreenshots entry={entry} />
 		</div>
 	</div>
 </div>
 
-<style>
-	.game-logo {
-		transition: 0s 180s;
-	}
-	.game-logo:hover {
-		transition: 0s;
-	}
-</style>

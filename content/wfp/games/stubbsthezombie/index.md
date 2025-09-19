@@ -19,6 +19,14 @@ support:
   version: Any
 tag: other
 title: Stubbs the Zombie Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/VJsLHtz.jpg
+  images:
+  - https://i.imgur.com/iAWnohi.jpg
+  - https://i.imgur.com/HHWee6o.jpg
+  - https://i.imgur.com/WYUoM4B.jpg
+  - https://i.imgur.com/BbpBKjD.jpg
+  youtube: https://www.youtube.com/embed/dNFRNfmR8M0
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

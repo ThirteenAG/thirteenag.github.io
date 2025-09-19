@@ -22,6 +22,19 @@ support:
   version: Any
 tag: other
 title: Hidden and Dangerous 2 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/wvcsHVI.jpg
+  images:
+  - https://i.imgur.com/vfF0gO5.jpg
+  - https://i.imgur.com/FTDw2uT.jpg
+  - https://i.imgur.com/mUpldfw.jpg
+  - https://i.imgur.com/shUr91i.jpg
+  - https://i.imgur.com/UkcMZeV.jpg
+  - https://i.imgur.com/b7E1L86.jpg
+  - https://i.imgur.com/DguNZ1c.jpg
+  - https://i.imgur.com/0qbkNdX.jpg
+  - https://i.imgur.com/GbIvJZj.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

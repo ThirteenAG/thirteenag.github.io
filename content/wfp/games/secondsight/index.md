@@ -16,6 +16,14 @@ support:
   version: Any
 tag: other
 title: Second Sight Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/z3JM9Ie.jpg
+  images:
+  - https://i.imgur.com/4aphWuw.jpg
+  - https://i.imgur.com/EUTqEP2.jpg
+  - https://i.imgur.com/wQKiHX1.jpg
+  - https://i.imgur.com/DqScHCC.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -19,6 +19,16 @@ support:
   version: Any
 tag: other
 title: Street Racing Syndicate Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/blrjqrD.jpg
+  images:
+  - https://i.imgur.com/S5SceTL.jpg
+  - https://i.imgur.com/pKykBMM.png
+  - https://i.imgur.com/fkvQI0w.jpg
+  - https://i.imgur.com/HwL1ZUp.jpg
+  - https://i.imgur.com/CNd6qNI.jpg
+  - https://i.imgur.com/ih1DDJO.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

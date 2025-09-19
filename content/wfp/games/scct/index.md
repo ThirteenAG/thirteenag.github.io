@@ -26,6 +26,19 @@ support:
   version: Any
 tag: splintercell
 title: Splinter Cell Chaos Theory Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/6NkTM0Z.jpg
+  images:
+  - https://i.imgur.com/WRbTZHK.jpg
+  - https://i.imgur.com/p1RDRKR.png
+  - https://i.imgur.com/KRx219e.jpg
+  - https://i.imgur.com/kboRwVG.png
+  - https://i.imgur.com/5vuxwZT.jpg
+  - https://i.imgur.com/fasN0xD.jpg
+  - https://i.imgur.com/lgIdhFr.jpg
+  - https://i.imgur.com/mdgQY6L.jpg
+  - https://i.imgur.com/pECnIAM.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

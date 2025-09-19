@@ -17,6 +17,10 @@ support:
   version: Any
 tag: mods
 title: Scarface Fusion Fix
+screenshots:
+  background: https://i.imgur.com/K8L9W8y.jpg
+  images: []
+  youtube: https://www.youtube.com/embed/ON5Yk_uU8DM
 ---
 
 1. Download and install [SilentPatch](https://github.com/CookiePLMonster/SilentPatchScarface/releases/latest).

@@ -20,6 +20,10 @@ support:
   version: Any
 tag: re
 title: Resident Evil 4 Fusion Mod
+screenshots:
+  background: https://www.residentevil.com/re4/assets/images/about_bg-about.jpg
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

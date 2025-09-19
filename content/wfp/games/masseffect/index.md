@@ -26,6 +26,27 @@ support:
   version: Any
 tag: other
 title: Mass Effect Trilogy FOV Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/mass3-keyart.jpg
+  images:
+  - https://i.imgur.com/ASQAk91.jpg
+  - https://i.imgur.com/UqGk13a.jpg
+  - https://i.imgur.com/qbW8OGg.jpg
+  - https://i.imgur.com/OuKmQZF.jpg
+  - https://i.imgur.com/dFBBUVq.jpg
+  - https://i.imgur.com/qzr1btd.jpg
+  - https://i.imgur.com/wbAg8ZS.jpg
+  - https://i.imgur.com/rOQSnY9.jpg
+  - https://i.imgur.com/ER57bgu.jpg
+  - https://i.imgur.com/eRc2Ys0.jpg
+  - https://i.imgur.com/rLR29z8.jpg
+  - https://i.imgur.com/g360V76.png
+  - https://i.imgur.com/wHf7XhJ.jpg
+  - https://i.imgur.com/ByZedw1.jpg
+  - https://i.imgur.com/gq9bqK7.jpg
+  - https://i.imgur.com/dRn2io4.jpg
+  - https://i.imgur.com/YJCs13l.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located (*Binaries* or *Binaries\Win32*).

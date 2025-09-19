@@ -19,6 +19,16 @@ support:
   version: Any
 tag: other
 title: Sonic Heroes Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/dPuwR8h.jpg
+  images:
+  - https://i.imgur.com/xxiSk8c.png
+  - https://i.imgur.com/CfND7aY.jpeg
+  - https://i.imgur.com/vlQpx9C.jpg
+  - https://i.imgur.com/ffbpSZM.jpg
+  - https://i.imgur.com/fSBMETS.jpg
+  - https://i.imgur.com/QkeTuQ4.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

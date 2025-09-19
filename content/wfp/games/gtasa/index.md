@@ -25,6 +25,16 @@ support:
   version: v1.0 US
 tag: gta
 title: Grand Theft Auto San Andreas Widescreen Fix
+screenshots:
+  background: https://media.rockstargames.com/rockstargames-newsite/img/global/downloads/wallpapers/games/sanandreas_boxart_2880x1800.jpg
+  images:
+  - https://i.imgur.com/4dof6Vc.jpg
+  - https://i.imgur.com/A9eSvu5.jpg
+  - https://i.imgur.com/udFhfM6.jpg
+  - https://i.imgur.com/qjK3OyJ.jpg
+  - https://i.imgur.com/PLbJlO3.png
+  - https://i.imgur.com/71ntbRI.png
+  youtube: https://www.youtube.com/embed/si-cziHBaPQ
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

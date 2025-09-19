@@ -23,6 +23,17 @@ support:
   version: SLUS-21590
 tag: gta
 title: GTA Vice City Stories Widescreen Fix [PCSX2F]
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/vicecitystories_vcsgirl02_1600x1200.jpg
+  images:
+  - https://i.imgur.com/fZfPlO8.jpeg
+  - https://i.imgur.com/Eiy9TiQ.jpeg
+  - https://i.imgur.com/hplRAA4.jpeg
+  - https://i.imgur.com/2rIT7dW.jpeg
+  - https://i.imgur.com/dDs6s3w.jpeg
+  - https://i.imgur.com/JVg4AxV.jpeg
+  - https://i.imgur.com/UZIxYXF.jpeg
+  youtube: https://www.youtube.com/embed/TrkxdiQW4ms
 ---
 
 1. Download and extract [PCSX2 Fork With Plugins](https://github.com/ASI-Factory/PCSX2-Fork-With-Plugins/releases/tag/latest).

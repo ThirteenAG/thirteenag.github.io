@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+	entry: CollectionEntry<"wfp-games">;
+}
+
+const { entry } = Astro.props;
+---
+
+<div class="relative w-auto aspect-video bg-black">
+	<Image
+		src={entry.data.before}
+		alt={entry.data.title}
+		class="z-0 block w-full h-full object-contain"
+	/>
+	<Image
+		src={entry.data.after}
+		alt={entry.data.title}
+		class="z-1 absolute inset-0 w-full h-full object-contain hover:opacity-0 transition-opacity duration-100"
+	/>
+	<Image
+		src={entry.data.logo}
+		alt={entry.data.title}
+		class="game-logo z-2 absolute inset-[25%] w-[50%] h-[50%] object-contain visible hover:invisible"
+	/>
+</div>
+
+<style>
+	.game-logo {
+		transition: 0s 180s;
+	}
+	.game-logo:hover {
+		transition: 0s;
+	}
+</style>

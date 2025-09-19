@@ -21,6 +21,10 @@ support:
   version: Any
 tag: maxpayne
 title: Max Payne 3 Fusion Fix
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/maxpayne3_maxartwork6_2560x1600.jpg
+  images: []
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

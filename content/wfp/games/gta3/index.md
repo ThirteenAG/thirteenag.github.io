@@ -28,6 +28,14 @@ support:
   version: Any | v1.0 recommended
 tag: gta
 title: Grand Theft Auto III Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/1wlgqDT.jpg
+  images:
+  - https://i.imgur.com/IwKH9Wo.jpg
+  - https://i.imgur.com/S0YoBBT.jpg
+  - https://i.imgur.com/XYDUIhd.jpg
+  - https://i.imgur.com/PzosQ5L.jpg
+  youtube: https://www.youtube.com/embed/Is5PLkHmG8s
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

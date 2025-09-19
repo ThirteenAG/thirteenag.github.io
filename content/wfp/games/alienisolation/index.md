@@ -21,6 +21,10 @@ support:
   version: Any
 tag: mods
 title: 'Alien: Isolation Save Confirmation Dialog Skipper'
+screenshots:
+  background: https://www.feralinteractive.com/data/games/alienisolation-switch/background/keyart.jpg
+  images: []
+  youtube: https://www.youtube.com/embed/5oFyVSWNsoY
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

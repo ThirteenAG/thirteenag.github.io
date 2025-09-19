@@ -30,6 +30,14 @@ support:
   version: Any
 tag: other
 title: Manhunt Widescreen Fix
+screenshots:
+  background: https://media.rockstargames.com/rockstargames-newsite/img/global/downloads/wallpapers/games/manhunt_artworkorange_1600x1200.jpg
+  images:
+  - https://i.imgur.com/6Xktkqx.jpeg
+  - https://i.imgur.com/BZxQD0c.png
+  - https://i.imgur.com/VKKo8g4.jpeg
+  - https://i.imgur.com/k33mNSu.jpeg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

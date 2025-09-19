@@ -26,6 +26,17 @@ support:
   version: v1.1
 tag: nfs
 title: Need for Speed ProStreet Generic Fix
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/nfs-prostreet-key-art.jpg
+  images:
+  - https://i.imgur.com/26Ktjcq.jpg
+  - https://i.imgur.com/7ZDVbIh.jpg
+  - https://i.imgur.com/MO3s6H9.jpg
+  - https://i.imgur.com/W6QDqcI.jpg
+  - https://i.imgur.com/5r8Sbwi.jpg
+  - https://i.imgur.com/Lbx7Uzx.jpg
+  - https://i.imgur.com/uEjCOdX.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

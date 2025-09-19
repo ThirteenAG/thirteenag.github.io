@@ -16,6 +16,17 @@ support:
   version: Any
 tag: other
 title: 'Knight Rider: The Game 2 Widescreen Fix'
+screenshots:
+  background: https://i.imgur.com/ohQxtsR.jpg
+  images:
+  - https://i.imgur.com/B3yka11.jpg
+  - https://i.imgur.com/RiJ2cWy.jpg
+  - https://i.imgur.com/XVqamAN.jpg
+  - https://i.imgur.com/oa9TCGT.jpg
+  - https://i.imgur.com/TVVAGC9.png
+  - https://i.imgur.com/lowoP96.jpg
+  - https://i.imgur.com/0XUsB2E.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the game exe is located.

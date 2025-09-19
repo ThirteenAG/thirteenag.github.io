@@ -23,6 +23,13 @@ support:
   version: ULUS-10490
 tag: gta
 title: GTA Chinatown Wars Fusion Mod [PPSSPP]
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/chinatownwars_biker_2560x1600.jpg
+  images:
+  - https://i.imgur.com/67TiYQE.png
+  - https://i.imgur.com/MaPGP3U.png
+  - https://i.imgur.com/J8gAIjv.jpeg
+  youtube: https://www.youtube.com/embed/CbbNctA5dhI
 ---
 
 1. Download and extract the archive to the directory, where PPSSPP's memstick folder is located.

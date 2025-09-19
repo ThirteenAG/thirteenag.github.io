@@ -30,6 +30,15 @@ support:
   version: Any
 tag: other
 title: 'Condemned: Criminal Origins Widescreen Fix'
+screenshots:
+  background: https://i.imgur.com/JyElC7H.jpg
+  images:
+  - https://i.imgur.com/negsn3x.png
+  - https://i.imgur.com/5nTXCWr.png
+  - https://i.imgur.com/rIYeMx8.png
+  - https://i.imgur.com/jtehxpc.jpg
+  - https://i.imgur.com/00UOaPH.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

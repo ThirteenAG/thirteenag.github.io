@@ -23,6 +23,19 @@ support:
   version: Any
 tag: silenthill
 title: Silent Hill 3 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/DGj7DYJ.jpg
+  images:
+  - https://i.imgur.com/cSDC38M.jpg
+  - https://i.imgur.com/DuvIgpH.jpg
+  - https://i.imgur.com/vfP9jja.jpg
+  - https://i.imgur.com/p39rmpA.png
+  - https://i.imgur.com/KqwK6hb.jpg
+  - https://i.imgur.com/xhrKqU6.jpg
+  - https://i.imgur.com/sfDfpeb.jpg
+  - https://i.imgur.com/ZGFSTiM.jpg
+  - https://i.imgur.com/ik5Ck1t.jpg
+  youtube: https://www.youtube.com/embed/6ukv-o_FLyk
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

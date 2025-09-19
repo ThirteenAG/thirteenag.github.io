@@ -16,6 +16,14 @@ support:
   version: Any
 tag: tonyhawk
 title: Tony Hawk's Pro Skater 2 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/7ymaT52.jpg
+  images:
+  - https://i.imgur.com/fvdKFM7.png
+  - https://i.imgur.com/uxH2iia.jpg
+  - https://i.imgur.com/MBEYeZu.png
+  - https://i.imgur.com/7LMdZvw.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the 'Game' folder, where the exe is located.

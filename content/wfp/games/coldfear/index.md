@@ -23,6 +23,19 @@ support:
   version: Any
 tag: other
 title: Cold Fear Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/8AJdRpl.jpg
+  images:
+  - https://i.imgur.com/s10eDVu.jpg
+  - https://i.imgur.com/RXPx6Ow.jpg
+  - https://i.imgur.com/KH8i1iX.jpg
+  - https://i.imgur.com/c2SD3XM.jpg
+  - https://i.imgur.com/B6vShal.png
+  - https://i.imgur.com/KLjlnfq.jpg
+  - https://i.imgur.com/pb5n0Yp.jpg
+  - https://i.imgur.com/bkrOqsA.jpg
+  - https://i.imgur.com/xC8Zn4B.jpg
+  youtube: https://www.youtube.com/embed/cV1kW5-JyDE
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

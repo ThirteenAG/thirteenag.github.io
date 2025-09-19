@@ -23,6 +23,17 @@ support:
   version: Any
 tag: gta
 title: GTA Vice City Stories Widescreen Fix [PPSSPP]
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/vicecitystories_vcsgirl02_1600x1200.jpg
+  images:
+  - https://i.imgur.com/CltlwfW.jpeg
+  - https://i.imgur.com/BJYpwGc.jpeg
+  - https://i.imgur.com/ObiEEh1.jpeg
+  - https://i.imgur.com/ZCFCPP8.jpeg
+  - https://i.imgur.com/7OE71qu.jpeg
+  - https://i.imgur.com/beCABhU.jpeg
+  - https://i.imgur.com/Mdf36jz.jpeg
+  youtube: https://www.youtube.com/embed/DJUdUjdw3VQ
 ---
 
 1. Download and extract the archive to the directory, where PPSSPP's memstick folder is located.

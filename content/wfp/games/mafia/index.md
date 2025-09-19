@@ -30,6 +30,14 @@ support:
   version: Any*
 tag: other
 title: 'Mafia: The City of Lost Heaven Widescreen Fix'
+screenshots:
+  background: https://i.imgur.com/V9X8Y67.jpg
+  images:
+  - https://i.imgur.com/lAEkXk5.jpg
+  - https://i.imgur.com/3LJKWh7.jpg
+  - https://i.imgur.com/qrQgPJh.jpg
+  - https://i.imgur.com/omHo2Zd.jpg
+  youtube: https://www.youtube.com/embed/DBdyncf5n4g
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

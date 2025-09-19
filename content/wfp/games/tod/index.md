@@ -22,6 +22,14 @@ support:
   version: Any
 tag: other
 title: Total Overdose Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/oZ1BFU6.jpg
+  images:
+  - https://i.imgur.com/7yA1MjH.jpg
+  - https://i.imgur.com/IyieJh7.jpg
+  - https://i.imgur.com/zvqHZ7b.jpg
+  - https://i.imgur.com/IBb9rBs.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

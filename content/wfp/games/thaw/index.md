@@ -16,6 +16,14 @@ support:
   version: Any
 tag: tonyhawk
 title: Tony Hawk's American Wasteland Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/3mBoGfe.jpg
+  images:
+  - https://i.imgur.com/lqBLgLE.jpg
+  - https://i.imgur.com/jR7kNdy.jpg
+  - https://i.imgur.com/w2xMDsY.jpg
+  - https://i.imgur.com/123wWfZ.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the 'Game' folder, where the exe is located.

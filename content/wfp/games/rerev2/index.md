@@ -20,6 +20,13 @@ support:
   version: Ver.5.00
 tag: re
 title: Resident Evil Revelations 2 Fusion Fix
+screenshots:
+  background: https://game.capcom.com/residentevil/pc/img/about/history/rev2/artwork/pop-artwork-l-2-1.jpg
+  images:
+  - https://i.imgur.com/Dz1IVuI.jpeg
+  - https://i.imgur.com/PIOFqVT.jpeg
+  - https://i.imgur.com/TjA8veA.jpeg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

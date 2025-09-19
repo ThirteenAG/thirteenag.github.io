@@ -19,6 +19,19 @@ support:
   version: Any
 tag: other
 title: True Crime New York City Widescreen Fix[+PCSX2F]
+screenshots:
+  background: https://i.imgur.com/DoXeZaa.jpg
+  images:
+  - https://i.imgur.com/ydHgeyQ.jpg
+  - https://i.imgur.com/v0z6m7h.jpg
+  - https://i.imgur.com/hk7RsOJ.jpg
+  - https://i.imgur.com/svcXWEo.jpg
+  - https://i.imgur.com/9LuB8MO.jpg
+  - https://i.imgur.com/e7OKwWk.jpg
+  - https://i.imgur.com/07g9gnp.jpg
+  - https://i.imgur.com/W9Wg82W.jpg
+  - https://i.imgur.com/RDTkLVa.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

@@ -22,6 +22,14 @@ support:
   version: Any
 tag: other
 title: Sniper Elite Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/BY2n2fb.jpg
+  images:
+  - https://i.imgur.com/ZrIbeZl.jpg
+  - https://i.imgur.com/KvFAnFy.jpg
+  - https://i.imgur.com/CAalcDy.jpg
+  - https://i.imgur.com/lYM6tmd.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

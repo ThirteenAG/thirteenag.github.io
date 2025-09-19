@@ -16,6 +16,13 @@ support:
   version: Any
 tag: other
 title: Deer Avenger 4 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/uMpMYNM.jpg
+  images:
+  - https://i.imgur.com/6liiphX.jpg
+  - https://i.imgur.com/5mDicrg.jpg
+  - https://i.imgur.com/q8ry6qw.jpg
+  youtube: https://www.youtube.com/embed/kjN3YqIPVEw
 ---
 
 * Download and extract the archive to the game directory, where the exe is located.

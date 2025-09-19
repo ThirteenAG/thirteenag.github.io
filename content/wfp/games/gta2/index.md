@@ -23,6 +23,19 @@ support:
   version: v9.6
 tag: gta
 title: Grand Theft Auto 2 Widescreen Fix
+screenshots:
+  background: https://i.imgur.com/DMu0xmp.jpg
+  images:
+  - https://i.imgur.com/g1zk9ba.jpg
+  - https://i.imgur.com/zvNushd.jpg
+  - https://i.imgur.com/a1f4Gjm.jpg
+  - https://i.imgur.com/qZYrzej.jpg
+  - https://i.imgur.com/xB1ASVC.jpg
+  - https://i.imgur.com/URBS1bH.jpg
+  - https://i.imgur.com/xy4d5Vj.jpg
+  - https://i.imgur.com/mH3pq95.jpg
+  - https://i.imgur.com/MDF0bgR.jpg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

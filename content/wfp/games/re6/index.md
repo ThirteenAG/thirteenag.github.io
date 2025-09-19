@@ -20,6 +20,14 @@ support:
   version: Any (v1.1.0 recommended)
 tag: re
 title: Resident Evil 6 Fusion Fix
+screenshots:
+  background: https://www.residentevil.com/6/_asset/images/firstView-bg.jpg
+  images:
+  - https://i.imgur.com/SBuBEnJ.jpeg
+  - https://i.imgur.com/cO876Ac.jpeg
+  - https://i.imgur.com/oMV2KNa.jpeg
+  - https://i.imgur.com/UDaVn2T.png
+  youtube: ''
 ---
 
 1. Download and extract the archive to the game directory, where the exe is located.

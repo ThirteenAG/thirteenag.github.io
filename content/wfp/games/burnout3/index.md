@@ -22,6 +22,19 @@ support:
   version: SLUS-21050
 tag: other
 title: 'Burnout 3: Takedown Widescreen Fix [PCSX2F]'
+screenshots:
+  background: https://media.contentapi.ea.com/content/dam/gin/images/2017/01/burnout-takedown-keyart.jpg
+  images:
+  - https://i.imgur.com/nZrPO21.jpg
+  - https://i.imgur.com/5Zqj5Nq.jpg
+  - https://i.imgur.com/wAwpchZ.jpg
+  - https://i.imgur.com/9HtjDiy.jpg
+  - https://i.imgur.com/X26TNyk.jpg
+  - https://i.imgur.com/5JGbswW.jpg
+  - https://i.imgur.com/yEeUBS1.jpg
+  - https://i.imgur.com/QhvvlSn.jpg
+  - https://i.imgur.com/3psGTMz.jpg
+  youtube: https://www.youtube.com/embed/7YAg1NB6yqk
 ---
 
 1. Download and extract [PCSX2 Fork With Plugins](https://github.com/ASI-Factory/PCSX2-Fork-With-Plugins/releases/tag/latest).

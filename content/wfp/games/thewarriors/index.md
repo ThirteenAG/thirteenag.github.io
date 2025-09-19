@@ -23,6 +23,11 @@ support:
   version: Any (tested on ULUS-10213)
 tag: mods
 title: The Warriors Fusion Mod [PPSSPP]
+screenshots:
+  background: https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/downloads/wallpapers/games/thewarriors_poster_1600x1200.jpg
+  images:
+  - https://i.imgur.com/MX8DYHv.jpeg
+  youtube: ''
 ---
 
 1. Download and extract the archive to the directory, where PPSSPP's memstick folder is located.
