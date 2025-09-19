@@ -6,6 +6,7 @@ import WFPHeader from "@/components/ui/wfp/WFPHeader.astro";
 import WFPTagButton from "@/components/ui/wfp/WFPTagButton.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { wfpReleasesInfo } from "@/components/ui/wfp/helpers";
 
 interface Props {
 	tag: string;
@@ -59,7 +60,14 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 			</div>
 		</div>
 
-		{games.map((entry) => <WFPGameCard entry={entry} />)}
+		{
+			games.map((entry) => (
+				<WFPGameCard
+					entry={entry}
+					releasesInfo={wfpReleasesInfo[entry.data.id]}
+				/>
+			))
+		}
 
 		<div class="flex justify-center">
 			<Button href="#top" variant="primary">Back to Top</Button>

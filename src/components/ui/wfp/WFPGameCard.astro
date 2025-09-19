@@ -11,12 +11,14 @@ import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/comp
 import WFPScreenshots from "./card/WFPScreenshots.astro";
 import { Image } from "astro:assets";
 import WFPImageStack from "./card/WFPImageStack.astro";
+import type { ReleaseInfo } from "@/lib/github/release";
 
 interface Props {
 	entry: CollectionEntry<"wfp-games">;
+	releasesInfo?: ReleaseInfo;
 }
 
-const { entry } = Astro.props as Props;
+const { entry, releasesInfo } = Astro.props as Props;
 const { Content } = await render(entry);
 ---
 
@@ -47,8 +49,21 @@ const { Content } = await render(entry);
 			>
 				{entry.data.title}
 			</a>
+			{
+				releasesInfo && releasesInfo.new && (
+					<span class="loader absolute z-1 top-[6px] right-[6px] bg-red-500"></span>
+				)
+			}
 		</h3>
+		{
+			releasesInfo && (
+				<div class="flex-none text-xs bg-blue-400 text-center font-bold text-white p-1">
+					Updated {releasesInfo.upload_time} and downloaded {releasesInfo.download_count} times since
+				</div>
+			)
+		}
 		<div class="p-2 text-sm flex-auto">
+	
 			<div class="flex flex-row justify-between items-center">
 				<div class="flex flex-col">
 					<div class="flex flex-row">
@@ -143,3 +158,24 @@ const { Content } = await render(entry);
 	</div>
 </div>
 
+<style>
+.loader {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-in infinite;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+} 
+</style>
