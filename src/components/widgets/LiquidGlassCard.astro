@@ -62,6 +62,7 @@ const { title, coverImage, href } = Astro.props as Props;
 			class="w-full aspect-video flex-none rounded-xl object-cover"
 			src={coverImage}
 			alt={title}
+			loading="eager"
 			formats={["avif", "webp"]}
 		/>
 		<!-- <iframe
@@ -76,7 +77,10 @@ const { title, coverImage, href } = Astro.props as Props;
 		</div>
 	</div>
 
-	<a href={href} class="z-[5] absolute top-0 bottom-0 left-0 right-0"></a>
+	<a
+		href={href}
+		aria-label={title}
+		class="z-[5] absolute top-0 bottom-0 left-0 right-0"></a>
 </div>
 
 <style>
