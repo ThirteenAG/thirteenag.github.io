@@ -96,8 +96,8 @@ function init(canvasId: string) {
 
     canvas.width = window.innerWidth * dpi;
     canvas.height = window.innerHeight * dpi;
-    canvas.style.width = window.innerWidth + "px";
-    canvas.style.height = window.innerHeight + "px";
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight}px`;
 
     raindrops = new Raindrops(
         canvas.width,
@@ -139,8 +139,8 @@ function init(canvasId: string) {
         var dpi = window.devicePixelRatio;
         canvas.width = window.innerWidth * dpi;
         canvas.height = window.innerHeight * dpi;
-        canvas.style.width = window.innerWidth + "px";
-        canvas.style.height = window.innerHeight + "px";
+        canvas.style.width = `${window.innerWidth}px`;
+        canvas.style.height = `${window.innerHeight}px`;
 
         raindrops.resize(canvas.width, canvas.height);
         renderer.resize(canvas.width, canvas.height);

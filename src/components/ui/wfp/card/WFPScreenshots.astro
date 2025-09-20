@@ -6,7 +6,7 @@ import {
 	DialogContent,
 	DialogClose,
 } from "@/components/starwind/dialog";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
@@ -50,18 +50,22 @@ if (!screenshots) return;
 					screenshots.images && screenshots.images.length > 0 ? (
 						screenshots.images.map((img) => (
 							<div class="w-full aspect-video bg-black">
-								<img
+								<Picture
 									src={img}
 									alt="Screenshot"
+									formats={["avif", "webp"]}
 									class="w-full h-full object-contain"
+									height="1920"
+									width="1080"
 								/>
 							</div>
 						))
 					) : (
-						<Image
+						<Picture
 							src={entry.data.after}
 							alt="Screenshot"
 							class="w-full h-full object-contain bg-black"
+							formats={["avif", "webp"]}
 						/>
 					)
 				}

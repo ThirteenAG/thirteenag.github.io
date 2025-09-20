@@ -12,6 +12,10 @@ export default defineConfig({
 		prefetchAll: true,
 	},
 
+	image: {
+		remotePatterns: [{ protocol: "https" }],
+	},
+
 	vite: {
 		plugins: [tailwindcss()],
 	},

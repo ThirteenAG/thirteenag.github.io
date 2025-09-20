@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/starwind/button";
 import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/components/starwind/dropdown";
 import WFPScreenshots from "./card/WFPScreenshots.astro";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import WFPImageStack from "./card/WFPImageStack.astro";
 import type { ReleaseInfo } from "@/lib/github/release";
 import { Icon } from "astro-icon/components";
@@ -24,16 +24,18 @@ const { Content } = await render(entry);
 
 <div
 	id={entry.id}
-	class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl w-full bg-white shadow-lg overflow-clip"
+	class="grid grid-cols-1 lg:grid-cols-2 rounded-2xl w-full bg-white shadow-lg overflow-clip border-1"
+	style={`border-color: ${entry.data.color === "rgba(0, 0, 0, 0)" ? "#000" : entry.data.color}`}
 >
 	<WFPImageStack entry={entry} />
 	<div class="flex flex-col w-auto">
 		<h3 class="flex-none relative w-full">
 			{
 				entry.data.stripe ? (
-					<Image
+					<Picture
 						src={entry.data.stripe}
 						alt={entry.data.title}
+						formats={['avif', 'webp']}
 						class="w-full h-[50px] object-cover"
 					/>
 				) : (
@@ -89,7 +91,7 @@ const { Content } = await render(entry);
 							)
 						}
 					</div>
-					<h4 class="font-bold text-lg underline">Installation:</h4>
+					<h4 class="font-bold text-md underline">Installation:</h4>
 				</div>
 				<div class="flex flex-row gap-2">
 					{
@@ -119,7 +121,7 @@ const { Content } = await render(entry);
 			</section>
 		</div>
 		<div
-			class="flex-none p-2 flex flex-row items-center justify-center"
+			class="flex-none p-2 pt-0 flex flex-row items-center justify-center"
 		>
 			<Button
 				variant="warning"

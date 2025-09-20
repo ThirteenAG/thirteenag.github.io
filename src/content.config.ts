@@ -69,7 +69,7 @@ const WFPGamesCollection = defineCollection({
         after: image(),
         screenshots: z.object({
             background: optionalUrl(),
-            images: z.optional(z.array(optionalUrl())),
+            images: z.optional(z.array(url())),
             youtube: optionalUrl(),
         }).optional(),
     }),

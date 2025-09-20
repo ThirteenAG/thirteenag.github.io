@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 
 interface Props {
 	title: string;
@@ -24,7 +24,7 @@ const { title, coverImage, href } = Astro.props as Props;
 </svg>
 
 <div
-	class="glass-card max-w-sm relative p-4 hover:p-5 rounded-3xl overflow-hidden shadow-[0_6px_24px_rgba(0,0,0,0.2)]"
+	class="glass-card max-w-sm relative p-4 rounded-3xl overflow-hidden shadow-[0_6px_24px_rgba(0,0,0,0.2)]"
 >
 	<!-- Blurred + distorted backdrop -->
 	<div
@@ -58,11 +58,18 @@ const { title, coverImage, href } = Astro.props as Props;
 	<div
 		class="relative z-[4] h-full text-black/90 text-center flex flex-col items-center justify-center gap-2"
 	>
-		<Image
-			class="w-full flex-none rounded-xl object-cover"
+		<Picture
+			class="w-full aspect-video flex-none rounded-xl object-cover"
 			src={coverImage}
 			alt={title}
+			formats={["avif", "webp"]}
 		/>
+		<!-- <iframe
+			class="w-full aspect-video flex-none rounded-4xl overflow-hidden"
+			style="zoom:0.25;"
+			src={href}
+			title={title}
+			loading="lazy"></iframe> -->
 		<h3 class="m-0 text-xl flex-none font-semibold">{title}</h3>
 		<div class="m-0 flex-auto flex flex-col align-middle justify-center">
 			<slot />

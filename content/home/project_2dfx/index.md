@@ -1,6 +1,6 @@
 ---
 title: Project2DFX
-href: https://thirteenag.github.io/iv
+href: https://thirteenag.github.io/p2dfx
 image: cover.png
 ---
 
