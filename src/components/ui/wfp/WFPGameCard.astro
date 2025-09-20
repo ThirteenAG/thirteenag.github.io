@@ -102,6 +102,7 @@ const { Content } = await render(entry);
 										href={icon.url}
 										target="_blank"
 										class="hover:text-blue-500"
+										aria-label={icon.name}
 									>
 										<Icon name={icon.name} class="h-8 w-8 fill-current" />
 									</a>
@@ -135,7 +136,13 @@ const { Content } = await render(entry);
 				entry.data.downloads && (
 					<Dropdown>
 						<DropdownTrigger asChild>
-							<Button variant="warning" class="rounded-l-none pl-[8px]"><Icon name="chevron-down" class="fill-current"/></Button>
+							<Button 
+								variant="warning" 
+								class="rounded-l-none pl-[8px]" 
+								aria-label="More download options"
+							>
+								<Icon name="chevron-down" class="fill-current"/>
+							</Button>
 						</DropdownTrigger>
 						<DropdownContent>
 						{

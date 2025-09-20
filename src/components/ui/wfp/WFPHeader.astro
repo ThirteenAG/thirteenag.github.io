@@ -12,35 +12,47 @@ import {
 } from "@/components/starwind/dropdown";
 import Button from "@/components/starwind/button";
 import MenuIcon from "@tabler/icons/outline/menu.svg";
+
+const navbar = [
+	{
+		name: "Github",
+		href: "https://github.com/ThirteenAG/WidescreenFixesPack",
+		icon: "github",
+	},
+	{
+		name: "Report an issue",
+		href: "https://github.com/ThirteenAG/WidescreenFixesPack/issues",
+		icon: "github-issue",
+	},
+];
 ---
 
 <header id="top" class="flex-none bg-black text-white w-full h-[50px] text-sm">
 	<nav role="navigation" class="flex flex-row align-middle h-full">
 		<div class="flex-none flex items-center justify-center">
-			<a href="/wfp/" class="hover:bg-white px-2">
+			<a
+				href="/wfp/"
+				class="hover:bg-white px-2"
+				aria-label="Widescreen Fixes Pack Home"
+			>
 				<LogoSvg class="w-[250px] h-[50px] object-contain" />
 			</a>
 		</div>
 
 		<!-- Navbar -->
 		<div class="flex-auto hidden lg:flex flex-row align-middle">
-			<a
-				href="https://github.com/ThirteenAG/WidescreenFixesPack"
-				target="_blank"
-				class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
-			>
-				<Icon name="github" class="h-4 w-4 fill-current" />
-				Github
-			</a>
-
-			<a
-				href="https://github.com/ThirteenAG/WidescreenFixesPack/issues"
-				target="_blank"
-				class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
-			>
-				<Icon name="github-issue" class="h-4 w-4 fill-current" />
-				Report an issue
-			</a>
+			{
+				navbar.map((item) => (
+					<a
+						href={item.href}
+						target="_blank"
+						class="hover:bg-white px-2 hover:text-black flex-none h-full flex items-center gap-1"
+					>
+						<Icon name={item.icon} class="h-4 w-4 fill-current" />
+						{item.name}
+					</a>
+				))
+			}
 		</div>
 
 		<Sponsors class="flex-none hidden lg:flex" />
@@ -55,17 +67,22 @@ import MenuIcon from "@tabler/icons/outline/menu.svg";
 					>
 				</DropdownTrigger>
 				<DropdownContent class="min-w-[15rem]">
-					<DropdownItem
-						><Icon name="github" class="h-4 w-4 fill-current" /><a
-							>Github</a
-						></DropdownItem
-					>
-					<DropdownItem
-						><Icon
-							name="github-issue"
-							class="h-4 w-4 fill-current"
-						/><a>Report an issue</a></DropdownItem
-					>
+					{
+						navbar.map((item) => (
+							<DropdownItem
+								as="a"
+								href={item.href}
+								target="_blank"
+								class="hover:bg-[var(--starwind-primary)] hover:text-white cursor-pointer"
+							>
+								<Icon
+									name={item.icon}
+									class="h-4 w-4 fill-current"
+								/>
+								{item.name}
+							</DropdownItem>
+						))
+					}
 					<DropdownSeparator />
 					<DropdownLabel>Sponsors</DropdownLabel>
 					<Sponsors type="dropdown" />

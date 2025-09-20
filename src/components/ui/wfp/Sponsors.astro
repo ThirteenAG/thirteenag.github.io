@@ -16,6 +16,7 @@ interface Props {
 const { class: className, type = "header" } = Astro.props;
 
 const sponsors = await getCollection("sponsors");
+sponsors.sort((a, b) => a.data.name.localeCompare(b.data.name));
 ---
 
 {
@@ -29,6 +30,7 @@ const sponsors = await getCollection("sponsors");
 							target="_blank"
 							style={`--sponsor-color: ${sponsor.data.color}`}
 							class={`bg-[var(--sponsor-color)] hover:bg-white text-white hover:text-[var(--sponsor-color)] px-2 h-full flex items-center`}
+							aria-label={sponsor.data.name}
 						>
 							<Icon
 								name={sponsor.data.icon}
@@ -49,7 +51,7 @@ const sponsors = await getCollection("sponsors");
 				href={sponsor.data.url}
 				target="_blank"
 				style={`--sponsor-color: ${sponsor.data.color}`}
-				class={`text-[var(--sponsor-color)] hover:bg-[var(--sponsor-color)] hover:text-white`}
+				class="text-[var(--sponsor-color)] hover:bg-[var(--sponsor-color)] hover:text-white cursor-pointer"
 			>
 				<Icon name={sponsor.data.icon} class="h-5 w-5 fill-current" />
 				{sponsor.data.name}

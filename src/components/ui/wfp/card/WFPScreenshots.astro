@@ -9,6 +9,7 @@ import {
 import { Picture } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
+import Youtube from "@/components/widgets/Youtube.astro";
 
 interface Props {
 	entry: CollectionEntry<"wfp-games">;
@@ -36,13 +37,7 @@ if (!screenshots) return;
 				{
 					screenshots.youtube ? (
 						<div class="w-full aspect-video">
-							<iframe
-								class="w-full h-full"
-								src={screenshots.youtube}
-								title="YouTube video player"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen
-							/>
+							<Youtube src={screenshots.youtube} />
 						</div>
 					) : null
 				}
