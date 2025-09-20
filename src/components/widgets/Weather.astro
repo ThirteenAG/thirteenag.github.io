@@ -1,10 +1,14 @@
 ---
+import AssetPrefetch from "@/lib/rain-effect/AssetPrefetch.astro";
+
 interface Props {
 	type: "rain" | "storm" | "fallout" | "drizzle" | "sunny";
 }
 
 const { type } = Astro.props;
 ---
+
+<AssetPrefetch />
 
 <div class="fixed -z-50 top-0 left-0 w-full h-full">
 	<div class="slideshow">
@@ -17,9 +21,7 @@ const { type } = Astro.props;
 <script>
 	import { loadTextures } from "@/lib/rain-effect";
 
-	window.onload = () => {
-		loadTextures("container-weather");
-	};
+	loadTextures("container-weather");
 </script>
 
 <style>

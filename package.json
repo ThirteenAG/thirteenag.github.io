@@ -1,40 +1,38 @@
 {
-  "name": "fusionfix",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^4.3.5",
-    "@astrojs/react": "^4.3.1",
-    "@biomejs/biome": "^2.2.4",
-    "@fontsource/lora": "^5.2.7",
-    "@fontsource/montserrat": "^5.2.7",
-    "@fontsource/warnes": "^5.2.7",
-    "@keystatic/astro": "^5.0.6",
-    "@keystatic/core": "^0.5.48",
-    "@tabler/icons": "^3.35.0",
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/vite": "^4",
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
-    "astro": "^5.13.7",
-    "astro-icon": "^1.1.5",
-    "github-buttons": "^2.29.1",
-    "gsap": "^3.13.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "sharp": "^0.34.4",
-    "tailwind-merge": "^3.3.1",
-    "tailwind-variants": "^2.1.0",
-    "tailwindcss": "^4",
-    "tw-animate-css": "^1.3.8"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.16"
-  }
+	"name": "fusionfix",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@biomejs/biome": "^2.2.4",
+		"@fontsource/lora": "^5.2.8",
+		"@fontsource/montserrat": "^5.2.8",
+		"@fontsource/warnes": "^5.2.8",
+		"@keystatic/astro": "^5.0.6",
+		"@keystatic/core": "^0.5.48",
+		"@tabler/icons": "^3.35.0",
+		"@tailwindcss/forms": "^0.5.10",
+		"@tailwindcss/vite": "^4.1.13",
+		"@types/react": "^19.1.13",
+		"@types/react-dom": "^19.1.9",
+		"astro": "^5.13.9",
+		"astro-icon": "^1.1.5",
+		"github-buttons": "^2.29.1",
+		"gsap": "^3.13.0",
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1",
+		"sharp": "^0.34.4",
+		"tailwind-merge": "^3.3.1",
+		"tailwind-variants": "^2.1.0",
+		"tailwindcss": "^4.1.13",
+		"tw-animate-css": "^1.3.8"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.18"
+	}
 }

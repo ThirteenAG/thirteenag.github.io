@@ -1,22 +1,12 @@
-import DropColor from './assets/img/drop-color.png';
-import DropAlpha from './assets/img/drop-alpha.png';
-import TextureRainFg from './assets/img/weather/texture-rain-fg.png';
-import TextureRainBg from './assets/img/weather/texture-rain-bg.png';
-import TextureSunFg from './assets/img/weather/texture-sun-fg.png';
-import TextureSunBg from './assets/img/weather/texture-sun-bg.png';
-import TextureFalloutFg from './assets/img/weather/texture-fallout-fg.png';
-import TextureFalloutBg from './assets/img/weather/texture-fallout-bg.png';
-import TextureDrizzleFg from './assets/img/weather/texture-drizzle-fg.png';
-import TextureDrizzleBg from './assets/img/weather/texture-drizzle-bg.png';
-import TextureStormLightningFg from './assets/img/weather/texture-storm-lightning-fg.png';
-import TextureStormLightningBg from './assets/img/weather/texture-storm-lightning-bg.png';
-import loadImages from './image-loader';
+// Libraries
+import { loadAssets } from './asset-loader';
 import Raindrops from './raindrops';
 import createCanvas from './create-canvas';
 import RainRenderer from './rain-renderer';
 import { gsap } from 'gsap';
 import { chance, random } from './random';
 import times from './times';
+import { defaultAssets } from './default-assets';
 
 let textureRainFg: HTMLImageElement, textureRainBg: HTMLImageElement,
     textureStormLightningFg: HTMLImageElement, textureStormLightningBg: HTMLImageElement,
@@ -51,42 +41,30 @@ const blend = { v: 0 };
 
 
 
-export function loadTextures(canvasId: string) {
+export async function loadTextures(canvasId: string) {
     // if correct texture overrides are provided,then load them, otherwise use the existing ones
-    loadImages([
-        { name: "dropAlpha", src: DropAlpha.src },
-        { name: "dropColor", src: DropColor.src },
-        { name: "textureRainFg", src: TextureRainFg.src },
-        { name: "textureRainBg", src: TextureRainBg.src },
-        { name: "textureStormLightningFg", src: TextureStormLightningFg.src },
-        { name: "textureStormLightningBg", src: TextureStormLightningBg.src },
-        { name: "textureFalloutFg", src: TextureFalloutFg.src },
-        { name: "textureFalloutBg", src: TextureFalloutBg.src },
-        { name: "textureSunFg", src: TextureSunFg.src },
-        { name: "textureSunBg", src: TextureSunBg.src },
-        { name: "textureDrizzleFg", src: TextureDrizzleFg.src },
-        { name: "textureDrizzleBg", src: TextureDrizzleBg.src },
-    ]).then((images) => {
-        textureRainFg = images.textureRainFg.img;
-        textureRainBg = images.textureRainBg.img;
 
-        textureFalloutFg = images.textureFalloutFg.img;
-        textureFalloutBg = images.textureFalloutBg.img;
+    const assets = await loadAssets(defaultAssets);
 
-        textureStormLightningFg = images.textureStormLightningFg.img;
-        textureStormLightningBg = images.textureStormLightningBg.img;
+    textureRainFg = assets.textureRainFg.img;
+    textureRainBg = assets.textureRainBg.img;
 
-        textureSunFg = images.textureSunFg.img;
-        textureSunBg = images.textureSunBg.img;
+    textureFalloutFg = assets.textureFalloutFg.img;
+    textureFalloutBg = assets.textureFalloutBg.img;
 
-        textureDrizzleFg = images.textureDrizzleFg.img;
-        textureDrizzleBg = images.textureDrizzleBg.img;
+    textureStormLightningFg = assets.textureStormLightningFg.img;
+    textureStormLightningBg = assets.textureStormLightningBg.img;
 
-        dropColor = images.dropColor.img;
-        dropAlpha = images.dropAlpha.img;
+    textureSunFg = assets.textureSunFg.img;
+    textureSunBg = assets.textureSunBg.img;
 
-        init(canvasId);
-    });
+    textureDrizzleFg = assets.textureDrizzleFg.img;
+    textureDrizzleBg = assets.textureDrizzleBg.img;
+
+    dropColor = assets.dropColor.img;
+    dropAlpha = assets.dropAlpha.img;
+
+    init(canvasId);
 }
 
 function init(canvasId: string) {

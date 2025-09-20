@@ -1,0 +1,16 @@
+---
+import { defaultAssets } from "./default-assets";
+---
+
+<div class="hidden">
+	{
+		Object.values(defaultAssets).map((asset) => (
+			<img
+				src={asset.src}
+				alt="preload"
+				loading="eager"
+				fetchpriority="high"
+			/>
+		))
+	}
+</div>

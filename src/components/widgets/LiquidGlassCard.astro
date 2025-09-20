@@ -63,6 +63,7 @@ const { title, coverImage, href } = Astro.props as Props;
 			src={coverImage}
 			alt={title}
 			loading="eager"
+			fetchpriority="high"
 			formats={["avif", "webp"]}
 		/>
 		<!-- <iframe

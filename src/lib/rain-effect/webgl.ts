@@ -79,7 +79,7 @@ export function createShader(gl: WebGLRenderingContext, script: string, type: GL
 
     return shader;
 }
-export function createTexture(gl: WebGLRenderingContext, source: TexImageSource, i): WebGLTexture {
+export function createTexture(gl: WebGLRenderingContext, source: TexImageSource | null, i: number): WebGLTexture {
     var texture = gl.createTexture();
     activeTexture(gl, i);
     gl.bindTexture(gl.TEXTURE_2D, texture);
@@ -90,9 +90,7 @@ export function createTexture(gl: WebGLRenderingContext, source: TexImageSource,
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 
-    if (source == null) {
-        return texture;
-    } else {
+    if (source !== null) {
         updateTexture(gl, source);
     }
 
@@ -103,7 +101,9 @@ export type UniformType = "1f" | "1fv" | "1i" | "1iv" | "2f" | "2fv" | "2i" | "2
 
 export function createUniform(gl: WebGLRenderingContext, program: WebGLProgram, type: UniformType, name: string, ...args: Array<any>) {
     const location = gl.getUniformLocation(program, `u_${name}`);
-    gl[`uniform${type}`](location, ...args);
+    if (location) {
+        gl[`uniform${type}`](location, ...args);
+    }
 }
 
 export function activeTexture(gl: WebGLRenderingContext, i: number) {
@@ -129,6 +129,6 @@ export function setRectangle(gl: WebGLRenderingContext, x: number, y: number, wi
         x2, y2]), gl.STATIC_DRAW);
 }
 
-function error(msg: any) {
+function error(msg: unknown) {
     console.error(msg);
 }

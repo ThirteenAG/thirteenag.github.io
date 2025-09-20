@@ -42,7 +42,7 @@ export default class GL {
 
     createTexture(source: TexImageSource | null, i: number): WebGLTexture {
         // WebGLUtils.createTexture tolerates null sources at runtime; cast for TS.
-        return WebGLUtils.createTexture(this.gl, source as unknown as TexImageSource, i);
+        return WebGLUtils.createTexture(this.gl, source, i);
     }
 
     createUniform(type: UniformType, name: string, ...v: Array<number | boolean | Float32List | Int32List>): void {
