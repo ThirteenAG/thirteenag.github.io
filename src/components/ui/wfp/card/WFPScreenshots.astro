@@ -45,13 +45,14 @@ if (!screenshots) return;
 					screenshots.images && screenshots.images.length > 0 ? (
 						screenshots.images.map((img) => (
 							<div class="w-full aspect-video bg-black">
-								<Picture
+								<img
 									src={img}
 									alt="Screenshot"
-									formats={["avif", "webp"]}
+									loading="lazy"
+									decoding="async"
 									class="w-full h-full object-contain"
-									height="1920"
-									width="1080"
+									width="1920"
+									height="1080"
 								/>
 							</div>
 						))
