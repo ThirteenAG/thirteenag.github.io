@@ -10,6 +10,7 @@ import { Picture } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 import Youtube from "@/components/widgets/Youtube.astro";
+import FullscreenDialogueContent from "@/components/widgets/FullscreenDialogueContent.astro";
 
 interface Props {
 	entry: CollectionEntry<"wfp-games">;
@@ -26,9 +27,9 @@ if (!screenshots) return;
 			<Icon name="images" class="fill-current" />Screenshots
 		</Button>
 	</DialogTrigger>
-	<DialogContent
+	<FullscreenDialogueContent
 		style={`background-image: url(${screenshots.background}); background-size: cover; background-position: center;`}
-		class="screenshot-modal h-[calc(95dvh)] max-h-[calc(95dvh)] w-[95vw] max-w-[95vw] border-transparent bg-white"
+		class="screenshot-modal border-transparent bg-white"
 	>
 		<div class="h-full w-full overflow-auto">
 			<div
@@ -85,7 +86,7 @@ if (!screenshots) return;
 				<Button variant="default">Close</Button>
 			</DialogClose>
 		</div>
-	</DialogContent>
+	</FullscreenDialogueContent>
 </Dialog>
 
 <script>
