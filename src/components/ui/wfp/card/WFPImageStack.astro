@@ -26,15 +26,7 @@ const { entry } = Astro.props;
 		src={entry.data.logo}
 		alt={entry.data.title}
 		formats={["avif", "webp"]}
-		class="game-logo z-2 absolute inset-[25%] w-[50%] h-[50%] object-contain visible hover:invisible"
+		style="inset: 25%; width: 50%; height: 50%;"
+		class="z-2 absolute object-contain visible hover:invisible transition-all duration-0 delay-[180s] hover:delay-0"
 	/>
 </div>
-
-<style>
-	.game-logo {
-		transition: 0s 180s;
-	}
-	.game-logo:hover {
-		transition: 0s;
-	}
-</style>
