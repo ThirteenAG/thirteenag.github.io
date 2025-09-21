@@ -1,6 +1,6 @@
-import createCanvas from "./create-canvas.js";
-import times from "./times.js";
-import { random, chance } from "./random.js";
+import createCanvas from "./utils/create-canvas.js";
+import times from "./utils/times.js";
+import { random, chance } from "./utils/random.js";
 
 const dropSize = 64;
 

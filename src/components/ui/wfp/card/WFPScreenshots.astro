@@ -28,11 +28,11 @@ if (!screenshots) return;
 	</DialogTrigger>
 	<DialogContent
 		style={`background-image: url(${screenshots.background}); background-size: cover; background-position: center;`}
-		class="h-[90vh] max-h-[90vh] w-[95vw] max-w-[95vw] border-transparent bg-white"
+		class="screenshot-modal h-[90vh] max-h-[90vh] w-[95vw] max-w-[95vw] border-transparent bg-white"
 	>
 		<div class="h-full w-full overflow-auto">
 			<div
-				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4"
+				class="gallery grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4"
 			>
 				{
 					screenshots.youtube ? (
@@ -44,7 +44,11 @@ if (!screenshots) return;
 				{
 					screenshots.images && screenshots.images.length > 0 ? (
 						screenshots.images.map((img) => (
-							<div class="w-full aspect-video bg-black">
+							<a
+								class="w-full aspect-video bg-black"
+								href={img}
+								target="_blank"
+							>
 								<img
 									src={img}
 									alt="Screenshot"
@@ -54,15 +58,21 @@ if (!screenshots) return;
 									width="1920"
 									height="1080"
 								/>
-							</div>
+							</a>
 						))
 					) : (
-						<Picture
-							src={entry.data.after}
-							alt="Screenshot"
-							class="w-full h-full object-contain bg-black"
-							formats={["avif", "webp"]}
-						/>
+						<a
+							class="w-full aspect-video bg-black"
+							href={entry.data.after.src}
+							target="_blank"
+						>
+							<Picture
+								src={entry.data.after}
+								alt="Screenshot"
+								class="w-full h-full object-contain bg-black"
+								formats={["avif", "webp"]}
+							/>
+						</a>
 					)
 				}
 			</div>
@@ -77,3 +87,24 @@ if (!screenshots) return;
 		</div>
 	</DialogContent>
 </Dialog>
+
+<script>
+	import lightGallery from "lightgallery";
+	import "lightgallery/css/lightgallery.css";
+
+	const modals = document.querySelectorAll(
+		".screenshot-modal",
+	) as NodeListOf<HTMLDialogElement>;
+
+	modals.forEach((modal) => {
+		const gallery = modal.querySelector(".gallery") as HTMLDivElement;
+
+		lightGallery(gallery, {
+			container: modal,
+			selector: "a",
+			download: false,
+			thumbnail: false,
+			speed: 500,
+		});
+	});
+</script>

@@ -1,15 +1,15 @@
-import DropColor from "./assets/img/drop-color.png";
-import DropAlpha from "./assets/img/drop-alpha.png";
-import TextureRainFg from "./assets/img/weather/texture-rain-fg.png";
-import TextureRainBg from "./assets/img/weather/texture-rain-bg.png";
-import TextureSunFg from "./assets/img/weather/texture-sun-fg.png";
-import TextureSunBg from "./assets/img/weather/texture-sun-bg.png";
-import TextureFalloutFg from "./assets/img/weather/texture-fallout-fg.png";
-import TextureFalloutBg from "./assets/img/weather/texture-fallout-bg.png";
-import TextureDrizzleFg from "./assets/img/weather/texture-drizzle-fg.png";
-import TextureDrizzleBg from "./assets/img/weather/texture-drizzle-bg.png";
-import TextureStormLightningFg from "./assets/img/weather/texture-storm-lightning-fg.png";
-import TextureStormLightningBg from "./assets/img/weather/texture-storm-lightning-bg.png";
+import DropColor from "./img/drop-color.png";
+import DropAlpha from "./img/drop-alpha.png";
+import TextureRainFg from "./img/weather/texture-rain-fg.png";
+import TextureRainBg from "./img/weather/texture-rain-bg.png";
+import TextureSunFg from "./img/weather/texture-sun-fg.png";
+import TextureSunBg from "./img/weather/texture-sun-bg.png";
+import TextureFalloutFg from "./img/weather/texture-fallout-fg.png";
+import TextureFalloutBg from "./img/weather/texture-fallout-bg.png";
+import TextureDrizzleFg from "./img/weather/texture-drizzle-fg.png";
+import TextureDrizzleBg from "./img/weather/texture-drizzle-bg.png";
+import TextureStormLightningFg from "./img/weather/texture-storm-lightning-fg.png";
+import TextureStormLightningBg from "./img/weather/texture-storm-lightning-bg.png";
 
 export type Asset = {
     img?: HTMLImageElement;

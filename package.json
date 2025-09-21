@@ -24,6 +24,7 @@
 		"astro-icon": "^1.1.5",
 		"github-buttons": "^2.29.1",
 		"gsap": "^3.13.0",
+		"lightgallery": "2.9.0-beta.1",
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1",
 		"sharp": "^0.34.4",

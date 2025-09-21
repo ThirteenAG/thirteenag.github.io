@@ -1,12 +1,12 @@
 // Libraries
-import { loadAssets } from './asset-loader';
+import { loadAssets } from './assets/loader';
 import Raindrops from './raindrops';
-import createCanvas from './create-canvas';
+import createCanvas from './utils/create-canvas';
 import RainRenderer from './rain-renderer';
 import { gsap } from 'gsap';
-import { chance, random } from './random';
-import times from './times';
-import { defaultAssets } from './default-assets';
+import { chance, random } from './utils/random';
+import times from './utils/times';
+import { defaultAssets } from './assets';
 
 let textureRainFg: HTMLImageElement, textureRainBg: HTMLImageElement,
     textureStormLightningFg: HTMLImageElement, textureStormLightningBg: HTMLImageElement,

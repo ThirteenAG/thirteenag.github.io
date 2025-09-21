@@ -1,6 +1,6 @@
 ---
 title: Widescreen Fixes Pack
-href: /wfp
+href: /wfp/
 image: cover.png
 ---
 

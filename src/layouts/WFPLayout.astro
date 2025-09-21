@@ -34,13 +34,13 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 	description="Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs"
 	favicon="/wfp/favicon.svg"
 >
-	<Snow />
-
 	<WFPHeader />
 
 	<main
 		class="flex-auto flex flex-col max-w-2xl lg:max-w-7xl mx-auto p-5 gap-5"
 	>
+		<Snow />
+
 		<div>
 			<div
 				class="w-full flex flex-row flex-wrap justify-evenly bg-transparent"
@@ -92,3 +92,10 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 			15px 15px;
 	}
 </style>
+
+<script
+	is:inline
+	src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
+	async
+	onload="kofiWidgetOverlay && kofiWidgetOverlay.draw('thirteenag', { type: 'floating-chat', 'floating-chat.donateButton.text': 'Donate', 'floating-chat.donateButton.background-color': '#00b9fe', 'floating-chat.donateButton.text-color': '#fff' })"
+></script>

@@ -6,6 +6,7 @@ import Weather from "@/components/widgets/Weather.astro";
 import { getCollection } from "astro:content";
 
 const entries = await getCollection("home");
+entries.sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
 <BaseLayout

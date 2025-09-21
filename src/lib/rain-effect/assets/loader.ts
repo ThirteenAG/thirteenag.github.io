@@ -1,4 +1,4 @@
-import type { Asset, Assets } from "./default-assets";
+import type { Asset, Assets } from ".";
 
 interface LoadedAsset extends Asset {
     img: HTMLImageElement;

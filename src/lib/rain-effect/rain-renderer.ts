@@ -1,4 +1,4 @@
-import createCanvas from "./create-canvas";
+import createCanvas from "./utils/create-canvas";
 import GL from "./gl-obj";
 
 // Import shaders as raw strings (using Vite)

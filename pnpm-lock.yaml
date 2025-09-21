@@ -53,6 +53,9 @@ importers:
       gsap:
         specifier: ^3.13.0
         version: 3.13.0
+      lightgallery:
+        specifier: 2.9.0-beta.1
+        version: 2.9.0-beta.1
       react:
         specifier: ^19.1.1
         version: 19.1.1
@@ -2237,6 +2240,10 @@ packages:
     resolution: {integrity: sha512-gcxmNFzA4hv8UYi8j43uPlQ7CGcyMJ2KQb5kZASw6SnAKAf10hK12i2fjrS3Cl/ugZa5Ui6WwIu1/6MIXiHttQ==}
     engines: {node: '>=16'}
     hasBin: true
+
+  lightgallery@2.9.0-beta.1:
+    resolution: {integrity: sha512-4Bl1vsYGOsI6RsPyephAUFW8bbZuZlLrpxU59cfKYKPDEX5Mhxfo1DUoUIJ+j5QPNrHEqrd+QeQtnGUCCwqK2g==}
+    engines: {node: '>=6.0.0'}
 
   lightningcss-darwin-arm64@1.30.1:
     resolution: {integrity: sha512-c8JK7hyE65X1MHMN+Viq9n11RRC7hgin3HhYKhrMyaXflk5GVplZ60IxyoVtzILeKr+xAJwg6zK6sjTBJ0FKYQ==}
@@ -6094,6 +6101,8 @@ snapshots:
   lib0@0.2.114:
     dependencies:
       isomorphic.js: 0.2.5
+
+  lightgallery@2.9.0-beta.1: {}
 
   lightningcss-darwin-arm64@1.30.1:
     optional: true
