@@ -22,7 +22,7 @@ support:
 tag: mods
 title: 'Alien: Isolation Save Confirmation Dialog Skipper'
 screenshots:
-  background: https://www.feralinteractive.com/data/games/alienisolation-switch/background/keyart.jpg
+  background: https://www.feralinteractive.com/minisite/alienisolation-switch/images/background.jpg
   images: []
   youtube: https://www.youtube.com/embed/5oFyVSWNsoY
 ---
