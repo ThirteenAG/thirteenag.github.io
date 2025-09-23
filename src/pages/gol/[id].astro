@@ -1,0 +1,23 @@
+---
+import GOLLayout from "@/layouts/GOLLayout.astro";
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const entries = await getCollection("gol");
+
+	return entries.map((entry) => ({
+		params: { id: entry.data.id },
+		props: { entry },
+	}));
+};
+
+interface Props {
+	entry: CollectionEntry<"gol">;
+}
+
+const { entry } = Astro.props;
+---
+
+<GOLLayout {entry} />

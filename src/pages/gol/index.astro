@@ -1,0 +1,10 @@
+---
+import GOLLayout from "@/layouts/GOLLayout.astro";
+import { getEntry } from "astro:content";
+
+const entry = await getEntry("gol", "gtavi");
+
+if (!entry) return;
+---
+
+<GOLLayout {entry} />

@@ -1,0 +1,82 @@
+---
+import {
+	Table,
+	TableBody,
+	TableCaption,
+	TableCell,
+	TableHead,
+	TableHeader,
+	TableRow,
+} from "@/components/starwind/table";
+import {
+	createTable,
+	getCoreRowModel,
+	type ColumnDef,
+} from "@tanstack/table-core";
+import { flexRender } from "./lib";
+
+interface Props<TData, TValue> {
+	caption: string;
+	columns: ColumnDef<TData, TValue>[];
+	data: TData[];
+}
+
+const { caption, columns, data } = Astro.props;
+
+const table = createTable({
+	columns,
+	data,
+	state: {
+		columnPinning: { left: [], right: [] },
+	},
+	onStateChange: () => {},
+	renderFallbackValue: null,
+	getCoreRowModel: getCoreRowModel(),
+});
+---
+
+<Table class="mx-auto w-full overflow-clip">
+	<TableCaption>{caption}</TableCaption>
+	<TableHeader>
+		{
+			table.getHeaderGroups().map((headerGroup) => (
+				<TableRow>
+					{headerGroup.headers.map((header) => (
+						<TableHead class="text-center text-xl font-bold text-black">
+							{header.isPlaceholder
+								? null
+								: flexRender(
+										header.column.columnDef.header,
+										header.getContext(),
+									)}
+						</TableHead>
+					))}
+				</TableRow>
+			))
+		}
+	</TableHeader>
+	<TableBody>
+		{
+			table.getRowModel().rows?.length ? (
+				table.getRowModel().rows.map((row) => (
+					<TableRow>
+						{row.getVisibleCells().map((cell) => (
+							<TableCell class="text-center">
+								{flexRender(
+									cell.column.columnDef.cell,
+									cell.getContext(),
+								)}
+							</TableCell>
+						))}
+					</TableRow>
+				))
+			) : (
+				<TableRow>
+					<TableCell colspan={columns.length} class="text-center">
+						No results.
+					</TableCell>
+				</TableRow>
+			)
+		}
+	</TableBody>
+</Table>

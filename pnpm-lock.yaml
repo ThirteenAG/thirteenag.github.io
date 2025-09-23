@@ -11,12 +11,18 @@ importers:
       '@biomejs/biome':
         specifier: ^2.2.4
         version: 2.2.4
+      '@fontsource/iceland':
+        specifier: ^5.2.8
+        version: 5.2.8
       '@fontsource/lora':
         specifier: ^5.2.8
         version: 5.2.8
       '@fontsource/montserrat':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/pacifico':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@fontsource/warnes':
         specifier: ^5.2.8
         version: 5.2.8
@@ -35,6 +41,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.13
         version: 4.1.13(vite@6.3.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(yaml@2.8.1))
+      '@tanstack/table-core':
+        specifier: ^8.21.3
+        version: 8.21.3
       '@types/react':
         specifier: ^19.1.13
         version: 19.1.13
@@ -432,11 +441,17 @@ packages:
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
+  '@fontsource/iceland@5.2.8':
+    resolution: {integrity: sha512-UB1LoJlHFy9CaccxFgLOId7713Uf9irFP+WIyqsgVXk71fqnu0BSJlWYGbLWsaNPWBHSm6VzhogQ0PSyFWO7BA==}
+
   '@fontsource/lora@5.2.8':
     resolution: {integrity: sha512-AQlfsHw4TP1x/eb2IZ6VjQ70ctKa39m9JN9A4zlvDOeKYLrCs+GaYIEQ86Y6YfSPGHn01bErXkRcyktOW0LOPQ==}
 
   '@fontsource/montserrat@5.2.8':
     resolution: {integrity: sha512-xTjLxSbSfCycDB0pwmNsfNvdfWPaDaRQ2LC6yt/ZI7SdvXG52zHnzNYC/09mzuAuWNJyShkteutfCoDgym56hQ==}
+
+  '@fontsource/pacifico@5.2.7':
+    resolution: {integrity: sha512-L+YiZn3Lb8rVN15zcLlti62doVxQeFpS+dJmulKkFrUo3dZIAxZLHwXoKaaHm+VVcOTrT/mmKCZqGOIWVmFV2w==}
 
   '@fontsource/warnes@5.2.8':
     resolution: {integrity: sha512-zkb7E1ePzN7GqS/IXKdjVAhPwmq9Utf4RFYeuf88UvV0ByLSBfQTLmP1IM5jwnhWqw6omSyHUtHLx98p2juamw==}
@@ -1449,6 +1464,10 @@ packages:
     resolution: {integrity: sha512-0PmqLQ010N58SbMTJ7BVJ4I2xopiQn/5i6nlb4JmxzQf8zcS5+m2Cv6tqh+sfDwtIdjoEnOvwsGQ1hkUi8QEHQ==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7
+
+  '@tanstack/table-core@8.21.3':
+    resolution: {integrity: sha512-ldZXEhOBb8Is7xLs01fR3YEc3DERiz5silj8tnGkFZytt1abEvl/GhUmCE0PMLaMPTa3Jk4HbKmRlHmu+gCftg==}
+    engines: {node: '>=12'}
 
   '@toeverything/y-indexeddb@0.10.0-canary.9':
     resolution: {integrity: sha512-3hzktNuOaXut/RgRjKNeqQura1zeYF+tSLSlWDc0rDBOrEpwD/1EOpKVCbgtl8ke7f4oinLfgBNk4HcwqaQUYQ==}
@@ -3662,9 +3681,13 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
+  '@fontsource/iceland@5.2.8': {}
+
   '@fontsource/lora@5.2.8': {}
 
   '@fontsource/montserrat@5.2.8': {}
+
+  '@fontsource/pacifico@5.2.7': {}
 
   '@fontsource/warnes@5.2.8': {}
 
@@ -5178,6 +5201,8 @@ snapshots:
       '@tailwindcss/oxide': 4.1.13
       tailwindcss: 4.1.13
       vite: 6.3.6(@types/node@24.5.2)(jiti@2.5.1)(lightningcss@1.30.1)(yaml@2.8.1)
+
+  '@tanstack/table-core@8.21.3': {}
 
   '@toeverything/y-indexeddb@0.10.0-canary.9(yjs@13.6.27)':
     dependencies:

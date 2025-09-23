@@ -1,0 +1,59 @@
+---
+import Button from "@/components/starwind/button";
+import { Card, CardContent, CardHeader } from "@/components/starwind/card";
+import GOLHeader from "@/components/ui/gol/GOLHeader.astro";
+import GOLTable from "@/components/ui/gol/GOLTable.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+interface Props {
+	entry: CollectionEntry<"gol">;
+}
+
+const { entry } = Astro.props as Props;
+
+const entries = await getCollection("gol");
+entries.sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout title="GTA One Liners" description="GTA texts in gifs">
+	<GOLHeader />
+	<main class="flex-auto m-auto max-w-2xl lg:max-w-7xl">
+		<Card class="w-full h-full p-4">
+			<CardHeader>
+				<div class="flex flex-row flex-wrap gap-2 justify-evenly">
+					{
+						entries.map((e) => (
+							<Button
+								class="grow-1"
+								variant={
+									e.data.id === entry.data.id
+										? "primary"
+										: "outline"
+								}
+								href={
+									e.data.id === entry.data.id
+										? null
+										: `/gol/${e.data.id}/`
+								}
+							>
+								{e.data.name}
+							</Button>
+						))
+					}
+				</div>
+			</CardHeader>
+			<CardContent class="flex flex-col gap-4 w-full">
+				<GOLTable entry={entry} />
+			</CardContent>
+		</Card>
+	</main>
+</BaseLayout>
+
+<style>
+	body {
+		background: url("/images/wildstyle.jpg") no-repeat top center fixed;
+		background-size: cover;
+	}
+</style>

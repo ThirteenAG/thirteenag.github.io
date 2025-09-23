@@ -1,0 +1,41 @@
+---
+import "@fontsource/pacifico";
+import "@fontsource/iceland";
+
+// Movie One Liners
+
+const navLinks = [
+	{ name: "Movie One Liners", href: "/mol/" },
+	{ name: "GTA Text", href: "/gt/" },
+	{ name: "Widescreen Fixes Pack", href: "/wfp/" },
+	{
+		name: "Donate with PayPal",
+		href: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=77JMVFE8N42PE",
+	},
+];
+---
+
+<header class="flex-hone">
+	<nav class="m-auto max-w-7xl p-4 flex justify-between items-center">
+		<a href="/gol/">
+			<h1
+				class="text-xl font-[Pacifico] text-[#FFDD1B] [text-shadow:0_0_5px_#000]"
+			>
+				GTA One Liners
+			</h1>
+		</a>
+
+		<div>
+			{
+				navLinks.map((link) => (
+					<a
+						href={link.href}
+						class="ml-4 text-md font-[Iceland] text-[#FFDD1B] [text-shadow:0_0_5px_#000] hover:text-blue-700 hover:[text-shadow:0_0_5px_#FFFFFF]"
+					>
+						{link.name}
+					</a>
+				))
+			}
+		</div>
+	</nav>
+</header>

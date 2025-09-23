@@ -42,8 +42,8 @@ const sponsorsCollection = defineCollection({
     }),
 });
 
-const WFPGamesCollection = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./content/wfp/games" }),
+const WFPCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./content/wfp" }),
     schema: ({ image }) => z.object({
         id: string(),
         tag: string(),
@@ -75,8 +75,18 @@ const WFPGamesCollection = defineCollection({
     }),
 });
 
+const GOLCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./content/gol" }),
+    schema: () => z.object({
+        id: string(),
+        name: string(),
+        url: url(),
+    }),
+});
+
 export const collections = {
     'home': homeCollection,
     'sponsors': sponsorsCollection,
-    'wfp-games': WFPGamesCollection,
+    'wfp-games': WFPCollection,
+    'gol': GOLCollection,
 };

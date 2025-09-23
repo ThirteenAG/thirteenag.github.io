@@ -1,6 +1,6 @@
 ---
 title: GTA One Liners
-href: https://thirteenag.github.io/gta-one-liners
+href: /gol/
 image: cover.png
 ---
 
