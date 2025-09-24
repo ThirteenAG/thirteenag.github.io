@@ -1,0 +1,17 @@
+---
+import type { GTTableData } from "./columns";
+import GTDataTable from "./gt-data-table.svelte";
+
+interface Props {
+	data: string[][];
+}
+
+const { data } = Astro.props;
+
+const tableData: GTTableData[] = data.map((item) => ({
+	gxt: item[0] ?? "",
+	subtitle: item[1] ?? "",
+}));
+---
+
+<GTDataTable data={tableData} client:load />

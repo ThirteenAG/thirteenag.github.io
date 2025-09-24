@@ -1,0 +1,17 @@
+---
+import type { MOLTableData } from "./columns";
+import MOLDataTable from "./mol-data-table.svelte";
+
+interface Props {
+	data: string[][];
+}
+
+const { data } = Astro.props;
+
+const tableData: MOLTableData[] = data.map((item) => ({
+	link: item[2] ?? "",
+	subtitle: item[3] ?? "",
+}));
+---
+
+<MOLDataTable data={tableData} client:load />

@@ -1,7 +1,10 @@
 ---
 import GOLLayout from "@/layouts/GOLLayout.astro";
-import type { GetStaticPaths } from "astro";
-import type { CollectionEntry } from "astro:content";
+import type {
+	GetStaticPaths,
+	InferGetStaticParamsType,
+	InferGetStaticPropsType,
+} from "astro";
 import { getCollection } from "astro:content";
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -9,15 +12,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 	return entries.map((entry) => ({
 		params: { id: entry.data.id },
-		props: { entry },
 	}));
 };
 
-interface Props {
-	entry: CollectionEntry<"gol">;
-}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 
-const { entry } = Astro.props;
+const { id } = Astro.params as Params;
 ---
 
-<GOLLayout {entry} />
+<GOLLayout selectedEntryId={id} />

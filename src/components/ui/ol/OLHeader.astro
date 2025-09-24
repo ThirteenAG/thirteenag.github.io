@@ -1,0 +1,61 @@
+---
+import "@fontsource/pacifico";
+import "@fontsource/iceland";
+import Dropdown from "@/components/starwind/dropdown";
+import Button from "@/components/starwind/button";
+import MenuIcon from "@tabler/icons/outline/menu.svg";
+
+interface Props {
+	home: { title: string; href: string };
+	navigation?: { title: string; href: string }[];
+}
+
+const { home, navigation = [] } = Astro.props;
+---
+
+<header class="flex-hone">
+	<nav class="m-auto max-w-7xl p-4 flex justify-between items-center">
+		<a href={home.href}>
+			<h1
+				class="text-xl font-[Pacifico] text-[#FFDD1B] [text-shadow:0_0_5px_#000]"
+			>
+				{home.title}
+			</h1>
+		</a>
+
+		<div class="hidden md:flex">
+			{
+				navigation.map((link) => (
+					<a
+						href={link.href}
+						class:list={[
+							"ml-4 text-md font-[Iceland] text-[#FFDD1B] [text-shadow:0_0_5px_#000",
+							home.href === "/gol/"
+								? "hover:text-blue-700 hover:[text-shadow:0_0_5px_#FFFFFF]"
+								: "hover:text-white hover:[text-shadow:0_0_5px_var(--color-blue-700)]",
+						]}
+					>
+						{link.title}
+					</a>
+				))
+			}
+		</div>
+
+		<Dropdown.Root class="block md:hidden">
+			<Dropdown.Trigger asChild>
+				<Button size="icon" variant="ghost">
+					<MenuIcon class="fill-current" />
+				</Button>
+			</Dropdown.Trigger>
+			<Dropdown.Content class="min-w-[15rem]">
+				{
+					navigation.map((link) => (
+						<Dropdown.Item as="a" href={link.href} target="_blank">
+							{link.title}
+						</Dropdown.Item>
+					))
+				}
+			</Dropdown.Content>
+		</Dropdown.Root>
+	</nav>
+</header>

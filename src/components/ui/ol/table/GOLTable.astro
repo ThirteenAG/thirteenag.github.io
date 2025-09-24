@@ -1,0 +1,17 @@
+---
+import type { GOLTableData } from "./columns";
+import GOLDataTable from "./gol-data-table.svelte";
+
+interface Props {
+	data: string[][];
+}
+
+const { data } = Astro.props;
+
+const tableData: GOLTableData[] = data.map((item) => ({
+	link: item[1] ?? "",
+	subtitle: item[3] ?? "",
+}));
+---
+
+<GOLDataTable data={tableData} client:load />

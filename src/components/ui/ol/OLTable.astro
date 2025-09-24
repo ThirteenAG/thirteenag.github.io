@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from "astro:content";
+import type { OLEntry } from "@/content.config";
+import GOLTable from "./table/GOLTable.astro";
+import MOLTable from "./table/MOLTable.astro";
+import GTTable from "./table/GTTable.astro";
+
+interface Props {
+	entry: CollectionEntry<OLEntry>;
+}
+
+const { entry } = Astro.props as Props;
+
+const response = await fetch(entry.data.url)
+	.then((res) => res.json())
+	.catch((err) => {
+		console.error("Error fetching OL data:", entry.data, err);
+		return null;
+	});
+if (!response) {
+	return;
+}
+
+const data = response.data as string[][];
+---
+
+{entry.collection === "gol" && <GOLTable {data} />}
+{entry.collection === "mol" && <MOLTable {data} />}
+{entry.collection === "gt" && <GTTable {data} />}

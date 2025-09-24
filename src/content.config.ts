@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, type DataEntryMap } from 'astro:content';
 import { glob } from 'astro/loaders';
 import type { ZodString } from 'astro:schema';
 
@@ -75,13 +75,25 @@ const WFPCollection = defineCollection({
     }),
 });
 
+const OLSchema = z.object({
+    id: string(),
+    name: string(),
+    url: url(),
+});
+
 const GOLCollection = defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./content/gol" }),
-    schema: () => z.object({
-        id: string(),
-        name: string(),
-        url: url(),
-    }),
+    schema: OLSchema,
+});
+
+const MOLCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./content/mol" }),
+    schema: OLSchema,
+});
+
+const GTCollection = defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./content/gt" }),
+    schema: OLSchema,
 });
 
 export const collections = {
@@ -89,4 +101,9 @@ export const collections = {
     'sponsors': sponsorsCollection,
     'wfp-games': WFPCollection,
     'gol': GOLCollection,
+    'mol': MOLCollection,
+    'gt': GTCollection,
 };
+
+export type OLEntry = ("gol" | "mol" | "gt") & keyof DataEntryMap;
+

@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import type { GetStaticPaths } from "astro";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const games = await getCollection("wfp-games");
@@ -14,9 +14,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 import WFPLayout from "@/layouts/WFPLayout.astro";
 
-interface Props {
-	tag: string;
-}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { tag } = Astro.props;
 ---

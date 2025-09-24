@@ -1,0 +1,33 @@
+---
+import Button from "@/components/starwind/button";
+import type { OLEntry } from "@/content.config";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+	base: string;
+	selectedEntry: CollectionEntry<OLEntry>;
+	entries: CollectionEntry<OLEntry>[];
+}
+
+const { base, selectedEntry, entries } = Astro.props as Props;
+---
+
+<div class="flex flex-row flex-wrap gap-2 justify-evenly">
+	{
+		entries.map((e) => (
+			<Button
+				class="grow-1"
+				variant={
+					e.data.id === selectedEntry.data.id ? "primary" : "outline"
+				}
+				href={
+					e.data.id === selectedEntry.data.id
+						? null
+						: `/${base}/${e.data.id}/`
+				}
+			>
+				{e.data.name}
+			</Button>
+		))
+	}
+</div>

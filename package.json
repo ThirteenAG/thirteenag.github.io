@@ -9,6 +9,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/svelte": "^7.1.1",
 		"@biomejs/biome": "^2.2.4",
 		"@fontsource/iceland": "^5.2.8",
 		"@fontsource/lora": "^5.2.8",
@@ -21,22 +22,28 @@
 		"@tailwindcss/forms": "^0.5.10",
 		"@tailwindcss/vite": "^4.1.13",
 		"@tanstack/table-core": "^8.21.3",
-		"@types/react": "^19.1.13",
-		"@types/react-dom": "^19.1.9",
 		"astro": "^5.13.9",
 		"astro-icon": "^1.1.5",
+		"export-to-csv": "^1.4.0",
 		"github-buttons": "^2.29.1",
 		"gsap": "^3.13.0",
 		"lightgallery": "2.9.0-beta.1",
 		"react": "^19.1.1",
 		"react-dom": "^19.1.1",
 		"sharp": "^0.34.4",
+		"svelte": "^5.39.5",
 		"tailwind-merge": "^3.3.1",
-		"tailwind-variants": "^2.1.0",
 		"tailwindcss": "^4.1.13",
-		"tw-animate-css": "^1.3.8"
+		"typescript": "^5.9.2"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.18"
+		"@iconify/svelte": "^5.0.2",
+		"@internationalized/date": "^3.9.0",
+		"@lucide/svelte": "^0.544.0",
+		"@tailwindcss/typography": "^0.5.18",
+		"bits-ui": "^2.11.1",
+		"clsx": "^2.1.1",
+		"tailwind-variants": "^3.1.1",
+		"tw-animate-css": "^1.3.8"
 	}
 }

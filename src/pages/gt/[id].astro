@@ -1,0 +1,24 @@
+---
+import GTLayout from "@/layouts/GTLayout.astro";
+import type {
+	GetStaticPaths,
+	InferGetStaticParamsType,
+	InferGetStaticPropsType,
+} from "astro";
+import { getCollection } from "astro:content";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	const entries = await getCollection("gt");
+
+	return entries.map((entry) => ({
+		params: { id: entry.data.id },
+	}));
+};
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+
+const { id } = Astro.params as Params;
+---
+
+<GTLayout selectedEntryId={id} />

@@ -1,55 +1,38 @@
 ---
-import Button from "@/components/starwind/button";
-import { Card, CardContent, CardHeader } from "@/components/starwind/card";
-import GOLHeader from "@/components/ui/gol/GOLHeader.astro";
-import GOLTable from "@/components/ui/gol/GOLTable.astro";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import OLLayout from "./OLLayout.astro";
+import { getEntry } from "astro:content";
 
 interface Props {
-	entry: CollectionEntry<"gol">;
+	selectedEntryId: string;
 }
 
-const { entry } = Astro.props as Props;
+const { selectedEntryId } = Astro.props as Props;
 
-const entries = await getCollection("gol");
-entries.sort((a, b) => a.data.name.localeCompare(b.data.name));
+const selectedEntry = await getEntry("gol", selectedEntryId);
+
+if (!selectedEntry) {
+	return;
+}
+
+const navigation = [
+	{ title: "Movie One Liners", href: "/mol/" },
+	{ title: "GTA Text", href: "/gt/" },
+	{ title: "Widescreen Fixes Pack", href: "/wfp/" },
+	{
+		title: "Donate with PayPal",
+		href: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=77JMVFE8N42PE",
+	},
+];
 ---
 
-<BaseLayout title="GTA One Liners" description="GTA texts in gifs">
-	<GOLHeader />
-	<main class="flex-auto m-auto max-w-2xl lg:max-w-7xl">
-		<Card class="w-full h-full p-4">
-			<CardHeader>
-				<div class="flex flex-row flex-wrap gap-2 justify-evenly">
-					{
-						entries.map((e) => (
-							<Button
-								class="grow-1"
-								variant={
-									e.data.id === entry.data.id
-										? "primary"
-										: "outline"
-								}
-								href={
-									e.data.id === entry.data.id
-										? null
-										: `/gol/${e.data.id}/`
-								}
-							>
-								{e.data.name}
-							</Button>
-						))
-					}
-				</div>
-			</CardHeader>
-			<CardContent class="flex flex-col gap-4 w-full">
-				<GOLTable entry={entry} />
-			</CardContent>
-		</Card>
-	</main>
-</BaseLayout>
+<OLLayout
+	id="gol"
+	title="GTA One Liners"
+	description="GTA texts in gifs"
+	favicon="/gol.svg"
+	{selectedEntry}
+	{navigation}
+/>
 
 <style>
 	body {

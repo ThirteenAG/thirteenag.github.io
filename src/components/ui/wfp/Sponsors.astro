@@ -1,10 +1,6 @@
 ---
-import { DropdownItem } from "@/components/starwind/dropdown";
-import {
-	Tooltip,
-	TooltipTrigger,
-	TooltipContent,
-} from "@/components/starwind/tooltip";
+import Dropdown from "@/components/starwind/dropdown";
+import Tooltip from "@/components/starwind/tooltip";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 
@@ -23,8 +19,8 @@ sponsors.sort((a, b) => a.data.name.localeCompare(b.data.name));
 	type === "header" ? (
 		<div class:list={["flex flex-row align-middle", className]}>
 			{sponsors.map((sponsor) => (
-				<Tooltip>
-					<TooltipTrigger>
+				<Tooltip.Root>
+					<Tooltip.Trigger>
 						<a
 							href={sponsor.data.url}
 							target="_blank"
@@ -37,16 +33,16 @@ sponsors.sort((a, b) => a.data.name.localeCompare(b.data.name));
 								class="h-5 w-5 fill-current"
 							/>
 						</a>
-					</TooltipTrigger>
-					<TooltipContent side="bottom">
+					</Tooltip.Trigger>
+					<Tooltip.Content side="bottom">
 						{sponsor.data.tooltip}
-					</TooltipContent>
-				</Tooltip>
+					</Tooltip.Content>
+				</Tooltip.Root>
 			))}
 		</div>
 	) : (
 		sponsors.map((sponsor) => (
-			<DropdownItem
+			<Dropdown.Item
 				as="a"
 				href={sponsor.data.url}
 				target="_blank"
@@ -55,7 +51,7 @@ sponsors.sort((a, b) => a.data.name.localeCompare(b.data.name));
 			>
 				<Icon name={sponsor.data.icon} class="h-5 w-5 fill-current" />
 				{sponsor.data.name}
-			</DropdownItem>
+			</Dropdown.Item>
 		))
 	)
 }

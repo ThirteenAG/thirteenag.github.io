@@ -1,9 +1,6 @@
 ---
 import Button from "@/components/starwind/button";
-import WFPGameCard from "@/components/ui/wfp/WFPGameCard.astro";
-import WFPFooter from "@/components/ui/wfp/WFPFooter.astro";
-import WFPHeader from "@/components/ui/wfp/WFPHeader.astro";
-import WFPTagButton from "@/components/ui/wfp/WFPTagButton.astro";
+import WFP from "@/components/ui/wfp";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { wfpReleasesInfo } from "@/components/ui/wfp/helpers";
@@ -32,9 +29,9 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 <BaseLayout
 	title="Widescreen Fixes Pack"
 	description="Widescreen Fixes Pack - Plugins to make or improve widescreen resolutions support in PC games, add more features and fix bugs"
-	favicon="/wfp/favicon.svg"
+	favicon="/wfp.svg"
 >
-	<WFPHeader />
+	<WFP.Header />
 
 	<main
 		class="flex-auto flex flex-col max-w-2xl lg:max-w-7xl mx-auto p-5 gap-5"
@@ -49,7 +46,7 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 					tags
 						.filter((t) => !nonGameTags.includes(t))
 						.map((t) => (
-							<WFPTagButton tag={t} selected={t === tag} />
+							<WFP.TagButton tag={t} selected={t === tag} />
 						))
 				}
 			</div>
@@ -58,7 +55,7 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 			>
 				{
 					nonGameTags.map((t) => (
-						<WFPTagButton tag={t} selected={t === tag} />
+						<WFP.TagButton tag={t} selected={t === tag} />
 					))
 				}
 			</div>
@@ -66,7 +63,7 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 
 		{
 			games.map((entry) => (
-				<WFPGameCard
+				<WFP.GameCard
 					entry={entry}
 					releasesInfo={wfpReleasesInfo[entry.data.id]}
 				/>
@@ -79,7 +76,7 @@ games.sort((a, b) => a.data.title.localeCompare(b.data.title));
 	</main>
 
 	<hr />
-	<WFPFooter />
+	<WFP.Footer />
 </BaseLayout>
 
 <style>

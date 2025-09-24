@@ -1,0 +1,42 @@
+---
+import OLLayout from "./OLLayout.astro";
+import { getEntry } from "astro:content";
+
+interface Props {
+	selectedEntryId: string;
+}
+
+const { selectedEntryId } = Astro.props as Props;
+
+const selectedEntry = await getEntry("mol", selectedEntryId);
+
+if (!selectedEntry) {
+	return;
+}
+
+const navigation = [
+	{ title: "GTA One Liners", href: "/gol/" },
+	{ title: "GTA Text", href: "/gt/" },
+	{ title: "Widescreen Fixes Pack", href: "/wfp/" },
+	{
+		title: "Donate with PayPal",
+		href: "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=77JMVFE8N42PE",
+	},
+];
+---
+
+<OLLayout
+	id="mol"
+	title="Movie One Liners"
+	description="GTA texts in gifs"
+	favicon="/mol.png"
+	{selectedEntry}
+	{navigation}
+/>
+
+<style>
+	body {
+		background: url("/images/mbg.jpg") no-repeat top center fixed;
+		background-size: cover;
+	}
+</style>

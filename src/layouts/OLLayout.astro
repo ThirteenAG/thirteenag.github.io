@@ -1,0 +1,44 @@
+---
+import Card from "@/components/starwind/card";
+import OneLiners from "@/components/ui/ol";
+import type { OLEntry } from "@/content.config";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+interface Props {
+	title: string;
+	id: OLEntry;
+	favicon: string;
+	description: string;
+	navigation: { title: string; href: string }[];
+	selectedEntry: CollectionEntry<OLEntry>;
+}
+
+const { selectedEntry, title, id, description, navigation, favicon } =
+	Astro.props;
+
+const entries = await getCollection(id);
+entries.sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout {title} {description} {favicon}>
+	<OneLiners.Header home={{ title, href: `/${id}/` }} {navigation} />
+	<main class="flex-auto m-auto w-screen max-w-2xl lg:max-w-7xl p-4">
+		<Card.Root class="w-full h-full p-4">
+			<Card.Header>
+				<OneLiners.Tabs base={id} {selectedEntry} {entries} />
+			</Card.Header>
+			<Card.Content class="flex flex-col gap-4 w-full">
+				<OneLiners.Table entry={selectedEntry} />
+			</Card.Content>
+			<Card.Footer>
+				<div class="w-full text-sm italic text-center">
+					Gifs in this table were made using OCR software and subtitle
+					text may not match the actual game text or overall be wrong
+					or missing.
+				</div>
+			</Card.Footer>
+		</Card.Root>
+	</main>
+</BaseLayout>

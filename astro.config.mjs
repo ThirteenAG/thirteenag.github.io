@@ -2,23 +2,25 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://fusionfix.io",
-	base: "/",
+    site: "https://fusionfix.io",
+    base: "/",
 
-	prefetch: {
-		defaultStrategy: "load",
-		prefetchAll: true,
-	},
+    prefetch: {
+        defaultStrategy: "load",
+        prefetchAll: true,
+    },
 
-	image: {
-		remotePatterns: [{ protocol: "https" }],
-	},
+    image: {
+        remotePatterns: [{ protocol: "https" }],
+    },
 
-	vite: {
-		plugins: [tailwindcss()],
-	},
+    vite: {
+        plugins: [tailwindcss()],
+    },
 
-	integrations: [icon()],
+    integrations: [icon(), svelte()],
 });

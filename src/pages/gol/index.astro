@@ -1,10 +1,9 @@
 ---
 import GOLLayout from "@/layouts/GOLLayout.astro";
-import { getEntry } from "astro:content";
 
-const entry = await getEntry("gol", "gtavi");
-
-if (!entry) return;
+// Default entry when visiting /gol/ (index). Change this to whichever
+// entry you want to show by default.
+const selectedEntryId = "gtavi";
 ---
 
-<GOLLayout {entry} />
+<GOLLayout selectedEntryId={selectedEntryId} />
