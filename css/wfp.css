@@ -93,19 +93,65 @@ a:not([class]):hover {
   top: 100% !important;
 }
 
-.input-group-navbar {
-  max-width: 240px !important;
+.wfp-search-form {
+  max-width: 240px;
+  position: relative;
 }
 
-.wfp-search {
-  height: 100%;
-  border: 0;
-  outline: 0;
-  border-bottom: 12px solid black;
-  border-top: 12px solid black;
+.wfp-search-form .awesomplete {
+  display: contents;
+}
+
+.wfp-search-form .wfp-search {
+  display: block;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
   font-size: 0.875rem;
   line-height: 1.25;
-  border-radius: 0;
+  padding: 6px 28px 6px 10px;
+  height: 30px;
+  min-height: 0;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid #555;
+  outline: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wfp-search-form .wfp-search:focus {
+  background-color: #4a4a4a;
+  color: #fff;
+  border-color: #888;
+  box-shadow: none;
+}
+
+.wfp-search-form .wfp-search::placeholder {
+  color: #999;
+}
+
+.wfp-search-form .wfp-search-btn {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  background: transparent;
+  color: #999;
+  height: 28px;
+  width: 26px;
+  padding: 0;
+  border-radius: 0 3px 3px 0;
+  transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.wfp-search-form .wfp-search-btn:hover {
+  color: #fff;
+}
+
+.wfp-search-form .wfp-search-btn:focus {
+  outline: none;
 }
 
 .panel-transparent {
@@ -312,6 +358,19 @@ a:not([class]):hover {
   overflow-y: auto;
 }
 
+.wfp-search-form .awesomplete>ul {
+  top: 100%;
+  margin-top: 2px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-size: 0.85rem;
+}
+
+.wfp-search-form .awesomplete>ul>li {
+  padding: 6px 10px;
+}
+
 .awesomplete>ul>li[aria-selected="true"] {
   background: #337ab7;
   color: white;
@@ -336,12 +395,8 @@ a:not([class]):hover {
   color: inherit;
 }
 
-.awesomplete>wfp-dropdown-input {
-  margin-top: 11px;
-}
-
-.awesomplete>input {
-  padding-left: 3px;
+.awesomplete>input.wfp-dropdown-input {
+  margin-top: 0;
 }
 
 .awesomplete>ul>li[aria-selected="true"]>a {
