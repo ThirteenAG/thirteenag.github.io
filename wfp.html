@@ -8813,9 +8813,39 @@
 
   <!-- jump to anchor after page was loaded / background -->
   <script type="text/javascript">
+    function _loadImages(container) {
+      (container || document).querySelectorAll('img.lazy[data-src]').forEach(function (img) {
+        var src = img.getAttribute('data-src');
+        if (src && (!img.src || img.src === window.location.href)) {
+          img.src = src;
+        }
+      });
+    }
+
+    function _scrollToTarget(target) {
+      // Load lazy images in the containing tab pane (cards above the target affect offset too)
+      var tabPane = target.closest('.tab-pane');
+      if (tabPane) {
+        _loadImages(tabPane);
+      } else {
+        _loadImages(target);
+      }
+      // Wait for images to start loading and layout to settle, then scroll
+      setTimeout(function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Scroll again after images below have loaded too
+        setTimeout(function () {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500);
+      }, 100);
+    }
+
     function jmpToHash() {
       if (window.location.hash != "") {
-        window.location.hash = window.location.hash;
+        var target = document.getElementById(window.location.hash.substring(1));
+        if (target) {
+          _scrollToTarget(target);
+        }
       }
     }
   </script>
@@ -8962,7 +8992,11 @@
       Awesomplete.$('input.wfp-dropdown-input').addEventListener("awesomplete-select", function (event) {
         if (event.origin.tagName == 'LI') {
           LocationManager(event.text.value);
-          window.location.hash = event.text.value;
+          if (history.pushState) {
+            history.pushState(null, null, event.text.value);
+          } else {
+            window.location.hash = event.text.value;
+          }
           jmpToHash();
         } else {
           event.preventDefault();
