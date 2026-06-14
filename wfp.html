@@ -128,7 +128,7 @@
             </a>
           </li>
           <li style="position: relative; top: 0; left: 0; background-color: #F15F2C;">
-            <a target="_blank" style="padding: 0px 5px 0px 5px;" href="https://boosty.to/thirteenag/donate"
+            <a target="_blank" style="padding: 0px 5px 0px 5px;" href="https://boosty.to/thirteenag"
               onmouseover="boosty1.style.opacity='1';boosty2.style.opacity='0';"
               onmouseout="boosty1.style.opacity='0';boosty2.style.opacity='1';" data-bs-placement="bottom"
               data-bs-toggle="tooltip" data-bs-original-title="Donate with Boosty. Thank You!">
@@ -160,6 +160,92 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     <!-- /Alert -->
+
+    <!-- Sponsors Widget -->
+    <div class="card my-2" id="sponsors-widget-card" style="background:#ffffffaa;border:1px solid #d0d7de;">
+      <div class="card-body py-3 px-4 sponsors-widget-body">
+        <!-- Title -->
+        <h5 class="text-center fw-bold mb-1" id="sponsors-title" style="color:#24292f;">Join Fusion Fix Sponsor Squad
+        </h5>
+        <p class="text-center small mb-2" id="sponsors-description" style="color:#57606a;">Fusion Fix is an open-source
+          project fixing bugs, technical issues, and limitations in classic titles. Become a sponsor and help us do even
+          more for legacy games.</p>
+
+        <!-- Optional Goal Message -->
+        <div id="sponsors-goal-box" class="sponsors-goal-box d-none" aria-live="polite">
+          <div class="sponsors-goal-title" id="sponsors-goal-title">Next milestone</div>
+          <div class="sponsors-goal-target" id="sponsors-goal-target">100 sponsors</div>
+          <div class="sponsors-goal-reward" id="sponsors-goal-reward">Milestone goal: -</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="mb-2">
+          <div class="progress" style="height:16px;border:1px solid #d0d7de;border-radius:8px;background:#ffffff;">
+            <div id="sponsors-progress-fill" class="progress-bar" role="progressbar"
+              style="width:0%;border-radius:8px;background:linear-gradient(90deg,#218bff,#1a7f37);" aria-valuenow="0"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="d-flex justify-content-between mt-1 small sponsors-meta" style="color:#57606a;">
+            <span id="sponsors-percent">0% complete</span>
+            <span id="sponsors-updated">Updated -</span>
+            <span id="sponsors-total-goal">0 / 3000</span>
+          </div>
+        </div>
+
+        <!-- Count Cards -->
+        <div class="row g-2 mb-3" id="sponsors-count-cards">
+          <div class="col-6 col-sm-4 col-lg">
+            <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
+              <small class="d-block" style="color:#57606a;">Total Sponsors</small>
+              <strong id="sponsors-total" style="color:#24292f;font-size:1.4rem;">0</strong>
+              <small class="d-block sponsors-join-link sponsors-join-placeholder" aria-hidden="true">Join</small>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <a href="https://github.com/sponsors/ThirteenAG" target="_blank" class="text-decoration-none">
+              <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
+                <small class="d-block" style="color:#57606a;">GitHub</small>
+                <strong id="sponsors-github" style="color:#0969da;font-size:1.4rem;">0</strong>
+                <small class="d-block sponsors-join-link">Join GitHub Sponsors</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <a href="https://www.patreon.com/ThirteenAG" target="_blank" class="text-decoration-none">
+              <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
+                <small class="d-block" style="color:#57606a;">Patreon</small>
+                <strong id="sponsors-patreon" style="color:#9a6700;font-size:1.4rem;">0</strong>
+                <small class="d-block sponsors-join-link">Join Patreon</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <a href="https://ko-fi.com/thirteenag" target="_blank" class="text-decoration-none">
+              <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
+                <small class="d-block" style="color:#57606a;">Ko-fi</small>
+                <strong id="sponsors-kofi" style="color:#218bff;font-size:1.4rem;">0</strong>
+                <small class="d-block sponsors-join-link">Join Ko-fi</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-sm-4 col-lg">
+            <a href="https://boosty.to/thirteenag" target="_blank" class="text-decoration-none">
+              <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
+                <small class="d-block" style="color:#57606a;">Boosty</small>
+                <strong id="sponsors-boosty" style="color:#f15f2c;font-size:1.4rem;">0</strong>
+                <small class="d-block sponsors-join-link">Join Boosty</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Combined Supporter List -->
+        <div class="rounded p-3" style="background:#f6f8faaa;border:1px solid #d0d7de;">
+          <div id="sponsors-list" class="sponsors-scroll"
+            style="max-height:clamp(220px,40vh,380px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- Tabs -->
     <div class="tabbable tabbable-line py-1">
@@ -8918,6 +9004,408 @@
       'floating-chat.donateButton.background-color': '#00b9fe',
       'floating-chat.donateButton.text-color': '#fff'
     });
+  </script>
+
+  <script>
+    (function () {
+      const SPONSORS_JSON_URL = 'https://fusionlegacyinitiative.com/wp-content/uploads/sc-sponsors/sponsors.json';
+      const SPONSOR_GOAL = 3000;
+      const SHOW_GOAL_MESSAGE = true;
+      const GOAL_MESSAGE_DEFAULTS = {
+        title: 'Next milestone',
+        target: '100 sponsors',
+        reward: 'a remake of Max Payne Widescreen Fix',
+        rewardPrefix: 'Milestone goal:'
+      };
+      const TIER_CONFIG = [
+        ["Shader Shredder", 100, "#FFCC00", 16],
+        ["Stutter Stopper", 50, "#22FF88", 15],
+        ["Glitch Guardian", 25, "#B026FF", 14],
+        ["Water Wrecker", 15, "#00D4FF", 13.5],
+        ["Bug Basher", 10, "#FF4400", 13],
+        ["Widescreen Warrior", 5, "#0099FF", 12.5],
+      ];
+
+      const style = document.createElement('style');
+      style.textContent = `
+        .sponsors-scroll{ scrollbar-width: thin; padding-right:4px; }
+        .sponsors-widget-body{ padding-left:1.5rem; padding-right:1.5rem; }
+        .sponsors-meta{ gap:10px; flex-wrap:wrap; }
+        .sponsors-meta > span{ white-space:nowrap; }
+        .sponsors-goal-box{
+          margin: 6px auto 10px;
+          padding: 7px 10px;
+          max-width: 640px;
+          text-align: center;
+          border: 1px solid #d0d7de;
+          border-radius: 8px;
+          background: #ffffff68;
+        }
+        .sponsors-goal-title{ color:#57606a; font-size:12px; line-height:1.2; }
+        .sponsors-goal-target{ color:#0969da; font-size:15px; line-height:1.3; font-weight:700; margin-top:2px; }
+        .sponsors-goal-reward{ color:#57606a; font-size:12px; line-height:1.25; margin-top:2px; }
+        #sponsors-count-cards .rounded{ padding:0.4rem 0.5rem !important; }
+        #sponsors-count-cards strong{ display:block; font-size:clamp(1rem, 2.5vw, 1.28rem) !important; line-height:1.1; margin:0.08rem 0 0.1rem; }
+        #sponsors-count-cards small{ font-size:0.74rem; line-height:1.05; }
+        .sponsors-join-link{ color:#1f6feb !important; font-weight:600; font-size:0.66rem !important; line-height:1.05; }
+        .sponsors-join-placeholder{ visibility:hidden; }
+        .sponsors-tier{ margin-bottom:12px; break-inside:avoid; }
+        .sponsors-tier-title{ font-weight:700; line-height:1.3; margin-bottom:6px; }
+        .sponsors-rows{ width:100%; }
+        .sponsors-row{ display:flex; width:100%; }
+        .sponsors-name{
+          display:block;
+          line-height:1.4;
+          white-space:nowrap;
+        }
+        @media (max-width: 767.98px){
+          .sponsors-widget-body{ padding-left:0.9rem; padding-right:0.9rem; }
+          #sponsors-title{ font-size:1.1rem; }
+          #sponsors-description{ font-size:0.82rem; }
+          .sponsors-meta{ justify-content:space-between !important; align-items:center; flex-wrap:nowrap; gap:8px; font-size:0.78rem; }
+          .sponsors-meta > span{ flex:1 1 0; min-width:0; }
+          .sponsors-meta > span:nth-child(1){ text-align:left; }
+          .sponsors-meta > span:nth-child(2){ text-align:center; }
+          .sponsors-meta > span:nth-child(3){ text-align:right; }
+          .sponsors-goal-box{ margin-top:4px; margin-bottom:8px; padding:6px 8px; }
+          .sponsors-goal-title{ font-size:11px; }
+          .sponsors-goal-target{ font-size:13px; }
+          .sponsors-goal-reward{ font-size:11px; }
+          #sponsors-count-cards .rounded{ padding:0.34rem 0.4rem !important; }
+          #sponsors-count-cards small{ font-size:0.7rem; }
+          .sponsors-join-link{ font-size:0.63rem !important; }
+          #sponsors-list{ max-height:clamp(200px, 36vh, 320px); }
+          .sponsors-name{ white-space:nowrap; line-height:1.3; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      let cachedGroups = [];
+      let resizeTimer = null;
+      let resizeBound = false;
+
+      function rerenderSponsorsOnResize() {
+        const listEl = document.getElementById('sponsors-list');
+        if (!listEl || !cachedGroups.length) return;
+        renderGroups(listEl, cachedGroups);
+      }
+
+      function bindSponsorsResizeHandlers() {
+        if (resizeBound) return;
+        const onResize = () => {
+          if (resizeTimer) clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(rerenderSponsorsOnResize, 120);
+        };
+        window.addEventListener('resize', onResize, { passive: true });
+        window.addEventListener('orientationchange', onResize, { passive: true });
+        resizeBound = true;
+      }
+
+      function escText(s) { return String(s ?? ''); }
+
+      function displayTierLabel(label) {
+        if (TIER_CONFIG.some(t => t[0] === label) && typeof label === 'string' && !label.endsWith('s')) {
+          return label + 's';
+        }
+        return label;
+      }
+
+      function buildTierMap(data) {
+        const tierByName = new Map(TIER_CONFIG.map(x => [x[0], x]));
+        const tierByAmount = new Map(TIER_CONFIG.map(x => [x[1], x]));
+
+        function groupByTier(source, nameField) {
+          const map = new Map();
+          (source || []).forEach(s => {
+            if (!s || !s.tier || !s[nameField]) return;
+            if (!map.has(s.tier)) map.set(s.tier, []);
+            map.get(s.tier).push(escText(s[nameField]));
+          });
+          return map;
+        }
+
+        const patreon = groupByTier(data.patreon_supporters, 'name');
+        const kofi = groupByTier(data.kofi_supporters, 'name');
+        const boosty = groupByTier(data.boosty_supporters, 'name');
+
+        const github = new Map();
+        (data.github_supporters || []).forEach(s => {
+          let login = null, tierName = null, amount = 0;
+          if (typeof s === 'string') {
+            login = s;
+          } else if (s && typeof s === 'object') {
+            login = s.login || null;
+            tierName = s.tier_name || null;
+            amount = Number(s.tier_amount || 0);
+          }
+          if (!login) return;
+
+          if (!tierName && tierByAmount.has(amount)) tierName = tierByAmount.get(amount)[0];
+          const key = tierName || (amount > 0 ? `$${amount}/mo` : 'Supporters');
+          if (!github.has(key)) github.set(key, []);
+          github.get(key).push(escText(login));
+        });
+
+        return { patreon, github, kofi, boosty, tierByName, tierByAmount };
+      }
+
+      function buildCombinedGroups(data) {
+        const { patreon, github, kofi, boosty, tierByName } = buildTierMap(data);
+
+        const combined = new Map();
+
+        function addToCombined(tier, names, color, size, prefix) {
+          if (!names || !names.length) return;
+          if (!combined.has(tier)) {
+            const cfg = tierByName.get(tier);
+            combined.set(tier, {
+              label: displayTierLabel(tier),
+              tierKey: tier,
+              color: cfg ? cfg[2] : color,
+              size: cfg ? cfg[3] : size,
+              names: []
+            });
+          }
+          names.forEach(n => combined.get(tier).names.push(prefix + n));
+        }
+
+        patreon.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
+        kofi.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
+        boosty.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
+        github.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, '@'));
+
+        // Determine total name count for font scaling (matches SVG: total_name_count logic)
+        const totalNameCount = combined.size > 0
+          ? Array.from(combined.values()).reduce((sum, g) => sum + g.names.length, 0)
+          : 0;
+        let baseNameFont;
+        if (totalNameCount > 3500) baseNameFont = 8;
+        else if (totalNameCount > 2400) baseNameFont = 9;
+        else if (totalNameCount > 1400) baseNameFont = 10;
+        else baseNameFont = 11;
+
+        const known = [];
+        const extra = [];
+        TIER_CONFIG.forEach(([name, , color, size]) => {
+          const g = combined.get(name);
+          if (g) {
+            g.color = color;
+            g.size = size;
+            g.names.sort((a, b) => a.localeCompare(b));
+            // Scale font per entry like SVG: max(7, min(12, base + round((size-12.5)*0.35)))
+            const font = Math.max(7, Math.min(12, baseNameFont + Math.round((g.size - 12.5) * 0.35)));
+            g.font = font;
+            known.push(g);
+          }
+        });
+
+        for (const [tierKey, g] of combined.entries()) {
+          if (tierByName.has(tierKey)) continue;
+          g.names.sort((a, b) => a.localeCompare(b));
+          const font = Math.max(7, Math.min(12, baseNameFont + Math.round((g.size - 12.5) * 0.35)));
+          g.font = font;
+          extra.push(g);
+        }
+
+        return known.concat(extra);
+      }
+
+      function renderGroups(container, groups) {
+        container.innerHTML = '';
+        if (!groups.length) {
+          container.innerHTML = '<div class="text-secondary">No supporters yet.</div>';
+          return;
+        }
+
+        function tokenWidth(text, fontSize) {
+          return Math.max(18, Math.floor(String(text).length * fontSize * 0.53) + 8);
+        }
+
+        function buildRows(items, cols) {
+          const rows = [];
+          for (let i = 0; i < items.length; i += cols) {
+            rows.push(items.slice(i, i + cols));
+          }
+          return rows;
+        }
+
+        groups.forEach(g => {
+          const wrap = document.createElement('div');
+          wrap.className = 'sponsors-tier';
+
+          const title = document.createElement('div');
+          title.className = 'sponsors-tier-title';
+          title.style.color = g.color;
+          title.style.fontSize = '14px';
+          title.textContent = g.label;
+          wrap.appendChild(title);
+
+          // Match SVG behavior: compute columns from token widths, then stretch rows across full width.
+          const nameFont = g.font || 11;
+          const rowW = Math.max(220, (container.clientWidth || 640) - 8);
+          const isPhone = window.matchMedia('(max-width: 767.98px)').matches;
+          const minGap = 4;
+          const tokens = g.names.map(name => ({ name, w: tokenWidth(name, nameFont) }));
+          const avgW = tokens.reduce((sum, t) => sum + t.w, 0) / Math.max(1, tokens.length);
+          const maxCols = isPhone ? 3 : 10;
+          const minReadableColWidth = isPhone ? 96 : 24;
+
+          let cols = Math.max(1, Math.floor((rowW + minGap) / Math.max(minReadableColWidth, avgW + minGap)));
+          cols = Math.min(cols, maxCols);
+
+          // On phones, keep one column if names are too wide to avoid cramped/awkward layout.
+          if (isPhone && cols > 1) {
+            const widest = tokens.reduce((m, t) => Math.max(m, t.w), 0);
+            if (widest > (rowW * 0.76)) cols = 1;
+          }
+
+          while (cols > 1) {
+            const probeRows = buildRows(tokens, cols);
+            const probeWidths = new Array(cols).fill(0);
+            probeRows.forEach(row => {
+              row.forEach((token, ci) => {
+                probeWidths[ci] = Math.max(probeWidths[ci], token.w);
+              });
+            });
+            const neededW = probeWidths.reduce((sum, w) => sum + w, 0) + (minGap * (cols - 1));
+            if (neededW <= rowW) break;
+            cols -= 1;
+          }
+
+          if (cols < 1) cols = 1;
+
+          const rows = buildRows(tokens, cols);
+          const activeCols = rows.reduce((m, r) => Math.max(m, r.length), 1);
+          const colWidths = new Array(activeCols).fill(0);
+          rows.forEach(row => {
+            row.forEach((token, ci) => {
+              colWidths[ci] = Math.max(colWidths[ci], token.w);
+            });
+          });
+
+          const totalColsW = colWidths.reduce((sum, w) => sum + w, 0);
+          const colGap = activeCols > 1
+            ? (isPhone
+              ? Math.max(minGap, Math.min(20, (rowW - totalColsW) / (activeCols - 1)))
+              : Math.max(minGap, (rowW - totalColsW) / (activeCols - 1)))
+            : 0;
+
+          const rowsWrap = document.createElement('div');
+          rowsWrap.className = 'sponsors-rows';
+
+          rows.forEach(row => {
+            const rowEl = document.createElement('div');
+            rowEl.className = 'sponsors-row';
+            if (isPhone && row.length > 1) {
+              rowEl.style.justifyContent = 'space-between';
+              rowEl.style.gap = '0px';
+            } else {
+              rowEl.style.gap = `${colGap}px`;
+            }
+
+            const rowCols = isPhone ? row.length : activeCols;
+
+            row.forEach((token, ci) => {
+              const name = token.name;
+              const cell = document.createElement('div');
+              if (isPhone && row.length > 1) {
+                cell.style.width = `${colWidths[ci]}px`;
+              } else {
+                cell.style.width = activeCols === 1 ? '100%' : `${colWidths[ci]}px`;
+              }
+
+              if (rowCols === 1 || ci === 0) {
+                cell.style.textAlign = 'left';
+              } else if (ci === rowCols - 1) {
+                cell.style.textAlign = 'right';
+              } else {
+                cell.style.textAlign = 'center';
+              }
+
+              const span = document.createElement('span');
+              span.className = 'sponsors-name';
+              span.style.color = g.color;
+              span.style.fontSize = nameFont + 'px';
+              span.textContent = name;
+              cell.appendChild(span);
+              rowEl.appendChild(cell);
+            });
+
+            rowsWrap.appendChild(rowEl);
+          });
+
+          wrap.appendChild(rowsWrap);
+          container.appendChild(wrap);
+        });
+      }
+
+      async function initSponsorsWidget() {
+        const listEl = document.getElementById('sponsors-list');
+        if (!listEl) return;
+        bindSponsorsResizeHandlers();
+
+        try {
+          const res = await fetch(SPONSORS_JSON_URL, { cache: 'no-store', mode: 'cors' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+
+          const total = data.total ?? 0;
+          const percent = Math.min(100, Math.floor(total / SPONSOR_GOAL * 100));
+
+          document.getElementById('sponsors-total').textContent = total;
+          document.getElementById('sponsors-github').textContent = data.github ?? 0;
+          document.getElementById('sponsors-patreon').textContent = data.patreon ?? 0;
+          document.getElementById('sponsors-kofi').textContent = data.kofi ?? 0;
+          document.getElementById('sponsors-boosty').textContent = data.boosty ?? 0;
+          document.getElementById('sponsors-percent').textContent = percent + '% complete';
+          document.getElementById('sponsors-updated').textContent = 'Updated ' + (data.last_updated ?? '-');
+          document.getElementById('sponsors-total-goal').textContent = total + ' / ' + SPONSOR_GOAL;
+
+          const goalBoxEl = document.getElementById('sponsors-goal-box');
+          const goalTitleEl = document.getElementById('sponsors-goal-title');
+          const goalTargetEl = document.getElementById('sponsors-goal-target');
+          const goalRewardEl = document.getElementById('sponsors-goal-reward');
+
+          const goalTitle = data.next_goal_title ?? GOAL_MESSAGE_DEFAULTS.title;
+          const goalTarget = data.next_goal_target ?? GOAL_MESSAGE_DEFAULTS.target;
+          const goalReward = data.next_goal_reward ?? GOAL_MESSAGE_DEFAULTS.reward;
+
+          if (SHOW_GOAL_MESSAGE && String(goalTarget || '').trim()) {
+            goalTitleEl.textContent = goalTitle;
+            goalTargetEl.textContent = goalTarget;
+
+            if (String(goalReward || '').trim()) {
+              goalRewardEl.textContent = `${GOAL_MESSAGE_DEFAULTS.rewardPrefix} ${goalReward}`;
+              goalRewardEl.classList.remove('d-none');
+            } else {
+              goalRewardEl.classList.add('d-none');
+            }
+
+            goalBoxEl.classList.remove('d-none');
+          } else {
+            goalBoxEl.classList.add('d-none');
+          }
+
+          const fill = document.getElementById('sponsors-progress-fill');
+          fill.style.width = percent + '%';
+          fill.setAttribute('aria-valuenow', percent);
+
+          cachedGroups = buildCombinedGroups(data);
+          renderGroups(listEl, cachedGroups);
+        } catch (e) {
+          listEl.innerHTML = '<span class="text-secondary">Failed to load supporters.</span>';
+          document.getElementById('sponsors-percent').textContent = 'Load failed';
+          document.getElementById('sponsors-updated').textContent = 'Updated -';
+          console.error('Sponsors widget error:', e);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSponsorsWidget);
+      } else {
+        initSponsorsWidget();
+      }
+    })();
   </script>
   <!-- /Scripts -->
 </body>
