@@ -9092,6 +9092,11 @@
           line-height:1.4;
           white-space:nowrap;
         }
+        .sponsors-tier--gold .sponsors-name{
+          background-color:rgba(0,0,0,1.0);
+          padding:1px 4px;
+          border-radius:3px;
+        }
         @media (max-width: 767.98px){
           .sponsors-widget-body{ padding-left:0.9rem; padding-right:0.9rem; }
           #sponsors-title{ font-size:1.1rem; }
@@ -9265,7 +9270,7 @@
 
         groups.forEach(g => {
           const wrap = document.createElement('div');
-          wrap.className = 'sponsors-tier';
+          wrap.className = g.tierKey === 'Shader Shredder' ? 'sponsors-tier sponsors-tier--gold' : 'sponsors-tier';
 
           const title = document.createElement('div');
           title.className = 'sponsors-tier-title';
