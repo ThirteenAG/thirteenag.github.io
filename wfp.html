@@ -8664,19 +8664,16 @@
       return timeAgo;
     }
 
+    var separateRepos = {
+      "gtaivfusionfix": "https://api.github.com/repos/ThirteenAG/GTAIV.EFLC.FusionFix/releases/latest",
+      "mp3fusionfix": "https://api.github.com/repos/ThirteenAG/MaxPayne3.FusionFix/releases/latest",
+      "alienisolation": "https://api.github.com/repos/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog/releases/latest",
+      "sniperghostwarrior": "https://api.github.com/repos/Fusion-Fix/SniperGhostWarrior.FusionFix/releases/latest"
+    };
+
     function getUrlFromTag(tag) {
-      switch (tag) {
-        case "gtaivfusionfix":
-          return "https://api.github.com/repos/ThirteenAG/GTAIV.EFLC.FusionFix/releases/latest";
-        case "mp3fusionfix":
-          return "https://api.github.com/repos/ThirteenAG/MaxPayne3.FusionFix/releases/latest";
-        case "alienisolation":
-          return "https://api.github.com/repos/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog/releases/latest";
-        case "sniperghostwarrior":
-          return "https://api.github.com/repos/Fusion-Fix/SniperGhostWarrior.FusionFix/releases/latest";
-        default:
-          return "https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases?per_page=100";
-      }
+      return separateRepos[tag] ||
+        "https://api.github.com/repos/ThirteenAG/WidescreenFixesPack/releases?per_page=100";
     }
 
     function GetReleaseInfo(ghtag, obj) {
@@ -8709,22 +8706,12 @@
         function (releases) {
           updateNotificationIcons(releases);
         });
-      getCachedJSON(getUrlFromTag("gtaivfusionfix"),
-        function (releases) {
-          updateNotificationIcons(releases, "gtaivfusionfix");
-        });
-      getCachedJSON(getUrlFromTag("mp3fusionfix"),
-        function (releases) {
-          updateNotificationIcons(releases, "mp3fusionfix");
-        });
-      getCachedJSON(getUrlFromTag("alienisolation"),
-        function (releases) {
-          updateNotificationIcons(releases, "alienisolation");
-        });
-      getCachedJSON(getUrlFromTag("sniperghostwarrior"),
-        function (releases) {
-          updateNotificationIcons(releases, "sniperghostwarrior");
-        });
+      Object.keys(separateRepos).forEach(function (tag) {
+        getCachedJSON(getUrlFromTag(tag),
+          function (releases) {
+            updateNotificationIcons(releases, tag);
+          });
+      });
     }
   </script>
 
