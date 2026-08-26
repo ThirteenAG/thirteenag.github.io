@@ -9492,20 +9492,22 @@
           const goalTarget = data.next_goal_target ?? GOAL_MESSAGE_DEFAULTS.target;
           const goalReward = data.next_goal_reward ?? GOAL_MESSAGE_DEFAULTS.reward;
 
-          if (SHOW_GOAL_MESSAGE && String(goalTarget || '').trim()) {
-            goalTitleEl.textContent = goalTitle;
-            goalTargetEl.textContent = goalTarget;
+          if (goalBoxEl && goalTitleEl && goalTargetEl && goalRewardEl) {
+            if (SHOW_GOAL_MESSAGE && String(goalTarget || '').trim()) {
+              goalTitleEl.textContent = goalTitle;
+              goalTargetEl.textContent = goalTarget;
 
-            if (String(goalReward || '').trim()) {
-              goalRewardEl.textContent = `${GOAL_MESSAGE_DEFAULTS.rewardPrefix} ${goalReward}`;
-              goalRewardEl.classList.remove('d-none');
+              if (String(goalReward || '').trim()) {
+                goalRewardEl.textContent = `${GOAL_MESSAGE_DEFAULTS.rewardPrefix} ${goalReward}`;
+                goalRewardEl.classList.remove('d-none');
+              } else {
+                goalRewardEl.classList.add('d-none');
+              }
+
+              goalBoxEl.classList.remove('d-none');
             } else {
-              goalRewardEl.classList.add('d-none');
+              goalBoxEl.classList.add('d-none');
             }
-
-            goalBoxEl.classList.remove('d-none');
-          } else {
-            goalBoxEl.classList.add('d-none');
           }
 
           const fill = document.getElementById('sponsors-progress-fill');
