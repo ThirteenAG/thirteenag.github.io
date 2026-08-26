@@ -171,12 +171,13 @@
           project fixing bugs, technical issues, and limitations in classic titles. Become a sponsor and help us do even
           more for legacy games.</p>
 
-        <!-- Optional Goal Message -->
+        <!-- Optional Goal Message 
         <div id="sponsors-goal-box" class="sponsors-goal-box d-none" aria-live="polite">
           <div class="sponsors-goal-title" id="sponsors-goal-title">Next milestone</div>
           <div class="sponsors-goal-target" id="sponsors-goal-target">100 sponsors</div>
           <div class="sponsors-goal-reward" id="sponsors-goal-reward">Milestone goal: -</div>
         </div>
+		-->
 
         <!-- Progress Bar -->
         <div class="mb-2">
@@ -186,9 +187,9 @@
               aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <div class="d-flex justify-content-between mt-1 small sponsors-meta" style="color:#57606a;">
-            <span id="sponsors-percent">0% complete</span>
+            <span id="sponsors-percent"><span class="spinner-border spinner-border-sm sponsors-meta-spinner" role="status" aria-label="Loading"></span></span>
             <span id="sponsors-updated">Updated -</span>
-            <span id="sponsors-total-goal">0 / 3000</span>
+            <span id="sponsors-total-goal"><span class="spinner-border spinner-border-sm sponsors-meta-spinner" role="status" aria-label="Loading"></span> / 3000</span>
           </div>
         </div>
 
@@ -197,7 +198,7 @@
           <div class="col-6 col-sm-4 col-lg">
             <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
               <small class="d-block" style="color:#57606a;">Total Sponsors</small>
-              <strong id="sponsors-total" style="color:#24292f;font-size:1.4rem;">0</strong>
+              <strong id="sponsors-total" style="color:#24292f;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
               <small class="d-block sponsors-join-link sponsors-join-placeholder" aria-hidden="true">Join</small>
             </div>
           </div>
@@ -205,7 +206,7 @@
             <a href="https://github.com/sponsors/ThirteenAG" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">GitHub</small>
-                <strong id="sponsors-github" style="color:#0969da;font-size:1.4rem;">0</strong>
+                <strong id="sponsors-github" style="color:#0969da;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join GitHub Sponsors</small>
               </div>
             </a>
@@ -214,7 +215,7 @@
             <a href="https://www.patreon.com/ThirteenAG" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">Patreon</small>
-                <strong id="sponsors-patreon" style="color:#9a6700;font-size:1.4rem;">0</strong>
+                <strong id="sponsors-patreon" style="color:#9a6700;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join Patreon</small>
               </div>
             </a>
@@ -223,7 +224,7 @@
             <a href="https://ko-fi.com/thirteenag" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">Ko-fi</small>
-                <strong id="sponsors-kofi" style="color:#218bff;font-size:1.4rem;">0</strong>
+                <strong id="sponsors-kofi" style="color:#218bff;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join Ko-fi</small>
               </div>
             </a>
@@ -232,7 +233,7 @@
             <a href="https://boosty.to/thirteenag" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">Boosty</small>
-                <strong id="sponsors-boosty" style="color:#f15f2c;font-size:1.4rem;">0</strong>
+                <strong id="sponsors-boosty" style="color:#f15f2c;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join Boosty</small>
               </div>
             </a>
@@ -9124,11 +9125,11 @@
     (function () {
       const SPONSORS_JSON_URL = 'https://fusionlegacyinitiative.com/wp-content/uploads/sc-sponsors/sponsors.json';
       const SPONSOR_GOAL = 3000;
-      const SHOW_GOAL_MESSAGE = true;
+      const SHOW_GOAL_MESSAGE = false;
       const GOAL_MESSAGE_DEFAULTS = {
         title: 'Next milestone',
         target: '100 sponsors',
-        reward: 'a remake of Max Payne Widescreen Fix',
+        reward: '',
         rewardPrefix: 'Milestone goal:'
       };
       const TIER_CONFIG = [
@@ -9163,6 +9164,8 @@
         #sponsors-count-cards small{ font-size:0.74rem; line-height:1.05; }
         .sponsors-join-link{ color:#1f6feb !important; font-weight:600; font-size:0.66rem !important; line-height:1.05; }
         .sponsors-join-placeholder{ visibility:hidden; }
+        .sponsors-spinner{ border-width:0.18em; }
+        .sponsors-meta-spinner{ width:0.7rem !important; height:0.7rem !important; border-width:0.14em; vertical-align:-0.08em; }
         .sponsors-tier{ margin-bottom:12px; break-inside:avoid; }
         .sponsors-tier-title{ font-weight:700; line-height:1.3; margin-bottom:6px; }
         .sponsors-rows{ width:100%; }
@@ -9513,8 +9516,13 @@
           renderGroups(listEl, cachedGroups);
         } catch (e) {
           listEl.innerHTML = '<span class="text-secondary">Failed to load supporters.</span>';
+          ['sponsors-total', 'sponsors-github', 'sponsors-patreon', 'sponsors-kofi', 'sponsors-boosty'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = '–';
+          });
           document.getElementById('sponsors-percent').textContent = 'Load failed';
           document.getElementById('sponsors-updated').textContent = 'Updated -';
+          document.getElementById('sponsors-total-goal').textContent = '– / ' + SPONSOR_GOAL;
           console.error('Sponsors widget error:', e);
         }
       }
