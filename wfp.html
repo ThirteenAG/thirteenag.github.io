@@ -187,9 +187,11 @@
               aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <div class="d-flex justify-content-between mt-1 small sponsors-meta" style="color:#57606a;">
-            <span id="sponsors-percent"><span class="spinner-border spinner-border-sm sponsors-meta-spinner" role="status" aria-label="Loading"></span></span>
+            <span id="sponsors-percent"><span class="spinner-border spinner-border-sm sponsors-meta-spinner"
+                role="status" aria-label="Loading"></span></span>
             <span id="sponsors-updated">Updated -</span>
-            <span id="sponsors-total-goal"><span class="spinner-border spinner-border-sm sponsors-meta-spinner" role="status" aria-label="Loading"></span> / 3000</span>
+            <span id="sponsors-total-goal"><span class="spinner-border spinner-border-sm sponsors-meta-spinner"
+                role="status" aria-label="Loading"></span> / 3000</span>
           </div>
         </div>
 
@@ -198,7 +200,9 @@
           <div class="col-6 col-sm-4 col-lg">
             <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
               <small class="d-block" style="color:#57606a;">Total Sponsors</small>
-              <strong id="sponsors-total" style="color:#24292f;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
+              <strong id="sponsors-total" style="color:#24292f;font-size:1.4rem;"><span
+                  class="spinner-border spinner-border-sm sponsors-spinner" role="status"
+                  aria-label="Loading"></span></strong>
               <small class="d-block sponsors-join-link sponsors-join-placeholder" aria-hidden="true">Join</small>
             </div>
           </div>
@@ -206,7 +210,9 @@
             <a href="https://github.com/sponsors/ThirteenAG" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">GitHub</small>
-                <strong id="sponsors-github" style="color:#0969da;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
+                <strong id="sponsors-github" style="color:#0969da;font-size:1.4rem;"><span
+                    class="spinner-border spinner-border-sm sponsors-spinner" role="status"
+                    aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join GitHub Sponsors</small>
               </div>
             </a>
@@ -215,7 +221,9 @@
             <a href="https://www.patreon.com/ThirteenAG" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">Patreon</small>
-                <strong id="sponsors-patreon" style="color:#9a6700;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
+                <strong id="sponsors-patreon" style="color:#9a6700;font-size:1.4rem;"><span
+                    class="spinner-border spinner-border-sm sponsors-spinner" role="status"
+                    aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join Patreon</small>
               </div>
             </a>
@@ -224,7 +232,9 @@
             <a href="https://ko-fi.com/thirteenag" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">Ko-fi</small>
-                <strong id="sponsors-kofi" style="color:#218bff;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
+                <strong id="sponsors-kofi" style="color:#218bff;font-size:1.4rem;"><span
+                    class="spinner-border spinner-border-sm sponsors-spinner" role="status"
+                    aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join Ko-fi</small>
               </div>
             </a>
@@ -233,7 +243,9 @@
             <a href="https://boosty.to/thirteenag" target="_blank" class="text-decoration-none">
               <div class="p-2 rounded text-center" style="background:#f6f8faaa;border:1px solid #d0d7de;">
                 <small class="d-block" style="color:#57606a;">Boosty</small>
-                <strong id="sponsors-boosty" style="color:#f15f2c;font-size:1.4rem;"><span class="spinner-border spinner-border-sm sponsors-spinner" role="status" aria-label="Loading"></span></strong>
+                <strong id="sponsors-boosty" style="color:#f15f2c;font-size:1.4rem;"><span
+                    class="spinner-border spinner-border-sm sponsors-spinner" role="status"
+                    aria-label="Loading"></span></strong>
                 <small class="d-block sponsors-join-link">Join Boosty</small>
               </div>
             </a>
@@ -9294,7 +9306,7 @@
         patreon.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
         kofi.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
         boosty.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
-        github.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, '@'));
+        github.forEach((names, tier) => addToCombined(tier, names, '#8b949e', 12.5, ''));
 
         // Determine total name count for font scaling (matches SVG: total_name_count logic)
         const totalNameCount = combined.size > 0
