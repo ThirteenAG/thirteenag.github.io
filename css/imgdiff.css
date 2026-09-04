@@ -217,8 +217,8 @@
   }
 }
 
-/* Small screens: keep every control on a single line and shrink the
-   range bar (and its circle thumb) so it doesn't push things to wrap. */
+/* Small screens: keep every control on a single line and make the range
+   bar narrower so it doesn't push the buttons to wrap. */
 @media (max-width: 575px) {
   .idc-controls {
     flex-wrap: nowrap;
@@ -240,23 +240,7 @@
     min-width: 26px;
     max-width: 56px;
     flex: 1 1 40px;
-    height: 10px;
+    height: 12px;
     margin: 0 3px 0 1px;
-  }
-
-  .idc-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ffffff;
-  }
-
-  .idc-range::-moz-range-thumb {
-    width: 10px;
-    height: 10px;
-    border: none;
-    border-radius: 50%;
-    background: #ffffff;
   }
 }
