@@ -99,6 +99,13 @@
     '.ff-feed .ff-line{height:auto !important;min-height:' + LINE_HEIGHT + 'px;}',
     '.ff-feed .ff-line-text{white-space:normal !important;overflow:visible !important;',
     'text-overflow:clip !important;overflow-wrap:break-word;}',
+    // Kill the desktop hover marquee on stacked layout: the mobile
+    // line-text reset alone isn't enough, because .ff-marq still turns
+    // .ff-inner into a max-content inline-block that scrolls past the
+    // card border (text-overflow/overflow are visible there).
+    '.ff-feed .ff-line .ff-inner{display:inline !important;width:auto !important;',
+    'overflow:visible !important;text-overflow:clip !important;',
+    'white-space:normal !important;animation:none !important;transform:none !important;}',
     '.card-body.row>.img-comparison{display:block;flex:0 1 100%;max-width:100%;}',
     '.card-body.row>.col{flex:0 0 100%;max-width:100%;}',
     '.card-body.row>.img-comparison>img{width:100%;}',
