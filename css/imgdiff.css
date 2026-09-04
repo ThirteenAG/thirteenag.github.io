@@ -6,6 +6,7 @@
 .img-comparison.idc {
   user-select: none;
   -webkit-user-select: none;
+  touch-action: pan-y;
 }
 
 .idc .idc-base {
@@ -38,7 +39,8 @@
 
 .idc[data-mode='swipe'] {
   cursor: ew-resize;
-  touch-action: none;
+  /* pan-y keeps vertical page scrolling native on touch devices */
+  touch-action: pan-y;
 }
 .idc[data-mode='swipe'] .idc-top {
   clip-path: inset(0 0 0 var(--id-split, 0%));
@@ -156,6 +158,7 @@
   display: none;
   cursor: pointer;
   accent-color: #ffffff;
+  touch-action: pan-y;
 }
 .idc[data-mode='swipe'] .idc-range.idc-range-swipe,
 .idc[data-mode='onion'] .idc-range.idc-range-onion {

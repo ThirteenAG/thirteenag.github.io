@@ -81,8 +81,27 @@
     return button;
   }
 
-  /** Let the user drag across the image to move the swipe divider. */
+  /**
+   * Let the user drag across the image to move the swipe divider.
+   * Vertical gestures are never intercepted, so the page keeps scrolling on
+   * touch devices (CSS touch-action: pan-y handles the vertical direction).
+   */
   function setupSwipeDrag(container, swipeRange) {
+    var drag = null;
+
+    function update(clientX) {
+      var rect = container.getBoundingClientRect();
+      if (rect.width <= 0) {
+        return;
+      }
+      var pct = ((clientX - rect.left) / rect.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      container.style.setProperty('--id-split', pct + '%');
+      if (swipeRange) {
+        swipeRange.value = String(Math.round(pct));
+      }
+    }
+
     container.addEventListener('pointerdown', function (e) {
       if (container.dataset.mode !== 'swipe') {
         return;
@@ -90,31 +109,59 @@
       if (e.target && e.target.closest && e.target.closest('.idc-controls')) {
         return;
       }
-      if (e.button !== undefined && e.button !== 0) {
+      if (e.pointerType === 'mouse' && e.button !== 0) {
         return;
       }
-      e.preventDefault();
-      var rect = container.getBoundingClientRect();
-      function update(clientX) {
-        var pct = ((clientX - rect.left) / rect.width) * 100;
-        pct = Math.max(0, Math.min(100, pct));
-        container.style.setProperty('--id-split', pct + '%');
-        if (swipeRange) {
-          swipeRange.value = String(Math.round(pct));
+      drag = {
+        id: e.pointerId,
+        startX: e.clientX,
+        startY: e.clientY,
+        engaged: e.pointerType === 'mouse',
+      };
+      if (drag.engaged) {
+        try {
+          container.setPointerCapture(e.pointerId);
+        } catch (err) {
+          /* pointer capture unsupported */
+        }
+        update(e.clientX);
+      }
+    });
+
+    container.addEventListener('pointermove', function (e) {
+      if (!drag || e.pointerId !== drag.id) {
+        return;
+      }
+      if (!drag.engaged) {
+        var dx = e.clientX - drag.startX;
+        var dy = e.clientY - drag.startY;
+        if (Math.abs(dx) <= Math.abs(dy) || Math.abs(dx) < 8) {
+          return; // vertical-ish gesture: let the page scroll
+        }
+        drag.engaged = true;
+        try {
+          container.setPointerCapture(e.pointerId);
+        } catch (err) {
+          /* pointer capture unsupported */
         }
       }
+      e.preventDefault();
       update(e.clientX);
-      function onMove(ev) {
-        ev.preventDefault();
-        update(ev.clientX);
-      }
-      function onUp() {
-        window.removeEventListener('pointermove', onMove);
-        window.removeEventListener('pointerup', onUp);
-      }
-      window.addEventListener('pointermove', onMove);
-      window.addEventListener('pointerup', onUp);
     });
+
+    function endDrag(e) {
+      if (drag && e.pointerId === drag.id) {
+        drag = null;
+        try {
+          container.releasePointerCapture(e.pointerId);
+        } catch (err) {
+          /* pointer capture unsupported */
+        }
+      }
+    }
+
+    container.addEventListener('pointerup', endDrag);
+    container.addEventListener('pointercancel', endDrag);
   }
 
   function buildControls(container, opts) {
