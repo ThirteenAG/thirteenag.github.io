@@ -980,3 +980,18 @@ ul.scanning li:nth-child(8)::before {
   filter: grayscale(1);
   z-index: 1;
 }
+
+/* "Supported exe version:" / "Supported version:" rows — restyled to match
+   the feature feed: accent chevron, muted label, bold dark value. Cards
+   without feed lines (e.g. p2dfx descriptions) and rows with their own
+   inline styling (Mafia) are deliberately left alone. */
+.panel-primary:has(.ff-lines li) .clearfix > p.card-text.float-start.mb-0:not([style]) {
+  font-size: 13px;
+  line-height: 21px;
+  color: #6c757d;
+}
+
+.panel-primary:has(.ff-lines li) .clearfix > p.card-text.float-start.mb-0:not([style]) b {
+  font-weight: 700;
+  color: #212529;
+}
