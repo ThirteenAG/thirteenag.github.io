@@ -34,6 +34,7 @@
   <link href="vendor/bootstrap-social/bootstrap-social.css" rel="stylesheet" />
   <link href="css/icomoon/style.css" rel="stylesheet" />
   <link href="css/wfp.css" rel="stylesheet">
+  <link href="css/imgdiff.css" rel="stylesheet" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2701063561750246"
     crossorigin="anonymous"></script>
 </head>
@@ -8552,6 +8553,18 @@
   </div>
   <!-- /Modal -->
 
+  <!-- Modal: enlarged image diff viewer -->
+  <div class="modal fade" id="imgdiff-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div id="imgdiff-modal-stage"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Modal: enlarged image diff viewer -->
+
   <!-- Bootstrap core JavaScript -->
   <script defer src="vendor/jquery/dist/jquery.min.js" onload="initTabs(); changeBG();"></script>
   <script defer src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"
@@ -8563,6 +8576,7 @@
   <!-- onload="initTwitch(); GetCommentsCount(236);" -->
   <script defer src="vendor/awesomplete/awesomplete.min.js" onload="initSearch();"></script>
   <script defer src="vendor/baguetteBox.js/dist/baguetteBox.min.js" onload="initBB();"></script>
+  <script defer src="js/imgdiff.js"></script>
   <script async defer src="vendor/github-buttons/dist/buttons.min.js"></script>
 
   <!-- Scripts -->
@@ -9123,7 +9137,7 @@
     }
   </script>
 
-  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <!--script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
   <script>
     kofiWidgetOverlay.draw('thirteenag', {
       'type': 'floating-chat',
@@ -9131,7 +9145,7 @@
       'floating-chat.donateButton.background-color': '#00b9fe',
       'floating-chat.donateButton.text-color': '#fff'
     });
-  </script>
+  </script-->
 
   <script>
     (function () {

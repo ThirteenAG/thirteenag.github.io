@@ -1,0 +1,215 @@
+/* Image diff compare modes for .img-comparison cards.
+ * Mirrors GitHub Desktop's image diff viewer: 2-up, Swipe, Onion Skin and
+ * Difference modes, with YouTube-style controls shown on hover, plus an
+ * enlarged popup viewer that uses the high resolution .png screenshots. */
+
+.img-comparison.idc {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.idc .idc-base {
+  position: relative;
+  z-index: 5;
+}
+
+/* The "after" image, stacked on top of the base image. */
+.idc .idc-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ---- presentation modes ---- */
+
+/* 2-up keeps the original hover behavior: swap on hover, swap back on leave. */
+.idc[data-mode='2up'] .idc-top {
+  visibility: hidden;
+}
+.idc[data-mode='2up']:hover .idc-top {
+  visibility: visible;
+}
+
+.idc[data-mode='swipe'] {
+  cursor: ew-resize;
+  touch-action: none;
+}
+.idc[data-mode='swipe'] .idc-top {
+  clip-path: inset(0 0 0 var(--id-split, 0%));
+}
+
+.idc[data-mode='onion'] .idc-top {
+  opacity: var(--id-opacity, 1);
+}
+
+.idc[data-mode='diff'] .idc-top {
+  mix-blend-mode: difference;
+}
+
+/* ---- swipe divider ---- */
+.idc-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--id-split, 0%);
+  width: 0;
+  z-index: 20;
+  display: none;
+  pointer-events: none;
+}
+.idc[data-mode='swipe'] .idc-divider {
+  display: block;
+}
+.idc-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+/* ---- controls overlay (YouTube-style, shown on hover) ---- */
+.idc-controls {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: wrap;
+  padding: 20px 6px 4px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.12s ease-in-out, visibility 0s linear 0.12s;
+}
+.idc:hover .idc-controls,
+.idc-controls:focus-within {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.12s ease-in-out;
+}
+
+.idc-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(20, 20, 20, 0.78);
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: inherit;
+  line-height: 1;
+  padding: 4px 7px;
+  margin: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.idc-btn:hover {
+  background: rgba(75, 75, 75, 0.92);
+  color: #fff;
+}
+.idc-btn:focus {
+  outline: none;
+}
+.idc-btn.idc-active {
+  background: #ffffff;
+  color: #111;
+  border-color: #ffffff;
+}
+
+.idc-btn.idc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+}
+.idc-btn.idc-icon svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+  display: block;
+}
+
+.idc-range {
+  width: 74px;
+  margin: 0 4px 0 2px;
+  height: 14px;
+  display: none;
+  cursor: pointer;
+  accent-color: #ffffff;
+}
+.idc[data-mode='swipe'] .idc-range.idc-range-swipe,
+.idc[data-mode='onion'] .idc-range.idc-range-onion {
+  display: inline-block;
+}
+
+/* ---- enlarged popup viewer ---- */
+#imgdiff-modal .modal-dialog {
+  max-width: 94vw;
+}
+#imgdiff-modal .modal-content {
+  background: #141414;
+  border: 0;
+  border-radius: 4px;
+}
+#imgdiff-modal .modal-body {
+  padding: 0;
+}
+#imgdiff-modal-stage {
+  text-align: center;
+}
+
+.idc-modal {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  max-width: 100%;
+}
+.idc-modal .idc-base {
+  display: block;
+  max-width: 94vw;
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+}
+.idc-modal .idc-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Touch devices don't have hover: keep the controls visible. */
+@media (hover: none) {
+  .idc-controls {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
