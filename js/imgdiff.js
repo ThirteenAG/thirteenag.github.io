@@ -119,6 +119,8 @@
         engaged: e.pointerType === 'mouse',
       };
       if (drag.engaged) {
+        // prevent the browser from starting a text/image selection drag
+        e.preventDefault();
         try {
           container.setPointerCapture(e.pointerId);
         } catch (err) {
