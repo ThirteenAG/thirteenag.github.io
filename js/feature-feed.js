@@ -257,6 +257,18 @@
    * layout we show every line statically and skip clipping/rotation.
    */
   function isStackedLayout(feed) {
+    // Below 1200px our injected CSS forces the image column above the
+    // panel, so the viewport alone decides. Relying on the image rect
+    // here breaks on mobile while the lazy screenshot hasn't loaded yet
+    // (offsetHeight 0 -> "not stacked" -> desktop rotation runs and the
+    // first visible lines get overwritten by other items).
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(max-width: 1199.98px)').matches
+    ) {
+      return true;
+    }
     var panel = feed.closest ? feed.closest('.panel-primary') : null;
     if (!panel || !panel.parentElement) {
       return false;
@@ -283,12 +295,20 @@
     if (state.stacked || state.pool.length <= state.n) {
       // Stacked mobile layout or everything fits: static, natural height.
       state.animating = false;
+      state.offset = 0;
       ul.style.height = '';
       ul.style.overflow = '';
       if (state.timer) {
         clearTimeout(state.timer);
         state.timer = null;
       }
+      // Rotation writes other items into the first lines in place; put
+      // the original content back so no entry appears duplicated.
+      state.lis.forEach(function (li, i) {
+        if (state.pool[i]) {
+          renderInto(li, state.pool[i], false);
+        }
+      });
       return;
     }
     state.animating = true;
@@ -438,6 +458,7 @@
       setupFeed: setupFeed,
       computeVisibleLines: computeVisibleLines,
       isStackedLayout: isStackedLayout,
+      layoutFeed: layoutFeed,
       markTruncated: markTruncated,
       readItem: readItem,
       renderInto: renderInto,
