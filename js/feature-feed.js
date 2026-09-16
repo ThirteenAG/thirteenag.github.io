@@ -5,7 +5,7 @@
  * inline in the HTML. The script:
  *
  *  - measures how many lines actually fit between the card header and the
- *    download/screenshots buttons (so the card never grows past the 367px
+ *    download/screenshots buttons (so the card never grows past the
  *    screenshot column on the left);
  *  - if every item fits, just shows them statically;
  *  - if there are more items than lines, the visible lines cycle through all
@@ -19,11 +19,21 @@
 
   var LINE_HEIGHT = 21; // px, matches .ff-line in the injected css
   var MAX_LINES = 6; // hard cap so the card never outgrows the screenshot
-  var SCREENSHOT_HEIGHT = 367; // every card uses a 652x367 screenshot
+  // Card screenshots are 652px wide. Most of them are 367px tall, but a
+  // handful (Spyro, Bully, RE4/RE5, Condemned, Driver PL, RDR, ...) are
+  // only 275/279px. While the real image height is unknown (lazy image not
+  // loaded yet) assume the shortest variant: too small a budget only hides
+  // a line for a moment, too large a budget makes the card taller than its
+  // own screenshot and the image no longer matches the card.
+  var MIN_SCREENSHOT_HEIGHT = 275;
   var ROTATE_MS = 3400;
   var CASCADE_MS = 120; // stagger between lines
   var EASE_MS = 700;
-  var FALLBACK_LINES = 5; // provisional value while the card is hidden/unmeasured
+  // A card inside a hidden tab pane measures as 0 everywhere. Until it can
+  // really be measured render only this many lines: the value is
+  // provisional and gets corrected the moment the pane becomes visible
+  // (see the observers in setupFeed).
+  var UNMEASURED_LINES = 2;
 
   var feeds = [];
 
@@ -195,24 +205,40 @@
   /**
    * How many 21px lines fit between the header and the bottom buttons?
    *
-   * The fixed height is the sum of the panel's other children (header,
-   * release-info strip, download/screenshots buttons) plus whatever else
-   * the feed's wrapper contains. This is robust: it doesn't rely on the
-   * panel's own height (which is stretched to the image, or 0 while the
-   * card sits in a hidden tab), and it uses the known 367px screenshot
-   * height as the budget until the image is measurable.
+   * Returns { n, measured }. `measured` is false while the card sits in a
+   * hidden tab pane, where every element reports a 0 height: `n` is then
+   * only a conservative provisional value that is replaced as soon as the
+   * card becomes measurable.
+   *
+   * The budget is the screenshot itself (the card-body row is as tall as
+   * the image) and the fixed height is the sum of the panel's other
+   * children (header, release-info strip, download/screenshots buttons)
+   * plus whatever else the feed's wrapper contains. This is robust: it
+   * doesn't rely on the panel's own height (which is stretched to the
+   * image, or 0 while the card sits in a hidden tab).
    */
-  function computeVisibleLines(feed) {
+  function measureFeed(feed) {
     var panel = feed.closest ? feed.closest('.panel-primary') : null;
     if (!panel) {
-      return FALLBACK_LINES;
+      return { n: UNMEASURED_LINES, measured: false };
     }
     var img = null;
     if (panel.parentElement) {
       img = panel.parentElement.querySelector('.img-comparison img');
     }
-    var budget =
-      img && img.offsetHeight >= 120 ? img.offsetHeight : SCREENSHOT_HEIGHT;
+    // Use the real rendered height as soon as the screenshot has one,
+    // otherwise the intrinsic aspect ratio if it is already decoded, and
+    // finally the shortest screenshot in the set.
+    var budget;
+    if (img && img.offsetHeight >= 120) {
+      budget = img.offsetHeight;
+    } else if (img && img.offsetWidth && img.naturalWidth && img.naturalHeight) {
+      budget = Math.round(
+        (img.offsetWidth * img.naturalHeight) / img.naturalWidth
+      );
+    } else {
+      budget = MIN_SCREENSHOT_HEIGHT;
+    }
 
     var wrapper = feed.parentElement;
     var fixed = 0;
@@ -236,17 +262,24 @@
         measured = true;
       }
     }
-    // Hidden tab pane: every measurement is 0, use a provisional value and
-    // re-measure once the card becomes visible (see setupFeed).
+    // Hidden tab pane: every measurement is 0, so only guess a small
+    // number of lines and re-measure once the card becomes visible.
     if (!measured) {
-      return FALLBACK_LINES;
+      return { n: UNMEASURED_LINES, measured: false };
     }
 
     var available = budget - fixed - 2; // small safety margin
     if (available < LINE_HEIGHT * 1.5) {
-      return 1;
+      return { n: 1, measured: true };
     }
-    return Math.min(MAX_LINES, Math.max(1, Math.floor(available / LINE_HEIGHT)));
+    return {
+      n: Math.min(MAX_LINES, Math.max(1, Math.floor(available / LINE_HEIGHT))),
+      measured: true,
+    };
+  }
+
+  function computeVisibleLines(feed) {
+    return measureFeed(feed).n;
   }
 
   /**
@@ -314,7 +347,10 @@
     state.animating = true;
     ul.style.height = state.n * LINE_HEIGHT + 'px';
     ul.style.overflow = 'hidden';
-    if (prefersReducedMotion()) {
+    // While the card is not measurable the line count is provisional (the
+    // card sits in a hidden tab pane, so nobody sees it); don't start
+    // rotating lines until the real numbers are in.
+    if (!state.measured || prefersReducedMotion()) {
       return;
     }
     if (!state.timer) {
@@ -366,11 +402,13 @@
     if (card && card.style && card.style.borderColor) {
       card.style.setProperty('--ff-accent', card.style.borderColor);
     }
+    var measurement = measureFeed(feed);
     var state = {
       feed: feed,
       ul: ul,
       lis: lis,
-      n: computeVisibleLines(feed),
+      n: measurement.n,
+      measured: measurement.measured,
       stacked: isStackedLayout(feed),
       pool: lis.map(readItem),
       offset: 0,
@@ -394,44 +432,69 @@
       state.paused = false;
     });
 
+    // Everything that can change the card's geometry has to trigger a
+    // re-measure, otherwise a provisional or image-less guess would stick
+    // until the next scroll: the screenshot finishing its lazy load, the
+    // tab pane becoming visible, the window being resized.
+    var panel = feed.closest ? feed.closest('.panel-primary') : null;
+    var img =
+      panel && panel.parentElement
+        ? panel.parentElement.querySelector('.img-comparison img')
+        : null;
+    if (img && img.addEventListener) {
+      img.addEventListener('load', function () {
+        refreshFeed(state);
+      });
+      img.addEventListener('error', function () {
+        refreshFeed(state);
+      });
+    }
+    if (typeof ResizeObserver === 'function') {
+      var observer = new ResizeObserver(function () {
+        refreshFeed(state);
+      });
+      if (img) {
+        observer.observe(img);
+      }
+      if (panel) {
+        observer.observe(panel);
+      }
+    }
+
     // Cards in inactive tabs measure as 0 at setup; re-measure when the
     // feed actually becomes visible (tab switch or scroll into view).
     if ('IntersectionObserver' in window) {
-      var lastReMeasure = 0;
       new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (!entry.isIntersecting) {
-            return;
+          if (entry.isIntersecting) {
+            refreshFeed(state);
           }
-          var now = Date.now();
-          if (now - lastReMeasure < 600) {
-            return;
-          }
-          lastReMeasure = now;
-          var n = computeVisibleLines(state.feed);
-          var stacked = isStackedLayout(state.feed);
-          if (n !== state.n || stacked !== state.stacked) {
-            state.stacked = stacked;
-            state.n = n;
-            layoutFeed(state);
-          }
-          state.lis.forEach(markTruncated);
         });
       }).observe(feed);
     }
   }
 
+  /**
+   * Re-measure a card and re-layout it when anything it depends on changed.
+   */
+  function refreshFeed(state) {
+    var measurement = measureFeed(state.feed);
+    var stacked = isStackedLayout(state.feed);
+    if (
+      measurement.n !== state.n ||
+      measurement.measured !== state.measured ||
+      stacked !== state.stacked
+    ) {
+      state.n = measurement.n;
+      state.measured = measurement.measured;
+      state.stacked = stacked;
+      layoutFeed(state);
+    }
+    state.lis.forEach(markTruncated);
+  }
+
   function reMeasure() {
-    feeds.forEach(function (state) {
-      var n = computeVisibleLines(state.feed);
-      var stacked = isStackedLayout(state.feed);
-      if (n !== state.n || stacked !== state.stacked) {
-        state.stacked = stacked;
-        state.n = n;
-        layoutFeed(state);
-      }
-      state.lis.forEach(markTruncated);
-    });
+    feeds.forEach(refreshFeed);
   }
 
   function boot() {
@@ -445,6 +508,16 @@
     if (window.addEventListener) {
       window.addEventListener('load', reMeasure);
       window.addEventListener('resize', reMeasure);
+      // Bootstrap tab switches and hash navigation change which panes are
+      // rendered, and with them what can be measured.
+      document.addEventListener('shown.bs.tab', reMeasure);
+      window.addEventListener('hashchange', reMeasure);
+      window.addEventListener('popstate', reMeasure);
+      // Some layout changes (fonts, lazy images, tabs opened by other
+      // scripts) are not announced, so retry a few times after boot too.
+      [0, 250, 1000, 2500].forEach(function (delay) {
+        setTimeout(reMeasure, delay);
+      });
     }
   }
 
@@ -456,14 +529,19 @@
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
       setupFeed: setupFeed,
+      measureFeed: measureFeed,
       computeVisibleLines: computeVisibleLines,
       isStackedLayout: isStackedLayout,
       layoutFeed: layoutFeed,
+      refreshFeed: refreshFeed,
+      reMeasure: reMeasure,
       markTruncated: markTruncated,
       readItem: readItem,
       renderInto: renderInto,
       LINE_HEIGHT: LINE_HEIGHT,
       MAX_LINES: MAX_LINES,
+      UNMEASURED_LINES: UNMEASURED_LINES,
+      MIN_SCREENSHOT_HEIGHT: MIN_SCREENSHOT_HEIGHT,
       CSS: CSS,
       feeds: feeds,
     };
