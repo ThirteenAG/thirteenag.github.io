@@ -7708,31 +7708,91 @@
 
   <!-- jump to anchor after page was loaded / background -->
   <script type="text/javascript">
-    function _loadImages(container) {
+    var _jumpToken = 0;
+
+    // Start loading the lazy screenshots that sit above the target card, so the
+    // page does not keep growing underneath it while we are jumping.
+    function _loadImages(container, target) {
       (container || document).querySelectorAll('img.lazy[data-src]').forEach(function (img) {
+        // Images below the target cannot move it, leave them to the lazy loader.
+        // 4 = Node.DOCUMENT_POSITION_FOLLOWING, ie. the card comes after the image.
+        if (target && !(img.compareDocumentPosition(target) & 4)) {
+          return;
+        }
         var src = img.getAttribute('data-src');
-        if (src && (!img.src || img.src === window.location.href)) {
+        if (src && (!img.getAttribute('src') || img.src === window.location.href)) {
           img.src = src;
         }
       });
     }
 
+    // After a fresh page load the cards are taller than they look: the ad above
+    // them, the supporters list and every screenshot above the target card still
+    // add height later on. Scrolling once therefore ends up above the card that
+    // was searched for, so keep the card pinned to the top of the viewport until
+    // the page settles - or until the user starts scrolling on his own.
     function _scrollToTarget(target) {
-      // Load lazy images in the containing tab pane (cards above the target affect offset too)
+      var token = ++_jumpToken;
+      var stopped = false;
+      var timers = [];
+      var observer = null;
+      var reAligns = 0;
+      var stopEvents = ['wheel', 'touchstart', 'touchmove', 'keydown', 'mousedown', 'pointerdown'];
+
+      function stop() {
+        if (stopped) {
+          return;
+        }
+        stopped = true;
+        timers.forEach(function (timer) { clearTimeout(timer); });
+        if (observer) {
+          observer.disconnect();
+        }
+        stopEvents.forEach(function (name) {
+          window.removeEventListener(name, stop);
+        });
+        window.removeEventListener('hashchange', stop);
+      }
+
+      function align() {
+        if (stopped || token !== _jumpToken) {
+          stop();
+          return;
+        }
+        // Instant jump on purpose: an animated scroll can still be running when
+        // the layout moves again, which is what made the target get missed.
+        target.scrollIntoView({ block: 'start' });
+      }
+
       var tabPane = target.closest('.tab-pane');
       if (tabPane) {
-        _loadImages(tabPane);
+        _loadImages(tabPane, target);
       } else {
         _loadImages(target);
       }
-      // Wait for images to start loading and layout to settle, then scroll
-      setTimeout(function () {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Scroll again after images below have loaded too
-        setTimeout(function () {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 500);
-      }, 100);
+
+      // The user takes over the moment he interacts with the page.
+      stopEvents.forEach(function (name) {
+        window.addEventListener(name, stop, { passive: true });
+      });
+      window.addEventListener('hashchange', stop);
+
+      [0, 60, 150, 300, 600, 1000, 1600, 2400, 3400, 4500].forEach(function (delay) {
+        timers.push(setTimeout(align, delay));
+      });
+      timers.push(setTimeout(stop, 5000));
+
+      if (window.ResizeObserver) {
+        // Any late layout change above the card (ads, supporters list, ...).
+        observer = new ResizeObserver(function () {
+          if (++reAligns > 30) {
+            stop();
+            return;
+          }
+          align();
+        });
+        observer.observe(document.body);
+      }
     }
 
     function jmpToHash() {

@@ -275,6 +275,38 @@ a:not([class]):hover {
   z-index: 100;
 }
 
+/* Reserve the screenshot box before the lazy image is loaded. Without this every
+   card grows from nothing to ~367px when its screenshot arrives, which pushes all
+   the cards below it down - and then any "jump to card" (search or #hash) lands
+   above the card it was aiming for. `aspect-ratio: auto <ratio>` only applies
+   while the image has no size of its own, so a loaded screenshot always keeps its
+   real ratio and can never be distorted by a wrong value here. */
+@media only screen and (min-width: 1201px) {
+  .img-comparison>img.lazy {
+    width: 652px;
+  }
+}
+
+.img-comparison>img.lazy {
+  aspect-ratio: auto 652 / 367;
+}
+
+/* Screenshots that are shorter than the usual 652x367. */
+.img-comparison>img.lazy[data-src$="/bully/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/condemned/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/driverpl/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/re4/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/re5/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/rerev/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/spyro/main2.jpg"] {
+  aspect-ratio: auto 652 / 275;
+}
+
+.img-comparison>img.lazy[data-src$="/rdr/main2.jpg"],
+.img-comparison>img.lazy[data-src$="/thesaboteur/main2.jpg"] {
+  aspect-ratio: auto 652 / 279;
+}
+
 .bs-30 {
   background-size: 30% !important;
 }
