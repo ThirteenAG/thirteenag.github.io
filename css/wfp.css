@@ -1027,3 +1027,13 @@ ul.scanning li:nth-child(8)::before {
   font-weight: 700;
   color: #212529;
 }
+
+#mafia .ff-install {
+  width: auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  background: rgba(255, 255, 255, 0.55);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 4px;
+}
