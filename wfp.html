@@ -762,7 +762,7 @@
                   <ul class="ff-lines">
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Resolution</b> — unlocks all resolutions in Advanced Display Options, including ultrawide</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Aspect Ratio</b> — corrected for all rendered elements</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>HUD</b> — repositioned and scaled to match the active aspect ratio; configurable scale for HUD, radar, subtitles and weapon icons. configurable width and height scale for the HUD, radar and subtitles</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>HUD</b> — Reposition and scale the HUD for the active aspect ratio, with configurable width and height scaling for the HUD, radar and subtitles, plus proportional weapon icons.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Field of View</b> — corrected for widescreen</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Cutscenes</b> — FOV and letterboxing adjust properly with the aspect ratio</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Sky</b> — the sky no longer distorts in widescreen</span></li>
@@ -1289,11 +1289,17 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>HUD</b> — Correct HUD scaling for widescreen.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Field of view</b> — Adjust the field of view for widescreen. Adjust the FOV multiplier in the INI file.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Videos</b> — Correct FMV scaling for widescreen.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Graphic novels</b> — Toggle fullscreen graphic novels with the configured hotkey (F2 by default); use the keyboard to navigate pages.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Cutscene borders</b> — Choose original borders, no borders, or borders sized to the active aspect ratio.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Graphic novels</b> — Toggle fullscreen pages with F2 by default; playback controls appear at the bottom when the mouse is there, and keyboard navigation is supported.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Cutscene borders</b> — Preserve original in-engine cutscene framing at any aspect ratio; choose sliding letterbox borders, pillarbox borders, both, or none.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Startup save</b> — Automatically load a selected, most recent, or last-used save on startup.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Save location</b> — Store saves in a <code>savegames</code> folder inside the game directory.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Background play</b> — Keep the game running when minimized.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Xbox 360 Gamma</b> — Optional higher-contrast gamma curve similar to GTA IV on Xbox 360; requires d3d8to9, enabled by the bundled dxwrapper.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>SMAA</b> — Optional post-processing antialiasing; requires d3d8to9 and disables itself when MSAA is used.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>VSync</b> — Disable the VSync forced by fullscreen mode; the dxwrapper frame rate limit still applies.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Settings file</b> — Store game settings in settings.ini beside the savegames instead of the registry; existing registry settings are imported on first use.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse smoothing</b> — Optionally disable mouse smoothing.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Adaptive difficulty</b> — Fix Fugitive difficulty tracking across reloads so deaths, health and play time can lower the difficulty again.</span></li>
                   </ul>
                 </div>
 
@@ -1362,11 +1368,16 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>HUD</b> — Correct HUD scaling for widescreen.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Field of view</b> — Adjust the field of view for widescreen. Adjust the FOV multiplier in the INI file.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Videos</b> — Correct FMV scaling for widescreen.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Graphic novels</b> — Toggle fullscreen graphic novels with the configured hotkey (F2 by default); use the keyboard to navigate pages.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Cutscene borders</b> — Choose original borders, no borders, or borders sized to the active aspect ratio.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Graphic novels</b> — Toggle fullscreen pages with F2 by default; playback controls appear at the bottom when the mouse is there, and keyboard navigation is supported.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Cutscene borders</b> — Preserve original in-engine cutscene framing at any aspect ratio; choose sliding letterbox borders, pillarbox borders, both, or none.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Startup save</b> — Automatically load a selected, most recent, or last-used save on startup.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Save location</b> — Store saves in a <code>savegames</code> folder inside the game directory.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Background play</b> — Keep the game running when minimized.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Xbox 360 Gamma</b> — Optional higher-contrast gamma curve similar to GTA IV on Xbox 360; requires d3d8to9, enabled by the bundled dxwrapper.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>SMAA</b> — Optional post-processing antialiasing; requires d3d8to9 and disables itself when MSAA is used.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>VSync</b> — Disable the VSync forced by fullscreen mode; the dxwrapper frame rate limit still applies.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Settings file</b> — Store game settings in settings.ini beside the savegames instead of the registry; existing registry settings are imported on first use.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse smoothing</b> — Optionally disable mouse smoothing.</span></li>
                   </ul>
                 </div>
 
@@ -2660,9 +2671,9 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>DLC crash</b> — Prevent crashes when Xbox 360 achievement conditions are met in DLC levels, including “King of the Crypt” in New Orleans and “Watch the Soap” in Portland.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Co-op frame rate</b> — Changed coop FPS limit to 60 (custom values can be set via <code>update/convictionsettings.ini</code>, <code>SyncMaxStepFrequency</code> parameter)</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Ammunition</b> — Disabled unlimited ammo for all weapons (restore original behavior by deleting <code>update/weapontuning.ini</code>)</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Skip intro</b> — Skip startup intros.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Windowed mode</b> — Run the game in a window.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse input</b> — Optionally disable negative mouse acceleration.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Skip intro</b> — Skip startup intros and the Press any key screen.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Windowed mode</b> — Run the game centered in a window.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse input</b> — Optionally disable negative mouse acceleration and smoothing; raw mouse input prevents lost movement with high polling rate mice.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Hardware detection</b> — Skip hardware detection messages on startup.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>LAN</b> — Restore LAN support.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Ultrawide</b> — Enable partial ultrawide support.</span></li>
@@ -2673,7 +2684,12 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>RGB lighting</b> — Support <a href="https://www.logitechg.com/innovation/lightsync-rgb.html">Logitech G LIGHTSYNC RGB Lighting</a>.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Loose files</b> — Load unpacked files from disk.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>DLC</b> — Unlock DLC content made unavailable by the server shutdown.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Controls</b> — Enable the Blacklist control scheme. Not fully tested; report issues via GitHub.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Controls</b> — Enable Blacklist-style keyboard and gamepad controls: toggle cover, drop from ledges with the cover button, and use E / X for Death from Above.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Window focus</b> — Start windowed mode focused, with the cursor available without a click.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Frame rate limit</b> — Set a custom frame rate limit instead of the default 120 FPS.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Gamepad camera speed</b> — Adjust how fast the stick turns the camera.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Split screen</b> — Restore original co-op split screen in one window, with keyboard/mouse or gamepad for player 1 and a gamepad for player 2; player 2 has a separate profile and lobby loadout.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Two instance split screen</b> — Run two game instances across top/bottom or side-by-side windows connected over LAN, each with its own gamepad and profile.</span></li>
                   </ul>
                 </div>
 
@@ -3094,7 +3110,7 @@
                 </div>
                 <div class="card-text p-0 m-0 mt-1 ff-feed" data-tag="driv3r">
                   <ul class="ff-lines">
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Resolution</b> — improved the display of available resolutions in the main menu</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Resolution</b> — Include the highest resolutions at their highest refresh rate and correct the displayed game size after resolution changes.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Aspect Ratio</b> — corrected for ultrawide</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Field of View</b> — corrected for widescreen using hor+ scaling</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>HUD / 2D Elements</b> — all 2D quads scaled and repositioned to match the active aspect ratio</span></li>
@@ -3106,6 +3122,9 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Xbox 360 Gamma</b> — a custom gamma curve that produces a higher-contrast image with deeper colors, similar to GTA IV on the Xbox 360</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Clip Cursor</b> — Locks the mouse cursor to the game window</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Turn indicators</b> — activate automatically when making a turn. Manual controls available in the ini file (keyboard only).</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Mouse</b> — Read mouse movement every frame to remove the original delay and dropped movement in menus and mouse look.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Modern Controls</b> — Use modern keyboard, mouse and Xbox controller bindings for new profiles and Reset in the controls menu; Start pauses the game.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse/Stick Look</b> — Orbit the vehicle camera with the mouse or right stick while retaining look back; configure return delay, speed, sensitivity and vertical inversion.</span></li>
                   </ul>
                 </div>
 
@@ -5060,15 +5079,14 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Aspect Ratio</b> — corrected for all rendered elements</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>HUD</b> — repositioned and scaled to match the active aspect ratio, with an option to keep the original 4:3 centered HUD</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Field of View</b> — corrected for widescreen</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>FMVs</b> — videos are scaled and centered at the correct aspect ratio, with fitted or fullscreen playback</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>FMVs</b> — Fullscreen videos are scaled and centered at the correct aspect ratio.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Shadow Flickering</b> — fixed the z-fighting of shadows</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Map / Text / Menus</b> — corrected scaling, with a choice of centered 4:3 or widescreen map</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Map / Text / Menus</b> — Scaled to match the active aspect ratio, with centered 4:3 or widescreen map layouts.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Cutscenes</b> — preserve the original 4:3 composition, with animated borders and off, letterbox, pillarbox or both modes</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>UI Scaling</b> — radar blips, menu underlines, crosshair and cursor scale with resolution</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Russian Credits</b> — restores the missing credits line</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Eye Animations</b> — restores the original moving eyes using the unpatched character models</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Car Scratches</b> — restores the original scratch opacity in patched versions</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Radar Map</b> — draws the city map inside the radar, as on Xbox</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Eye Animations</b> — Restore moving eyes using the original models from A2.dta instead of their static-eyed A8.dta replacements; loose replacement models remain supported.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Car Scratches</b> — Restore the original 1.0 scratch opacity on 1.1 and 1.2, retaining native 1.0 behavior.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Radar Map</b> — Draw the PC city map inside the radar with a smooth circular mask, Xbox-sized car footprints and speed-based zoom; the map and blips scale with resolution.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Draw Distance</b> — increases the draw distance; the new distance and the skip ranges are configurable in <code>Mafia.FusionFix.ini</code></span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>FPS Limit</b> — caps the frame rate via the <code>FPSLimit</code> option in <code>Mafia.FusionFix.ini</code></span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Settings</b> — saves all game settings to <code>savegame\settings.bin</code> instead of the registry, fixing an issue when the settings are lost</span></li>
@@ -5076,6 +5094,7 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Stick Deadzones</b> — configurable deadzones for the left and right stick (otherwise the camera just spins on its own)</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Xbox 360 Gamma</b> — a custom gamma curve that produces a higher-contrast image with deeper colors, similar to GTA IV on the Xbox 360</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>SMAA</b> — enhanced subpixel morphological antialiasing as a post-processing effect</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Free Camera</b> — Optional mouse or right-stick car camera with independent aiming, native camera collision and weapon targeting; return delay and speed are configurable.</span></li>
                   </ul>
                 </div>
 
@@ -6398,17 +6417,28 @@
                   <ul class="ff-lines">
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Skip intro</b> — Skip startup intros.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Startup prompt</b> — Skip the “Press Any Key” screen and checkpoint selection.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Startup display</b> — Switch to fullscreen if the game starts in a window.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse input</b> — Optionally disable negative mouse acceleration.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Ultrawide</b> — Enable ultrawide support; this also disables the damage overlay and fading in ultrawide.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mouse input</b> — Use raw mouse input for camera turning so high polling rate mice do not lose movement; optionally disable negative mouse acceleration.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Ultrawide</b> — Keep HUD and menus at 16:9 while the 3D view fills the screen; menus, dialogs and fullscreen movies receive black bars on other aspect ratios.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Field of view</b> — Adjust <code>FOVFactor</code> from 0.5 to 2.5.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Draw distance</b> — Adjust <code>ScreenCullBias</code>; lower values keep distant objects visible for longer.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>DLC</b> — Unlock DLC content made unavailable by the server shutdown.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Mission unlocks</b> — Separate options unlock campaign and 4th Echelon missions from the start.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Loose files</b> — Load unpacked files from disk.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Loose files</b> — Load unpacked files from the update folder; DumpPackedFiles extracts .umd archives for use as loose files.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>RGB lighting</b> — Support <a href="https://www.logitechg.com/innovation/lightsync-rgb.html">Logitech G LIGHTSYNC RGB Lighting</a>.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Forced walking</b> — Allow running during forced walking sections.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">ⓘ</span><span class="ff-line-text"><b>Difficulty</b> — Mark and Execute, sonar, and drop crates are enabled on Perfectionist; unlimited ammo is disabled on Rookie.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Turn speed</b> — Adjust TurnSpeed for faster turns toward the movement direction while moving.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Window modes</b> — Windowed, borderless and fullscreen offer the same resolutions; windows open centered and focused, can be resized, and remember their size.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Letterbox</b> — Optionally letterbox the 3D view to 16:9 on narrower screens, including 4:3 and 16:10.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Frame rate limit</b> — Set a frame rate limit with FPSLimit.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Split screen co-op</b> — Restore console split screen co-op in DX11 and DX9, with separate HUDs, prompts, markers and saved gear for player 2; configure gamepad assignments in the INI. Ambient occlusion is disabled during split screen.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Ending cutscene</b> — Fix the grid transition remaining over the ending cutscene at high frame rates.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Online server crash</b> — Prevent the crash after about 30 minutes caused by failed logins exhausting the network request pool.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Extraction mode</b> — Configure enemy counts and randomized waves, and load custom wave configs.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Extra Extraction maps</b> — Optionally add Charlie versions of eight Kobin/Grim missions and four co-op campaign missions. These do not affect profile progression; campaign story scripts still run and may obstruct doors.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Kestrel DLC</b> — Optionally add four cut Kestrel missions, completed by taking down the High Value Target; player 2 plays as Kestrel in co-op. These missions do not affect profile progression.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Hunter and co-op reinforcements</b> — Configure reinforcement counts or randomize them within minimum and maximum limits.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✦</span><span class="ff-line-text"><b>Detection failure</b> — Optionally disable mission failure on detection in Ghost mode and the single-player or co-op campaign.</span></li>
                   </ul>
                 </div>
 
@@ -6998,7 +7028,7 @@
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Mouse look</b> — Correct mouse look behavior.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Gamepad</b> — Support controllers through <a href="https://github.com/samuelgr/Xidi">Xidi</a>.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Gamepad controls</b> — Use triggers to brake/accelerate and aim/shoot.</span></li>
-                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Controller prompts</b> — Switch keyboard labels and controller icons with the last input; icons and controls-menu binding names follow the active Xidi profile.</span></li>
+                    <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Controller prompts</b> — Switch keyboard labels and controller icons with the last input; prompts and controls-menu binding names follow the active Xidi profile, including changes while a dialog is open. Choose Xbox, PlayStation, Switch, Steam Deck or Steam Controller artwork.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Weapon selection</b> — Scroll through weapons with the mouse wheel.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Windowed mode</b> — Use native borderless windows at the selected resolution or desktop resolution.</span></li>
                     <li class="ff-line"><span class="ff-line-icon" aria-hidden="true">✔</span><span class="ff-line-text"><b>Widescreen HUD</b> — Reposition HUD elements and notifications for a chosen aspect ratio; use Auto for the screen aspect or retain the original 4:3 placement.</span></li>
